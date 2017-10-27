@@ -1,0 +1,7 @@
+set_global_assignment -library "pcie_le" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "../../common/vi_design/sv_pcie/pcie_gen2x8/bali_pcie_app/include/bali_lib_inc.sv"]
+set_global_assignment -library "pcie_le" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "../../common/vi_design/sv_pcie/pcie_gen2x8/bali_pcie_app/include/pcie_app_inc.sv"]
+set_global_assignment -library "pcie_le" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "../../fc1_layer_kr_16_8/rtl/fc1_intstat/fc1_pkg.sv"]
+set_global_assignment -name QIP_FILE           [file join $::quartus(qip_path) "../../link_engine/rtl/link_engine.qip"]
+set_global_assignment -name QIP_FILE           [file join $::quartus(qip_path) "../../pcie_gen2x8/pcie_gen2x8_13_1/synthesis/pcie_gen2x8_13_1.qip"]
+set_global_assignment -library "pcie_le" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "spd_change.v"]
+set_global_assignment -library "pcie_le" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "fc16_pcie_le.v"]

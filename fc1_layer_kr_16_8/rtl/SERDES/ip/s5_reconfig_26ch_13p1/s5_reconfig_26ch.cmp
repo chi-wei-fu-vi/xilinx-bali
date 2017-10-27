@@ -1,0 +1,107 @@
+	component s5_reconfig_26ch is
+		generic (
+			device_family                 : string  := "Stratix V";
+			number_of_reconfig_interfaces : integer := 2;
+			enable_offset                 : integer := 1;
+			enable_lc                     : integer := 1;
+			enable_dcd                    : integer := 0;
+			enable_dcd_power_up           : integer := 1;
+			enable_analog                 : integer := 1;
+			enable_eyemon                 : integer := 0;
+			enable_ber                    : integer := 0;
+			enable_dfe                    : integer := 0;
+			enable_adce                   : integer := 0;
+			enable_mif                    : integer := 0;
+			enable_pll                    : integer := 0
+		);
+		port (
+			reconfig_busy             : out std_logic;                                        -- reconfig_busy
+			tx_cal_busy               : out std_logic;                                        -- tx_cal_busy
+			rx_cal_busy               : out std_logic;                                        -- tx_cal_busy
+			mgmt_clk_clk              : in  std_logic                     := 'X';             -- clk
+			mgmt_rst_reset            : in  std_logic                     := 'X';             -- reset
+			reconfig_mgmt_address     : in  std_logic_vector(6 downto 0)  := (others => 'X'); -- address
+			reconfig_mgmt_read        : in  std_logic                     := 'X';             -- read
+			reconfig_mgmt_readdata    : out std_logic_vector(31 downto 0);                    -- readdata
+			reconfig_mgmt_waitrequest : out std_logic;                                        -- waitrequest
+			reconfig_mgmt_write       : in  std_logic                     := 'X';             -- write
+			reconfig_mgmt_writedata   : in  std_logic_vector(31 downto 0) := (others => 'X'); -- writedata
+			reconfig_mif_address      : out std_logic_vector(31 downto 0);                    -- address
+			reconfig_mif_read         : out std_logic;                                        -- read
+			reconfig_mif_readdata     : in  std_logic_vector(15 downto 0) := (others => 'X'); -- readdata
+			reconfig_mif_waitrequest  : in  std_logic                     := 'X';             -- waitrequest
+			ch0_0_to_xcvr             : out std_logic_vector(69 downto 0);                    -- reconfig_to_xcvr
+			ch0_0_from_xcvr           : in  std_logic_vector(45 downto 0) := (others => 'X'); -- reconfig_from_xcvr
+			ch1_1_to_xcvr             : out std_logic_vector(69 downto 0);                    -- reconfig_to_xcvr
+			ch1_1_from_xcvr           : in  std_logic_vector(45 downto 0) := (others => 'X'); -- reconfig_from_xcvr
+			ch2_2_to_xcvr             : out std_logic_vector(69 downto 0);                    -- reconfig_to_xcvr
+			ch2_2_from_xcvr           : in  std_logic_vector(45 downto 0) := (others => 'X'); -- reconfig_from_xcvr
+			ch3_3_to_xcvr             : out std_logic_vector(69 downto 0);                    -- reconfig_to_xcvr
+			ch3_3_from_xcvr           : in  std_logic_vector(45 downto 0) := (others => 'X'); -- reconfig_from_xcvr
+			ch4_4_to_xcvr             : out std_logic_vector(69 downto 0);                    -- reconfig_to_xcvr
+			ch4_4_from_xcvr           : in  std_logic_vector(45 downto 0) := (others => 'X'); -- reconfig_from_xcvr
+			ch5_5_to_xcvr             : out std_logic_vector(69 downto 0);                    -- reconfig_to_xcvr
+			ch5_5_from_xcvr           : in  std_logic_vector(45 downto 0) := (others => 'X'); -- reconfig_from_xcvr
+			ch6_6_to_xcvr             : out std_logic_vector(69 downto 0);                    -- reconfig_to_xcvr
+			ch6_6_from_xcvr           : in  std_logic_vector(45 downto 0) := (others => 'X'); -- reconfig_from_xcvr
+			ch7_7_to_xcvr             : out std_logic_vector(69 downto 0);                    -- reconfig_to_xcvr
+			ch7_7_from_xcvr           : in  std_logic_vector(45 downto 0) := (others => 'X'); -- reconfig_from_xcvr
+			ch8_8_to_xcvr             : out std_logic_vector(69 downto 0);                    -- reconfig_to_xcvr
+			ch8_8_from_xcvr           : in  std_logic_vector(45 downto 0) := (others => 'X'); -- reconfig_from_xcvr
+			ch9_9_to_xcvr             : out std_logic_vector(69 downto 0);                    -- reconfig_to_xcvr
+			ch9_9_from_xcvr           : in  std_logic_vector(45 downto 0) := (others => 'X'); -- reconfig_from_xcvr
+			ch10_10_to_xcvr           : out std_logic_vector(69 downto 0);                    -- reconfig_to_xcvr
+			ch10_10_from_xcvr         : in  std_logic_vector(45 downto 0) := (others => 'X'); -- reconfig_from_xcvr
+			ch11_11_to_xcvr           : out std_logic_vector(69 downto 0);                    -- reconfig_to_xcvr
+			ch11_11_from_xcvr         : in  std_logic_vector(45 downto 0) := (others => 'X'); -- reconfig_from_xcvr
+			ch12_12_to_xcvr           : out std_logic_vector(69 downto 0);                    -- reconfig_to_xcvr
+			ch12_12_from_xcvr         : in  std_logic_vector(45 downto 0) := (others => 'X'); -- reconfig_from_xcvr
+			ch13_13_to_xcvr           : out std_logic_vector(69 downto 0);                    -- reconfig_to_xcvr
+			ch13_13_from_xcvr         : in  std_logic_vector(45 downto 0) := (others => 'X'); -- reconfig_from_xcvr
+			ch14_14_to_xcvr           : out std_logic_vector(69 downto 0);                    -- reconfig_to_xcvr
+			ch14_14_from_xcvr         : in  std_logic_vector(45 downto 0) := (others => 'X'); -- reconfig_from_xcvr
+			ch15_15_to_xcvr           : out std_logic_vector(69 downto 0);                    -- reconfig_to_xcvr
+			ch15_15_from_xcvr         : in  std_logic_vector(45 downto 0) := (others => 'X'); -- reconfig_from_xcvr
+			ch16_16_to_xcvr           : out std_logic_vector(69 downto 0);                    -- reconfig_to_xcvr
+			ch16_16_from_xcvr         : in  std_logic_vector(45 downto 0) := (others => 'X'); -- reconfig_from_xcvr
+			ch17_17_to_xcvr           : out std_logic_vector(69 downto 0);                    -- reconfig_to_xcvr
+			ch17_17_from_xcvr         : in  std_logic_vector(45 downto 0) := (others => 'X'); -- reconfig_from_xcvr
+			ch18_18_to_xcvr           : out std_logic_vector(69 downto 0);                    -- reconfig_to_xcvr
+			ch18_18_from_xcvr         : in  std_logic_vector(45 downto 0) := (others => 'X'); -- reconfig_from_xcvr
+			ch19_19_to_xcvr           : out std_logic_vector(69 downto 0);                    -- reconfig_to_xcvr
+			ch19_19_from_xcvr         : in  std_logic_vector(45 downto 0) := (others => 'X'); -- reconfig_from_xcvr
+			ch20_20_to_xcvr           : out std_logic_vector(69 downto 0);                    -- reconfig_to_xcvr
+			ch20_20_from_xcvr         : in  std_logic_vector(45 downto 0) := (others => 'X'); -- reconfig_from_xcvr
+			ch21_21_to_xcvr           : out std_logic_vector(69 downto 0);                    -- reconfig_to_xcvr
+			ch21_21_from_xcvr         : in  std_logic_vector(45 downto 0) := (others => 'X'); -- reconfig_from_xcvr
+			ch22_22_to_xcvr           : out std_logic_vector(69 downto 0);                    -- reconfig_to_xcvr
+			ch22_22_from_xcvr         : in  std_logic_vector(45 downto 0) := (others => 'X'); -- reconfig_from_xcvr
+			ch23_23_to_xcvr           : out std_logic_vector(69 downto 0);                    -- reconfig_to_xcvr
+			ch23_23_from_xcvr         : in  std_logic_vector(45 downto 0) := (others => 'X'); -- reconfig_from_xcvr
+			ch24_24_to_xcvr           : out std_logic_vector(69 downto 0);                    -- reconfig_to_xcvr
+			ch24_24_from_xcvr         : in  std_logic_vector(45 downto 0) := (others => 'X'); -- reconfig_from_xcvr
+			ch25_25_to_xcvr           : out std_logic_vector(69 downto 0);                    -- reconfig_to_xcvr
+			ch25_25_from_xcvr         : in  std_logic_vector(45 downto 0) := (others => 'X'); -- reconfig_from_xcvr
+			ch26_26_to_xcvr           : out std_logic_vector(69 downto 0);                    -- reconfig_to_xcvr
+			ch26_26_from_xcvr         : in  std_logic_vector(45 downto 0) := (others => 'X'); -- reconfig_from_xcvr
+			ch27_27_to_xcvr           : out std_logic_vector(69 downto 0);                    -- reconfig_to_xcvr
+			ch27_27_from_xcvr         : in  std_logic_vector(45 downto 0) := (others => 'X'); -- reconfig_from_xcvr
+			ch28_28_to_xcvr           : out std_logic_vector(69 downto 0);                    -- reconfig_to_xcvr
+			ch28_28_from_xcvr         : in  std_logic_vector(45 downto 0) := (others => 'X'); -- reconfig_from_xcvr
+			ch29_29_to_xcvr           : out std_logic_vector(69 downto 0);                    -- reconfig_to_xcvr
+			ch29_29_from_xcvr         : in  std_logic_vector(45 downto 0) := (others => 'X'); -- reconfig_from_xcvr
+			ch30_30_to_xcvr           : out std_logic_vector(69 downto 0);                    -- reconfig_to_xcvr
+			ch30_30_from_xcvr         : in  std_logic_vector(45 downto 0) := (others => 'X'); -- reconfig_from_xcvr
+			ch31_31_to_xcvr           : out std_logic_vector(69 downto 0);                    -- reconfig_to_xcvr
+			ch31_31_from_xcvr         : in  std_logic_vector(45 downto 0) := (others => 'X'); -- reconfig_from_xcvr
+			ch32_32_to_xcvr           : out std_logic_vector(69 downto 0);                    -- reconfig_to_xcvr
+			ch32_32_from_xcvr         : in  std_logic_vector(45 downto 0) := (others => 'X'); -- reconfig_from_xcvr
+			ch33_33_to_xcvr           : out std_logic_vector(69 downto 0);                    -- reconfig_to_xcvr
+			ch33_33_from_xcvr         : in  std_logic_vector(45 downto 0) := (others => 'X'); -- reconfig_from_xcvr
+			ch34_34_to_xcvr           : out std_logic_vector(69 downto 0);                    -- reconfig_to_xcvr
+			ch34_34_from_xcvr         : in  std_logic_vector(45 downto 0) := (others => 'X'); -- reconfig_from_xcvr
+			ch35_35_to_xcvr           : out std_logic_vector(69 downto 0);                    -- reconfig_to_xcvr
+			ch35_35_from_xcvr         : in  std_logic_vector(45 downto 0) := (others => 'X')  -- reconfig_from_xcvr
+		);
+	end component s5_reconfig_26ch;
+

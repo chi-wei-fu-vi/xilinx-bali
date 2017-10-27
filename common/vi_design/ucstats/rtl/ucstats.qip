@@ -1,0 +1,5 @@
+set_global_assignment -name SYNTHESIS_ONLY_QIP ON
+set_global_assignment -library "ucstats" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "../../../vi_lib/s5_alttemp_sense/s5_alttemp_sense.v"]
+set_global_assignment -library "ucstats" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "ucstats_wrap.sv"]
+set_global_assignment -library "ucstats" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "ip/s5_ram1w1r_1024x32b.v"]
+set_global_assignment -library "ucstats" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "auto/ucstats_regs.v"]

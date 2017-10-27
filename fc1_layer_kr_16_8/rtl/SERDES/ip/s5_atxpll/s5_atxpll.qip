@@ -1,0 +1,18 @@
+set_global_assignment -entity "s5_atxpll" -library "s5_atxpll" -name IP_TOOL_NAME "altera_xcvr_pll_sv"
+set_global_assignment -entity "s5_atxpll" -library "s5_atxpll" -name IP_TOOL_VERSION "13.0sp1"
+set_global_assignment -entity "s5_atxpll" -library "s5_atxpll" -name IP_TOOL_ENV "mwpim"
+set_global_assignment -library "s5_atxpll" -name MISC_FILE [file join $::quartus(qip_path) "s5_atxpll.cmp"]
+set_global_assignment -name SYNTHESIS_ONLY_QIP ON
+
+set_global_assignment -library "s5_atxpll" -name VERILOG_FILE [file join $::quartus(qip_path) "s5_atxpll.v"]
+set_global_assignment -library "s5_atxpll" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "s5_atxpll/altera_xcvr_functions.sv"]
+set_global_assignment -library "s5_atxpll" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "s5_atxpll/sv_xcvr_h.sv"]
+set_global_assignment -library "s5_atxpll" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "s5_atxpll/sv_xcvr_plls.sv"]
+set_global_assignment -library "s5_atxpll" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "s5_atxpll/sv_reconfig_bundle_to_xcvr.sv"]
+set_global_assignment -library "s5_atxpll" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "s5_atxpll/sv_xcvr_avmm_csr.sv"]
+set_global_assignment -library "s5_atxpll" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "s5_atxpll/alt_xcvr_resync.sv"]
+set_global_assignment -library "s5_atxpll" -name SOURCE_FILE [file join $::quartus(qip_path) "s5_atxpll/plain_files.txt"]
+
+set_global_assignment -entity "sv_xcvr_plls" -library "s5_atxpll" -name IP_TOOL_NAME "altera_xcvr_pll_sv"
+set_global_assignment -entity "sv_xcvr_plls" -library "s5_atxpll" -name IP_TOOL_VERSION "13.0"
+set_global_assignment -entity "sv_xcvr_plls" -library "s5_atxpll" -name IP_TOOL_ENV "mwpim"

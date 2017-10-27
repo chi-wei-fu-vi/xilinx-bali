@@ -1,0 +1,7 @@
+set_global_assignment -name SYNTHESIS_ONLY_QIP ON
+set_global_assignment -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "../../common/vi_lib/vi_sync_lib.sv"]
+set_global_assignment -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "../../common/vi_lib/vi_stratixv_crcblock.sv"]
+set_global_assignment -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "../rtl/ip/fpga_rev_rom/fpga_rev_rom.v"]
+set_global_assignment -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "../rtl/gbl_timer.sv"]
+set_global_assignment -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "../rtl/auto/chipregs.v"]
+set_global_assignment -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "../rtl/chipregs_wrap.sv"]
