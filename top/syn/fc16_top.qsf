@@ -456,13 +456,12 @@ set_global_assignment -name SDC_FILE ./fc16_top.sdc
 set_global_assignment -name SYSTEMVERILOG_FILE common/vi_lib/vi_lfsr.v
 set_global_assignment -name SYSTEMVERILOG_FILE common/vi_lib/vi_async_rst.v
 set_global_assignment -name SYSTEMVERILOG_FILE pcie_le/rtl/fc16_pcie_le.v
-set_global_assignment -name SYSTEMVERILOG_FILE ../../top/rtl/addr_mux.v
 set_global_assignment -name SYSTEMVERILOG_FILE ../../txmux/txmux.v
-set_global_assignment -name SYSTEMVERILOG_FILE ../../top/rtl/bist_addr_decoder.v
+set_global_assignment -name SYSTEMVERILOG_FILE ../../top/doc/bist_addr_decoder.v
 set_global_assignment -name SYSTEMVERILOG_FILE ../../top/rtl/fc16_top.sv
 set_global_assignment -name SYSTEMVERILOG_FILE ../../top/rtl/lpm_mux_32_1.v
-set_global_assignment -name SYSTEMVERILOG_FILE ../../top/rtl/top_addr_decoder.v
-set_global_assignment -name SYSTEMVERILOG_FILE ../../top/rtl/xx01_g_addr_decoder.v
+set_global_assignment -name SYSTEMVERILOG_FILE ../../top/doc/top_addr_decoder.v
+set_global_assignment -name SYSTEMVERILOG_FILE ../../top/doc/xx01_g_addr_decoder.v
 
 set_global_assignment -name SYSTEMVERILOG_FILE common/vi_lib/heartbeat_x4.v
 set_global_assignment -name QIP_FILE ../../common/vi_lib/s5_alttemp_sense/s5_alttemp_sense.qip
@@ -665,30 +664,5 @@ set_global_assignment -name QIP_FILE ../../fmac/rtl/lib/s5_sfifo_64x96b.qip
 set_global_assignment -name QIP_FILE ../../xbar/rtl/ip/s5_sfifo_4x42b.qip
 #set_global_assignment -name QIP_FILE ../../fc16clkrst/rtl/ip/s5_altclkmux_auto/s5_altclkmux_auto.qip
 
-set_global_assignment -name VERILOG_FILE ../doc/xx06_dplbuf_addr_decoder.v
-set_global_assignment -name VERILOG_FILE ../doc/xx05_dplbuf_addr_decoder.v
-set_global_assignment -name VERILOG_FILE ../doc/xx03_pcie_addr_decoder.v
-set_global_assignment -name VERILOG_FILE ../doc/xx02_g_addr_decoder.v
-set_global_assignment -name VERILOG_FILE ../doc/pcie_addr_decoder.v
-set_global_assignment -name VERILOG_FILE ../doc/link11_addr_decoder.v
-set_global_assignment -name VERILOG_FILE ../doc/link10_addr_decoder.v
-set_global_assignment -name VERILOG_FILE ../doc/link9_addr_decoder.v
-set_global_assignment -name VERILOG_FILE ../doc/link8_addr_decoder.v
-set_global_assignment -name VERILOG_FILE ../doc/link7_addr_decoder.v
-set_global_assignment -name VERILOG_FILE ../doc/link6_addr_decoder.v
-set_global_assignment -name VERILOG_FILE ../doc/link5_addr_decoder.v
-set_global_assignment -name VERILOG_FILE ../doc/link4_addr_decoder.v
-set_global_assignment -name VERILOG_FILE ../doc/link3_addr_decoder.v
-set_global_assignment -name VERILOG_FILE ../doc/link2_addr_decoder.v
-set_global_assignment -name VERILOG_FILE ../doc/link1_addr_decoder.v
-set_global_assignment -name VERILOG_FILE ../doc/link0_addr_decoder.v
-set_global_assignment -name VERILOG_FILE ../doc/global_addr_decoder.v
-set_global_assignment -name VERILOG_FILE ../doc/ch1_addr_decoder.v
-set_global_assignment -name VERILOG_FILE ../doc/ch0_addr_decoder.v -library top_sim
 set_global_assignment -name SDC_FILE fc16_top.sdc
-set_global_assignment -name SYSTEMVERILOG_FILE ../rtl/addr_mux.v
-set_global_assignment -name SYSTEMVERILOG_FILE ../rtl/bist_addr_decoder.v
 set_global_assignment -name SYSTEMVERILOG_FILE ../rtl/fc16_top.sv
-set_global_assignment -name SYSTEMVERILOG_FILE ../rtl/lpm_mux_32_1.v
-set_global_assignment -name SYSTEMVERILOG_FILE ../rtl/top_addr_decoder.v
-set_global_assignment -name SYSTEMVERILOG_FILE ../rtl/xx01_g_addr_decoder.v
