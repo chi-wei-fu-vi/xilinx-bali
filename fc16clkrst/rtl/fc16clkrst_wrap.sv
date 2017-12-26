@@ -214,32 +214,41 @@ assign oCLK_SER_PMA = iCLK_SERDES_TXCLK[0];
 //the core 212MHz (425 sourced) domain.  These 2 domains always have ppm
 //difference.
 
+/*
 s5_altclkctrl_auto altclkctrl_ser_212_inst
 (
 	.inclk   (clk_core_212),
 	.outclk  (oCLK_CORE_212)
 );
+*/
+assign oCLK_CORE_212 = clk_core_212;
 assign oCLK_SER_212 = oCLK_CORE_212;
 
+/*
 s5_altclkctrl_auto altclkctrl_100m_inst
 (
 	.inclk   (iCLK_FR_100M_PAD),
 	.outclk  (oCLK_100M_GLOBAL)
 );
-
-
+*/
+assign oCLK_100M_GLOBAL = iCLK_FR_100M_PAD;
+/*
 s5_altclkctrl_auto altclkctrl_pcie_inst
 (
 	.inclk   (iCLK_PCIE_CORECLKOUT_HIP),
 	.outclk  (oCLK_PCIE_GLOBAL)
 );
+*/
+assign oCLK_PCIE_GLOBAL = iCLK_PCIE_CORECLKOUT_HIP;
 
-
+/*
 s5_altclkctrl_auto altclkctrl_pcie_ref_inst
 (
 	.inclk   (iCLK_PCIE_REF_PAD),
 	.outclk  (oCLK_PCIE_REF_GLOBAL)
 );
+*/
+assign oCLK_PCIE_REF_GLOBAL = iCLK_PCIE_REF_PAD;
 
 ///////////////////////////////////////////////////////////////////////////////
 //
