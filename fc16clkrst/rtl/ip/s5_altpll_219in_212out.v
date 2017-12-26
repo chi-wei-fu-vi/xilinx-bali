@@ -13,13 +13,15 @@ module s5_altpll_219in_212out (
 		output wire  locked    //  locked.export
 	);
 
-	s5_altpll_219in_212out_0002 s5_altpll_219in_212out_inst (
-		.refclk   (refclk),   //  refclk.clk
-		.rst      (rst),      //   reset.reset
-		.outclk_0 (outclk_0), // outclk0.clk
-		.outclk_1 (outclk_1), // outclk1.clk
-		.locked   (locked)    //  locked.export
-	);
+
+s5_altpll_219in_212out_0002 5_altpll_219in_212out_inst (
+ . clk_in1              ( refclk                                             ), //  refclk.clk
+ . reset                ( rst                                                ), //   reset.reset
+ . clk_out2             ( outclk_0                                           ), // outclk0.clk
+ . clk_out1             ( outclk_1                                           ), // outclk1.clk
+ . locked               ( locked                                             )  
+);
+
 
 endmodule
 // Retrieval info: <?xml version="1.0"?>

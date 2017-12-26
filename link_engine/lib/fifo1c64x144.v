@@ -57,14 +57,17 @@ logic wrreq_mem_mux;
 ///////////////////////////////////////////////////////////////////////////////
 // Memory Instantiation
 ///////////////////////////////////////////////////////////////////////////////
-ram1r1w64x144 u_fifo_ram (
-    .q                  ( fifo_rd                   ),
-    .clock              ( clk                       ),
-    .rdaddress          ( fifo_ra_nxt               ),
-    .wraddress          ( fifo_wa_r                 ),
-    .data               ( data                      ),
-    .wren               ( wrreq_mem_mux             )
+
+ram1r1w64x144 _fifo_ram (
+ . doutb                ( fifo_rd                                            ), 
+ . clka                 ( clk                                                ), 
+ . clkb                 ( clk                                                ), 
+ . addrb                ( fifo_ra_nxt                                        ), 
+ . addra                ( fifo_wa_r                                          ), 
+ . dina                 ( data                                               ), 
+ . wea                  ( wrreq_mem_mux                                      )  
 );
+
 
 ///////////////////////////////////////////////////////////////////////////////
 // Controller Instantiation

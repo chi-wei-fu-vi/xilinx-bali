@@ -82,8 +82,7 @@ module rom #(
 				.wren_a (1'b0),
 				.wren_b (1'b0));
 	defparam
-		altsyncram_component.init_file = MIF_FILE;
-	defparam
+		altsyncram_component.init_file = MIF_FILE,
 		altsyncram_component.address_aclr_a = "NONE",
 		altsyncram_component.clock_enable_input_a = "BYPASS",
 		altsyncram_component.clock_enable_output_a = "BYPASS",

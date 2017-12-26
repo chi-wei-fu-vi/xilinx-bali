@@ -119,23 +119,32 @@ module xbar_efifo
    // read threshold mark.  In the case of POR state primitives, read logic replicates POR
    // state primitives.
 
-   s5_afifo_1024x42b s5_afifo_1024x42b_inst
+
+wire                  wr_rst_busy;
+wire                  rd_rst_busy;
+
+assign rdfull = efifo_rd_usedw[9:0] == ((1<<$bit(efifo_rd_usedw[9:0]))-1);
+
+
+assign wrempty = efifo_wr_usedw[9:0] == 0;
+
+s5_afifo_1024x42b 5_afifo_1024x42b_inst
      (// Outputs
-      .q                      (efifo_rd_data[41:0]),
-      .rdempty                (efifo_rd_empty),
-      .rdfull                 (efifo_rd_full),
-      .rdusedw                (efifo_rd_usedw[9:0]),
-      .wrempty                (efifo_wr_empty),
-      .wrfull                 (efifo_wr_full),
-      .wrusedw                (efifo_wr_usedw[9:0]),
-      // Inputs
-      .aclr                   (~rx_rst_n),
-      .data                   (drop_fifo_rd_data[41:0]),
-      .rdclk                  (tx_clk),
-      .rdreq                  (efifo_rd_en),
-      .wrclk                  (rx_clk),
-      .wrreq                  (efifo_wr_en)
-      );
+ . wr_rst_busy          ( wr_rst_busy                                        ), // output
+ . rd_rst_busy          ( rd_rst_busy                                        ), // output
+ . dout                 ( efifo_rd_data[41:0]                                ), 
+ . empty                ( efifo_rd_empty                                     ), 
+ . rd_data_count        ( efifo_rd_usedw[9:0]                                ), 
+ . full                 ( efifo_wr_full                                      ), 
+ . wr_data_count        ( efifo_wr_usedw[9:0]                                ), // Inputs
+ . rst                  ( ~rx_rst_n                                          ), 
+ . din                  ( drop_fifo_rd_data[41:0]                            ), 
+ . rd_clk               ( tx_clk                                             ), 
+ . rd_en                ( efifo_rd_en                                        ), 
+ . wr_clk               ( rx_clk                                             ), 
+ . wr_en                ( efifo_wr_en                                        )  
+);
+
 
    // write enable
    assign efifo_wr_en         = ~drop_fifo_empty & ~drop_idle;
@@ -189,17 +198,33 @@ module xbar_efifo
 
    // This FIFO buffers data from the LPM_MUX before writing into the EFIFO.  It's a FWFT FIFO.
    
-   s5_sfifo_4x42b s5_sfifo_4x42b_inst
+
+wire                  almost_full;
+wire  [3:0]           data_count;
+wire                  almost_empty;
+wire                  underflow;
+wire                  wr_rst_busy;
+wire                  rd_rst_busy;
+wire                  overflow;
+s5_sfifo_4x42b 5_sfifo_4x42b_inst
      (// Outputs
-      .empty                            (drop_fifo_empty),
-      .full                             (drop_fifo_full),
-      .q                                (drop_fifo_rd_data[41:0]),
-      // Inputs
-      .aclr                             (~rx_rst_n),
-      .clock                            (rx_clk),
-      .data                             ({rx_type[1:0],rx_data_in[39:0]}),
-      .rdreq                            (~drop_fifo_empty),
-      .wrreq                            (rx_data_val & drop_fifo_wr_one_shot));
+ . almost_full          ( almost_full                                        ), // output
+ . data_count           ( data_count                                         ), // output [3:0]
+ . almost_empty         ( almost_empty                                       ), // output
+ . underflow            ( underflow                                          ), // output
+ . wr_rst_busy          ( wr_rst_busy                                        ), // output
+ . rd_rst_busy          ( rd_rst_busy                                        ), // output
+ . overflow             ( overflow                                           ), // output
+ . din                  ( {rx_type[1:0],rx_data_in[39:0]}                    ), 
+ . full                 ( drop_fifo_full                                     ), 
+ . dout                 ( drop_fifo_rd_data[41:0]                            ), // Inputs
+ . clk                  ( rx_clk                                             ), 
+ . wr_en                ( rx_data_val & drop_fifo_wr_one_shot                ), 
+ . rd_en                ( ~drop_fifo_empty                                   ), 
+ . rst                  ( ~rx_rst_n                                          ), 
+ . empty                ( drop_fifo_empty                                    )  
+);
+
 
    assign idle_in_drop_fifo = (drop_fifo_rd_data[41:40]==IDLE);
    assign sof_in_drop_fifo  = (drop_fifo_rd_data[41:40]==SOF);

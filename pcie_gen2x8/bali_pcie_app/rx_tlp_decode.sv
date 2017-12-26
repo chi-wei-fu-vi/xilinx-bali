@@ -189,33 +189,61 @@ assign rx_st_in.bar   = iRX_ST_BAR;
 // The following fifos are used to throttle the arrival of the TLP packets.
 
 // FIFO - write the RX AVALON CONTROL SIGNALS
-tlp_decode_sc_fifo_48x8 sc_fifo_48x8_inst
+
+wire                  almost_full;
+wire                  almost_empty;
+wire                  underflow;
+wire                  wr_rst_busy;
+wire                  rd_rst_busy;
+wire                  overflow;
+tlp_decode_sc_fifo_48x8 c_fifo_48x8_inst
 (
-        .aclr       (iRST),
-        .clock      (iCLK),
-        .data       (rx_st_in),
-        .rdreq      (fifo_rd),
-        .wrreq      (iRX_ST_VALID),
-        .empty      (fifo_empty),
-        .full       (),
-        .q          (rx_st),
-        .usedw      ()
+ . almost_full          ( almost_full                                        ), // output
+ . almost_empty         ( almost_empty                                       ), // output
+ . underflow            ( underflow                                          ), // output
+ . wr_rst_busy          ( wr_rst_busy                                        ), // output
+ . rd_rst_busy          ( rd_rst_busy                                        ), // output
+ . overflow             ( overflow                                           ), // output
+ . din                  ( rx_st_in                                           ), 
+ . full                 (                                                    ), 
+ . dout                 ( rx_st                                              ), 
+ . data_count           (                                                    ), // fixme 3 vs 4
+ . clk                  ( iCLK                                               ), 
+ . wr_en                ( iRX_ST_VALID                                       ), 
+ . rd_en                ( fifo_rd                                            ), 
+ . rst                  ( iRST                                               ), 
+ . empty                ( fifo_empty                                         )  
 );
+
 
 
 // FIFO - write the RX AVALON DATA
-tlp_decode_sc_fifo_256x8 sc_fifo_256x8_inst
+
+wire                  almost_full;
+wire                  almost_empty;
+wire                  underflow;
+wire                  wr_rst_busy;
+wire                  rd_rst_busy;
+wire                  overflow;
+tlp_decode_sc_fifo_256x8 c_fifo_256x8_inst
 (
-        .aclr       (iRST),
-        .clock      (iCLK),
-        .data       (iRX_ST_DATA),
-        .rdreq      (fifo_rd),
-        .wrreq      (iRX_ST_VALID),
-        .empty      (),
-        .full       (),
-        .q          (rx_st_data),
-        .usedw      ()
+ . almost_full          ( almost_full                                        ), // output
+ . almost_empty         ( almost_empty                                       ), // output
+ . underflow            ( underflow                                          ), // output
+ . wr_rst_busy          ( wr_rst_busy                                        ), // output
+ . rd_rst_busy          ( rd_rst_busy                                        ), // output
+ . overflow             ( overflow                                           ), // output
+ . din                  ( iRX_ST_DATA                                        ), 
+ . full                 (                                                    ), 
+ . dout                 ( rx_st_data                                         ), 
+ . data_count           (                                                    ), 
+ . clk                  ( iCLK                                               ), 
+ . wr_en                ( iRX_ST_VALID                                       ), 
+ . rd_en                ( fifo_rd                                            ), 
+ . rst                  ( iRST                                               ), 
+ . empty                (                                                    )  
 );
+
 end : gen_no_bali
 
 // BALI mode : i.e. PCIe Gen3 and extra pipe.
@@ -252,33 +280,61 @@ always @(posedge iCLK or posedge iRST)
 // The following fifos are used to throttle the arrival of the TLP packets.
 
 // FIFO - write the RX AVALON CONTROL SIGNALS
-tlp_decode_sc_fifo_48x8 sc_fifo_48x8_inst
+
+wire                  almost_full;
+wire                  almost_empty;
+wire                  underflow;
+wire                  wr_rst_busy;
+wire                  rd_rst_busy;
+wire                  overflow;
+tlp_decode_sc_fifo_48x8 c_fifo_48x8_inst
 (
-        .aclr       (iRST),
-        .clock      (iCLK),
-        .data       (rx_st_in),
-        .rdreq      (fifo_rd),
-        .wrreq      (rx_st_in.valid),
-        .empty      (fifo_empty),
-        .full       (),
-        .q          (rx_st),
-        .usedw      ()
+ . almost_full          ( almost_full                                        ), // output
+ . almost_empty         ( almost_empty                                       ), // output
+ . underflow            ( underflow                                          ), // output
+ . wr_rst_busy          ( wr_rst_busy                                        ), // output
+ . rd_rst_busy          ( rd_rst_busy                                        ), // output
+ . overflow             ( overflow                                           ), // output
+ . din                  ( rx_st_in                                           ), 
+ . full                 (                                                    ), 
+ . dout                 ( rx_st                                              ), 
+ . data_count           (                                                    ), // fixme 3 vs 4
+ . clk                  ( iCLK                                               ), 
+ . wr_en                ( rx_st_in.valid                                     ), 
+ . rd_en                ( fifo_rd                                            ), 
+ . rst                  ( iRST                                               ), 
+ . empty                ( fifo_empty                                         )  
 );
+
 
 
 // FIFO - write the RX AVALON DATA
-tlp_decode_sc_fifo_256x8 sc_fifo_256x8_inst
+
+wire                  almost_full;
+wire                  almost_empty;
+wire                  underflow;
+wire                  wr_rst_busy;
+wire                  rd_rst_busy;
+wire                  overflow;
+tlp_decode_sc_fifo_256x8 c_fifo_256x8_inst
 (
-        .aclr       (iRST),
-        .clock      (iCLK),
-        .data       (irx_st_data),
-        .rdreq      (fifo_rd),
-        .wrreq      (rx_st_in.valid),
-        .empty      (),
-        .full       (),
-        .q          (rx_st_data),
-        .usedw      ()
+ . almost_full          ( almost_full                                        ), // output
+ . almost_empty         ( almost_empty                                       ), // output
+ . underflow            ( underflow                                          ), // output
+ . wr_rst_busy          ( wr_rst_busy                                        ), // output
+ . rd_rst_busy          ( rd_rst_busy                                        ), // output
+ . overflow             ( overflow                                           ), // output
+ . din                  ( irx_st_data                                        ), 
+ . full                 (                                                    ), 
+ . dout                 ( rx_st_data                                         ), 
+ . data_count           (                                                    ), 
+ . clk                  ( iCLK                                               ), 
+ . wr_en                ( rx_st_in.valid                                     ), 
+ . rd_en                ( fifo_rd                                            ), 
+ . rst                  ( iRST                                               ), 
+ . empty                (                                                    )  
 );
+
 
 end : gen_bali
 

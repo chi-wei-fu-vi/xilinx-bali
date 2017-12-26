@@ -545,27 +545,33 @@ endgenerate
 
 logic [2:0][15:0]                    rom_readdata;
 
-  rom #(
+
+rom #(
           . MIF_FILE                                           ( "rom4g.mif"                                        )
   ) rom_inst2 (
-          . address                                            ( reconfig_mif_address[8:1]                          ),    // input [7:0]
-          . clock                                              ( mgmt_clk_clk                                       ),    // input
-          . q                                                  ( rom_readdata[ 0]                                   )     // output [15:0]
-  );
-  rom #(
+ . a                    ( reconfig_mif_address[8:1]                          ), // input [7:0]
+ . clk                  ( mgmt_clk_clk                                       ), // input
+ . qspo                 ( rom_readdata[ 0]                                   )  
+);
+
+
+rom #(
           . MIF_FILE                                           ( "rom8g.mif"                                        )
   ) rom_inst1 (
-          . address                                            ( reconfig_mif_address[8:1]                          ),    // input [7:0]
-          . clock                                              ( mgmt_clk_clk                                       ),    // input
-          . q                                                  ( rom_readdata[ 1]                                   )     // output [15:0]
-  );
-  rom #(
+ . a                    ( reconfig_mif_address[8:1]                          ), // input [7:0]
+ . clk                  ( mgmt_clk_clk                                       ), // input
+ . qspo                 ( rom_readdata[ 1]                                   )  
+);
+
+
+rom #(
           . MIF_FILE                                           ( "rom16g.mif"                                       )
   ) rom_inst0 (
-          . address                                            ( reconfig_mif_address[8:1]                          ),    // input [7:0]
-          . clock                                              ( mgmt_clk_clk                                       ),    // input
-          . q                                                  ( rom_readdata[ 2]                                   )     // output [15:0]
-  );
+ . a                    ( reconfig_mif_address[8:1]                          ), // input [7:0]
+ . clk                  ( mgmt_clk_clk                                       ), // input
+ . qspo                 ( rom_readdata[ 2]                                   )  
+);
+
 
 logic reconfig_mif_read_d;
 always @(posedge mgmt_clk_clk) 

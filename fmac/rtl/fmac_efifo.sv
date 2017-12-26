@@ -290,22 +290,32 @@ import fmac_pkg::*;
    // ------------
    //
    
-   s5_afifo_32x128b efifo_32x128b 
+
+wire                  wr_rst_busy;
+wire                  rd_rst_busy;
+
+assign rdfull = reg_efifo_rd_used[4:0] == ((1<<$bit(reg_efifo_rd_used[4:0]))-1);
+
+
+assign wrempty = reg_efifo_wr_used[4:0] == 0;
+
+s5_afifo_32x128b fifo_32x128b 
      (// Outputs
-      .q				({rd_dec_intf_1,rd_dec_intf_0,rd_rx_data[63:0]}),
-      .rdempty				(reg_efifo_rd_empty),
-      .rdfull				(reg_efifo_rd_full),
-      .rdusedw				(reg_efifo_rd_used[4:0]),
-      .wrempty				(reg_efifo_wr_empty),
-      .wrfull				(reg_efifo_wr_full),
-      .wrusedw				(reg_efifo_wr_used[4:0]),
-      // Inputs
-      .aclr				(~rst_n | ~rx_rst_n | ~linkup ),
-      .data				({wr_dec_intf_1,wr_dec_intf_0,wr_rx_data[63:0]}),
-      .rdclk				(clk),
-      .rdreq				(efifo_rdreq),
-      .wrclk				(rx_clk),
-      .wrreq				(efifo_wrreq));
+ . wr_rst_busy          ( wr_rst_busy                                        ), // output
+ . rd_rst_busy          ( rd_rst_busy                                        ), // output
+ . dout                 ( {rd_dec_intf_1,rd_dec_intf_0,rd_rx_data[63:0]}     ), 
+ . empty                ( reg_efifo_rd_empty                                 ), 
+ . rd_data_count        ( reg_efifo_rd_used[4:0]                             ), 
+ . full                 ( reg_efifo_wr_full                                  ), 
+ . wr_data_count        ( reg_efifo_wr_used[4:0]                             ), // Inputs
+ . rst                  ( ~rst_n | ~rx_rst_n | ~linkup                       ), 
+ . din                  ( {wr_dec_intf_1,wr_dec_intf_0,wr_rx_data[63:0]}     ), 
+ . rd_clk               ( clk                                                ), 
+ . rd_en                ( efifo_rdreq                                        ), 
+ . wr_clk               ( rx_clk                                             ), 
+ . wr_en                ( efifo_wrreq                                        )  
+);
+
 
    // --------------------
    // Clock Correction Word

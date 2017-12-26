@@ -346,19 +346,32 @@ import fmac_pkg::*;
    //-----------------------
    logic rcv_fifo_empty, rcv_fifo_full;
 
-   s5_sfifo_16x72b rcv_fifo
+
+wire                  almost_full;
+wire                  almost_empty;
+wire                  underflow;
+wire                  wr_rst_busy;
+wire                  rd_rst_busy;
+wire                  overflow;
+s5_sfifo_16x72b cv_fifo
      (// Outputs
-      .empty                            (rcv_fifo_empty),
-      .full                             (rcv_fifo_full),
-      .q                                ({unused[3:0],rcv_type_fp0[1][1:0],rcv_type_fp0[0][1:0],rcv_data_fp0[63:0]}),
-      .usedw                            (reg_rcv_fifo_usedw[3:0]),
-      // Inputs
-      .clock                            (clk),
-      .data                             ({4'h0,rx_type_a[1][1:0],rx_type_a[0][1:0],rx_data_a[63:0]}),
-      .rdreq                            (rcv_fifo_rd),
-      .aclr                             (~rst_n),
-      .wrreq                            (in_frame)
-      /*AUTOINST*/);
+ . almost_full          ( almost_full                                        ), // output
+ . almost_empty         ( almost_empty                                       ), // output
+ . underflow            ( underflow                                          ), // output
+ . wr_rst_busy          ( wr_rst_busy                                        ), // output
+ . rd_rst_busy          ( rd_rst_busy                                        ), // output
+ . overflow             ( overflow                                           ), // output
+ . din                  ( {4'h0,rx_type_a[1][1:0],rx_type_a[0][1:0],rx_data_a[63:0]} ), 
+ . full                 ( rcv_fifo_full                                      ), 
+ . dout                 ( {unused[3:0],rcv_type_fp0[1][1:0],rcv_type_fp0[0][1:0],rcv_data_fp0[63:0]} ), 
+ . data_count           ( reg_rcv_fifo_usedw[3:0]                            ), // Inputs
+ . clk                  ( clk                                                ), 
+ . wr_en                ( in_frame                                           ), 
+ . rd_en                ( rcv_fifo_rd                                        ), 
+ . rst                  ( ~rst_n                                             ), 
+ . empty                ( rcv_fifo_empty                                     )  
+);
+
 
 
    assign rcv_fifo_rd = ~rcv_fifo_empty;
@@ -684,18 +697,32 @@ import fmac_pkg::*;
 		 reg_fmac_fifo_usedw <= fmac_fifo_usedw;
 	 end
 
-   s5_sfifo_64x96b fmac_fifo
+
+wire                  almost_full;
+wire                  almost_empty;
+wire                  underflow;
+wire                  wr_rst_busy;
+wire                  rd_rst_busy;
+wire                  overflow;
+s5_sfifo_64x96b mac_fifo
      (// Outputs
-      .empty                            (fmac_fifo_empty),
-      .full                             (fmac_fifo_full),
-      .q                                (fmac_fifo_rd_data[95:0]),
-      .usedw                            (fmac_fifo_usedw[5:0]),
-      // Inputs
-      .clock                            (clk),
-      .data                             (fmac_fifo_wr_data[95:0]),
-      .rdreq                            (fmac_fifo_rd),
-      .aclr                             (~rst_n),
-      .wrreq                            (fmac_fifo_wr_fp2));
+ . almost_full          ( almost_full                                        ), // output
+ . almost_empty         ( almost_empty                                       ), // output
+ . underflow            ( underflow                                          ), // output
+ . wr_rst_busy          ( wr_rst_busy                                        ), // output
+ . rd_rst_busy          ( rd_rst_busy                                        ), // output
+ . overflow             ( overflow                                           ), // output
+ . din                  ( fmac_fifo_wr_data[95:0]                            ), 
+ . full                 ( fmac_fifo_full                                     ), 
+ . dout                 ( fmac_fifo_rd_data[95:0]                            ), 
+ . data_count           ( fmac_fifo_usedw[5:0]                               ), // Inputs
+ . clk                  ( clk                                                ), 
+ . wr_en                ( fmac_fifo_wr_fp2                                   ), 
+ . rd_en                ( fmac_fifo_rd                                       ), 
+ . rst                  ( ~rst_n                                             ), 
+ . empty                ( fmac_fifo_empty                                    )  
+);
+
 
    /* must write a cycle when eof is inserted due to error condition */
    assign fmac_fifo_wr_fp2 = in_frame_fp2 & valid_fp2 || insert_eof_fp2;

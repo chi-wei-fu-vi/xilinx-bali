@@ -271,33 +271,61 @@ end
 // FIFOs
 //
 //////////////////////////////////////////////////////////////////////////////
-tx_app2hip_sc_fifo_256x512 data_sc_fifo_256x512_inst
+
+wire                  almost_full;
+wire                  almost_empty;
+wire                  underflow;
+wire                  wr_rst_busy;
+wire                  rd_rst_busy;
+wire                  overflow;
+tx_app2hip_sc_fifo_256x512 ata_sc_fifo_256x512_inst
 (
-        .aclr      (iRST),
-        .clock     (iCLK),
-        .data      (iTX_ST_DATA[gnt_enc]),
-        .rdreq     (fifo_rd_en),
-        .wrreq     (fifo_wr_en),
-        .empty     (fifo_empty),
-        .full      (fifo_full),
-        .q         (fifo_data),
-        .usedw     (fifo_usedw)
+ . almost_full          ( almost_full                                        ), // output
+ . almost_empty         ( almost_empty                                       ), // output
+ . underflow            ( underflow                                          ), // output
+ . wr_rst_busy          ( wr_rst_busy                                        ), // output
+ . rd_rst_busy          ( rd_rst_busy                                        ), // output
+ . overflow             ( overflow                                           ), // output
+ . din                  ( iTX_ST_DATA[gnt_enc]                               ), 
+ . full                 ( fifo_full                                          ), 
+ . dout                 ( fifo_data                                          ), 
+ . data_count           ( fifo_usedw                                         ), 
+ . clk                  ( iCLK                                               ), 
+ . wr_en                ( fifo_wr_en                                         ), 
+ . rd_en                ( fifo_rd_en                                         ), 
+ . rst                  ( iRST                                               ), 
+ . empty                ( fifo_empty                                         )  
 );
+
 
 assign dma_4kb_done = iBLK_DONE_PULSE & iTX_ST[gnt_enc].valid;
 
-tx_app2hip_sc_fifo_48x512 ctrl_sc_fifo_48x512_inst
+
+wire                  almost_full;
+wire                  almost_empty;
+wire                  underflow;
+wire                  wr_rst_busy;
+wire                  rd_rst_busy;
+wire                  overflow;
+tx_app2hip_sc_fifo_48x512 trl_sc_fifo_48x512_inst
 (
-         .aclr     (iRST),
-         .clock    (iCLK),
-         .data     ({dma_4kb_done, iLINK_NUMBER, iTX_ST[gnt_enc]}),
-         .rdreq    (fifo_rd_en),
-         .wrreq    (fifo_wr_en),
-         .empty    (),
-         .full     (),
-         .q        ({hip_4kb_done, hip_link_number, tx_st_ctrl}),
-         .usedw    ()
+ . almost_full          ( almost_full                                        ), // output
+ . almost_empty         ( almost_empty                                       ), // output
+ . underflow            ( underflow                                          ), // output
+ . wr_rst_busy          ( wr_rst_busy                                        ), // output
+ . rd_rst_busy          ( rd_rst_busy                                        ), // output
+ . overflow             ( overflow                                           ), // output
+ . din                  ( {dma_4kb_done, iLINK_NUMBER, iTX_ST[gnt_enc]}      ), 
+ . full                 (                                                    ), 
+ . dout                 ( {hip_4kb_done, hip_link_number, tx_st_ctrl}        ), 
+ . data_count           (                                                    ), 
+ . clk                  ( iCLK                                               ), 
+ . wr_en                ( fifo_wr_en                                         ), 
+ . rd_en                ( fifo_rd_en                                         ), 
+ . rst                  ( iRST                                               ), 
+ . empty                (                                                    )  
 );
+
 
 //////////////////////////////////////////////////////////////////////////////
 //

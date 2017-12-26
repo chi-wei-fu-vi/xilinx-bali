@@ -155,17 +155,31 @@ end
 	 */
 wire    [64:0] t_blk;
 
-corr_buff corr_buff_inst (
-	.clock                 (CLK),
-	.data  (T_BLK),
-	.rdreq (rd_en_t_blk),
-	.sclr  (!FEC_LOCK),
-	.wrreq (wr_en_t_blk),
-	.empty (),
-	.full  (),
-	.q     (t_blk),
-	.usedw ()
+
+wire                  almost_full;
+wire                  almost_empty;
+wire                  underflow;
+wire                  wr_rst_busy;
+wire                  rd_rst_busy;
+wire                  overflow;
+corr_buff orr_buff_inst (
+ . almost_full          ( almost_full                                        ), // output
+ . almost_empty         ( almost_empty                                       ), // output
+ . underflow            ( underflow                                          ), // output
+ . wr_rst_busy          ( wr_rst_busy                                        ), // output
+ . rd_rst_busy          ( rd_rst_busy                                        ), // output
+ . overflow             ( overflow                                           ), // output
+ . din                  ( T_BLK                                              ), 
+ . full                 (                                                    ), 
+ . dout                 ( t_blk                                              ), 
+ . data_count           (                                                    ), 
+ . clk                  ( CLK                                                ), 
+ . wr_en                ( wr_en_t_blk                                        ), 
+ . rd_en                ( rd_en_t_blk                                        ), 
+ . rst                  ( !FEC_LOCK                                          ), 
+ . empty                (                                                    )  
 );
+
 
 /* C_BLK output
 	 * Correction happens here...

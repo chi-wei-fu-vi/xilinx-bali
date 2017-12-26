@@ -96,16 +96,28 @@ module xbar_wrap #(
   logic                                       bist1_empty, bist1_rd_en, bist1_val_r, bist1_val_rr;
 
 /*synchronize bist data from BIST clock to PMA clock*/
-s5_afifo_16_40b bist0_sync (
-  .aclr(~rst_txbist_n),
-  .data(txbist32b_data0),
-  .rdclk(tx_clk),
-  .rdreq(bist0_rd_en),
-  .wrclk(clk_txbist),
-  .wrreq(txbist32b_data_val0),
-  .q(txbist32b_data0_sync),
-  .rdempty(bist0_empty)
+
+wire                  wr_rst_busy;
+wire                  full;
+wire  [3:0]           rd_data_count;
+wire  [3:0]           wr_data_count;
+wire                  rd_rst_busy;
+s5_afifo_16_40b ist0_sync (
+ . wr_rst_busy          ( wr_rst_busy                                        ), // output
+ . full                 ( full                                               ), // output
+ . rd_data_count        ( rd_data_count                                      ), // output [3:0]
+ . wr_data_count        ( wr_data_count                                      ), // output [3:0]
+ . rd_rst_busy          ( rd_rst_busy                                        ), // output
+ . rst                  ( ~rst_txbist_n                                      ), 
+ . din                  ( txbist32b_data0                                    ), 
+ . rd_clk               ( tx_clk                                             ), 
+ . rd_en                ( bist0_rd_en                                        ), 
+ . wr_clk               ( clk_txbist                                         ), 
+ . wr_en                ( txbist32b_data_val0                                ), 
+ . dout                 ( txbist32b_data0_sync                               ), 
+ . empty                ( bist0_empty                                        )  
 );
+
 
 assign bist0_rd_en = !bist0_empty;
 
@@ -124,16 +136,28 @@ always @ (posedge clk_txbist or negedge rst_txbist_n)
 	end
 
 
-s5_afifo_16_40b bist1_sync (
-  .aclr(~rst_txbist_n),
-  .data(txbist32b_data1),
-  .rdclk(tx_clk),
-  .rdreq(bist1_rd_en),
-  .wrclk(clk_txbist),
-  .wrreq(txbist32b_data_val1),
-  .q(txbist32b_data1_sync),
-  .rdempty(bist1_empty)
+
+wire                  wr_rst_busy;
+wire                  full;
+wire  [3:0]           rd_data_count;
+wire  [3:0]           wr_data_count;
+wire                  rd_rst_busy;
+s5_afifo_16_40b ist1_sync (
+ . wr_rst_busy          ( wr_rst_busy                                        ), // output
+ . full                 ( full                                               ), // output
+ . rd_data_count        ( rd_data_count                                      ), // output [3:0]
+ . wr_data_count        ( wr_data_count                                      ), // output [3:0]
+ . rd_rst_busy          ( rd_rst_busy                                        ), // output
+ . rst                  ( ~rst_txbist_n                                      ), 
+ . din                  ( txbist32b_data1                                    ), 
+ . rd_clk               ( tx_clk                                             ), 
+ . rd_en                ( bist1_rd_en                                        ), 
+ . wr_clk               ( clk_txbist                                         ), 
+ . wr_en                ( txbist32b_data_val1                                ), 
+ . dout                 ( txbist32b_data1_sync                               ), 
+ . empty                ( bist1_empty                                        )  
 );
+
 
 assign bist1_rd_en = !bist1_empty;
 

@@ -231,12 +231,21 @@ endgenerate
 
 
 //use a ROM to store revision (see fpga_rev_rom.mif)
+
 fpga_rev_rom  fpga_rev_rom_inst
+
 (
-   .address (5'd0),
-   .clock   (iCLK_100M),
-   .q       (fpga_rev)
+
+   .a       (5'd0),
+
+   .clk     (iCLK_100M),
+
+   .qspo    (fpga_rev)
+
 );  
+
+
+
 
 ///////////////////////////////////////////////////////////////////////////////
 //
@@ -426,6 +435,10 @@ always_ff @( posedge iCLK_PCIE_REF or negedge iRST_PCIE_REF_n )
 
 // CRC Error
 
+assign crc_error_event = 0;
+assign crc_error_emr[67:0] = 0;
+assign ioCRC_ERROR = 0;
+/*
 vi_stratixv_crcblock vi_stratixv_crcblock
   (// Outputs
    .crc_error_event			(crc_error_event),
@@ -436,6 +449,7 @@ vi_stratixv_crcblock vi_stratixv_crcblock
    .clk					(iCLK_FC_CORE),
    .rst_fr_n				(iRST_100M_n),
    .rst_n				(iRST_FC_CORE_n));
+*/
 
 endmodule
 

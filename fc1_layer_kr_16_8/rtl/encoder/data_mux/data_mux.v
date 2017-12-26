@@ -219,17 +219,7 @@ logic [63:0] mux_dat;
 logic [1:0]  mux_sh;
 logic        mux_val;
 
-alt_fifo_sync_66_66 
-alt_fifo_sync_66_66_inst(
-  .clock(CLK219),
-  .data({rx_sh_r2, rx_dat_r2}),
-  .rdreq(sync_rd_en),
-  .wrreq(rx_val_r2),
-  .empty(sync_empty),
-  .full(),
-  .q({mux_sh, mux_dat}),
-  .usedw(sync_usewd)
-);
+
 
 always @(posedge CLK219)
   if (RST219 || sync_empty)

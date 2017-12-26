@@ -401,27 +401,41 @@ module ucstats_wrap
    // the current UC write bank is promoted for reads by the link engine.  While either agent is
    // performing reads or writes, the bank is locked and may not be switched.
 
-   s5_ram1w1r_1024x32b stats_ram0
+
+wire                  rsta_busy;
+wire                  rstb_busy;
+s5_ram1w1r_1024x32b tats_ram0
      (// Outputs
-      .q                                (stats_ram0_rd_data[31:0]),
-      // Inputs
-      .aclr                             (~rst_n),
-      .clock                            (clk),
-      .data                             (uc_data[31:0]),
-      .rdaddress                        (stats_ram0_rd_addr[9:0]),
-      .wraddress                        (uc_addr[9:0]),
-      .wren                             (stats_ram0_wr_en));
+ . rsta_busy            ( rsta_busy                                          ), // output
+ . rstb_busy            ( rstb_busy                                          ), // output
+ . doutb                ( stats_ram0_rd_data[31:0]                           ), // Inputs
+ . rstb                 ( ~rst_n                                             ), 
+ . clka                 ( clk                                                ), 
+ . clkb                 ( clk                                                ), 
+ . dina                 ( uc_data[31:0]                                      ), 
+ . addrb                ( stats_ram0_rd_addr[9:0]                            ), 
+ . addra                ( uc_addr[9:0]                                       ), 
+ . wea                  ( stats_ram0_wr_en                                   )  
+);
+
  
-   s5_ram1w1r_1024x32b stats_ram1
+
+wire                  rsta_busy;
+wire                  rstb_busy;
+s5_ram1w1r_1024x32b tats_ram1
      (// Outputs
-      .q                                (stats_ram1_rd_data[31:0]),
-      // Inputs
-      .aclr                             (~rst_n),
-      .clock                            (clk),
-      .data                             (uc_data[31:0]),
-      .rdaddress                        (stats_ram1_rd_addr[9:0]),
-      .wraddress                        (uc_addr[9:0]),
-      .wren                             (stats_ram1_wr_en));
+ . rsta_busy            ( rsta_busy                                          ), // output
+ . rstb_busy            ( rstb_busy                                          ), // output
+ . doutb                ( stats_ram1_rd_data[31:0]                           ), // Inputs
+ . rstb                 ( ~rst_n                                             ), 
+ . clka                 ( clk                                                ), 
+ . clkb                 ( clk                                                ), 
+ . dina                 ( uc_data[31:0]                                      ), 
+ . addrb                ( stats_ram1_rd_addr[9:0]                            ), 
+ . addra                ( uc_addr[9:0]                                       ), 
+ . wea                  ( stats_ram1_wr_en                                   )  
+);
+
 
 
    assign stats_ram0_wr_en = sm_uc_wr_ram & ~uc_wrbank_sel;
@@ -508,16 +522,23 @@ module ucstats_wrap
    // ----------------------
    // UC writes on shadowed and available for PCIE based register access
    
-   s5_ram1w1r_1024x32b stats_ram_regs
+
+wire                  rsta_busy;
+wire                  rstb_busy;
+s5_ram1w1r_1024x32b tats_ram_regs
      (// Outputs
-      .q                                (iUCSTATS_MM_RD_DATA[31:0]), 
-      // Inputs
-      .aclr                             (~rst_n),
-      .clock                            (clk),
-      .data                             (uc_data[31:0]),
-      .rdaddress                        (oLE_UCSTATS_MM_ADDR[9:0]),
-      .wraddress                        (uc_addr[9:0]),
-      .wren                             (sm_uc_wr_ram));
+ . rsta_busy            ( rsta_busy                                          ), // output
+ . rstb_busy            ( rstb_busy                                          ), // output
+ . doutb                ( iUCSTATS_MM_RD_DATA[31:0]                          ), // Inputs
+ . rstb                 ( ~rst_n                                             ), 
+ . clka                 ( clk                                                ), 
+ . clkb                 ( clk                                                ), 
+ . dina                 ( uc_data[31:0]                                      ), 
+ . addrb                ( oLE_UCSTATS_MM_ADDR[9:0]                           ), 
+ . addra                ( uc_addr[9:0]                                       ), 
+ . wea                  ( sm_uc_wr_ram                                       )  
+);
+
 
 //   // Link engine expects two cycle delay for data
 //   always @(posedge clk or negedge reset_n)

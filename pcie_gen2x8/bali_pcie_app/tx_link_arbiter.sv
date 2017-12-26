@@ -276,34 +276,60 @@ vi_onehot_to_bin #(
 
 // show-ahead. rdreq is actually an ack.
 //tx_link_arbiter_sc_fifo_512x256 tx_link_arbiter_sc_fifo_512x256_inst
-tx_link_arbiter_sc_fifo_256x256 tx_link_arbiter_sc_fifo_256x256_inst
-(
-  //inputs
-  .aclr           (iRST),
-  .clock          (iCLK),
-  .data           (dplbuf_data),
-  .rdreq          (iFIFO_RD_ACK),
-  .wrreq          (|dplbuf_data_v), // only port w/ grant can write fifo.
-  //outputs
-  .empty          (oFIFO_EMPTY),
-  .full           (fifo_full),
-  .q              (oFIFO_DATA),
-  .usedw          (fifo_used)
+
+wire                  almost_full;
+wire                  almost_empty;
+wire                  underflow;
+wire                  wr_rst_busy;
+wire                  rd_rst_busy;
+wire                  overflow;
+tx_link_arbiter_sc_fifo_256x256 x_link_arbiter_sc_fifo_256x256_inst
+(//inputs
+ . almost_full          ( almost_full                                        ), // output
+ . almost_empty         ( almost_empty                                       ), // output
+ . underflow            ( underflow                                          ), // output
+ . wr_rst_busy          ( wr_rst_busy                                        ), // output
+ . rd_rst_busy          ( rd_rst_busy                                        ), // output
+ . overflow             ( overflow                                           ), // output
+ . din                  ( dplbuf_data                                        ), 
+ . full                 ( fifo_full                                          ), 
+ . dout                 ( oFIFO_DATA                                         ), 
+ . data_count           ( fifo_used                                          ), // fixme 8 vs 9
+ . clk                  ( iCLK                                               ), //outputs
+ . wr_en                ( |dplbuf_data_v                                     ), // only port w/ grant can write fifo.
+ . rd_en                ( iFIFO_RD_ACK                                       ), 
+ . rst                  ( iRST                                               ), 
+ . empty                ( oFIFO_EMPTY                                        )  
 );
 
+
 // show-ahead. rdreq is actually an ack.
-tx_link_arbiter_misc_sc_fifo_4x8 link_number_sc_fifo_4x8
+
+wire                  almost_full;
+wire                  almost_empty;
+wire                  underflow;
+wire                  wr_rst_busy;
+wire                  rd_rst_busy;
+wire                  overflow;
+tx_link_arbiter_misc_sc_fifo_4x8 ink_number_sc_fifo_4x8
 (
-  .aclr           (iRST),
-  .clock          (iCLK),
-  .data           ({{(8-PORT_WIDTH){1'b0}}, link_number[PORT_WIDTH-1:0]}),
-  .rdreq          (iBLK_DONE_PULSE),
-  .wrreq          (link_number_fifo_wr_pulse),
-  .empty          (link_number_fifo_empty),
-  .full           (link_number_fifo_full),
-  .q              ({link_numer_fifo_msb, oLINK_NUMBER[PORT_WIDTH-1:0]}),
-  .usedw          ()
+ . almost_full          ( almost_full                                        ), // output
+ . almost_empty         ( almost_empty                                       ), // output
+ . underflow            ( underflow                                          ), // output
+ . wr_rst_busy          ( wr_rst_busy                                        ), // output
+ . rd_rst_busy          ( rd_rst_busy                                        ), // output
+ . overflow             ( overflow                                           ), // output
+ . din                  ( {{(8-PORT_WIDTH){1'b0}}, link_number[PORT_WIDTH-1:0]} ), 
+ . full                 ( link_number_fifo_full                              ), 
+ . dout                 ( {link_numer_fifo_msb, oLINK_NUMBER[PORT_WIDTH-1:0]} ), 
+ . data_count           (                                                    ), // fixme 2 vs 5
+ . clk                  ( iCLK                                               ), 
+ . wr_en                ( link_number_fifo_wr_pulse                          ), 
+ . rd_en                ( iBLK_DONE_PULSE                                    ), 
+ . rst                  ( iRST                                               ), 
+ . empty                ( link_number_fifo_empty                             )  
 );
+
 
 //////////////////////////////////////////////////////////////////////////////
 //

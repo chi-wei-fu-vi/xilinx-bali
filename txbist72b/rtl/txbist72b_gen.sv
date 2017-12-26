@@ -413,28 +413,42 @@ else
 
 generate
 if (CH==0) begin : gen_s5_ram1w1r1c_16kx72b_ch0
-        s5_ram1w1r1c_16kx72b_ch0 s5_ram1w1r1c_16kx72b_ch0_inst (
-                . aclr            ( rst            ),   // input
-                . byteena_a           ( ram_wr_byteen[8:0]         ),   // input [8:0]
-                . clock            ( clk            ),  // input
-                . data            ( { oREG_TXBIST_WR_DATA[7:0], oREG_TXBIST_WR_DATA[63:0] }      ),     // input [71:0]
-                . rdaddress           ( ram_rd_addr[13:0]         ),    // input [10:0]
-                . wraddress           ( ram_wr_addr[13:0]         ),    // input [10:0]
-                . wren            ( cr_ram_wr_en_edge         ),                // input
-                . q             ( ram_rd_data[71:0]         )                   // output [71:0]
-        );
+
+wire                  rsta_busy;
+wire                  rstb_busy;
+s5_ram1w1r1c_16kx72b_ch0 5_ram1w1r1c_16kx72b_ch0_inst (
+ . rsta_busy            ( rsta_busy                                          ), // output
+ . rstb_busy            ( rstb_busy                                          ), // output
+ . rstb                 ( rst                                                ), // input
+ . wea                  ( ram_wr_byteen[8:0]                                 ), // input [8:0]
+ . clka                 ( clk                                                ), // input
+ . clkb                 ( clk                                                ), // input
+ . dina                 ( { oREG_TXBIST_WR_DATA[7:0], oREG_TXBIST_WR_DATA[63:0] } ), // input [71:0]
+ . addrb                ( ram_rd_addr[13:0]                                  ), // input [10:0]
+ . addra                ( ram_wr_addr[13:0]                                  ), // input [10:0]
+ . wea                  ( cr_ram_wr_en_edge                                  ), // input fixme 1 vs 9
+ . doutb                ( ram_rd_data[71:0]                                  )  
+);
+
 end
 else begin : gen_s5_ram1w1r1c_16kx72b_ch1
-        s5_ram1w1r1c_16kx72b_ch1 s5_ram1w1r1c_16kx72b_ch1_inst (
-                . aclr            ( rst            ),   // input
-                . byteena_a           ( ram_wr_byteen[8:0]         ),   // input [8:0]
-                . clock            ( clk            ),  // input
-                . data            ( { oREG_TXBIST_WR_DATA[7:0], oREG_TXBIST_WR_DATA[63:0] }      ),     // input [71:0]
-                . wraddress           ( ram_wr_addr[13:0]         ),    // input [10:0]
-                . wren            ( cr_ram_wr_en_edge         ),                // input
-                . rdaddress           ( ram_rd_addr[13:0]         ),            // input [10:0]
-                . q             ( ram_rd_data[71:0]         )                   // output [71:0]
-        );
+
+wire                  rsta_busy;
+wire                  rstb_busy;
+s5_ram1w1r1c_16kx72b_ch1 5_ram1w1r1c_16kx72b_ch1_inst (
+ . rsta_busy            ( rsta_busy                                          ), // output
+ . rstb_busy            ( rstb_busy                                          ), // output
+ . rstb                 ( rst                                                ), // input
+ . wea                  ( ram_wr_byteen[8:0]                                 ), // input [8:0]
+ . clka                 ( clk                                                ), // input
+ . clkb                 ( clk                                                ), // input
+ . dina                 ( { oREG_TXBIST_WR_DATA[7:0], oREG_TXBIST_WR_DATA[63:0] } ), // input [71:0]
+ . addra                ( ram_wr_addr[13:0]                                  ), // input [10:0]
+ . wea                  ( cr_ram_wr_en_edge                                  ), // input fixme 1 vs 9
+ . addrb                ( ram_rd_addr[13:0]                                  ), // input [10:0]
+ . doutb                ( ram_rd_data[71:0]                                  )  
+);
+
 end
 endgenerate
 
@@ -459,16 +473,28 @@ begin
         ram_rd_val_p0 <= ram_rd_val;
 end
 
-alt_fifo_sync_72_72 data_fifo (
-        .clock                 (clk),
-        .data  (ram_rd_data_p0),
-        .rdreq (fifo_rd_req),
-        .wrreq (ram_rd_val_p0),
-        .empty (fifo_empty),
-        .full  (),
-        .q     (fifo_dword),
-        .usedw (fifo_usedw)
+
+wire                  almost_empty;
+logic                 rst = 0;  // fixme
+wire                  overflow;
+wire                  almost_full;
+wire                  underflow;
+alt_fifo_sync_72_72 ata_fifo (
+ . almost_empty         ( almost_empty                                       ), // output
+ . rst                  ( rst                                                ), // input
+ . overflow             ( overflow                                           ), // output
+ . almost_full          ( almost_full                                        ), // output
+ . underflow            ( underflow                                          ), // output
+ . din                  ( ram_rd_data_p0                                     ), 
+ . full                 (                                                    ), 
+ . dout                 ( fifo_dword                                         ), 
+ . data_count           ( fifo_usedw                                         ), 
+ . clk                  ( clk                                                ), 
+ . wr_en                ( ram_rd_val_p0                                      ), 
+ . rd_en                ( fifo_rd_req                                        ), 
+ . empty                ( fifo_empty                                         )  
 );
+
 
 
 always @(posedge clk or negedge rst_n)
