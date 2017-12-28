@@ -102,7 +102,7 @@ wire                  full;
 wire  [3:0]           rd_data_count;
 wire  [3:0]           wr_data_count;
 wire                  rd_rst_busy;
-s5_afifo_16_40b ist0_sync (
+s5_afifo_16_40b bist0_sync (
  . wr_rst_busy          ( wr_rst_busy                                        ), // output
  . full                 ( full                                               ), // output
  . rd_data_count        ( rd_data_count                                      ), // output [3:0]
@@ -142,7 +142,7 @@ wire                  full;
 wire  [3:0]           rd_data_count;
 wire  [3:0]           wr_data_count;
 wire                  rd_rst_busy;
-s5_afifo_16_40b ist1_sync (
+s5_afifo_16_40b bist1_sync (
  . wr_rst_busy          ( wr_rst_busy                                        ), // output
  . full                 ( full                                               ), // output
  . rd_data_count        ( rd_data_count                                      ), // output [3:0]

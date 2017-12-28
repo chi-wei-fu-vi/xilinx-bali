@@ -138,26 +138,26 @@ end
 
 template_ram u_template_ram (
 
-    .q_a                ( template_mem_rd_a             ),
+    .douta                ( template_mem_rd_a             ),
 
-    .q_b                ( template_mem_rd_b             ),
+    .doutb                ( template_mem_rd_b             ),
 
-    .clock              ( clk                           ),
+    .clka                 ( clk                           ),
+    .clkb                 ( clk                           ),
 
-    .address_a          ( template_mem_ra_r             ),
+    .addra                ( template_mem_ra_r             ),
 
-    .address_b          ( iREG_TEMPLATERAM_ADDR         ),
+    .addrb                ( iREG_TEMPLATERAM_ADDR         ),
 
-    .data_a             ( 72'b0                         ),
+    .dina                 ( 72'b0                         ),
 
-    .data_b             ( {8'b0, iREG_TEMPLATERAM_WR}   ),
+    .dinb                 ( {8'b0, iREG_TEMPLATERAM_WR}   ),
 
-    .wren_a             ( 1'b0                          ),
+    .wea                  ( 1'b0                          ),
 
-    .wren_b             ( iREG_TEMPLATERAM_WR_EN        )
+    .web                  ( iREG_TEMPLATERAM_WR_EN        )
 
 );
-
 
 always_ff @( posedge clk ) 
     oFMEX_REG_TEMPLATERAM_RD <= template_mem_rd_b[63:0];

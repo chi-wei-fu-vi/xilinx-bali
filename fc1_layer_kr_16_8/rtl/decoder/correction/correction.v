@@ -162,7 +162,7 @@ wire                  underflow;
 wire                  wr_rst_busy;
 wire                  rd_rst_busy;
 wire                  overflow;
-corr_buff orr_buff_inst (
+corr_buff corr_buff_inst (
  . almost_full          ( almost_full                                        ), // output
  . almost_empty         ( almost_empty                                       ), // output
  . underflow            ( underflow                                          ), // output

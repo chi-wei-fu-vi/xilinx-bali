@@ -283,7 +283,7 @@ wire                  underflow;
 wire                  wr_rst_busy;
 wire                  rd_rst_busy;
 wire                  overflow;
-tx_link_arbiter_sc_fifo_256x256 x_link_arbiter_sc_fifo_256x256_inst
+tx_link_arbiter_sc_fifo_256x256 tx_link_arbiter_sc_fifo_256x256_inst
 (//inputs
  . almost_full          ( almost_full                                        ), // output
  . almost_empty         ( almost_empty                                       ), // output
@@ -311,7 +311,7 @@ wire                  underflow;
 wire                  wr_rst_busy;
 wire                  rd_rst_busy;
 wire                  overflow;
-tx_link_arbiter_misc_sc_fifo_4x8 ink_number_sc_fifo_4x8
+tx_link_arbiter_misc_sc_fifo_4x8 link_number_sc_fifo_4x8
 (
  . almost_full          ( almost_full                                        ), // output
  . almost_empty         ( almost_empty                                       ), // output

@@ -278,7 +278,7 @@ wire                  underflow;
 wire                  wr_rst_busy;
 wire                  rd_rst_busy;
 wire                  overflow;
-tx_app2hip_sc_fifo_256x512 ata_sc_fifo_256x512_inst
+tx_app2hip_sc_fifo_256x512 data_sc_fifo_256x512_inst
 (
  . almost_full          ( almost_full                                        ), // output
  . almost_empty         ( almost_empty                                       ), // output
@@ -307,7 +307,7 @@ wire                  underflow;
 wire                  wr_rst_busy;
 wire                  rd_rst_busy;
 wire                  overflow;
-tx_app2hip_sc_fifo_48x512 trl_sc_fifo_48x512_inst
+tx_app2hip_sc_fifo_48x512 ctrl_sc_fifo_48x512_inst
 (
  . almost_full          ( almost_full                                        ), // output
  . almost_empty         ( almost_empty                                       ), // output

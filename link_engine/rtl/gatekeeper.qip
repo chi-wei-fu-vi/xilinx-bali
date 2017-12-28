@@ -1,0 +1,2 @@
+set_global_assignment -library gatekeeper -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) gatekeeper.v]
+set_global_assignment -library gatekeeper -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) se_violation.v]

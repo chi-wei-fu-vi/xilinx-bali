@@ -1,0 +1,1 @@
+set_global_assignment -library link_engine_regs -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) link_engine_regs.v]

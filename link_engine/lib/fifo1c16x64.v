@@ -57,7 +57,7 @@ logic wrreq_mem_mux;
 // Memory Instantiation
 ///////////////////////////////////////////////////////////////////////////////
 
-ram1r1w16x64 _fifo_ram (
+ram1r1w16x64 u_fifo_ram (
  . doutb                ( fifo_rd                                            ), 
  . clka                 ( clk                                                ), 
  . clkb                 ( clk                                                ), 

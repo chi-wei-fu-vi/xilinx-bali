@@ -353,7 +353,7 @@ wire                  underflow;
 wire                  wr_rst_busy;
 wire                  rd_rst_busy;
 wire                  overflow;
-s5_sfifo_16x72b cv_fifo
+s5_sfifo_16x72b rcv_fifo
      (// Outputs
  . almost_full          ( almost_full                                        ), // output
  . almost_empty         ( almost_empty                                       ), // output

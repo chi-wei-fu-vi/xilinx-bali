@@ -1,0 +1,1 @@
+set_global_assignment -library vi_sync_level -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) vi_sync_level.sv]

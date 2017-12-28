@@ -128,7 +128,7 @@ assign rdfull = efifo_rd_usedw[9:0] == ((1<<$bit(efifo_rd_usedw[9:0]))-1);
 
 assign wrempty = efifo_wr_usedw[9:0] == 0;
 
-s5_afifo_1024x42b 5_afifo_1024x42b_inst
+s5_afifo_1024x42b s5_afifo_1024x42b_inst
      (// Outputs
  . wr_rst_busy          ( wr_rst_busy                                        ), // output
  . rd_rst_busy          ( rd_rst_busy                                        ), // output
@@ -206,7 +206,7 @@ wire                  underflow;
 wire                  wr_rst_busy;
 wire                  rd_rst_busy;
 wire                  overflow;
-s5_sfifo_4x42b 5_sfifo_4x42b_inst
+s5_sfifo_4x42b s5_sfifo_4x42b_inst
      (// Outputs
  . almost_full          ( almost_full                                        ), // output
  . data_count           ( data_count                                         ), // output [3:0]

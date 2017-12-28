@@ -196,7 +196,7 @@ wire                  underflow;
 wire                  wr_rst_busy;
 wire                  rd_rst_busy;
 wire                  overflow;
-tlp_decode_sc_fifo_48x8 c_fifo_48x8_inst
+tlp_decode_sc_fifo_48x8 sc_fifo_48x8_inst
 (
  . almost_full          ( almost_full                                        ), // output
  . almost_empty         ( almost_empty                                       ), // output
@@ -225,7 +225,7 @@ wire                  underflow;
 wire                  wr_rst_busy;
 wire                  rd_rst_busy;
 wire                  overflow;
-tlp_decode_sc_fifo_256x8 c_fifo_256x8_inst
+tlp_decode_sc_fifo_256x8 sc_fifo_256x8_inst
 (
  . almost_full          ( almost_full                                        ), // output
  . almost_empty         ( almost_empty                                       ), // output
@@ -287,7 +287,7 @@ wire                  underflow;
 wire                  wr_rst_busy;
 wire                  rd_rst_busy;
 wire                  overflow;
-tlp_decode_sc_fifo_48x8 c_fifo_48x8_inst
+tlp_decode_sc_fifo_48x8 sc_fifo_48x8_inst
 (
  . almost_full          ( almost_full                                        ), // output
  . almost_empty         ( almost_empty                                       ), // output
@@ -316,7 +316,7 @@ wire                  underflow;
 wire                  wr_rst_busy;
 wire                  rd_rst_busy;
 wire                  overflow;
-tlp_decode_sc_fifo_256x8 c_fifo_256x8_inst
+tlp_decode_sc_fifo_256x8 sc_fifo_256x8_inst
 (
  . almost_full          ( almost_full                                        ), // output
  . almost_empty         ( almost_empty                                       ), // output

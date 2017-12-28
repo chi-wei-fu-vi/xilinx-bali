@@ -299,7 +299,7 @@ assign rdfull = reg_efifo_rd_used[4:0] == ((1<<$bit(reg_efifo_rd_used[4:0]))-1);
 
 assign wrempty = reg_efifo_wr_used[4:0] == 0;
 
-s5_afifo_32x128b fifo_32x128b 
+s5_afifo_32x128b efifo_32x128b 
      (// Outputs
  . wr_rst_busy          ( wr_rst_busy                                        ), // output
  . rd_rst_busy          ( rd_rst_busy                                        ), // output

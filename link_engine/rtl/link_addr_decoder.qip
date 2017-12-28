@@ -1,0 +1,1 @@
+set_global_assignment -library link_addr_decoder -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) link_addr_decoder.v]

@@ -416,7 +416,7 @@ if (CH==0) begin : gen_s5_ram1w1r1c_16kx72b_ch0
 
 wire                  rsta_busy;
 wire                  rstb_busy;
-s5_ram1w1r1c_16kx72b_ch0 5_ram1w1r1c_16kx72b_ch0_inst (
+s5_ram1w1r1c_16kx72b_ch0 s5_ram1w1r1c_16kx72b_ch0_inst (
  . rsta_busy            ( rsta_busy                                          ), // output
  . rstb_busy            ( rstb_busy                                          ), // output
  . rstb                 ( rst                                                ), // input
@@ -435,7 +435,7 @@ else begin : gen_s5_ram1w1r1c_16kx72b_ch1
 
 wire                  rsta_busy;
 wire                  rstb_busy;
-s5_ram1w1r1c_16kx72b_ch1 5_ram1w1r1c_16kx72b_ch1_inst (
+s5_ram1w1r1c_16kx72b_ch1 s5_ram1w1r1c_16kx72b_ch1_inst (
  . rsta_busy            ( rsta_busy                                          ), // output
  . rstb_busy            ( rstb_busy                                          ), // output
  . rstb                 ( rst                                                ), // input
@@ -479,7 +479,7 @@ logic                 rst = 0;  // fixme
 wire                  overflow;
 wire                  almost_full;
 wire                  underflow;
-alt_fifo_sync_72_72 ata_fifo (
+alt_fifo_sync_72_72 data_fifo (
  . almost_empty         ( almost_empty                                       ), // output
  . rst                  ( rst                                                ), // input
  . overflow             ( overflow                                           ), // output

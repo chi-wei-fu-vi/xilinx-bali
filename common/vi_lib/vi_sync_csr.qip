@@ -1,0 +1,4 @@
+set_global_assignment -library vi_sync_csr -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) vi_sync_csr.sv]
+set_global_assignment -library vi_sync_csr -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) vi_sync_1c.sv]
+set_global_assignment -library vi_sync_csr -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) vi_sync_pulse.sv]
+set_global_assignment -library vi_sync_csr -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) vi_sync_level.sv]

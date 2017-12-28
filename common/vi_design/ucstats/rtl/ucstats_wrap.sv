@@ -404,7 +404,7 @@ module ucstats_wrap
 
 wire                  rsta_busy;
 wire                  rstb_busy;
-s5_ram1w1r_1024x32b tats_ram0
+s5_ram1w1r_1024x32b stats_ram0
      (// Outputs
  . rsta_busy            ( rsta_busy                                          ), // output
  . rstb_busy            ( rstb_busy                                          ), // output
@@ -422,7 +422,7 @@ s5_ram1w1r_1024x32b tats_ram0
 
 wire                  rsta_busy;
 wire                  rstb_busy;
-s5_ram1w1r_1024x32b tats_ram1
+s5_ram1w1r_1024x32b stats_ram1
      (// Outputs
  . rsta_busy            ( rsta_busy                                          ), // output
  . rstb_busy            ( rstb_busy                                          ), // output
@@ -525,7 +525,7 @@ s5_ram1w1r_1024x32b tats_ram1
 
 wire                  rsta_busy;
 wire                  rstb_busy;
-s5_ram1w1r_1024x32b tats_ram_regs
+s5_ram1w1r_1024x32b stats_ram_regs
      (// Outputs
  . rsta_busy            ( rsta_busy                                          ), // output
  . rstb_busy            ( rstb_busy                                          ), // output

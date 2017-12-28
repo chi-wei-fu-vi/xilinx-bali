@@ -72,17 +72,30 @@
 	// Frame Extractor Fifo - 36 bits wide, 256 words deep. Show ahead with registered output
 	fifo_36bx256w	feBuff 
   (
-	 .aclr 	( !iRESET_n ),
-	 .clock ( iCLK ),
-	 .data 	( feBuffDataIn ),
-	 .rdreq ( readEn ),
-	 .wrreq ( iMTIP_DVAL ), // All valid data from the MTIP core is written into this fifo
+         .almost_full(),    // output wire almost_full
+         .overflow(),          // output wire overflow
+         .almost_empty(),  // output wire almost_empty
+         .underflow(),        // output wire underflow
+  .       wr_rst_busy(),    // output wire wr_rst_busy
+         .rd_rst_busy(),   // output wire rd_rst_busy
+	 .rst 	( !iRESET_n ),
+	 .clk ( iCLK ),
+	 .din 	( feBuffDataIn ),
+	 .rd_en ( readEn ),
+	 .wr_en ( iMTIP_DVAL ), // All valid data from the MTIP core is written into this fifo
 	 .empty ( feBuffEmpty ),
 	 .full 	( feBuffFull ),
-	 .q 		( feBuffDataOut ),
-	 .usedw (  )
+	 .dout 		( feBuffDataOut ),
+	 .data_count (  )
 	 );
-   
+
+
+// INST_TAG_END ------ End INSTANTIATION Template ---------
+
+// You must compile the wrapper file fifo_36bx256w.v when simulating
+// the core, fifo_36bx256w. When compiling the wrapper file, be sure to
+// reference the Verilog simulation library.
+
     // The FIFO output is not valid if it is empty, or the next state is not the read state. 
     // This prevents the same output data from being valid for more than 1 clock cycle. 
    assign feBuffValid = (!feBuffEmpty && ((ns == READ_ST) || (ps == READ_ST)) ) ;
