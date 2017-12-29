@@ -140,7 +140,8 @@ generate
     // Output clock from PLL (may got to output or through CGB for xN topologies)
     wire    pll_outclk;
 
-    if(use_avmm == 1) begin:avmm
+    //if(use_avmm == 1) begin:avmm
+    if(use_avmm == 1 && 0) begin:avmm
       // avalon MM native reconfiguration interfaces
       wire          pld_avmm_reset;     // one for each lane
       wire          pld_avmm_clk;       // one for each lane
@@ -345,7 +346,8 @@ generate
     end // no_avmm
 
     // PLL
-    if(pll_external == 1) begin:external_pll
+    //if(pll_external == 1) begin:external_pll
+    if(pll_external == 1 || 1) begin:external_pll
       // Pass refclk (PLL output clock from external PLL when "external_pll" == 1) to output (or CGB)
       assign  pll_outclk    = refclk[ig];
       assign  locked  [ig]  = 1'b0;
@@ -678,7 +680,8 @@ generate
                                                           refclk_sel_fnl ==  2  ? "ref_iqclk2"  :
                                                           refclk_sel_fnl ==  1  ? "ref_iqclk1"  :
                                                                                   "ref_iqclk0"  ;
-        if(enabled_for_reconfig == "true" && enable_mux == 1) begin:pll_mux
+        //if(enabled_for_reconfig == "true" && enable_mux == 1) begin:pll_mux
+        if(enabled_for_reconfig == "true" && enable_mux == 1 && 0) begin:pll_mux
           wire  [10:0]  int_refclks;  // internal refclks
 
           assign  int_refclks = { {(11-refclks){1'b0}} , refclk};

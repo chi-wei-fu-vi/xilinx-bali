@@ -370,7 +370,7 @@ module sv_hssi_common_pcs_pma_interface_rbc #(
 			$display("Critical Warning: parameter 'ppm_deassert_early' of instance '%m' has illegal value '%s' assigned to it.  Valid parameter values are: '%s'.  Using value '%s'", ppm_deassert_early, rbc_all_ppm_deassert_early, fnl_ppm_deassert_early);
 		end
 	end
-
+/*
 	stratixv_hssi_common_pcs_pma_interface #(
 		.func_mode(fnl_func_mode),
 		.prot_mode(fnl_prot_mode),
@@ -580,4 +580,5 @@ module sv_hssi_common_pcs_pma_interface_rbc #(
 		.pmatxelecidle(pmatxelecidle),
 		.resetppmcntrs(resetppmcntrs)
 	);
+*/
 endmodule

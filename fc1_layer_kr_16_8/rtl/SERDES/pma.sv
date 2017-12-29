@@ -289,6 +289,7 @@ if (LOW_LATENCY_PHY == 0 && PHASE_COMP == 0) begin : native_phy
         // -----------------------
         // Reconfig Controller
         // -----------------------
+        /*
         s5_reconfig_26ch s5_reconfig_26ch_inst (
                 .mgmt_clk_clk                     ( mgmt_clk_clk              ),        // input 
                 .mgmt_rst_reset                   ( mgmt_rst_reset            ),        // input 
@@ -385,6 +386,7 @@ if (LOW_LATENCY_PHY == 0 && PHASE_COMP == 0) begin : native_phy
                 .ch35_35_from_xcvr                ( reconfig_from_xcvr [35]   )         // input [45:0]
                 
         );
+        */
         s5_reset_26ch s5_reset_26ch
         (       // Outputs
                 .pll_powerdown                  ( rc_pll_powerdown        [2*ATXS-1:0]     ),
@@ -546,32 +548,34 @@ endgenerate
 logic [2:0][15:0]                    rom_readdata;
 
 
-rom #(
-          . MIF_FILE                                           ( "rom4g.mif"                                        )
-  ) rom_inst2 (
- . a                    ( reconfig_mif_address[8:1]                          ), // input [7:0]
- . clk                  ( mgmt_clk_clk                                       ), // input
- . qspo                 ( rom_readdata[ 0]                                   )  
+//rom #(
+//          . MIF_FILE                                           ( "rom4g.mif"                                        )
+//  ) rom_inst2 (
+rom rom_inst2 (
+ . addra                    ( reconfig_mif_address[8:1]                          ), // input [7:0]
+ . clka                  ( mgmt_clk_clk                                       ), // input
+ . douta                 ( rom_readdata[ 0]                                   )  
 );
 
 
-rom #(
-          . MIF_FILE                                           ( "rom8g.mif"                                        )
-  ) rom_inst1 (
- . a                    ( reconfig_mif_address[8:1]                          ), // input [7:0]
- . clk                  ( mgmt_clk_clk                                       ), // input
- . qspo                 ( rom_readdata[ 1]                                   )  
+//rom #(
+//          . MIF_FILE                                           ( "rom8g.mif"                                        )
+//  ) rom_inst1 (
+rom rom_inst1 (
+ . addra                    ( reconfig_mif_address[8:1]                          ), // input [7:0]
+ . clka                  ( mgmt_clk_clk                                       ), // input
+ . douta                 ( rom_readdata[ 1]                                   )  
 );
 
 
-rom #(
-          . MIF_FILE                                           ( "rom16g.mif"                                       )
-  ) rom_inst0 (
- . a                    ( reconfig_mif_address[8:1]                          ), // input [7:0]
- . clk                  ( mgmt_clk_clk                                       ), // input
- . qspo                 ( rom_readdata[ 2]                                   )  
+//rom #(
+//          . MIF_FILE                                           ( "rom16g.mif"                                       )
+//  ) rom_inst0 (
+rom rom_inst0 (
+ . addra                    ( reconfig_mif_address[8:1]                          ), // input [7:0]
+ . clka                  ( mgmt_clk_clk                                       ), // input
+ . douta                 ( rom_readdata[ 2]                                   )  
 );
-
 
 logic reconfig_mif_read_d;
 always @(posedge mgmt_clk_clk) 

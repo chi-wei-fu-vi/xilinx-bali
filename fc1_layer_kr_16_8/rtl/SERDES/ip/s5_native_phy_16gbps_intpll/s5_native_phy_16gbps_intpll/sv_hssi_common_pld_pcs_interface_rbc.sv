@@ -348,7 +348,7 @@ module sv_hssi_common_pld_pcs_interface_rbc #(
 			$display("Critical Warning: parameter 'usrmode_sel4rst' of instance '%m' has illegal value '%s' assigned to it.  Valid parameter values are: '%s'.  Using value '%s'", usrmode_sel4rst, rbc_all_usrmode_sel4rst, fnl_usrmode_sel4rst);
 		end
 	end
-
+/*
 	stratixv_hssi_common_pld_pcs_interface #(
 		.avmm_group_channel_index(avmm_group_channel_index),
 		.data_source(fnl_data_source),
@@ -500,4 +500,5 @@ module sv_hssi_common_pld_pcs_interface_rbc #(
 		.usermode(usermode),
 		.usrrstsel(usrrstsel)
 	);
+*/
 endmodule

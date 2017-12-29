@@ -2212,7 +2212,7 @@ end
 			$display("Critical Warning: parameter 'rx_polarity_inv' of instance '%m' has illegal value '%s' assigned to it.  Valid parameter values are: '%s'.  Using value '%s'", rx_polarity_inv, rbc_all_rx_polarity_inv, fnl_rx_polarity_inv);
 		end
 	end
-
+/*
 	stratixv_hssi_10g_rx_pcs #(
 				   .silicon_rev(silicon_rev_local),
 		.enable_debug_info("true"),
@@ -2382,4 +2382,5 @@ end
 		.syncdatain(syncdatain),
 		.txpmaclk(txpmaclk)
 	);
+*/
 endmodule

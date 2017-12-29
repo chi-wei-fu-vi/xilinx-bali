@@ -79,17 +79,26 @@ always @(posedge RXCLK or posedge RXRST)
 
 alt_fifo_async_66_66
   alt_fifo_async_66_66_inst (
-  .data({RX_SH_r2, RX_DAT_r2}),
-  .rdclk(CLK219),
-  .rdreq(rx_rden),
-  .wrclk(RXCLK),
-  .wrreq(RX_VAL_r2),
-  .q({rx_sh, rx_dat}),
-  .rdempty(expt_gb66_64_empty),
-  .rdusedw(async_rdusedw),
-  .wrusedw(async_wrusedw),
-  .wrfull(simonly_expt_gb66_64_full)
+  .rst(1'b0),                      // input wire rst
+  .wr_rst_busy(),      // output wire wr_rst_busy
+  .rd_rst_busy(),     // output wire rd_rst_busy
+  .din({RX_SH_r2, RX_DAT_r2}),
+  .rd_clk(CLK219),
+  .rd_en(rx_rden),
+  .wr_clk(RXCLK),
+  .wr_en(RX_VAL_r2),
+  .dout({rx_sh, rx_dat}),
+  .empty(expt_gb66_64_empty),
+  .rd_data_count(async_rdusedw),
+  .wr_data_count(async_wrusedw),
+  .full(simonly_expt_gb66_64_full)
   );
+
+// INST_TAG_END ------ End INSTANTIATION Template ---------
+
+// You must compile the wrapper file alt_fifo_async_66_66.v when simulating
+// the core, alt_fifo_async_66_66. When compiling the wrapper file, be sure to
+// reference the Verilog simulation library.
 
 /****************************** TXCLK domain **************************/
 

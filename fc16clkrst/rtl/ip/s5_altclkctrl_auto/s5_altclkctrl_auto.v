@@ -63,6 +63,7 @@ module  s5_altclkctrl_auto_altclkctrl_7ug
 	wire  wire_sd1_outclk;
 	wire [1:0]  clkselect;
 
+/*
 	stratixv_clkena   sd1
 	( 
 	.ena(ena),
@@ -73,6 +74,8 @@ module  s5_altclkctrl_auto_altclkctrl_7ug
 		sd1.clock_type = "Auto",
 		sd1.ena_register_mode = "always enabled",
 		sd1.lpm_type = "stratixv_clkena";
+*/
+	assign wire_sd1_outclk = inclk[0];
 	assign
 		clkselect = {2{1'b0}},
 		outclk = wire_sd1_outclk;

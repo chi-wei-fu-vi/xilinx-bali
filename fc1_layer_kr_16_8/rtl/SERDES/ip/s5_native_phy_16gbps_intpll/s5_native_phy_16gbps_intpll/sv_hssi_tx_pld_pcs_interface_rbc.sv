@@ -170,6 +170,7 @@ module sv_hssi_tx_pld_pcs_interface_rbc #(
 		end
 	end
 
+/*
 	stratixv_hssi_tx_pld_pcs_interface #(
 		.avmm_group_channel_index(avmm_group_channel_index),
 		.data_source(fnl_data_source),
@@ -277,4 +278,5 @@ module sv_hssi_tx_pld_pcs_interface_rbc #(
 		.rstsel(rstsel),
 		.usrrstsel(usrrstsel)
 	);
+*/
 endmodule

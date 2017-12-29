@@ -171,7 +171,8 @@ module sv_tx_pma_ch #(
                             (tx_clk_div == 8) ? 8 :
                             1;    
 
-  generate if(is_empty_chan == 0) begin:tx_pma_ch
+  //generate if(is_empty_chan == 0) begin:tx_pma_ch
+  generate if(is_empty_chan == 0 && 0) begin:tx_pma_ch
     wire  [MAX_PLLS-1:0] wire_clk;
 
     wire  [79:0]  w_datain;

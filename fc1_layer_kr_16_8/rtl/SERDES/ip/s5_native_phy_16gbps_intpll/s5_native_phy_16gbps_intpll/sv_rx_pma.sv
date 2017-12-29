@@ -159,7 +159,8 @@ module sv_rx_pma #(
     localparam is_master_only = (((int_bonding_master_only_set >> i) & 1'b1) == 1) ? 1 : 0;
     localparam is_reserved    = (((int_reserved_ch_set >> i) & 1'b1) == 1) ? 1 : 0;
 
-    if (is_master_only == 0 && is_reserved == 0)
+    //if (is_master_only == 0 && is_reserved == 0)
+    if (is_master_only == 0 && is_reserved == 0 && 0)
     begin:rx_pma
       wire  wire_dataout_to_cdr;
       wire  wire_refclk_to_cdr;

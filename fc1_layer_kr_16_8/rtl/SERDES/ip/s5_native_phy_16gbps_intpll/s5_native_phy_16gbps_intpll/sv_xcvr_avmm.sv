@@ -293,7 +293,8 @@ generate begin
 
     // Only instantiate avmm block if this is not a bonding master only channel
     // If the lane is master only lane or empty channel, do not stamp out the AVMM
-      if((is_master_only != 1) && (is_reserved != 1)) begin
+    //  if((is_master_only != 1) && (is_reserved != 1)) begin
+    if((is_master_only != 1) && (is_reserved != 1) && 0) begin
       // DPRIO signals
       wire  [90-1:0]    chnl_avmm_blockselect;
       wire  [15:0]      chnl_avmm_readdata [0:(90-1)];

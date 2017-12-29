@@ -261,7 +261,7 @@ module sv_hssi_rx_pld_pcs_interface_rbc #(
 			$display("Critical Warning: parameter 'use_default_base_address' of instance '%m' has illegal value '%s' assigned to it.  Valid parameter values are: '%s'.  Using value '%s'", use_default_base_address, rbc_all_use_default_base_address, fnl_use_default_base_address);
 		end
 	end
-
+/*
 	stratixv_hssi_rx_pld_pcs_interface #(
 		.avmm_group_channel_index(avmm_group_channel_index),
 		.data_source(fnl_data_source),
@@ -452,4 +452,5 @@ module sv_hssi_rx_pld_pcs_interface_rbc #(
 		.rstsel(rstsel),
 		.usrrstsel(usrrstsel)
 	);
+*/
 endmodule

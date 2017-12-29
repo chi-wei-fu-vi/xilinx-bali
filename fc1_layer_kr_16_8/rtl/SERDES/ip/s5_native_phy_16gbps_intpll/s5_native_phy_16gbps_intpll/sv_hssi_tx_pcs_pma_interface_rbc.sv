@@ -85,6 +85,7 @@ module sv_hssi_tx_pcs_pma_interface_rbc #(
 		end
 	end
 
+/*
 	stratixv_hssi_tx_pcs_pma_interface #(
 		.avmm_group_channel_index(avmm_group_channel_index),
 		.selectpcs(fnl_selectpcs),
@@ -125,4 +126,5 @@ module sv_hssi_tx_pcs_pma_interface_rbc #(
 		.pmatxpmasyncpfbkp(pmatxpmasyncpfbkp),
 		.reset(reset)
 	);
+*/
 endmodule

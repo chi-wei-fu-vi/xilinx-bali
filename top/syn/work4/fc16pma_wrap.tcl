@@ -9,7 +9,7 @@ if {[info exists ::create_path]} {
 puts "INFO: Creating new project in $dest_dir"
 
 # Set the reference directory for source file relative paths (by default the value is script directory path)
-set proj_name pcie_gen2x8_13_1
+set proj_name fc16pma_wrap
 
 # Set the reference directory for source file relative paths (by default the value is script directory path)
 set origin_dir ".."
@@ -55,12 +55,17 @@ set obj [get_filesets sources_1]
 # Add conventional sources
 #add_files -quiet $src_dir/hdl
 source ~/bin/set_global_assignment.tcl
-set ::quartus(qip_path) [ file normalize [ file dirname /home/chiwei/work/checkout/xilinx-bali.git.new/pcie_gen2x8/pcie_gen2x8_13_1/synthesis/pcie_gen2x8_13_1.qip ] ]
-source /home/chiwei/work/checkout/xilinx-bali.git.new/pcie_gen2x8/pcie_gen2x8_13_1/synthesis/pcie_gen2x8_13_1.qip
-set_property "top" "pcie_gen2x8_13_1" $obj
-set_property include_dirs /home/chiwei/work/checkout/xilinx-bali.git.new/link_engine/lib $obj
-set_property generic { PORTS=12 } [current_fileset]
-set_property generic { BALI=1 } [current_fileset]
+set ::quartus(qip_path) [ file normalize [ file dirname /home/chiwei/work/checkout/xilinx-bali.git.new/fc1_layer_kr_16_8/rtl/SERDES/fc16pma_wrap.qip ] ]
+source /home/chiwei/work/checkout/xilinx-bali.git.new/fc1_layer_kr_16_8/rtl/SERDES/fc16pma_wrap.qip
+set_property "top" "fc16pma_wrap" $obj
+#set_property include_dirs /home/chiwei/work/checkout/xilinx-bali.git.new/fc1_layer_kr_16_8/rtl/SERDES/auto $obj
+#set_property include_dirs /home/chiwei/work/checkout/xilinx-bali.git.new/fc1_layer_kr_16_8/rtl/SERDES/includes $obj
+set_property include_dirs {/home/chiwei/work/checkout/xilinx-bali.git.new/fc1_layer_kr_16_8/rtl/SERDES/auto /home/chiwei/work/checkout/xilinx-bali.git.new/fc1_layer_kr_16_8/rtl/SERDES/includes} $obj
+set_property generic { CHANNELS=26 } [current_fileset]
+set_property generic { LITE=0 } [current_fileset]
+set_property generic { SIM_ONLY=0 } [current_fileset]
+set_property generic { LOW_LATENCY_PHY=0 } [current_fileset]
+set_property generic { PHASE_COMP=0 } [current_fileset]
 
 
 # Add IPs
@@ -114,5 +119,5 @@ reset_run synth_1
 launch_runs synth_1 -jobs 4
 wait_on_run synth_1
 open_run synth_1
-write_checkpoint -force pcie_gen2x8_13_1_synth.dcp
+write_checkpoint -force fc16pma_wrap_synth.dcp
       

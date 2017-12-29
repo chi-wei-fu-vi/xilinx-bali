@@ -116,7 +116,7 @@ module sv_hssi_rx_pcs_pma_interface_rbc #(
 			$display("Critical Warning: parameter 'clkslip_sel' of instance '%m' has illegal value '%s' assigned to it.  Valid parameter values are: '%s'.  Using value '%s'", clkslip_sel, rbc_all_clkslip_sel, fnl_clkslip_sel);
 		end
 	end
-
+/*
 	stratixv_hssi_rx_pcs_pma_interface #(
 		.prot_mode(fnl_prot_mode),
 		.avmm_group_channel_index(avmm_group_channel_index),
@@ -171,4 +171,5 @@ module sv_hssi_rx_pcs_pma_interface_rbc #(
 		.pmasignalok(pmasignalok),
 		.reset(reset)
 	);
+*/
 endmodule

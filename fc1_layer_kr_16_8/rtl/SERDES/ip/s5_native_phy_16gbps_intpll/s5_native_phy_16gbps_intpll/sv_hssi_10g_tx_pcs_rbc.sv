@@ -2130,7 +2130,7 @@ module sv_hssi_10g_tx_pcs_rbc #(
 			$display("Critical Warning: parameter 'pmagate_en' of instance '%m' has illegal value '%s' assigned to it.  Valid parameter values are: '%s'.  Using value '%s'", pmagate_en, rbc_all_pmagate_en, fnl_pmagate_en);
 		end
 	end
-
+/*
 	stratixv_hssi_10g_tx_pcs #(
 				   .silicon_rev(silicon_rev_local),
 		.enable_debug_info("true"),
@@ -2299,4 +2299,5 @@ module sv_hssi_10g_tx_pcs_rbc #(
 		.txwordslip(txwordslip),
 		.txwordslipexe(txwordslipexe)
 	);
+*/
 endmodule
