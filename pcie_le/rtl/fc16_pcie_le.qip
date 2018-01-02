@@ -73,7 +73,6 @@ set_global_assignment -library fc16_pcie_le -name SYSTEMVERILOG_FILE [file join 
 set_global_assignment -library fc16_pcie_le -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) ../../pcie_gen2x8/bali_pcie_app/include/pcie_app_inc.sv]
 set_global_assignment -library fc16_pcie_le -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) ../../common/vi_lib/vi_rst_sync_async.sv]
 set_global_assignment -library fc16_pcie_le -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) ../../link_engine/lib/fifo1c.v]
-set_global_assignment -library fc16_pcie_le -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) ../../pcie_gen2x8/bali_pcie_app/bali_lib.sv]
 set_global_assignment -library fc16_pcie_le -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) ../../top/doc/pcie_addr_decoder.v]
 set_global_assignment -library fc16_pcie_le -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) ../../common/vi_lib/vi_onehot_to_bin.v]
 set_global_assignment -library fc16_pcie_le -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) ../../pcie_gen2x8/bali_pcie_app/pcie_perf_ctl.sv]

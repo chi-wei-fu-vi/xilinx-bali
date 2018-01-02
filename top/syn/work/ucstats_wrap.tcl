@@ -57,6 +57,7 @@ set obj [get_filesets sources_1]
 source ~/bin/set_global_assignment.tcl
 set ::quartus(qip_path) [ file normalize [ file dirname /home/chiwei/work/checkout/xilinx-bali.git.new/common/vi_design/ucstats/rtl/ucstats_wrap.qip ] ]
 source /home/chiwei/work/checkout/xilinx-bali.git.new/common/vi_design/ucstats/rtl/ucstats_wrap.qip
+set_property include_dirs ../../../common/vi_design/ucstats/rtl/auto $obj
 set_property "top" "ucstats_wrap" $obj
 
 

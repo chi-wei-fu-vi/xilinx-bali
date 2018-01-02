@@ -23,7 +23,6 @@ set_global_assignment -library pcie_gen2x8_13_1 -name SYSTEMVERILOG_FILE [file j
 set_global_assignment -library pcie_gen2x8_13_1 -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) ../../bali_pcie_app/tx_tlp_dma.sv]
 set_global_assignment -library pcie_gen2x8_13_1 -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) ../../../top/doc/pcie_addr_decoder.v]
 set_global_assignment -library pcie_gen2x8_13_1 -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) ../../../common/vi_lib/vi_onehot_to_bin.v]
-set_global_assignment -library pcie_gen2x8_13_1 -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) ../../bali_pcie_app/bali_lib.sv]
 set_global_assignment -library pcie_gen2x8_13_1 -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) ../../bali_pcie_app/pcie_perf_ctl.sv]
 set_global_assignment -library pcie_gen2x8_13_1 -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) ../../bali_pcie_app/tx_app2hip_arbiter.sv]
 set_global_assignment -library pcie_gen2x8_13_1 -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) ../../bali_pcie_app/find_max.sv]

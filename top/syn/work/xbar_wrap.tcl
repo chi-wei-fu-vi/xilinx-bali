@@ -58,6 +58,7 @@ source ~/bin/set_global_assignment.tcl
 set ::quartus(qip_path) [ file normalize [ file dirname /home/chiwei/work/checkout/xilinx-bali.git.new/xbar/rtl/xbar_wrap.qip ] ]
 source /home/chiwei/work/checkout/xilinx-bali.git.new/xbar/rtl/xbar_wrap.qip
 set_property "top" "xbar_wrap" $obj
+set_property include_dirs ../../../fc1_layer_kr_16_8/rtl/SERDES/includes $obj
 set_property generic { REMOVE_XBAR=1 } [current_fileset]
 
 

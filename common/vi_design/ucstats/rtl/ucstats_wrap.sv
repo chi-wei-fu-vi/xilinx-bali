@@ -722,7 +722,7 @@ s5_ram1w1r_1024x32b stats_ram_regs
 
    // 4.7ns x 2^27 -> ~630ms
    assign temp_sense_clr = ~rst_n | (temp_sense_timer[26:0]>27'h7ff_fff0);
-
+/*
    s5_alttemp_sense s5_alttemp_sense
      (// Outputs
       .tsdcaldone       (tsdcaldone_d),
@@ -731,7 +731,9 @@ s5_ram1w1r_1024x32b stats_ram_regs
       .ce               (temp_sense_en),
       .clk              (clk),
       .clr              (temp_sense_clr));
-
+*/
+   assign tsdcaldone_d = 0;
+   assign tsdcalo_d = 0;
 
    // ----------------------
    // Assertions

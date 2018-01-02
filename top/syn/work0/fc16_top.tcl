@@ -9,7 +9,7 @@ if {[info exists ::create_path]} {
 puts "INFO: Creating new project in $dest_dir"
 
 # Set the reference directory for source file relative paths (by default the value is script directory path)
-set proj_name fc16_pcie_le
+set proj_name fc16_top
 
 # Set the reference directory for source file relative paths (by default the value is script directory path)
 set origin_dir ".."
@@ -55,8 +55,12 @@ set obj [get_filesets sources_1]
 # Add conventional sources
 #add_files -quiet $src_dir/hdl
 source ~/bin/set_global_assignment.tcl
-##set ::quartus(qip_path) [ file normalize [ file dirname /home/chiwei/work/checkout/xilinx-bali.git.new/pcie_le/rtl/fc16_pcie_le.qip ] ]
-##source /home/chiwei/work/checkout/xilinx-bali.git.new/pcie_le/rtl/fc16_pcie_le.qip
+set ::quartus(qip_path) [ file normalize [ file dirname /home/chiwei/work/checkout/xilinx-bali.git.new/top/doc/bist_addr_decoder.qip ] ]
+source /home/chiwei/work/checkout/xilinx-bali.git.new/top/doc/bist_addr_decoder.qip
+set ::quartus(qip_path) [ file normalize [ file dirname /home/chiwei/work/checkout/xilinx-bali.git.new/chipregs/rtl/chipregs_wrap.qip ] ]
+source /home/chiwei/work/checkout/xilinx-bali.git.new/chipregs/rtl/chipregs_wrap.qip
+set ::quartus(qip_path) [ file normalize [ file dirname /home/chiwei/work/checkout/xilinx-bali.git.new/fc16clkrst/rtl/fc16clkrst_wrap.qip ] ]
+source /home/chiwei/work/checkout/xilinx-bali.git.new/fc16clkrst/rtl/fc16clkrst_wrap.qip
 set ::quartus(qip_path) [ file normalize [ file dirname /home/chiwei/work/checkout/xilinx-bali.git.new/link_engine/rtl/dplbuf_pipe.qip ] ]
 source /home/chiwei/work/checkout/xilinx-bali.git.new/link_engine/rtl/dplbuf_pipe.qip
 set ::quartus(qip_path) [ file normalize [ file dirname /home/chiwei/work/checkout/xilinx-bali.git.new/link_engine/rtl/link_engine.qip ] ]
@@ -69,17 +73,31 @@ set ::quartus(qip_path) [ file normalize [ file dirname /home/chiwei/work/checko
 source /home/chiwei/work/checkout/xilinx-bali.git.new/pcie_le/rtl/spd_change.qip
 set ::quartus(qip_path) [ file normalize [ file dirname /home/chiwei/work/checkout/xilinx-bali.git.new/link_engine/rtl/ucstats_pipe.qip ] ]
 source /home/chiwei/work/checkout/xilinx-bali.git.new/link_engine/rtl/ucstats_pipe.qip
-#set ::quartus(qip_path) [ file normalize [ file dirname /home/chiwei/work/checkout/xilinx-bali.git.new/common/vi_lib/vi_sync_csr.qip ] ]
-#source /home/chiwei/work/checkout/xilinx-bali.git.new/common/vi_lib/vi_sync_csr.qip
-set ::quartus(qip_path) [ file normalize [ file dirname /home/chiwei/work/checkout/xilinx-bali.git.new/top/syn/work/fc16_pcie_le.qip ] ]
-source fc16_pcie_le.qip
-set_property "top" "fc16_pcie_le" $obj
-#set_property "top" "pcie_gen2x8_13_1" $obj
-#set_property "top" [lindex [find_top] 1] $obj
-set_property include_dirs {/home/chiwei/work/checkout/xilinx-bali.git.new/link_engine/lib /home/chiwei/work/checkout/xilinx-bali.git.new/pcie_gen2x8/bali_pcie_app/include} $obj
-#set_property include_dirs /home/chiwei/work/checkout/xilinx-bali.git.new/link_engine/lib $obj
-#set_property include_dirs {/home/chiwei/work/checkout/xilinx-bali.git.new/link_engine/lib /home/chiwei/work/checkout/xilinx-bali.git.new/pcie_gen2x8/bali_pcie_app/include} [current_fileset]
-#set_property verilog_dir {/home/chiwei/work/checkout/xilinx-bali.git.new/link_engine/lib /home/chiwei/work/checkout/xilinx-bali.git.new/pcie_gen2x8/bali_pcie_app/include} [current_fileset]
+set ::quartus(qip_path) [ file normalize [ file dirname /home/chiwei/work/checkout/xilinx-bali.git.new/fc1_layer_kr_16_8/rtl/SERDES/fc16pma_wrap.qip ] ]
+source /home/chiwei/work/checkout/xilinx-bali.git.new/fc1_layer_kr_16_8/rtl/SERDES/fc16pma_wrap.qip
+set ::quartus(qip_path) [ file normalize [ file dirname /home/chiwei/work/checkout/xilinx-bali.git.new/fc1_layer_kr_16_8/rtl/fc1_kr_wrap.qip ] ]
+source /home/chiwei/work/checkout/xilinx-bali.git.new/fc1_layer_kr_16_8/rtl/fc1_kr_wrap.qip
+set ::quartus(qip_path) [ file normalize [ file dirname /home/chiwei/work/checkout/xilinx-bali.git.new/common/vi_lib/heartbeat_x4.qip ] ]
+source /home/chiwei/work/checkout/xilinx-bali.git.new/common/vi_lib/heartbeat_x4.qip
+set ::quartus(qip_path) [ file normalize [ file dirname /home/chiwei/work/checkout/xilinx-bali.git.new/top/doc/top_addr_decoder.qip ] ]
+source /home/chiwei/work/checkout/xilinx-bali.git.new/top/doc/top_addr_decoder.qip
+set ::quartus(qip_path) [ file normalize [ file dirname /home/chiwei/work/checkout/xilinx-bali.git.new/txbist72b/rtl/txbist72b_wrap.qip ] ]
+source /home/chiwei/work/checkout/xilinx-bali.git.new/txbist72b/rtl/txbist72b_wrap.qip
+set ::quartus(qip_path) [ file normalize [ file dirname /home/chiwei/work/checkout/xilinx-bali.git.new/txmux/txmux.qip ] ]
+source /home/chiwei/work/checkout/xilinx-bali.git.new/txmux/txmux.qip
+set ::quartus(qip_path) [ file normalize [ file dirname /home/chiwei/work/checkout/xilinx-bali.git.new/common/vi_design/ucstats/rtl/ucstats_wrap.qip ] ]
+source /home/chiwei/work/checkout/xilinx-bali.git.new/common/vi_design/ucstats/rtl/ucstats_wrap.qip
+set ::quartus(qip_path) [ file normalize [ file dirname /home/chiwei/work/checkout/xilinx-bali.git.new/common/vi_lib/vi_sync_pulse.qip ] ]
+source /home/chiwei/work/checkout/xilinx-bali.git.new/common/vi_lib/vi_sync_pulse.qip
+set ::quartus(qip_path) [ file normalize [ file dirname /home/chiwei/work/checkout/xilinx-bali.git.new/xbar/rtl/xbar_wrap.qip ] ]
+source /home/chiwei/work/checkout/xilinx-bali.git.new/xbar/rtl/xbar_wrap.qip
+set ::quartus(qip_path) [ file normalize [ file dirname /home/chiwei/work/checkout/xilinx-bali.git.new/top/doc/xx01_g_addr_decoder.qip ] ]
+source /home/chiwei/work/checkout/xilinx-bali.git.new/top/doc/xx01_g_addr_decoder.qip
+
+set ::quartus(qip_path) [ file normalize [ file dirname /home/chiwei/work/checkout/xilinx-bali.git.new/top/syn/work0/fc16_top.qip ] ]
+source fc16_top.qip
+set_property "top" "fc16_top" $obj
+set_property include_dirs {/home/chiwei/work/checkout/xilinx-bali.git.new/fc1_layer_kr_16_8/rtl/SERDES/auto /home/chiwei/work/checkout/xilinx-bali.git.new/fc1_layer_kr_16_8/rtl/SERDES/includes ../../../common/vi_design/ucstats/rtl/auto /home/chiwei/work/checkout/xilinx-bali.git.new/link_engine/lib /home/chiwei/work/checkout/xilinx-bali.git.new/pcie_gen2x8/bali_pcie_app/include} $obj
 set_property generic { PCIE_GEN3=0 } [current_fileset]
 set_property generic { LINKS=12 } [current_fileset]
 set_property generic { PORTS=12 } [current_fileset]
@@ -137,5 +155,5 @@ reset_run synth_1
 launch_runs synth_1 -jobs 4
 wait_on_run synth_1
 open_run synth_1
-write_checkpoint -force fc16_pcie_le_synth.dcp
+write_checkpoint -force fc16_top_synth.dcp
       

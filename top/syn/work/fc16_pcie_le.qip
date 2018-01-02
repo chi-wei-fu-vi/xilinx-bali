@@ -1,0 +1,4 @@
+#set_global_assignment -library fc16_pcie_le -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) ../../../pcie_gen2x8/bali_pcie_app/include/bali_lib_pkg.sv]
+#set_global_assignment -library fc16_pcie_le -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) ../../../pcie_gen2x8/bali_pcie_app/include/pcie_app_pkg.sv]
+set_global_assignment -library fc16_pcie_le -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) ../../../pcie_le/rtl/fc16_pcie_le.v]
+set_global_assignment -library fc16_pcie_le -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) ../../../common/vi_lib/vi_sync_csr.sv]

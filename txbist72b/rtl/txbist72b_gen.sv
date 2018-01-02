@@ -420,13 +420,13 @@ s5_ram1w1r1c_16kx72b_ch0 s5_ram1w1r1c_16kx72b_ch0_inst (
  . rsta_busy            ( rsta_busy                                          ), // output
  . rstb_busy            ( rstb_busy                                          ), // output
  . rstb                 ( rst                                                ), // input
- . wea                  ( ram_wr_byteen[8:0]                                 ), // input [8:0]
+ . wea                  ( cr_ram_wr_en_edge ? ram_wr_byteen[8:0] : 0         ), // input [8:0]
  . clka                 ( clk                                                ), // input
  . clkb                 ( clk                                                ), // input
  . dina                 ( { oREG_TXBIST_WR_DATA[7:0], oREG_TXBIST_WR_DATA[63:0] } ), // input [71:0]
  . addrb                ( ram_rd_addr[13:0]                                  ), // input [10:0]
  . addra                ( ram_wr_addr[13:0]                                  ), // input [10:0]
- . wea                  ( cr_ram_wr_en_edge                                  ), // input fixme 1 vs 9
+ //. wea                  ( cr_ram_wr_en_edge                                  ), // input fixme 1 vs 9
  . doutb                ( ram_rd_data[71:0]                                  )  
 );
 
@@ -439,12 +439,12 @@ s5_ram1w1r1c_16kx72b_ch1 s5_ram1w1r1c_16kx72b_ch1_inst (
  . rsta_busy            ( rsta_busy                                          ), // output
  . rstb_busy            ( rstb_busy                                          ), // output
  . rstb                 ( rst                                                ), // input
- . wea                  ( ram_wr_byteen[8:0]                                 ), // input [8:0]
+ . wea                  ( cr_ram_wr_en_edge ? ram_wr_byteen[8:0] : 0         ), // input [8:0]
  . clka                 ( clk                                                ), // input
  . clkb                 ( clk                                                ), // input
  . dina                 ( { oREG_TXBIST_WR_DATA[7:0], oREG_TXBIST_WR_DATA[63:0] } ), // input [71:0]
  . addra                ( ram_wr_addr[13:0]                                  ), // input [10:0]
- . wea                  ( cr_ram_wr_en_edge                                  ), // input fixme 1 vs 9
+ //. wea                  ( cr_ram_wr_en_edge                                  ), // input fixme 1 vs 9
  . addrb                ( ram_rd_addr[13:0]                                  ), // input [10:0]
  . doutb                ( ram_rd_data[71:0]                                  )  
 );

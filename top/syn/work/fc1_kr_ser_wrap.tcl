@@ -55,9 +55,19 @@ set obj [get_filesets sources_1]
 # Add conventional sources
 #add_files -quiet $src_dir/hdl
 source ~/bin/set_global_assignment.tcl
-set ::quartus(qip_path) [ file normalize [ file dirname /home/chiwei/work/checkout/xilinx-bali.git.new/fc1_layer_kr_16_8/rtl/fc1_kr_ser_wrap.qip ] ]
-source /home/chiwei/work/checkout/xilinx-bali.git.new/fc1_layer_kr_16_8/rtl/fc1_kr_ser_wrap.qip
+#set ::quartus(qip_path) [ file normalize [ file dirname xx] ]
+#source xx
+set ::quartus(qip_path) [ file normalize [ file dirname /home/chiwei/work/checkout/xilinx-bali.git.new/fc1_layer_kr_16_8/rtl/SERDES/fc16pma_wrap.qip ] ]
+source /home/chiwei/work/checkout/xilinx-bali.git.new/fc1_layer_kr_16_8/rtl/SERDES/fc16pma_wrap.qip
+set ::quartus(qip_path) [ file normalize [ file dirname /home/chiwei/work/checkout/xilinx-bali.git.new/fc1_layer_kr_16_8/rtl/fc1_kr_wrap.qip ] ]
+source /home/chiwei/work/checkout/xilinx-bali.git.new/fc1_layer_kr_16_8/rtl/fc1_kr_wrap.qip
+set ::quartus(qip_path) [ file normalize [ file dirname fc1_kr_ser_wrap.qip] ]
+source fc1_kr_ser_wrap.qip
+#set ::quartus(qip_path) [ file normalize [ file dirname /home/chiwei/work/checkout/xilinx-bali.git.new/fc1_layer_kr_16_8/rtl/fc1_kr_ser_wrap.qip ] ]
+#source /home/chiwei/work/checkout/xilinx-bali.git.new/fc1_layer_kr_16_8/rtl/fc1_kr_ser_wrap.qip
+
 set_property "top" "fc1_kr_ser_wrap" $obj
+set_property include_dirs {/home/chiwei/work/checkout/xilinx-bali.git.new/fc1_layer_kr_16_8/rtl/SERDES/auto /home/chiwei/work/checkout/xilinx-bali.git.new/fc1_layer_kr_16_8/rtl/SERDES/includes} $obj
 set_property generic { SIM_ONLY=0 } [current_fileset]
 set_property generic { CHANNELS=CHANNELS } [current_fileset]
 set_property generic { DEBUG=0 } [current_fileset]

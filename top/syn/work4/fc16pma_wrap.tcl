@@ -60,7 +60,8 @@ source /home/chiwei/work/checkout/xilinx-bali.git.new/fc1_layer_kr_16_8/rtl/SERD
 set_property "top" "fc16pma_wrap" $obj
 #set_property include_dirs /home/chiwei/work/checkout/xilinx-bali.git.new/fc1_layer_kr_16_8/rtl/SERDES/auto $obj
 #set_property include_dirs /home/chiwei/work/checkout/xilinx-bali.git.new/fc1_layer_kr_16_8/rtl/SERDES/includes $obj
-set_property include_dirs {/home/chiwei/work/checkout/xilinx-bali.git.new/fc1_layer_kr_16_8/rtl/SERDES/auto /home/chiwei/work/checkout/xilinx-bali.git.new/fc1_layer_kr_16_8/rtl/SERDES/includes} $obj
+#set_property include_dirs {/home/chiwei/work/checkout/xilinx-bali.git.new/fc1_layer_kr_16_8/rtl/SERDES/auto /home/chiwei/work/checkout/xilinx-bali.git.new/fc1_layer_kr_16_8/rtl/SERDES/includes} $obj
+set_property include_dirs {/home/chiwei/work/checkout/xilinx-bali.git.new/fc1_layer_kr_16_8/rtl/SERDES/auto /home/chiwei/work/checkout/xilinx-bali.git.new/fc1_layer_kr_16_8/rtl/SERDES/includes} [current_fileset]
 set_property generic { CHANNELS=26 } [current_fileset]
 set_property generic { LITE=0 } [current_fileset]
 set_property generic { SIM_ONLY=0 } [current_fileset]
