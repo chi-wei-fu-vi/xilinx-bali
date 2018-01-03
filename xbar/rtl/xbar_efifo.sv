@@ -120,8 +120,8 @@ module xbar_efifo
    // state primitives.
 
 
-wire                  wr_rst_busy;
-wire                  rd_rst_busy;
+wire        efifo_wr_rst_busy;
+wire        efifo_rd_rst_busy;
 
 assign rdfull = efifo_rd_usedw[9:0] == ((1<<$bit(efifo_rd_usedw[9:0]))-1);
 
@@ -130,8 +130,8 @@ assign wrempty = efifo_wr_usedw[9:0] == 0;
 
 s5_afifo_1024x42b s5_afifo_1024x42b_inst
      (// Outputs
- . wr_rst_busy          ( wr_rst_busy                                        ), // output
- . rd_rst_busy          ( rd_rst_busy                                        ), // output
+ . wr_rst_busy          ( efifo_wr_rst_busy                                  ), // output
+ . rd_rst_busy          ( efifo_rd_rst_busy                                  ), // output
  . dout                 ( efifo_rd_data[41:0]                                ), 
  . empty                ( efifo_rd_empty                                     ), 
  . rd_data_count        ( efifo_rd_usedw[9:0]                                ), 
@@ -199,22 +199,22 @@ s5_afifo_1024x42b s5_afifo_1024x42b_inst
    // This FIFO buffers data from the LPM_MUX before writing into the EFIFO.  It's a FWFT FIFO.
    
 
-wire                  almost_full;
-wire  [3:0]           data_count;
-wire                  almost_empty;
-wire                  underflow;
-wire                  wr_rst_busy;
-wire                  rd_rst_busy;
-wire                  overflow;
+wire          drop_fifo_almost_full;
+wire  [3:0]   drop_fifo_data_count;
+wire          drop_fifo_almost_empty;
+wire          drop_fifo_underflow;
+wire          drop_fifo_wr_rst_busy;
+wire          drop_fifo_rd_rst_busy;
+wire          drop_fifo_overflow;
 s5_sfifo_4x42b s5_sfifo_4x42b_inst
      (// Outputs
- . almost_full          ( almost_full                                        ), // output
- . data_count           ( data_count                                         ), // output [3:0]
- . almost_empty         ( almost_empty                                       ), // output
- . underflow            ( underflow                                          ), // output
- . wr_rst_busy          ( wr_rst_busy                                        ), // output
- . rd_rst_busy          ( rd_rst_busy                                        ), // output
- . overflow             ( overflow                                           ), // output
+ . almost_full          ( drop_fifo_almost_full                              ), // output
+ . data_count           ( drop_fifo_data_count                               ), // output [3:0]
+ . almost_empty         ( drop_fifo_almost_empty                             ), // output
+ . underflow            ( drop_fifo_underflow                                ), // output
+ . wr_rst_busy          ( drop_fifo_wr_rst_busy                              ), // output
+ . rd_rst_busy          ( drop_fifo_rd_rst_busy                              ), // output
+ . overflow             ( drop_fifo_overflow                                 ), // output
  . din                  ( {rx_type[1:0],rx_data_in[39:0]}                    ), 
  . full                 ( drop_fifo_full                                     ), 
  . dout                 ( drop_fifo_rd_data[41:0]                            ), // Inputs

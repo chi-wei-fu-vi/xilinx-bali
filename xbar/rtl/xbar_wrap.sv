@@ -97,17 +97,17 @@ module xbar_wrap #(
 
 /*synchronize bist data from BIST clock to PMA clock*/
 
-wire                  wr_rst_busy;
-wire                  full;
-wire  [3:0]           rd_data_count;
-wire  [3:0]           wr_data_count;
-wire                  rd_rst_busy;
+wire  [1:0]           wr_rst_busy;
+wire  [1:0]           full;
+wire  [1:0][3:0]      rd_data_count;
+wire  [1:0][3:0]      wr_data_count;
+wire  [1:0]           rd_rst_busy;
 s5_afifo_16_40b bist0_sync (
- . wr_rst_busy          ( wr_rst_busy                                        ), // output
- . full                 ( full                                               ), // output
- . rd_data_count        ( rd_data_count                                      ), // output [3:0]
- . wr_data_count        ( wr_data_count                                      ), // output [3:0]
- . rd_rst_busy          ( rd_rst_busy                                        ), // output
+ . wr_rst_busy          ( wr_rst_busy[0]                                     ), // output
+ . full                 ( full[0]                                            ), // output
+ . rd_data_count        ( rd_data_count[0]                                   ), // output [3:0]
+ . wr_data_count        ( wr_data_count[0]                                   ), // output [3:0]
+ . rd_rst_busy          ( rd_rst_busy[0]                                     ), // output
  . rst                  ( ~rst_txbist_n                                      ), 
  . din                  ( txbist32b_data0                                    ), 
  . rd_clk               ( tx_clk                                             ), 
@@ -137,17 +137,17 @@ always @ (posedge clk_txbist or negedge rst_txbist_n)
 
 
 
-wire                  wr_rst_busy;
-wire                  full;
-wire  [3:0]           rd_data_count;
-wire  [3:0]           wr_data_count;
-wire                  rd_rst_busy;
+//wire                  wr_rst_busy;
+//wire                  full;
+//wire  [3:0]           rd_data_count;
+//wire  [3:0]           wr_data_count;
+//wire                  rd_rst_busy;
 s5_afifo_16_40b bist1_sync (
- . wr_rst_busy          ( wr_rst_busy                                        ), // output
- . full                 ( full                                               ), // output
- . rd_data_count        ( rd_data_count                                      ), // output [3:0]
- . wr_data_count        ( wr_data_count                                      ), // output [3:0]
- . rd_rst_busy          ( rd_rst_busy                                        ), // output
+ . wr_rst_busy          ( wr_rst_busy[1]                                     ), // output
+ . full                 ( full[1]                                            ), // output
+ . rd_data_count        ( rd_data_count[1]                                   ), // output [3:0]
+ . wr_data_count        ( wr_data_count[1]                                   ), // output [3:0]
+ . rd_rst_busy          ( rd_rst_busy[1]                                     ), // output
  . rst                  ( ~rst_txbist_n                                      ), 
  . din                  ( txbist32b_data1                                    ), 
  . rd_clk               ( tx_clk                                             ), 

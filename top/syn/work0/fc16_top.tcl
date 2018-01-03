@@ -96,8 +96,16 @@ source /home/chiwei/work/checkout/xilinx-bali.git.new/top/doc/xx01_g_addr_decode
 
 set ::quartus(qip_path) [ file normalize [ file dirname /home/chiwei/work/checkout/xilinx-bali.git.new/top/syn/work0/fc16_top.qip ] ]
 source fc16_top.qip
+#add_files -quiet [glob -nocomplain ../../../xilinx_ip/*/*/sources_1/ip/*/*.xci]
 set_property "top" "fc16_top" $obj
-set_property include_dirs {/home/chiwei/work/checkout/xilinx-bali.git.new/fc1_layer_kr_16_8/rtl/SERDES/auto /home/chiwei/work/checkout/xilinx-bali.git.new/fc1_layer_kr_16_8/rtl/SERDES/includes ../../../common/vi_design/ucstats/rtl/auto /home/chiwei/work/checkout/xilinx-bali.git.new/link_engine/lib /home/chiwei/work/checkout/xilinx-bali.git.new/pcie_gen2x8/bali_pcie_app/include} $obj
+set incdir_list [list]
+#set_property include_dirs {/home/chiwei/work/checkout/xilinx-bali.git.new/fc1_layer_kr_16_8/rtl/SERDES/auto /home/chiwei/work/checkout/xilinx-bali.git.new/fc1_layer_kr_16_8/rtl/SERDES/includes ../../../common/vi_design/ucstats/rtl/auto /home/chiwei/work/checkout/xilinx-bali.git.new/link_engine/lib /home/chiwei/work/checkout/xilinx-bali.git.new/pcie_gen2x8/bali_pcie_app/include} $obj
+lappend incdir_list /home/chiwei/work/checkout/xilinx-bali.git.new/fc1_layer_kr_16_8/rtl/SERDES/auto
+lappend incdir_list /home/chiwei/work/checkout/xilinx-bali.git.new/fc1_layer_kr_16_8/rtl/SERDES/includes
+lappend incdir_list ../../../common/vi_design/ucstats/rtl/auto
+lappend incdir_list /home/chiwei/work/checkout/xilinx-bali.git.new/link_engine/lib
+lappend incdir_list /home/chiwei/work/checkout/xilinx-bali.git.new/pcie_gen2x8/bali_pcie_app/include
+set_property include_dirs $incdir_list $obj
 set_property generic { PCIE_GEN3=0 } [current_fileset]
 set_property generic { LINKS=12 } [current_fileset]
 set_property generic { PORTS=12 } [current_fileset]
@@ -120,6 +128,7 @@ if {[string equal [get_runs -quiet synth_1] ""]} {
 } else {
   set_property strategy "Vivado Synthesis Defaults" [get_runs synth_1]
   set_property flow "Vivado Synthesis 2017" [get_runs synth_1]
+  set_property "needs_refresh" "1" [get_runs synth_1]
 }
 set obj [get_runs synth_1]
 set_property "part" "$part_num" $obj
@@ -134,21 +143,6 @@ set_property "steps.synth_design.args.shreg_min_size" "5" $obj
 # set the current synth run
 current_run -synthesis [get_runs synth_1]
 
-# Create 'impl_1' run (if not found)
-if {[string equal [get_runs -quiet impl_1] ""]} {
-  create_run -name impl_1 -part $part_num -flow {Vivado Implementation 2017} -strategy "Vivado Implementation Defaults" -constrset constrs_1 -parent_run synth_1
-} else {
-  set_property strategy "Vivado Implementation Defaults" [get_runs impl_1]
-  set_property flow "Vivado Implementation 2017" [get_runs impl_1]
-}
-set obj [get_runs impl_1]
-set_property "part" "$part_num" $obj
-set_property "steps.write_bitstream.args.bin_file" "1" $obj
-
-# set the current impl run
-current_run -implementation [get_runs impl_1]
-
-puts "INFO: Project created:$proj_name"
 
       
 reset_run synth_1
@@ -156,4 +150,39 @@ launch_runs synth_1 -jobs 4
 wait_on_run synth_1
 open_run synth_1
 write_checkpoint -force fc16_top_synth.dcp
+
+report_power
       
+# Create 'impl_1' run (if not found)
+if {[string equal [get_runs -quiet impl_1] ""]} {
+  create_run -name impl_1 -part $part_num -flow {Vivado Implementation 2017} -strategy "Vivado Implementation Defaults" -constrset constrs_1 -parent_run synth_1
+} else {
+  set_property strategy "Vivado Implementation Defaults" [get_runs impl_1]
+  set_property flow "Vivado Implementation 2017" [get_runs impl_1]
+  set_property "needs_refresh" "1" [get_runs impl_1]
+}
+
+set obj [get_runs impl_1]
+set_property "steps.opt_design.args.directive" "NoBramPowerOpt" $obj
+set_property "steps.place_design.args.directive" "ExtraPostPlacementOpt" $obj
+set_property "steps.phys_opt_design.is_enabled" "1" $obj
+set_property "steps.phys_opt_design.args.directive" "AlternateFlowWithRetiming" $obj
+set_property "steps.route_design.args.directive" "HigherDelayCost" $obj
+set_property "steps.post_route_phys_opt_design.is_enabled" "1" $obj
+set_property "steps.post_route_phys_opt_design.args.directive" "AggressiveExplore" $obj
+
+set_property "part" "$part_num" $obj
+set_property "steps.write_bitstream.args.bin_file" "1" $obj
+
+# set the current impl run
+current_run -implementation [get_runs impl_1]
+
+puts "INFO: Project created:$proj_name"
+reset_run impl_1
+launch_runs impl_1 -jobs 4
+wait_on_run impl_1
+open_run impl_1
+write_checkpoint -force fc16_top_impl.dcp
+
+reset_run impl_1 -prev_step 
+launch_runs impl_1 -to_step write_bitstream -jobs 4

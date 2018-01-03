@@ -414,8 +414,8 @@ else
 generate
 if (CH==0) begin : gen_s5_ram1w1r1c_16kx72b_ch0
 
-wire                  rsta_busy;
-wire                  rstb_busy;
+wire               rsta_busy;
+wire               rstb_busy;
 s5_ram1w1r1c_16kx72b_ch0 s5_ram1w1r1c_16kx72b_ch0_inst (
  . rsta_busy            ( rsta_busy                                          ), // output
  . rstb_busy            ( rstb_busy                                          ), // output
@@ -474,17 +474,17 @@ begin
 end
 
 
-wire                  almost_empty;
-logic                 rst = 0;  // fixme
-wire                  overflow;
-wire                  almost_full;
-wire                  underflow;
+wire                  fifo_almost_empty;
+logic                 fifo_rst = 0;  // fixme
+wire                  fifo_overflow;
+wire                  fifo_almost_full;
+wire                  fifo_underflow;
 alt_fifo_sync_72_72 data_fifo (
- . almost_empty         ( almost_empty                                       ), // output
- . rst                  ( rst                                                ), // input
- . overflow             ( overflow                                           ), // output
- . almost_full          ( almost_full                                        ), // output
- . underflow            ( underflow                                          ), // output
+ . almost_empty         ( fifo_almost_empty                                  ), // output
+ . rst                  ( fifo_rst                                           ), // input
+ . overflow             ( fifo_overflow                                      ), // output
+ . almost_full          ( fifo_almost_full                                   ), // output
+ . underflow            ( fifo_underflow                                     ), // output
  . din                  ( ram_rd_data_p0                                     ), 
  . full                 (                                                    ), 
  . dout                 ( fifo_dword                                         ), 
