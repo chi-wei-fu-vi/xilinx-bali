@@ -402,12 +402,12 @@ module ucstats_wrap
    // performing reads or writes, the bank is locked and may not be switched.
 
 
-wire                  rsta_busy;
-wire                  rstb_busy;
+wire   [2:0]       rsta_busy;
+wire   [2:0]       rstb_busy;
 s5_ram1w1r_1024x32b stats_ram0
      (// Outputs
- . rsta_busy            ( rsta_busy                                          ), // output
- . rstb_busy            ( rstb_busy                                          ), // output
+ . rsta_busy            ( rsta_busy[0]                                       ), // output
+ . rstb_busy            ( rstb_busy[0]                                       ), // output
  . doutb                ( stats_ram0_rd_data[31:0]                           ), // Inputs
  . rstb                 ( ~rst_n                                             ), 
  . clka                 ( clk                                                ), 
@@ -420,12 +420,12 @@ s5_ram1w1r_1024x32b stats_ram0
 
  
 
-wire                  rsta_busy;
-wire                  rstb_busy;
+//wire                  rsta_busy;
+//wire                  rstb_busy;
 s5_ram1w1r_1024x32b stats_ram1
      (// Outputs
- . rsta_busy            ( rsta_busy                                          ), // output
- . rstb_busy            ( rstb_busy                                          ), // output
+ . rsta_busy            ( rsta_busy[1]                                       ), // output
+ . rstb_busy            ( rstb_busy[1]                                       ), // output
  . doutb                ( stats_ram1_rd_data[31:0]                           ), // Inputs
  . rstb                 ( ~rst_n                                             ), 
  . clka                 ( clk                                                ), 
@@ -523,12 +523,12 @@ s5_ram1w1r_1024x32b stats_ram1
    // UC writes on shadowed and available for PCIE based register access
    
 
-wire                  rsta_busy;
-wire                  rstb_busy;
+//wire                  rsta_busy;
+//wire                  rstb_busy;
 s5_ram1w1r_1024x32b stats_ram_regs
      (// Outputs
- . rsta_busy            ( rsta_busy                                          ), // output
- . rstb_busy            ( rstb_busy                                          ), // output
+ . rsta_busy            ( rsta_busy[2]                                       ), // output
+ . rstb_busy            ( rstb_busy[2]                                       ), // output
  . doutb                ( iUCSTATS_MM_RD_DATA[31:0]                          ), // Inputs
  . rstb                 ( ~rst_n                                             ), 
  . clka                 ( clk                                                ), 

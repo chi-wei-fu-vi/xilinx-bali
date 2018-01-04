@@ -272,19 +272,19 @@ end
 //
 //////////////////////////////////////////////////////////////////////////////
 
-wire                  almost_full;
-wire                  almost_empty;
-wire                  underflow;
-wire                  wr_rst_busy;
-wire                  rd_rst_busy;
-wire                  overflow;
+wire             data_almost_full;
+wire             data_almost_empty;
+wire             data_underflow;
+wire             data_wr_rst_busy;
+wire             data_rd_rst_busy;
+wire             data_overflow;
 tx_app2hip_sc_fifo_256x512 data_sc_fifo_256x512_inst
 (
- . almost_full          ( almost_full                                        ), // output
- . almost_empty         ( almost_empty                                       ), // output
- . underflow            ( underflow                                          ), // output
- . wr_rst_busy          ( wr_rst_busy                                        ), // output
- . rd_rst_busy          ( rd_rst_busy                                        ), // output
+ . almost_full          ( data_almost_full                                   ), // output
+ . almost_empty         ( data_almost_empty                                  ), // output
+ . underflow            ( data_underflow                                     ), // output
+ . wr_rst_busy          ( data_wr_rst_busy                                   ), // output
+ . rd_rst_busy          ( data_rd_rst_busy                                   ), // output
  . overflow             ( overflow                                           ), // output
  . din                  ( iTX_ST_DATA[gnt_enc]                               ), 
  . full                 ( fifo_full                                          ), 
@@ -301,20 +301,20 @@ tx_app2hip_sc_fifo_256x512 data_sc_fifo_256x512_inst
 assign dma_4kb_done = iBLK_DONE_PULSE & iTX_ST[gnt_enc].valid;
 
 
-wire                  almost_full;
-wire                  almost_empty;
-wire                  underflow;
-wire                  wr_rst_busy;
-wire                  rd_rst_busy;
-wire                  overflow;
+wire      ctrl_almost_full;
+wire      ctrl_almost_empty;
+wire      ctrl_underflow;
+wire      ctrl_wr_rst_busy;
+wire      ctrl_rd_rst_busy;
+wire      ctrl_overflow;
 tx_app2hip_sc_fifo_48x512 ctrl_sc_fifo_48x512_inst
 (
- . almost_full          ( almost_full                                        ), // output
- . almost_empty         ( almost_empty                                       ), // output
- . underflow            ( underflow                                          ), // output
- . wr_rst_busy          ( wr_rst_busy                                        ), // output
- . rd_rst_busy          ( rd_rst_busy                                        ), // output
- . overflow             ( overflow                                           ), // output
+ . almost_full          ( ctrl_almost_full                                   ), // output
+ . almost_empty         ( ctrl_almost_empty                                  ), // output
+ . underflow            ( ctrl_underflow                                     ), // output
+ . wr_rst_busy          ( ctrl_wr_rst_busy                                   ), // output
+ . rd_rst_busy          ( ctrl_rd_rst_busy                                   ), // output
+ . overflow             ( ctrl_overflow                                      ), // output
  . din                  ( {dma_4kb_done, iLINK_NUMBER, iTX_ST[gnt_enc]}      ), 
  . full                 (                                                    ), 
  . dout                 ( {hip_4kb_done, hip_link_number, tx_st_ctrl}        ), 

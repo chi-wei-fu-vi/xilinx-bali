@@ -305,20 +305,20 @@ tx_link_arbiter_sc_fifo_256x256 tx_link_arbiter_sc_fifo_256x256_inst
 
 // show-ahead. rdreq is actually an ack.
 
-wire                  almost_full;
-wire                  almost_empty;
-wire                  underflow;
-wire                  wr_rst_busy;
-wire                  rd_rst_busy;
-wire                  overflow;
+wire      misc_almost_full;
+wire      misc_almost_empty;
+wire      misc_underflow;
+wire      misc_wr_rst_busy;
+wire      misc_rd_rst_busy;
+wire      misc_overflow;
 tx_link_arbiter_misc_sc_fifo_4x8 link_number_sc_fifo_4x8
 (
- . almost_full          ( almost_full                                        ), // output
- . almost_empty         ( almost_empty                                       ), // output
- . underflow            ( underflow                                          ), // output
- . wr_rst_busy          ( wr_rst_busy                                        ), // output
- . rd_rst_busy          ( rd_rst_busy                                        ), // output
- . overflow             ( overflow                                           ), // output
+ . almost_full          ( misc_almost_full                                   ), // output
+ . almost_empty         ( misc_almost_empty                                  ), // output
+ . underflow            ( misc_underflow                                     ), // output
+ . wr_rst_busy          ( misc_wr_rst_busy                                   ), // output
+ . rd_rst_busy          ( misc_rd_rst_busy                                   ), // output
+ . overflow             ( misc_overflow                                      ), // output
  . din                  ( {{(8-PORT_WIDTH){1'b0}}, link_number[PORT_WIDTH-1:0]} ), 
  . full                 ( link_number_fifo_full                              ), 
  . dout                 ( {link_numer_fifo_msb, oLINK_NUMBER[PORT_WIDTH-1:0]} ), 

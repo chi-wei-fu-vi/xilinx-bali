@@ -123,8 +123,8 @@ module fc16_top #(
 		     // ------------
 		     // debug
 		     // ------------
-		     inout   [33:0]                         oMICTOR_A,                       //  Logic analyzer debug interface A
-		     output  [33:0]                         oMICTOR_B,                       //  Logic analyzer debug interface B
+		     //inout   [33:0]                         oMICTOR_A,                       //  Logic analyzer debug interface A
+		     //output  [33:0]                         oMICTOR_B,                       //  Logic analyzer debug interface B
 
 		     inout   ioSYNC_RIBBON,
 		     inout   ioSYNC_NEIGHBOR
@@ -1194,8 +1194,8 @@ module fc16_top #(
    //   assign oMICTOR_A[33:0] = ioOPT_1 ? debug_pcie_regs[33:0] : debug_counter[33:0];    - removed for LAI
    //assign  oMICTOR_A[33:0]    =  oREG_FPGA_CTL_LOGIC_ANALYZER_INF_DISABLE ? 34'd0 : debug_counter[33:0];
    //assign  oMICTOR_B[33:0]    =  oREG_FPGA_CTL_LOGIC_ANALYZER_INF_DISABLE ? 34'd0 : debug_counter[33:0];
-   assign  oMICTOR_A[33:0]    =  34'd0;
-   assign  oMICTOR_B[33:0]    =  34'd0;
+   //assign  oMICTOR_A[33:0]    =  34'd0;
+   //assign  oMICTOR_B[33:0]    =  34'd0;
 
 
    assign  debug_pcie_regs[33:0]  =  {iMM2PCIE_RD_DATA_V,8'd0,oPCIE2MM_ADDRESS[20:0],oPCIE2MM_WR_EN,oPCIE2MM_RD_EN};

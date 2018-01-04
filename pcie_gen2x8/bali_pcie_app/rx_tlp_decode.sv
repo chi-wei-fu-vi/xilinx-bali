@@ -190,20 +190,20 @@ assign rx_st_in.bar   = iRX_ST_BAR;
 
 // FIFO - write the RX AVALON CONTROL SIGNALS
 
-wire                  almost_full;
-wire                  almost_empty;
-wire                  underflow;
-wire                  wr_rst_busy;
-wire                  rd_rst_busy;
-wire                  overflow;
+wire      ctrl_almost_full;
+wire      ctrl_almost_empty;
+wire      ctrl_underflow;
+wire      ctrl_wr_rst_busy;
+wire      ctrl_rd_rst_busy;
+wire      ctrl_overflow;
 tlp_decode_sc_fifo_48x8 sc_fifo_48x8_inst
 (
- . almost_full          ( almost_full                                        ), // output
- . almost_empty         ( almost_empty                                       ), // output
- . underflow            ( underflow                                          ), // output
- . wr_rst_busy          ( wr_rst_busy                                        ), // output
- . rd_rst_busy          ( rd_rst_busy                                        ), // output
- . overflow             ( overflow                                           ), // output
+ . almost_full          ( ctrl_almost_full                                   ), // output
+ . almost_empty         ( ctrl_almost_empty                                  ), // output
+ . underflow            ( ctrl_underflow                                     ), // output
+ . wr_rst_busy          ( ctrl_wr_rst_busy                                   ), // output
+ . rd_rst_busy          ( ctrl_rd_rst_busy                                   ), // output
+ . overflow             ( ctrl_overflow                                      ), // output
  . din                  ( rx_st_in                                           ), 
  . full                 (                                                    ), 
  . dout                 ( rx_st                                              ), 
@@ -219,20 +219,20 @@ tlp_decode_sc_fifo_48x8 sc_fifo_48x8_inst
 
 // FIFO - write the RX AVALON DATA
 
-wire                  almost_full;
-wire                  almost_empty;
-wire                  underflow;
-wire                  wr_rst_busy;
-wire                  rd_rst_busy;
-wire                  overflow;
+wire      data_almost_full;
+wire      data_almost_empty;
+wire      data_underflow;
+wire      data_wr_rst_busy;
+wire      data_rd_rst_busy;
+wire      data_overflow;
 tlp_decode_sc_fifo_256x8 sc_fifo_256x8_inst
 (
- . almost_full          ( almost_full                                        ), // output
- . almost_empty         ( almost_empty                                       ), // output
- . underflow            ( underflow                                          ), // output
- . wr_rst_busy          ( wr_rst_busy                                        ), // output
- . rd_rst_busy          ( rd_rst_busy                                        ), // output
- . overflow             ( overflow                                           ), // output
+ . almost_full          ( data_almost_full                                   ), // output
+ . almost_empty         ( data_almost_empty                                  ), // output
+ . underflow            ( data_underflow                                     ), // output
+ . wr_rst_busy          ( data_wr_rst_busy                                   ), // output
+ . rd_rst_busy          ( data_rd_rst_busy                                   ), // output
+ . overflow             ( data_overflow                                      ), // output
  . din                  ( iRX_ST_DATA                                        ), 
  . full                 (                                                    ), 
  . dout                 ( rx_st_data                                         ), 
@@ -281,20 +281,20 @@ always @(posedge iCLK or posedge iRST)
 
 // FIFO - write the RX AVALON CONTROL SIGNALS
 
-wire                  almost_full;
-wire                  almost_empty;
-wire                  underflow;
-wire                  wr_rst_busy;
-wire                  rd_rst_busy;
-wire                  overflow;
+wire      ctrl_almost_full;
+wire      ctrl_almost_empty;
+wire      ctrl_underflow;
+wire      ctrl_wr_rst_busy;
+wire      ctrl_rd_rst_busy;
+wire      ctrl_overflow;
 tlp_decode_sc_fifo_48x8 sc_fifo_48x8_inst
 (
- . almost_full          ( almost_full                                        ), // output
- . almost_empty         ( almost_empty                                       ), // output
- . underflow            ( underflow                                          ), // output
- . wr_rst_busy          ( wr_rst_busy                                        ), // output
- . rd_rst_busy          ( rd_rst_busy                                        ), // output
- . overflow             ( overflow                                           ), // output
+ . almost_full          ( ctrl_almost_full                                   ), // output
+ . almost_empty         ( ctrl_almost_empty                                  ), // output
+ . underflow            ( ctrl_underflow                                     ), // output
+ . wr_rst_busy          ( ctrl_wr_rst_busy                                   ), // output
+ . rd_rst_busy          ( ctrl_rd_rst_busy                                   ), // output
+ . overflow             ( ctrl_overflow                                      ), // output
  . din                  ( rx_st_in                                           ), 
  . full                 (                                                    ), 
  . dout                 ( rx_st                                              ), 
@@ -310,20 +310,20 @@ tlp_decode_sc_fifo_48x8 sc_fifo_48x8_inst
 
 // FIFO - write the RX AVALON DATA
 
-wire                  almost_full;
-wire                  almost_empty;
-wire                  underflow;
-wire                  wr_rst_busy;
-wire                  rd_rst_busy;
-wire                  overflow;
+wire      data_almost_full;
+wire      data_almost_empty;
+wire      data_underflow;
+wire      data_wr_rst_busy;
+wire      data_rd_rst_busy;
+wire      data_overflow;
 tlp_decode_sc_fifo_256x8 sc_fifo_256x8_inst
 (
- . almost_full          ( almost_full                                        ), // output
- . almost_empty         ( almost_empty                                       ), // output
- . underflow            ( underflow                                          ), // output
- . wr_rst_busy          ( wr_rst_busy                                        ), // output
- . rd_rst_busy          ( rd_rst_busy                                        ), // output
- . overflow             ( overflow                                           ), // output
+ . almost_full          ( data_almost_full                                   ), // output
+ . almost_empty         ( data_almost_empty                                  ), // output
+ . underflow            ( data_underflow                                     ), // output
+ . wr_rst_busy          ( data_wr_rst_busy                                   ), // output
+ . rd_rst_busy          ( data_rd_rst_busy                                   ), // output
+ . overflow             ( data_overflow                                      ), // output
  . din                  ( irx_st_data                                        ), 
  . full                 (                                                    ), 
  . dout                 ( rx_st_data                                         ), 

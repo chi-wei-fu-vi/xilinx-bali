@@ -347,20 +347,20 @@ import fmac_pkg::*;
    logic rcv_fifo_empty, rcv_fifo_full;
 
 
-wire                  almost_full;
-wire                  almost_empty;
-wire                  underflow;
-wire                  wr_rst_busy;
-wire                  rd_rst_busy;
-wire                  overflow;
+wire    rcv_fifo_almost_full;
+wire    rcv_fifo_almost_empty;
+wire    rcv_fifo_underflow;
+wire    rcv_fifo_wr_rst_busy;
+wire    rcv_fifo_rd_rst_busy;
+wire    rcv_fifo_overflow;
 s5_sfifo_16x72b rcv_fifo
      (// Outputs
- . almost_full          ( almost_full                                        ), // output
- . almost_empty         ( almost_empty                                       ), // output
- . underflow            ( underflow                                          ), // output
- . wr_rst_busy          ( wr_rst_busy                                        ), // output
- . rd_rst_busy          ( rd_rst_busy                                        ), // output
- . overflow             ( overflow                                           ), // output
+ . almost_full          ( rcv_fifo_almost_full                               ), // output
+ . almost_empty         ( rcv_fifo_almost_empty                              ), // output
+ . underflow            ( rcv_fifo_underflow                                 ), // output
+ . wr_rst_busy          ( rcv_fifo_wr_rst_busy                               ), // output
+ . rd_rst_busy          ( rcv_fifo_rd_rst_busy                               ), // output
+ . overflow             ( rcv_fifo_overflow                                  ), // output
  . din                  ( {4'h0,rx_type_a[1][1:0],rx_type_a[0][1:0],rx_data_a[63:0]} ), 
  . full                 ( rcv_fifo_full                                      ), 
  . dout                 ( {unused[3:0],rcv_type_fp0[1][1:0],rcv_type_fp0[0][1:0],rcv_data_fp0[63:0]} ), 
@@ -698,20 +698,20 @@ s5_sfifo_16x72b rcv_fifo
 	 end
 
 
-wire                  almost_full;
-wire                  almost_empty;
-wire                  underflow;
-wire                  wr_rst_busy;
-wire                  rd_rst_busy;
-wire                  overflow;
+wire    mac_fifo_almost_full;
+wire    mac_fifo_almost_empty;
+wire    mac_fifo_underflow;
+wire    mac_fifo_wr_rst_busy;
+wire    mac_fifo_rd_rst_busy;
+wire    mac_fifo_overflow;
 s5_sfifo_64x96b mac_fifo
      (// Outputs
- . almost_full          ( almost_full                                        ), // output
- . almost_empty         ( almost_empty                                       ), // output
- . underflow            ( underflow                                          ), // output
- . wr_rst_busy          ( wr_rst_busy                                        ), // output
- . rd_rst_busy          ( rd_rst_busy                                        ), // output
- . overflow             ( overflow                                           ), // output
+ . almost_full          ( mac_fifo_almost_full                               ), // output
+ . almost_empty         ( mac_fifo_almost_empty                              ), // output
+ . underflow            ( mac_fifo_underflow                                 ), // output
+ . wr_rst_busy          ( mac_fifo_wr_rst_busy                               ), // output
+ . rd_rst_busy          ( mac_fifo_rd_rst_busy                               ), // output
+ . overflow             ( mac_fifo_overflow                                  ), // output
  . din                  ( fmac_fifo_wr_data[95:0]                            ), 
  . full                 ( fmac_fifo_full                                     ), 
  . dout                 ( fmac_fifo_rd_data[95:0]                            ), 

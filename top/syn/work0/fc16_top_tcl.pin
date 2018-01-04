@@ -1,0 +1,2415 @@
+set_location_assignment PIN_A7 -to iBUS_MASTER # Y
+set_location_assignment PIN_A8 -to ioSYNC_NEIGHBOR # Y
+set_location_assignment PIN_A28 -to iSFP_LOS[23] # Y
+set_location_assignment PIN_A29 -to iSFP_LOS[19] # Y
+set_location_assignment PIN_AA3 -to oFC_TD_P[17](n) # N
+set_location_assignment PIN_AA4 -to oFC_TD_P[17] # Y
+set_location_assignment PIN_AA9 -to MSEL0 # 
+set_location_assignment PIN_AA10 -to MSEL1 # 
+set_location_assignment PIN_AA25 -to oMICTOR_A[21] # Y
+set_location_assignment PIN_AA26 -to oLED_N[8] # Y
+set_location_assignment PIN_AA27 -to oLED_N[9] # Y
+set_location_assignment PIN_AA31 -to TCK # 
+set_location_assignment PIN_AA36 -to oHIP_SERIAL_TX_OUT7 # Y
+set_location_assignment PIN_AA37 -to oHIP_SERIAL_TX_OUT7(n) # N
+set_location_assignment PIN_AB1 -to iFC_RD_P[17](n) # N
+set_location_assignment PIN_AB2 -to iFC_RD_P[17] # Y
+set_location_assignment PIN_AB24 -to oMICTOR_B[12] # Y
+set_location_assignment PIN_AB25 -to oMICTOR_A[20] # Y
+set_location_assignment PIN_AB27 -to oLED_N[10] # Y
+set_location_assignment PIN_AB30 -to ioOPT_ROT_3 # Y
+set_location_assignment PIN_AB38 -to iHIP_SERIAL_RX_IN7 # Y
+set_location_assignment PIN_AB39 -to iHIP_SERIAL_RX_IN7(n) # N
+set_location_assignment PIN_AC3 -to oFC_TD_P[18](n) # N
+set_location_assignment PIN_AC4 -to oFC_TD_P[18] # Y
+set_location_assignment PIN_AC24 -to oMICTOR_B[13] # Y
+set_location_assignment PIN_AC25 -to oMICTOR_A[14] # Y
+set_location_assignment PIN_AC26 -to oMICTOR_A[15] # Y
+set_location_assignment PIN_AC27 -to oLED_N[11] # Y
+set_location_assignment PIN_AC28 -to iPIN_PERST_n # Y
+set_location_assignment PIN_AC30 -to ioOPT_ROT_4 # Y
+set_location_assignment PIN_AC31 -to DCLK # 
+set_location_assignment PIN_AC36 -to oHIP_SERIAL_TX_OUT6 # Y
+set_location_assignment PIN_AC37 -to oHIP_SERIAL_TX_OUT6(n) # N
+set_location_assignment PIN_AD1 -to iFC_RD_P[18](n) # N
+set_location_assignment PIN_AD2 -to iFC_RD_P[18] # Y
+set_location_assignment PIN_AD8 -to MSEL2 # 
+set_location_assignment PIN_AD20 -to oFC_RATE_SEL[0] # Y
+set_location_assignment PIN_AD21 -to oFC_RATE_SEL[1] # Y
+set_location_assignment PIN_AD24 -to oMICTOR_B[14] # Y
+set_location_assignment PIN_AD26 -to oMICTOR_A[12] # Y
+set_location_assignment PIN_AD30 -to ioOPT_ROT_1 # Y
+set_location_assignment PIN_AD33 -to iPCIE_REF_CLK # Y
+set_location_assignment PIN_AD34 -to iPCIE_REF_CLK(n) # N
+set_location_assignment PIN_AD38 -to iHIP_SERIAL_RX_IN6 # Y
+set_location_assignment PIN_AD39 -to iHIP_SERIAL_RX_IN6(n) # N
+set_location_assignment PIN_AE3 -to oFC_TD_P[19](n) # N
+set_location_assignment PIN_AE4 -to oFC_TD_P[19] # Y
+set_location_assignment PIN_AE16 -to iCLK_425M_P[0](n) # N
+set_location_assignment PIN_AE17 -to iCLK_425M_P[0] # Y
+set_location_assignment PIN_AE20 -to oFC_RATE_SEL[2] # Y
+set_location_assignment PIN_AE21 -to oFC_RATE_SEL[3] # Y
+set_location_assignment PIN_AE24 -to oMICTOR_B[15] # Y
+set_location_assignment PIN_AE25 -to oMICTOR_B[20] # Y
+set_location_assignment PIN_AE26 -to oMICTOR_A[13] # Y
+set_location_assignment PIN_AE30 -to ioOPT_ROT_2 # Y
+set_location_assignment PIN_AE36 -to oHIP_SERIAL_TX_OUT5 # Y
+set_location_assignment PIN_AE37 -to oHIP_SERIAL_TX_OUT5(n) # N
+set_location_assignment PIN_AF1 -to iFC_RD_P[19](n) # N
+set_location_assignment PIN_AF2 -to iFC_RD_P[19] # Y
+set_location_assignment PIN_AF25 -to oMICTOR_B[21] # Y
+set_location_assignment PIN_AF26 -to oMICTOR_A[16] # Y
+set_location_assignment PIN_AF29 -to ioOPT_5 # Y
+set_location_assignment PIN_AF38 -to iHIP_SERIAL_RX_IN5 # Y
+set_location_assignment PIN_AF39 -to iHIP_SERIAL_RX_IN5(n) # N
+set_location_assignment PIN_AG3 -to oFC_TD_P[20](n) # N
+set_location_assignment PIN_AG4 -to oFC_TD_P[20] # Y
+set_location_assignment PIN_AG8 -to MSEL3 # 
+set_location_assignment PIN_AG21 -to oFC_RATE_SEL[9] # Y
+set_location_assignment PIN_AG24 -to oMICTOR_B[23] # Y
+set_location_assignment PIN_AG25 -to oMICTOR_A[18] # Y
+set_location_assignment PIN_AG26 -to oMICTOR_A[17] # Y
+set_location_assignment PIN_AG27 -to oLED_N[12] # Y
+set_location_assignment PIN_AG28 -to ioOPT_7 # Y
+set_location_assignment PIN_AG30 -to ioOPT_6 # Y
+set_location_assignment PIN_AG36 -to oHIP_SERIAL_TX_OUT4 # Y
+set_location_assignment PIN_AG37 -to oHIP_SERIAL_TX_OUT4(n) # N
+set_location_assignment PIN_AH1 -to iFC_RD_P[20](n) # N
+set_location_assignment PIN_AH2 -to iFC_RD_P[20] # Y
+set_location_assignment PIN_AH6 -to CONF_DONE # 
+set_location_assignment PIN_AH7 -to MSEL4 # 
+set_location_assignment PIN_AH21 -to oFC_RATE_SEL[8] # Y
+set_location_assignment PIN_AH22 -to iRXD # Y
+set_location_assignment PIN_AH24 -to oMICTOR_B[22] # Y
+set_location_assignment PIN_AH25 -to oMICTOR_A[19] # Y
+set_location_assignment PIN_AH27 -to oLED_N[13] # Y
+set_location_assignment PIN_AH28 -to ioOPT_8 # Y
+set_location_assignment PIN_AH34 -to TDO # 
+set_location_assignment PIN_AH38 -to iHIP_SERIAL_RX_IN4 # Y
+set_location_assignment PIN_AH39 -to iHIP_SERIAL_RX_IN4(n) # N
+set_location_assignment PIN_AJ3 -to oFC_TD_P[21](n) # N
+set_location_assignment PIN_AJ4 -to oFC_TD_P[21] # Y
+set_location_assignment PIN_AJ20 -to oFC_RATE_SEL[4] # Y
+set_location_assignment PIN_AJ21 -to oFC_RATE_SEL[5] # Y
+set_location_assignment PIN_AJ22 -to oTXD # Y
+set_location_assignment PIN_AJ24 -to oMICTOR_B[16] # Y
+set_location_assignment PIN_AJ26 -to oMICTOR_A[22] # Y
+set_location_assignment PIN_AJ27 -to oLED_N[14] # Y
+set_location_assignment PIN_AJ29 -to oLED_N[3] # Y
+set_location_assignment PIN_AJ34 -to TDI # 
+set_location_assignment PIN_AK1 -to iFC_RD_P[21](n) # N
+set_location_assignment PIN_AK2 -to iFC_RD_P[21] # Y
+set_location_assignment PIN_AK5 -to nIO_PULLUP # 
+set_location_assignment PIN_AK21 -to oFC_RATE_SEL[10] # Y
+set_location_assignment PIN_AK24 -to oMICTOR_B[17] # Y
+set_location_assignment PIN_AK26 -to oMICTOR_A[23] # Y
+set_location_assignment PIN_AK27 -to oLED_N[15] # Y
+set_location_assignment PIN_AK29 -to oLED_N[2] # Y
+set_location_assignment PIN_AK30 -to oLED_N[0] # Y
+set_location_assignment PIN_AK35 -to nCONFIG # 
+set_location_assignment PIN_AL3 -to oFC_TD_P[22](n) # N
+set_location_assignment PIN_AL4 -to oFC_TD_P[22] # Y
+set_location_assignment PIN_AL20 -to oFC_RATE_SEL[6] # Y
+set_location_assignment PIN_AL21 -to oFC_RATE_SEL[7] # Y
+set_location_assignment PIN_AL22 -to oFC_RATE_SEL[11] # Y
+set_location_assignment PIN_AL24 -to oMICTOR_B[19] # Y
+set_location_assignment PIN_AL25 -to oMICTOR_B[18] # Y
+set_location_assignment PIN_AL26 -to oMICTOR_A[4] # Y
+set_location_assignment PIN_AL27 -to oLED_N[4] # Y
+set_location_assignment PIN_AL28 -to oLED_N[5] # Y
+set_location_assignment PIN_AL30 -to oLED_N[1] # Y
+set_location_assignment PIN_AL36 -to oHIP_SERIAL_TX_OUT3 # Y
+set_location_assignment PIN_AL37 -to oHIP_SERIAL_TX_OUT3(n) # N
+set_location_assignment PIN_AM1 -to iFC_RD_P[22](n) # N
+set_location_assignment PIN_AM2 -to iFC_RD_P[22] # Y
+set_location_assignment PIN_AM20 -to oMICTOR_B[29] # Y
+set_location_assignment PIN_AM22 -to oMICTOR_A[28] # Y
+set_location_assignment PIN_AM23 -to oMICTOR_A[30] # Y
+set_location_assignment PIN_AM25 -to oMICTOR_B[4] # Y
+set_location_assignment PIN_AM26 -to oMICTOR_A[5] # Y
+set_location_assignment PIN_AM28 -to oLED_N[6] # Y
+set_location_assignment PIN_AM31 -to ioFPGA_DATA[6] # Y
+set_location_assignment PIN_AM34 -to iFPGA_CLRN # Y
+set_location_assignment PIN_AM35 -to TRST # 
+set_location_assignment PIN_AM38 -to iHIP_SERIAL_RX_IN3 # Y
+set_location_assignment PIN_AM39 -to iHIP_SERIAL_RX_IN3(n) # N
+set_location_assignment PIN_AN3 -to oFC_TD_P[23](n) # N
+set_location_assignment PIN_AN4 -to oFC_TD_P[23] # Y
+set_location_assignment PIN_AN20 -to oMICTOR_B[28] # Y
+set_location_assignment PIN_AN21 -to oMICTOR_B[30] # Y
+set_location_assignment PIN_AN22 -to oMICTOR_A[29] # Y
+set_location_assignment PIN_AN23 -to oMICTOR_A[31] # Y
+set_location_assignment PIN_AN24 -to oMICTOR_B[6] # Y
+set_location_assignment PIN_AN25 -to oMICTOR_B[5] # Y
+set_location_assignment PIN_AN26 -to oMICTOR_A[6] # Y
+set_location_assignment PIN_AN27 -to oMICTOR_A[7] # Y
+set_location_assignment PIN_AN28 -to oLED_N[7] # Y
+set_location_assignment PIN_AN31 -to ioFPGA_DATA[5] # Y
+set_location_assignment PIN_AN36 -to oHIP_SERIAL_TX_OUT2 # Y
+set_location_assignment PIN_AN37 -to oHIP_SERIAL_TX_OUT2(n) # N
+set_location_assignment PIN_AP1 -to iFC_RD_P[23](n) # N
+set_location_assignment PIN_AP2 -to iFC_RD_P[23] # Y
+set_location_assignment PIN_AP7 -to ioEXT3 # Y
+set_location_assignment PIN_AP21 -to oMICTOR_B[31] # Y
+set_location_assignment PIN_AP24 -to oMICTOR_B[7] # Y
+set_location_assignment PIN_AP25 -to oMICTOR_B[10] # Y
+set_location_assignment PIN_AP27 -to oMICTOR_A[10] # Y
+set_location_assignment PIN_AP30 -to iFPGA_RSTN # Y
+set_location_assignment PIN_AP38 -to iHIP_SERIAL_RX_IN2 # Y
+set_location_assignment PIN_AP39 -to iHIP_SERIAL_RX_IN2(n) # N
+set_location_assignment PIN_AR3 -to oFC_TD_P[24](n) # N
+set_location_assignment PIN_AR4 -to oFC_TD_P[24] # Y
+set_location_assignment PIN_AR7 -to ioEXT4 # Y
+set_location_assignment PIN_AR24 -to oMICTOR_B[2] # Y
+set_location_assignment PIN_AR25 -to oMICTOR_B[11] # Y
+set_location_assignment PIN_AR27 -to oMICTOR_A[11] # Y
+set_location_assignment PIN_AR30 -to iFPGA_ID_N # Y
+set_location_assignment PIN_AR31 -to iBD_NO[1] # Y
+set_location_assignment PIN_AR33 -to ioFPGA_DATA[2] # Y
+set_location_assignment PIN_AR36 -to oHIP_SERIAL_TX_OUT1 # Y
+set_location_assignment PIN_AR37 -to oHIP_SERIAL_TX_OUT1(n) # N
+set_location_assignment PIN_AT1 -to iFC_RD_P[24](n) # N
+set_location_assignment PIN_AT2 -to iFC_RD_P[24] # Y
+set_location_assignment PIN_AT6 -to ioSYNC_RIBBON # Y
+set_location_assignment PIN_AT20 -to oMICTOR_B[26] # Y
+set_location_assignment PIN_AT21 -to oMICTOR_B[32] # Y
+set_location_assignment PIN_AT23 -to oMICTOR_A[26] # Y
+set_location_assignment PIN_AT24 -to oMICTOR_B[3] # Y
+set_location_assignment PIN_AT26 -to oMICTOR_A[2] # Y
+set_location_assignment PIN_AT27 -to oMICTOR_A[0] # Y
+set_location_assignment PIN_AT32 -to iBD_NO[0] # Y
+set_location_assignment PIN_AT33 -to ioFPGA_DATA[1] # Y
+set_location_assignment PIN_AT35 -to TMS # 
+set_location_assignment PIN_AT38 -to iHIP_SERIAL_RX_IN1 # Y
+set_location_assignment PIN_AT39 -to iHIP_SERIAL_RX_IN1(n) # N
+set_location_assignment PIN_AU3 -to oFC_TD_P[25](n) # N
+set_location_assignment PIN_AU4 -to oFC_TD_P[25] # Y
+set_location_assignment PIN_AU6 -to ioEXT2 # Y
+set_location_assignment PIN_AU20 -to oMICTOR_B[27] # Y
+set_location_assignment PIN_AU21 -to oMICTOR_B[33] # Y
+set_location_assignment PIN_AU23 -to oMICTOR_A[27] # Y
+set_location_assignment PIN_AU24 -to oMICTOR_B[8] # Y
+set_location_assignment PIN_AU25 -to oMICTOR_B[9] # Y
+set_location_assignment PIN_AU26 -to oMICTOR_A[3] # Y
+set_location_assignment PIN_AU27 -to oMICTOR_A[1] # Y
+set_location_assignment PIN_AU32 -to ioFPGA_DATA[7] # Y
+set_location_assignment PIN_AU33 -to ioFPGA_DATA[4] # Y
+set_location_assignment PIN_AU34 -to ioFPGA_DATA[3] # Y
+set_location_assignment PIN_AU36 -to oHIP_SERIAL_TX_OUT0 # Y
+set_location_assignment PIN_AU37 -to oHIP_SERIAL_TX_OUT0(n) # N
+set_location_assignment PIN_AV1 -to iFC_RD_P[25](n) # N
+set_location_assignment PIN_AV2 -to iFC_RD_P[25] # Y
+set_location_assignment PIN_AV20 -to oMICTOR_B[24] # Y
+set_location_assignment PIN_AV22 -to oMICTOR_A[32] # Y
+set_location_assignment PIN_AV23 -to oMICTOR_A[24] # Y
+set_location_assignment PIN_AV25 -to oMICTOR_B[0] # Y
+set_location_assignment PIN_AV26 -to oMICTOR_A[8] # Y
+set_location_assignment PIN_AV28 -to ioOPT_3 # Y
+set_location_assignment PIN_AV29 -to ioOPT_1 # Y
+set_location_assignment PIN_AV38 -to iHIP_SERIAL_RX_IN0 # Y
+set_location_assignment PIN_AV39 -to iHIP_SERIAL_RX_IN0(n) # N
+set_location_assignment PIN_AW20 -to oMICTOR_B[25] # Y
+set_location_assignment PIN_AW22 -to oMICTOR_A[33] # Y
+set_location_assignment PIN_AW23 -to oMICTOR_A[25] # Y
+set_location_assignment PIN_AW25 -to oMICTOR_B[1] # Y
+set_location_assignment PIN_AW26 -to oMICTOR_A[9] # Y
+set_location_assignment PIN_AW28 -to ioOPT_4 # Y
+set_location_assignment PIN_AW29 -to ioOPT_2 # Y
+set_location_assignment PIN_B7 -to iBUS_RST # Y
+set_location_assignment PIN_B28 -to iSFP_LOS[22] # Y
+set_location_assignment PIN_B29 -to iSFP_LOS[18] # Y
+set_location_assignment PIN_C3 -to oFC_TD_P[8](n) # N
+set_location_assignment PIN_C4 -to oFC_TD_P[8] # Y
+set_location_assignment PIN_C7 -to ioBUS_SPARE # Y
+set_location_assignment PIN_C28 -to iSFP_LOS[17] # Y
+set_location_assignment PIN_C36 -to oFC_TD_P[7] # Y
+set_location_assignment PIN_C37 -to oFC_TD_P[7](n) # N
+set_location_assignment PIN_D1 -to iFC_RD_P[8](n) # N
+set_location_assignment PIN_D2 -to iFC_RD_P[8] # Y
+set_location_assignment PIN_D7 -to ioFPGA_DATA[0] # Y
+set_location_assignment PIN_D28 -to iSFP_LOS[16] # Y
+set_location_assignment PIN_D38 -to iFC_RD_P[7] # Y
+set_location_assignment PIN_D39 -to iFC_RD_P[7](n) # N
+set_location_assignment PIN_E3 -to oFC_TD_P[9](n) # N
+set_location_assignment PIN_E4 -to oFC_TD_P[9] # Y
+set_location_assignment PIN_E28 -to iSFP_LOS[13] # Y
+set_location_assignment PIN_E36 -to oFC_TD_P[6] # Y
+set_location_assignment PIN_E37 -to oFC_TD_P[6](n) # N
+set_location_assignment PIN_F1 -to iFC_RD_P[9](n) # N
+set_location_assignment PIN_F2 -to iFC_RD_P[9] # Y
+set_location_assignment PIN_F29 -to iSFP_LOS[12] # Y
+set_location_assignment PIN_F38 -to iFC_RD_P[6] # Y
+set_location_assignment PIN_F39 -to iFC_RD_P[6](n) # N
+set_location_assignment PIN_G3 -to oFC_TD_P[10](n) # N
+set_location_assignment PIN_G4 -to oFC_TD_P[10] # Y
+set_location_assignment PIN_G7 -to iCLK_FR # Y
+set_location_assignment PIN_G28 -to iSFP_LOS[15] # Y
+set_location_assignment PIN_G29 -to iSFP_LOS[21] # Y
+set_location_assignment PIN_G36 -to oFC_TD_P[5] # Y
+set_location_assignment PIN_G37 -to oFC_TD_P[5](n) # N
+set_location_assignment PIN_H1 -to iFC_RD_P[10](n) # N
+set_location_assignment PIN_H2 -to iFC_RD_P[10] # Y
+set_location_assignment PIN_H28 -to iSFP_LOS[14] # Y
+set_location_assignment PIN_H29 -to iSFP_LOS[20] # Y
+set_location_assignment PIN_H38 -to iFC_RD_P[5] # Y
+set_location_assignment PIN_H39 -to iFC_RD_P[5](n) # N
+set_location_assignment PIN_J3 -to oFC_TD_P[11](n) # N
+set_location_assignment PIN_J4 -to oFC_TD_P[11] # Y
+set_location_assignment PIN_J28 -to iSFP_LOS[11] # Y
+set_location_assignment PIN_J29 -to iSFP_LOS[10] # Y
+set_location_assignment PIN_J36 -to oFC_TD_P[4] # Y
+set_location_assignment PIN_J37 -to oFC_TD_P[4](n) # N
+set_location_assignment PIN_K1 -to iFC_RD_P[11](n) # N
+set_location_assignment PIN_K2 -to iFC_RD_P[11] # Y
+set_location_assignment PIN_K6 -to iBUS_CLK # Y
+set_location_assignment PIN_K28 -to iSFP_LOS[7] # Y
+set_location_assignment PIN_K38 -to iFC_RD_P[4] # Y
+set_location_assignment PIN_K39 -to iFC_RD_P[4](n) # N
+set_location_assignment PIN_L3 -to oFC_TD_P[12](n) # N
+set_location_assignment PIN_L4 -to oFC_TD_P[12] # Y
+set_location_assignment PIN_L6 -to iBUS_EN # Y
+set_location_assignment PIN_L28 -to iSFP_LOS[6] # Y
+set_location_assignment PIN_L33 -to iASY[0] # Y
+set_location_assignment PIN_L34 -to iASY[1] # Y
+set_location_assignment PIN_L36 -to oFC_TD_P[3] # Y
+set_location_assignment PIN_L37 -to oFC_TD_P[3](n) # N
+set_location_assignment PIN_M1 -to iFC_RD_P[12](n) # N
+set_location_assignment PIN_M2 -to iFC_RD_P[12] # Y
+set_location_assignment PIN_M29 -to iSFP_LOS[5] # Y
+set_location_assignment PIN_M38 -to iFC_RD_P[3] # Y
+set_location_assignment PIN_M39 -to iFC_RD_P[3](n) # N
+set_location_assignment PIN_N3 -to oFC_TD_P[13](n) # N
+set_location_assignment PIN_N4 -to oFC_TD_P[13] # Y
+set_location_assignment PIN_N28 -to iSFP_LOS[4] # Y
+set_location_assignment PIN_N34 -to iASY[3] # Y
+set_location_assignment PIN_N36 -to oFC_TD_P[2] # Y
+set_location_assignment PIN_N37 -to oFC_TD_P[2](n) # N
+set_location_assignment PIN_P1 -to iFC_RD_P[13](n) # N
+set_location_assignment PIN_P2 -to iFC_RD_P[13] # Y
+set_location_assignment PIN_P29 -to iSFP_LOS[3] # Y
+set_location_assignment PIN_P34 -to iASY[2] # Y
+set_location_assignment PIN_P38 -to iFC_RD_P[2] # Y
+set_location_assignment PIN_P39 -to iFC_RD_P[2](n) # N
+set_location_assignment PIN_R3 -to oFC_TD_P[14](n) # N
+set_location_assignment PIN_R4 -to oFC_TD_P[14] # Y
+set_location_assignment PIN_R29 -to iSFP_LOS[2] # Y
+set_location_assignment PIN_R36 -to oFC_TD_P[1] # Y
+set_location_assignment PIN_R37 -to oFC_TD_P[1](n) # N
+set_location_assignment PIN_T1 -to iFC_RD_P[14](n) # N
+set_location_assignment PIN_T2 -to iFC_RD_P[14] # Y
+set_location_assignment PIN_T16 -to iCLK_425M_P[1](n) # N
+set_location_assignment PIN_T30 -to iSFP_LOS[9] # Y
+set_location_assignment PIN_T38 -to iFC_RD_P[1] # Y
+set_location_assignment PIN_T39 -to iFC_RD_P[1](n) # N
+set_location_assignment PIN_U3 -to oFC_TD_P[15](n) # N
+set_location_assignment PIN_U4 -to oFC_TD_P[15] # Y
+set_location_assignment PIN_U15 -to iCLK_425M_P[1] # Y
+set_location_assignment PIN_U29 -to iSFP_LOS[1] # Y
+set_location_assignment PIN_U30 -to iSFP_LOS[8] # Y
+set_location_assignment PIN_U36 -to oFC_TD_P[0] # Y
+set_location_assignment PIN_U37 -to oFC_TD_P[0](n) # N
+set_location_assignment PIN_V1 -to iFC_RD_P[15](n) # N
+set_location_assignment PIN_V2 -to iFC_RD_P[15] # Y
+set_location_assignment PIN_V5 -to iCLK_FC_425_P[1](n) # N
+set_location_assignment PIN_V6 -to iCLK_FC_425_P[1] # Y
+set_location_assignment PIN_V29 -to iSFP_LOS[0] # Y
+set_location_assignment PIN_V34 -to iCLK_FC_425_P[0] # Y
+set_location_assignment PIN_V35 -to iCLK_FC_425_P[0](n) # N
+set_location_assignment PIN_V38 -to iFC_RD_P[0] # Y
+set_location_assignment PIN_V39 -to iFC_RD_P[0](n) # N
+set_location_assignment PIN_W3 -to oFC_TD_P[16](n) # N
+set_location_assignment PIN_W4 -to oFC_TD_P[16] # Y
+set_location_assignment PIN_Y1 -to iFC_RD_P[16](n) # N
+set_location_assignment PIN_Y2 -to iFC_RD_P[16] # Y
+set_location_assignment PIN_Y6 -to iCLK_FC_219_P[1](n) # N
+set_location_assignment PIN_Y7 -to iCLK_FC_219_P[1] # Y
+set_location_assignment PIN_Y33 -to iCLK_FC_219_P[0] # Y
+set_location_assignment PIN_Y34 -to iCLK_FC_219_P[0](n) # N
+set_instance_assignment -name TOGGLE_RATE "20 MHz" -to iBUS_MASTER
+set_instance_assignment -name TOGGLE_RATE "20 MHz" -to ioSYNC_NEIGHBOR
+set_instance_assignment -name TOGGLE_RATE "20 MHz" -to iSFP_LOS[23]
+set_instance_assignment -name TOGGLE_RATE "20 MHz" -to iSFP_LOS[19]
+set_instance_assignment -name TOGGLE_RATE "20 MHz" -to MSEL0
+set_instance_assignment -name TOGGLE_RATE "20 MHz" -to MSEL1
+set_instance_assignment -name TOGGLE_RATE "20 MHz" -to oMICTOR_A[21]
+set_instance_assignment -name TOGGLE_RATE "20 MHz" -to TCK
+set_instance_assignment -name TOGGLE_RATE "20 MHz" -to iFC_RD_P[17](n)
+set_instance_assignment -name TOGGLE_RATE "20 MHz" -to iFC_RD_P[17]
+set_instance_assignment -name TOGGLE_RATE "20 MHz" -to oMICTOR_A[20]
+set_instance_assignment -name TOGGLE_RATE "20 MHz" -to ioOPT_ROT_3
+set_instance_assignment -name TOGGLE_RATE "20 MHz" -to iHIP_SERIAL_RX_IN7
+set_instance_assignment -name TOGGLE_RATE "20 MHz" -to iHIP_SERIAL_RX_IN7(n)
+set_instance_assignment -name TOGGLE_RATE "20 MHz" -to oMICTOR_A[14]
+set_instance_assignment -name TOGGLE_RATE "20 MHz" -to oMICTOR_A[15]
+set_instance_assignment -name TOGGLE_RATE "20 MHz" -to iPIN_PERST_n
+set_instance_assignment -name TOGGLE_RATE "20 MHz" -to ioOPT_ROT_4
+set_instance_assignment -name TOGGLE_RATE "20 MHz" -to DCLK
+set_instance_assignment -name TOGGLE_RATE "20 MHz" -to iFC_RD_P[18](n)
+set_instance_assignment -name TOGGLE_RATE "20 MHz" -to iFC_RD_P[18]
+set_instance_assignment -name TOGGLE_RATE "20 MHz" -to MSEL2
+set_instance_assignment -name TOGGLE_RATE "20 MHz" -to oMICTOR_A[12]
+set_instance_assignment -name TOGGLE_RATE "20 MHz" -to ioOPT_ROT_1
+set_instance_assignment -name TOGGLE_RATE "20 MHz" -to iPCIE_REF_CLK
+set_instance_assignment -name TOGGLE_RATE "20 MHz" -to iPCIE_REF_CLK(n)
+set_instance_assignment -name TOGGLE_RATE "20 MHz" -to iHIP_SERIAL_RX_IN6
+set_instance_assignment -name TOGGLE_RATE "20 MHz" -to iHIP_SERIAL_RX_IN6(n)
+set_instance_assignment -name TOGGLE_RATE "20 MHz" -to iCLK_425M_P[0](n)
+set_instance_assignment -name TOGGLE_RATE "20 MHz" -to iCLK_425M_P[0]
+set_instance_assignment -name TOGGLE_RATE "20 MHz" -to oMICTOR_A[13]
+set_instance_assignment -name TOGGLE_RATE "20 MHz" -to ioOPT_ROT_2
+set_instance_assignment -name TOGGLE_RATE "20 MHz" -to iFC_RD_P[19](n)
+set_instance_assignment -name TOGGLE_RATE "20 MHz" -to iFC_RD_P[19]
+set_instance_assignment -name TOGGLE_RATE "20 MHz" -to oMICTOR_A[16]
+set_instance_assignment -name TOGGLE_RATE "20 MHz" -to ioOPT_5
+set_instance_assignment -name TOGGLE_RATE "20 MHz" -to iHIP_SERIAL_RX_IN5
+set_instance_assignment -name TOGGLE_RATE "20 MHz" -to iHIP_SERIAL_RX_IN5(n)
+set_instance_assignment -name TOGGLE_RATE "20 MHz" -to MSEL3
+set_instance_assignment -name TOGGLE_RATE "20 MHz" -to oMICTOR_A[18]
+set_instance_assignment -name TOGGLE_RATE "20 MHz" -to oMICTOR_A[17]
+set_instance_assignment -name TOGGLE_RATE "20 MHz" -to ioOPT_7
+set_instance_assignment -name TOGGLE_RATE "20 MHz" -to ioOPT_6
+set_instance_assignment -name TOGGLE_RATE "20 MHz" -to iFC_RD_P[20](n)
+set_instance_assignment -name TOGGLE_RATE "20 MHz" -to iFC_RD_P[20]
+set_instance_assignment -name TOGGLE_RATE "20 MHz" -to CONF_DONE
+set_instance_assignment -name TOGGLE_RATE "20 MHz" -to MSEL4
+set_instance_assignment -name TOGGLE_RATE "20 MHz" -to iRXD
+set_instance_assignment -name TOGGLE_RATE "20 MHz" -to oMICTOR_A[19]
+set_instance_assignment -name TOGGLE_RATE "20 MHz" -to ioOPT_8
+set_instance_assignment -name TOGGLE_RATE "20 MHz" -to iHIP_SERIAL_RX_IN4
+set_instance_assignment -name TOGGLE_RATE "20 MHz" -to iHIP_SERIAL_RX_IN4(n)
+set_instance_assignment -name TOGGLE_RATE "20 MHz" -to oMICTOR_A[22]
+set_instance_assignment -name TOGGLE_RATE "20 MHz" -to TDI
+set_instance_assignment -name TOGGLE_RATE "20 MHz" -to iFC_RD_P[21](n)
+set_instance_assignment -name TOGGLE_RATE "20 MHz" -to iFC_RD_P[21]
+set_instance_assignment -name TOGGLE_RATE "20 MHz" -to nIO_PULLUP
+set_instance_assignment -name TOGGLE_RATE "20 MHz" -to oMICTOR_A[23]
+set_instance_assignment -name TOGGLE_RATE "20 MHz" -to nCONFIG
+set_instance_assignment -name TOGGLE_RATE "20 MHz" -to oMICTOR_A[4]
+set_instance_assignment -name TOGGLE_RATE "20 MHz" -to iFC_RD_P[22](n)
+set_instance_assignment -name TOGGLE_RATE "20 MHz" -to iFC_RD_P[22]
+set_instance_assignment -name TOGGLE_RATE "20 MHz" -to oMICTOR_A[28]
+set_instance_assignment -name TOGGLE_RATE "20 MHz" -to oMICTOR_A[30]
+set_instance_assignment -name TOGGLE_RATE "20 MHz" -to oMICTOR_A[5]
+set_instance_assignment -name TOGGLE_RATE "20 MHz" -to ioFPGA_DATA[6]
+set_instance_assignment -name TOGGLE_RATE "20 MHz" -to iFPGA_CLRN
+set_instance_assignment -name TOGGLE_RATE "20 MHz" -to TRST
+set_instance_assignment -name TOGGLE_RATE "20 MHz" -to iHIP_SERIAL_RX_IN3
+set_instance_assignment -name TOGGLE_RATE "20 MHz" -to iHIP_SERIAL_RX_IN3(n)
+set_instance_assignment -name TOGGLE_RATE "20 MHz" -to oMICTOR_A[29]
+set_instance_assignment -name TOGGLE_RATE "20 MHz" -to oMICTOR_A[31]
+set_instance_assignment -name TOGGLE_RATE "20 MHz" -to oMICTOR_A[6]
+set_instance_assignment -name TOGGLE_RATE "20 MHz" -to oMICTOR_A[7]
+set_instance_assignment -name TOGGLE_RATE "20 MHz" -to ioFPGA_DATA[5]
+set_instance_assignment -name TOGGLE_RATE "20 MHz" -to iFC_RD_P[23](n)
+set_instance_assignment -name TOGGLE_RATE "20 MHz" -to iFC_RD_P[23]
+set_instance_assignment -name TOGGLE_RATE "20 MHz" -to ioEXT3
+set_instance_assignment -name TOGGLE_RATE "20 MHz" -to oMICTOR_A[10]
+set_instance_assignment -name TOGGLE_RATE "20 MHz" -to iFPGA_RSTN
+set_instance_assignment -name TOGGLE_RATE "20 MHz" -to iHIP_SERIAL_RX_IN2
+set_instance_assignment -name TOGGLE_RATE "20 MHz" -to iHIP_SERIAL_RX_IN2(n)
+set_instance_assignment -name TOGGLE_RATE "20 MHz" -to ioEXT4
+set_instance_assignment -name TOGGLE_RATE "20 MHz" -to oMICTOR_A[11]
+set_instance_assignment -name TOGGLE_RATE "20 MHz" -to iFPGA_ID_N
+set_instance_assignment -name TOGGLE_RATE "20 MHz" -to iBD_NO[1]
+set_instance_assignment -name TOGGLE_RATE "20 MHz" -to ioFPGA_DATA[2]
+set_instance_assignment -name TOGGLE_RATE "20 MHz" -to iFC_RD_P[24](n)
+set_instance_assignment -name TOGGLE_RATE "20 MHz" -to iFC_RD_P[24]
+set_instance_assignment -name TOGGLE_RATE "20 MHz" -to ioSYNC_RIBBON
+set_instance_assignment -name TOGGLE_RATE "20 MHz" -to oMICTOR_A[26]
+set_instance_assignment -name TOGGLE_RATE "20 MHz" -to oMICTOR_A[2]
+set_instance_assignment -name TOGGLE_RATE "20 MHz" -to oMICTOR_A[0]
+set_instance_assignment -name TOGGLE_RATE "20 MHz" -to iBD_NO[0]
+set_instance_assignment -name TOGGLE_RATE "20 MHz" -to ioFPGA_DATA[1]
+set_instance_assignment -name TOGGLE_RATE "20 MHz" -to TMS
+set_instance_assignment -name TOGGLE_RATE "20 MHz" -to iHIP_SERIAL_RX_IN1
+set_instance_assignment -name TOGGLE_RATE "20 MHz" -to iHIP_SERIAL_RX_IN1(n)
+set_instance_assignment -name TOGGLE_RATE "20 MHz" -to ioEXT2
+set_instance_assignment -name TOGGLE_RATE "20 MHz" -to oMICTOR_A[27]
+set_instance_assignment -name TOGGLE_RATE "20 MHz" -to oMICTOR_A[3]
+set_instance_assignment -name TOGGLE_RATE "20 MHz" -to oMICTOR_A[1]
+set_instance_assignment -name TOGGLE_RATE "20 MHz" -to ioFPGA_DATA[7]
+set_instance_assignment -name TOGGLE_RATE "20 MHz" -to ioFPGA_DATA[4]
+set_instance_assignment -name TOGGLE_RATE "20 MHz" -to ioFPGA_DATA[3]
+set_instance_assignment -name TOGGLE_RATE "20 MHz" -to iFC_RD_P[25](n)
+set_instance_assignment -name TOGGLE_RATE "20 MHz" -to iFC_RD_P[25]
+set_instance_assignment -name TOGGLE_RATE "20 MHz" -to oMICTOR_A[32]
+set_instance_assignment -name TOGGLE_RATE "20 MHz" -to oMICTOR_A[24]
+set_instance_assignment -name TOGGLE_RATE "20 MHz" -to oMICTOR_A[8]
+set_instance_assignment -name TOGGLE_RATE "20 MHz" -to ioOPT_3
+set_instance_assignment -name TOGGLE_RATE "20 MHz" -to ioOPT_1
+set_instance_assignment -name TOGGLE_RATE "20 MHz" -to iHIP_SERIAL_RX_IN0
+set_instance_assignment -name TOGGLE_RATE "20 MHz" -to iHIP_SERIAL_RX_IN0(n)
+set_instance_assignment -name TOGGLE_RATE "20 MHz" -to oMICTOR_A[33]
+set_instance_assignment -name TOGGLE_RATE "20 MHz" -to oMICTOR_A[25]
+set_instance_assignment -name TOGGLE_RATE "20 MHz" -to oMICTOR_A[9]
+set_instance_assignment -name TOGGLE_RATE "20 MHz" -to ioOPT_4
+set_instance_assignment -name TOGGLE_RATE "20 MHz" -to ioOPT_2
+set_instance_assignment -name TOGGLE_RATE "20 MHz" -to iBUS_RST
+set_instance_assignment -name TOGGLE_RATE "20 MHz" -to iSFP_LOS[22]
+set_instance_assignment -name TOGGLE_RATE "20 MHz" -to iSFP_LOS[18]
+set_instance_assignment -name TOGGLE_RATE "20 MHz" -to ioBUS_SPARE
+set_instance_assignment -name TOGGLE_RATE "20 MHz" -to iSFP_LOS[17]
+set_instance_assignment -name TOGGLE_RATE "20 MHz" -to iFC_RD_P[8](n)
+set_instance_assignment -name TOGGLE_RATE "20 MHz" -to iFC_RD_P[8]
+set_instance_assignment -name TOGGLE_RATE "20 MHz" -to ioFPGA_DATA[0]
+set_instance_assignment -name TOGGLE_RATE "20 MHz" -to iSFP_LOS[16]
+set_instance_assignment -name TOGGLE_RATE "20 MHz" -to iFC_RD_P[7]
+set_instance_assignment -name TOGGLE_RATE "20 MHz" -to iFC_RD_P[7](n)
+set_instance_assignment -name TOGGLE_RATE "20 MHz" -to iSFP_LOS[13]
+set_instance_assignment -name TOGGLE_RATE "20 MHz" -to iFC_RD_P[9](n)
+set_instance_assignment -name TOGGLE_RATE "20 MHz" -to iFC_RD_P[9]
+set_instance_assignment -name TOGGLE_RATE "20 MHz" -to iSFP_LOS[12]
+set_instance_assignment -name TOGGLE_RATE "20 MHz" -to iFC_RD_P[6]
+set_instance_assignment -name TOGGLE_RATE "20 MHz" -to iFC_RD_P[6](n)
+set_instance_assignment -name TOGGLE_RATE "20 MHz" -to iCLK_FR
+set_instance_assignment -name TOGGLE_RATE "20 MHz" -to iSFP_LOS[15]
+set_instance_assignment -name TOGGLE_RATE "20 MHz" -to iSFP_LOS[21]
+set_instance_assignment -name TOGGLE_RATE "20 MHz" -to iFC_RD_P[10](n)
+set_instance_assignment -name TOGGLE_RATE "20 MHz" -to iFC_RD_P[10]
+set_instance_assignment -name TOGGLE_RATE "20 MHz" -to iSFP_LOS[14]
+set_instance_assignment -name TOGGLE_RATE "20 MHz" -to iSFP_LOS[20]
+set_instance_assignment -name TOGGLE_RATE "20 MHz" -to iFC_RD_P[5]
+set_instance_assignment -name TOGGLE_RATE "20 MHz" -to iFC_RD_P[5](n)
+set_instance_assignment -name TOGGLE_RATE "20 MHz" -to iSFP_LOS[11]
+set_instance_assignment -name TOGGLE_RATE "20 MHz" -to iSFP_LOS[10]
+set_instance_assignment -name TOGGLE_RATE "20 MHz" -to iFC_RD_P[11](n)
+set_instance_assignment -name TOGGLE_RATE "20 MHz" -to iFC_RD_P[11]
+set_instance_assignment -name TOGGLE_RATE "20 MHz" -to iBUS_CLK
+set_instance_assignment -name TOGGLE_RATE "20 MHz" -to iSFP_LOS[7]
+set_instance_assignment -name TOGGLE_RATE "20 MHz" -to iFC_RD_P[4]
+set_instance_assignment -name TOGGLE_RATE "20 MHz" -to iFC_RD_P[4](n)
+set_instance_assignment -name TOGGLE_RATE "20 MHz" -to iBUS_EN
+set_instance_assignment -name TOGGLE_RATE "20 MHz" -to iSFP_LOS[6]
+set_instance_assignment -name TOGGLE_RATE "20 MHz" -to iASY[0]
+set_instance_assignment -name TOGGLE_RATE "20 MHz" -to iASY[1]
+set_instance_assignment -name TOGGLE_RATE "20 MHz" -to iFC_RD_P[12](n)
+set_instance_assignment -name TOGGLE_RATE "20 MHz" -to iFC_RD_P[12]
+set_instance_assignment -name TOGGLE_RATE "20 MHz" -to iSFP_LOS[5]
+set_instance_assignment -name TOGGLE_RATE "20 MHz" -to iFC_RD_P[3]
+set_instance_assignment -name TOGGLE_RATE "20 MHz" -to iFC_RD_P[3](n)
+set_instance_assignment -name TOGGLE_RATE "20 MHz" -to iSFP_LOS[4]
+set_instance_assignment -name TOGGLE_RATE "20 MHz" -to iASY[3]
+set_instance_assignment -name TOGGLE_RATE "20 MHz" -to iFC_RD_P[13](n)
+set_instance_assignment -name TOGGLE_RATE "20 MHz" -to iFC_RD_P[13]
+set_instance_assignment -name TOGGLE_RATE "20 MHz" -to iSFP_LOS[3]
+set_instance_assignment -name TOGGLE_RATE "20 MHz" -to iASY[2]
+set_instance_assignment -name TOGGLE_RATE "20 MHz" -to iFC_RD_P[2]
+set_instance_assignment -name TOGGLE_RATE "20 MHz" -to iFC_RD_P[2](n)
+set_instance_assignment -name TOGGLE_RATE "20 MHz" -to iSFP_LOS[2]
+set_instance_assignment -name TOGGLE_RATE "20 MHz" -to iFC_RD_P[14](n)
+set_instance_assignment -name TOGGLE_RATE "20 MHz" -to iFC_RD_P[14]
+set_instance_assignment -name TOGGLE_RATE "20 MHz" -to iCLK_425M_P[1](n)
+set_instance_assignment -name TOGGLE_RATE "20 MHz" -to iSFP_LOS[9]
+set_instance_assignment -name TOGGLE_RATE "20 MHz" -to iFC_RD_P[1]
+set_instance_assignment -name TOGGLE_RATE "20 MHz" -to iFC_RD_P[1](n)
+set_instance_assignment -name TOGGLE_RATE "20 MHz" -to iCLK_425M_P[1]
+set_instance_assignment -name TOGGLE_RATE "20 MHz" -to iSFP_LOS[1]
+set_instance_assignment -name TOGGLE_RATE "20 MHz" -to iSFP_LOS[8]
+set_instance_assignment -name TOGGLE_RATE "20 MHz" -to iFC_RD_P[15](n)
+set_instance_assignment -name TOGGLE_RATE "20 MHz" -to iFC_RD_P[15]
+set_instance_assignment -name TOGGLE_RATE "20 MHz" -to iCLK_FC_425_P[1](n)
+set_instance_assignment -name TOGGLE_RATE "20 MHz" -to iCLK_FC_425_P[1]
+set_instance_assignment -name TOGGLE_RATE "20 MHz" -to iSFP_LOS[0]
+set_instance_assignment -name TOGGLE_RATE "20 MHz" -to iCLK_FC_425_P[0]
+set_instance_assignment -name TOGGLE_RATE "20 MHz" -to iCLK_FC_425_P[0](n)
+set_instance_assignment -name TOGGLE_RATE "20 MHz" -to iFC_RD_P[0]
+set_instance_assignment -name TOGGLE_RATE "20 MHz" -to iFC_RD_P[0](n)
+set_instance_assignment -name TOGGLE_RATE "20 MHz" -to iFC_RD_P[16](n)
+set_instance_assignment -name TOGGLE_RATE "20 MHz" -to iFC_RD_P[16]
+set_instance_assignment -name TOGGLE_RATE "20 MHz" -to iCLK_FC_219_P[1](n)
+set_instance_assignment -name TOGGLE_RATE "20 MHz" -to iCLK_FC_219_P[1]
+set_instance_assignment -name TOGGLE_RATE "20 MHz" -to iCLK_FC_219_P[0]
+set_instance_assignment -name TOGGLE_RATE "20 MHz" -to iCLK_FC_219_P[0](n)
+set_instance_assignment -name OUTPUT_PIN_LOAD 68 -to ioSYNC_NEIGHBOR
+set_instance_assignment -name OUTPUT_PIN_LOAD 68 -to oFC_TD_P[17](n)
+set_instance_assignment -name OUTPUT_PIN_LOAD 68 -to oFC_TD_P[17]
+set_instance_assignment -name OUTPUT_PIN_LOAD 68 -to oMICTOR_A[21]
+set_instance_assignment -name OUTPUT_PIN_LOAD 68 -to oLED_N[8]
+set_instance_assignment -name OUTPUT_PIN_LOAD 68 -to oLED_N[9]
+set_instance_assignment -name OUTPUT_PIN_LOAD 68 -to oHIP_SERIAL_TX_OUT7
+set_instance_assignment -name OUTPUT_PIN_LOAD 68 -to oHIP_SERIAL_TX_OUT7(n)
+set_instance_assignment -name OUTPUT_PIN_LOAD 68 -to oMICTOR_B[12]
+set_instance_assignment -name OUTPUT_PIN_LOAD 68 -to oMICTOR_A[20]
+set_instance_assignment -name OUTPUT_PIN_LOAD 68 -to oLED_N[10]
+set_instance_assignment -name OUTPUT_PIN_LOAD 68 -to ioOPT_ROT_3
+set_instance_assignment -name OUTPUT_PIN_LOAD 68 -to oFC_TD_P[18](n)
+set_instance_assignment -name OUTPUT_PIN_LOAD 68 -to oFC_TD_P[18]
+set_instance_assignment -name OUTPUT_PIN_LOAD 68 -to oMICTOR_B[13]
+set_instance_assignment -name OUTPUT_PIN_LOAD 68 -to oMICTOR_A[14]
+set_instance_assignment -name OUTPUT_PIN_LOAD 68 -to oMICTOR_A[15]
+set_instance_assignment -name OUTPUT_PIN_LOAD 68 -to oLED_N[11]
+set_instance_assignment -name OUTPUT_PIN_LOAD 68 -to ioOPT_ROT_4
+set_instance_assignment -name OUTPUT_PIN_LOAD 68 -to DCLK
+set_instance_assignment -name OUTPUT_PIN_LOAD 68 -to oHIP_SERIAL_TX_OUT6
+set_instance_assignment -name OUTPUT_PIN_LOAD 68 -to oHIP_SERIAL_TX_OUT6(n)
+set_instance_assignment -name OUTPUT_PIN_LOAD 68 -to oFC_RATE_SEL[0]
+set_instance_assignment -name OUTPUT_PIN_LOAD 68 -to oFC_RATE_SEL[1]
+set_instance_assignment -name OUTPUT_PIN_LOAD 68 -to oMICTOR_B[14]
+set_instance_assignment -name OUTPUT_PIN_LOAD 68 -to oMICTOR_A[12]
+set_instance_assignment -name OUTPUT_PIN_LOAD 68 -to ioOPT_ROT_1
+set_instance_assignment -name OUTPUT_PIN_LOAD 68 -to oFC_TD_P[19](n)
+set_instance_assignment -name OUTPUT_PIN_LOAD 68 -to oFC_TD_P[19]
+set_instance_assignment -name OUTPUT_PIN_LOAD 68 -to oFC_RATE_SEL[2]
+set_instance_assignment -name OUTPUT_PIN_LOAD 68 -to oFC_RATE_SEL[3]
+set_instance_assignment -name OUTPUT_PIN_LOAD 68 -to oMICTOR_B[15]
+set_instance_assignment -name OUTPUT_PIN_LOAD 68 -to oMICTOR_B[20]
+set_instance_assignment -name OUTPUT_PIN_LOAD 68 -to oMICTOR_A[13]
+set_instance_assignment -name OUTPUT_PIN_LOAD 68 -to ioOPT_ROT_2
+set_instance_assignment -name OUTPUT_PIN_LOAD 68 -to oHIP_SERIAL_TX_OUT5
+set_instance_assignment -name OUTPUT_PIN_LOAD 68 -to oHIP_SERIAL_TX_OUT5(n)
+set_instance_assignment -name OUTPUT_PIN_LOAD 68 -to oMICTOR_B[21]
+set_instance_assignment -name OUTPUT_PIN_LOAD 68 -to oMICTOR_A[16]
+set_instance_assignment -name OUTPUT_PIN_LOAD 68 -to ioOPT_5
+set_instance_assignment -name OUTPUT_PIN_LOAD 68 -to oFC_TD_P[20](n)
+set_instance_assignment -name OUTPUT_PIN_LOAD 68 -to oFC_TD_P[20]
+set_instance_assignment -name OUTPUT_PIN_LOAD 68 -to oFC_RATE_SEL[9]
+set_instance_assignment -name OUTPUT_PIN_LOAD 68 -to oMICTOR_B[23]
+set_instance_assignment -name OUTPUT_PIN_LOAD 68 -to oMICTOR_A[18]
+set_instance_assignment -name OUTPUT_PIN_LOAD 68 -to oMICTOR_A[17]
+set_instance_assignment -name OUTPUT_PIN_LOAD 68 -to oLED_N[12]
+set_instance_assignment -name OUTPUT_PIN_LOAD 68 -to ioOPT_7
+set_instance_assignment -name OUTPUT_PIN_LOAD 68 -to ioOPT_6
+set_instance_assignment -name OUTPUT_PIN_LOAD 68 -to oHIP_SERIAL_TX_OUT4
+set_instance_assignment -name OUTPUT_PIN_LOAD 68 -to oHIP_SERIAL_TX_OUT4(n)
+set_instance_assignment -name OUTPUT_PIN_LOAD 68 -to CONF_DONE
+set_instance_assignment -name OUTPUT_PIN_LOAD 68 -to oFC_RATE_SEL[8]
+set_instance_assignment -name OUTPUT_PIN_LOAD 68 -to oMICTOR_B[22]
+set_instance_assignment -name OUTPUT_PIN_LOAD 68 -to oMICTOR_A[19]
+set_instance_assignment -name OUTPUT_PIN_LOAD 68 -to oLED_N[13]
+set_instance_assignment -name OUTPUT_PIN_LOAD 68 -to ioOPT_8
+set_instance_assignment -name OUTPUT_PIN_LOAD 68 -to TDO
+set_instance_assignment -name OUTPUT_PIN_LOAD 68 -to oFC_TD_P[21](n)
+set_instance_assignment -name OUTPUT_PIN_LOAD 68 -to oFC_TD_P[21]
+set_instance_assignment -name OUTPUT_PIN_LOAD 68 -to oFC_RATE_SEL[4]
+set_instance_assignment -name OUTPUT_PIN_LOAD 68 -to oFC_RATE_SEL[5]
+set_instance_assignment -name OUTPUT_PIN_LOAD 68 -to oTXD
+set_instance_assignment -name OUTPUT_PIN_LOAD 68 -to oMICTOR_B[16]
+set_instance_assignment -name OUTPUT_PIN_LOAD 68 -to oMICTOR_A[22]
+set_instance_assignment -name OUTPUT_PIN_LOAD 68 -to oLED_N[14]
+set_instance_assignment -name OUTPUT_PIN_LOAD 68 -to oLED_N[3]
+set_instance_assignment -name OUTPUT_PIN_LOAD 68 -to oFC_RATE_SEL[10]
+set_instance_assignment -name OUTPUT_PIN_LOAD 68 -to oMICTOR_B[17]
+set_instance_assignment -name OUTPUT_PIN_LOAD 68 -to oMICTOR_A[23]
+set_instance_assignment -name OUTPUT_PIN_LOAD 68 -to oLED_N[15]
+set_instance_assignment -name OUTPUT_PIN_LOAD 68 -to oLED_N[2]
+set_instance_assignment -name OUTPUT_PIN_LOAD 68 -to oLED_N[0]
+set_instance_assignment -name OUTPUT_PIN_LOAD 68 -to oFC_TD_P[22](n)
+set_instance_assignment -name OUTPUT_PIN_LOAD 68 -to oFC_TD_P[22]
+set_instance_assignment -name OUTPUT_PIN_LOAD 68 -to oFC_RATE_SEL[6]
+set_instance_assignment -name OUTPUT_PIN_LOAD 68 -to oFC_RATE_SEL[7]
+set_instance_assignment -name OUTPUT_PIN_LOAD 68 -to oFC_RATE_SEL[11]
+set_instance_assignment -name OUTPUT_PIN_LOAD 68 -to oMICTOR_B[19]
+set_instance_assignment -name OUTPUT_PIN_LOAD 68 -to oMICTOR_B[18]
+set_instance_assignment -name OUTPUT_PIN_LOAD 68 -to oMICTOR_A[4]
+set_instance_assignment -name OUTPUT_PIN_LOAD 68 -to oLED_N[4]
+set_instance_assignment -name OUTPUT_PIN_LOAD 68 -to oLED_N[5]
+set_instance_assignment -name OUTPUT_PIN_LOAD 68 -to oLED_N[1]
+set_instance_assignment -name OUTPUT_PIN_LOAD 68 -to oHIP_SERIAL_TX_OUT3
+set_instance_assignment -name OUTPUT_PIN_LOAD 68 -to oHIP_SERIAL_TX_OUT3(n)
+set_instance_assignment -name OUTPUT_PIN_LOAD 68 -to oMICTOR_B[29]
+set_instance_assignment -name OUTPUT_PIN_LOAD 68 -to oMICTOR_A[28]
+set_instance_assignment -name OUTPUT_PIN_LOAD 68 -to oMICTOR_A[30]
+set_instance_assignment -name OUTPUT_PIN_LOAD 68 -to oMICTOR_B[4]
+set_instance_assignment -name OUTPUT_PIN_LOAD 68 -to oMICTOR_A[5]
+set_instance_assignment -name OUTPUT_PIN_LOAD 68 -to oLED_N[6]
+set_instance_assignment -name OUTPUT_PIN_LOAD 68 -to ioFPGA_DATA[6]
+set_instance_assignment -name OUTPUT_PIN_LOAD 68 -to oFC_TD_P[23](n)
+set_instance_assignment -name OUTPUT_PIN_LOAD 68 -to oFC_TD_P[23]
+set_instance_assignment -name OUTPUT_PIN_LOAD 68 -to oMICTOR_B[28]
+set_instance_assignment -name OUTPUT_PIN_LOAD 68 -to oMICTOR_B[30]
+set_instance_assignment -name OUTPUT_PIN_LOAD 68 -to oMICTOR_A[29]
+set_instance_assignment -name OUTPUT_PIN_LOAD 68 -to oMICTOR_A[31]
+set_instance_assignment -name OUTPUT_PIN_LOAD 68 -to oMICTOR_B[6]
+set_instance_assignment -name OUTPUT_PIN_LOAD 68 -to oMICTOR_B[5]
+set_instance_assignment -name OUTPUT_PIN_LOAD 68 -to oMICTOR_A[6]
+set_instance_assignment -name OUTPUT_PIN_LOAD 68 -to oMICTOR_A[7]
+set_instance_assignment -name OUTPUT_PIN_LOAD 68 -to oLED_N[7]
+set_instance_assignment -name OUTPUT_PIN_LOAD 68 -to ioFPGA_DATA[5]
+set_instance_assignment -name OUTPUT_PIN_LOAD 68 -to oHIP_SERIAL_TX_OUT2
+set_instance_assignment -name OUTPUT_PIN_LOAD 68 -to oHIP_SERIAL_TX_OUT2(n)
+set_instance_assignment -name OUTPUT_PIN_LOAD 68 -to ioEXT3
+set_instance_assignment -name OUTPUT_PIN_LOAD 68 -to oMICTOR_B[31]
+set_instance_assignment -name OUTPUT_PIN_LOAD 68 -to oMICTOR_B[7]
+set_instance_assignment -name OUTPUT_PIN_LOAD 68 -to oMICTOR_B[10]
+set_instance_assignment -name OUTPUT_PIN_LOAD 68 -to oMICTOR_A[10]
+set_instance_assignment -name OUTPUT_PIN_LOAD 68 -to oFC_TD_P[24](n)
+set_instance_assignment -name OUTPUT_PIN_LOAD 68 -to oFC_TD_P[24]
+set_instance_assignment -name OUTPUT_PIN_LOAD 68 -to ioEXT4
+set_instance_assignment -name OUTPUT_PIN_LOAD 68 -to oMICTOR_B[2]
+set_instance_assignment -name OUTPUT_PIN_LOAD 68 -to oMICTOR_B[11]
+set_instance_assignment -name OUTPUT_PIN_LOAD 68 -to oMICTOR_A[11]
+set_instance_assignment -name OUTPUT_PIN_LOAD 68 -to ioFPGA_DATA[2]
+set_instance_assignment -name OUTPUT_PIN_LOAD 68 -to oHIP_SERIAL_TX_OUT1
+set_instance_assignment -name OUTPUT_PIN_LOAD 68 -to oHIP_SERIAL_TX_OUT1(n)
+set_instance_assignment -name OUTPUT_PIN_LOAD 68 -to ioSYNC_RIBBON
+set_instance_assignment -name OUTPUT_PIN_LOAD 68 -to oMICTOR_B[26]
+set_instance_assignment -name OUTPUT_PIN_LOAD 68 -to oMICTOR_B[32]
+set_instance_assignment -name OUTPUT_PIN_LOAD 68 -to oMICTOR_A[26]
+set_instance_assignment -name OUTPUT_PIN_LOAD 68 -to oMICTOR_B[3]
+set_instance_assignment -name OUTPUT_PIN_LOAD 68 -to oMICTOR_A[2]
+set_instance_assignment -name OUTPUT_PIN_LOAD 68 -to oMICTOR_A[0]
+set_instance_assignment -name OUTPUT_PIN_LOAD 68 -to ioFPGA_DATA[1]
+set_instance_assignment -name OUTPUT_PIN_LOAD 68 -to oFC_TD_P[25](n)
+set_instance_assignment -name OUTPUT_PIN_LOAD 68 -to oFC_TD_P[25]
+set_instance_assignment -name OUTPUT_PIN_LOAD 68 -to ioEXT2
+set_instance_assignment -name OUTPUT_PIN_LOAD 68 -to oMICTOR_B[27]
+set_instance_assignment -name OUTPUT_PIN_LOAD 68 -to oMICTOR_B[33]
+set_instance_assignment -name OUTPUT_PIN_LOAD 68 -to oMICTOR_A[27]
+set_instance_assignment -name OUTPUT_PIN_LOAD 68 -to oMICTOR_B[8]
+set_instance_assignment -name OUTPUT_PIN_LOAD 68 -to oMICTOR_B[9]
+set_instance_assignment -name OUTPUT_PIN_LOAD 68 -to oMICTOR_A[3]
+set_instance_assignment -name OUTPUT_PIN_LOAD 68 -to oMICTOR_A[1]
+set_instance_assignment -name OUTPUT_PIN_LOAD 68 -to ioFPGA_DATA[7]
+set_instance_assignment -name OUTPUT_PIN_LOAD 68 -to ioFPGA_DATA[4]
+set_instance_assignment -name OUTPUT_PIN_LOAD 68 -to ioFPGA_DATA[3]
+set_instance_assignment -name OUTPUT_PIN_LOAD 68 -to oHIP_SERIAL_TX_OUT0
+set_instance_assignment -name OUTPUT_PIN_LOAD 68 -to oHIP_SERIAL_TX_OUT0(n)
+set_instance_assignment -name OUTPUT_PIN_LOAD 68 -to oMICTOR_B[24]
+set_instance_assignment -name OUTPUT_PIN_LOAD 68 -to oMICTOR_A[32]
+set_instance_assignment -name OUTPUT_PIN_LOAD 68 -to oMICTOR_A[24]
+set_instance_assignment -name OUTPUT_PIN_LOAD 68 -to oMICTOR_B[0]
+set_instance_assignment -name OUTPUT_PIN_LOAD 68 -to oMICTOR_A[8]
+set_instance_assignment -name OUTPUT_PIN_LOAD 68 -to ioOPT_3
+set_instance_assignment -name OUTPUT_PIN_LOAD 68 -to ioOPT_1
+set_instance_assignment -name OUTPUT_PIN_LOAD 68 -to oMICTOR_B[25]
+set_instance_assignment -name OUTPUT_PIN_LOAD 68 -to oMICTOR_A[33]
+set_instance_assignment -name OUTPUT_PIN_LOAD 68 -to oMICTOR_A[25]
+set_instance_assignment -name OUTPUT_PIN_LOAD 68 -to oMICTOR_B[1]
+set_instance_assignment -name OUTPUT_PIN_LOAD 68 -to oMICTOR_A[9]
+set_instance_assignment -name OUTPUT_PIN_LOAD 68 -to ioOPT_4
+set_instance_assignment -name OUTPUT_PIN_LOAD 68 -to ioOPT_2
+set_instance_assignment -name OUTPUT_PIN_LOAD 68 -to oFC_TD_P[8](n)
+set_instance_assignment -name OUTPUT_PIN_LOAD 68 -to oFC_TD_P[8]
+set_instance_assignment -name OUTPUT_PIN_LOAD 68 -to ioBUS_SPARE
+set_instance_assignment -name OUTPUT_PIN_LOAD 68 -to oFC_TD_P[7]
+set_instance_assignment -name OUTPUT_PIN_LOAD 68 -to oFC_TD_P[7](n)
+set_instance_assignment -name OUTPUT_PIN_LOAD 68 -to ioFPGA_DATA[0]
+set_instance_assignment -name OUTPUT_PIN_LOAD 68 -to oFC_TD_P[9](n)
+set_instance_assignment -name OUTPUT_PIN_LOAD 68 -to oFC_TD_P[9]
+set_instance_assignment -name OUTPUT_PIN_LOAD 68 -to oFC_TD_P[6]
+set_instance_assignment -name OUTPUT_PIN_LOAD 68 -to oFC_TD_P[6](n)
+set_instance_assignment -name OUTPUT_PIN_LOAD 68 -to oFC_TD_P[10](n)
+set_instance_assignment -name OUTPUT_PIN_LOAD 68 -to oFC_TD_P[10]
+set_instance_assignment -name OUTPUT_PIN_LOAD 68 -to oFC_TD_P[5]
+set_instance_assignment -name OUTPUT_PIN_LOAD 68 -to oFC_TD_P[5](n)
+set_instance_assignment -name OUTPUT_PIN_LOAD 68 -to oFC_TD_P[11](n)
+set_instance_assignment -name OUTPUT_PIN_LOAD 68 -to oFC_TD_P[11]
+set_instance_assignment -name OUTPUT_PIN_LOAD 68 -to oFC_TD_P[4]
+set_instance_assignment -name OUTPUT_PIN_LOAD 68 -to oFC_TD_P[4](n)
+set_instance_assignment -name OUTPUT_PIN_LOAD 68 -to oFC_TD_P[12](n)
+set_instance_assignment -name OUTPUT_PIN_LOAD 68 -to oFC_TD_P[12]
+set_instance_assignment -name OUTPUT_PIN_LOAD 68 -to oFC_TD_P[3]
+set_instance_assignment -name OUTPUT_PIN_LOAD 68 -to oFC_TD_P[3](n)
+set_instance_assignment -name OUTPUT_PIN_LOAD 68 -to oFC_TD_P[13](n)
+set_instance_assignment -name OUTPUT_PIN_LOAD 68 -to oFC_TD_P[13]
+set_instance_assignment -name OUTPUT_PIN_LOAD 68 -to oFC_TD_P[2]
+set_instance_assignment -name OUTPUT_PIN_LOAD 68 -to oFC_TD_P[2](n)
+set_instance_assignment -name OUTPUT_PIN_LOAD 68 -to oFC_TD_P[14](n)
+set_instance_assignment -name OUTPUT_PIN_LOAD 68 -to oFC_TD_P[14]
+set_instance_assignment -name OUTPUT_PIN_LOAD 68 -to oFC_TD_P[1]
+set_instance_assignment -name OUTPUT_PIN_LOAD 68 -to oFC_TD_P[1](n)
+set_instance_assignment -name OUTPUT_PIN_LOAD 68 -to oFC_TD_P[15](n)
+set_instance_assignment -name OUTPUT_PIN_LOAD 68 -to oFC_TD_P[15]
+set_instance_assignment -name OUTPUT_PIN_LOAD 68 -to oFC_TD_P[0]
+set_instance_assignment -name OUTPUT_PIN_LOAD 68 -to oFC_TD_P[0](n)
+set_instance_assignment -name OUTPUT_PIN_LOAD 68 -to oFC_TD_P[16](n)
+set_instance_assignment -name OUTPUT_PIN_LOAD 68 -to oFC_TD_P[16]
+set_instance_assignment -name STRATIXII_TERMINATION "SERIES 25 OHMS WITH CALIBRATION" -to iBUS_MASTER
+set_instance_assignment -name STRATIXII_TERMINATION "SERIES 25 OHMS WITH CALIBRATION" -to iSFP_LOS[23]
+set_instance_assignment -name STRATIXII_TERMINATION "SERIES 25 OHMS WITH CALIBRATION" -to iSFP_LOS[19]
+set_instance_assignment -name STRATIXII_TERMINATION "SERIES 25 OHMS WITH CALIBRATION" -to MSEL0
+set_instance_assignment -name STRATIXII_TERMINATION "SERIES 25 OHMS WITH CALIBRATION" -to MSEL1
+set_instance_assignment -name STRATIXII_TERMINATION "SERIES 25 OHMS WITH CALIBRATION" -to TCK
+set_instance_assignment -name STRATIXII_TERMINATION "SERIES 25 OHMS WITH CALIBRATION" -to iFC_RD_P[17](n)
+set_instance_assignment -name STRATIXII_TERMINATION "SERIES 25 OHMS WITH CALIBRATION" -to iFC_RD_P[17]
+set_instance_assignment -name STRATIXII_TERMINATION "SERIES 25 OHMS WITH CALIBRATION" -to iHIP_SERIAL_RX_IN7
+set_instance_assignment -name STRATIXII_TERMINATION "SERIES 25 OHMS WITH CALIBRATION" -to iHIP_SERIAL_RX_IN7(n)
+set_instance_assignment -name STRATIXII_TERMINATION "SERIES 25 OHMS WITH CALIBRATION" -to iPIN_PERST_n
+set_instance_assignment -name STRATIXII_TERMINATION "SERIES 25 OHMS WITH CALIBRATION" -to iFC_RD_P[18](n)
+set_instance_assignment -name STRATIXII_TERMINATION "SERIES 25 OHMS WITH CALIBRATION" -to iFC_RD_P[18]
+set_instance_assignment -name STRATIXII_TERMINATION "SERIES 25 OHMS WITH CALIBRATION" -to MSEL2
+set_instance_assignment -name STRATIXII_TERMINATION "SERIES 25 OHMS WITH CALIBRATION" -to iPCIE_REF_CLK
+set_instance_assignment -name STRATIXII_TERMINATION "SERIES 25 OHMS WITH CALIBRATION" -to iPCIE_REF_CLK(n)
+set_instance_assignment -name STRATIXII_TERMINATION "SERIES 25 OHMS WITH CALIBRATION" -to iHIP_SERIAL_RX_IN6
+set_instance_assignment -name STRATIXII_TERMINATION "SERIES 25 OHMS WITH CALIBRATION" -to iHIP_SERIAL_RX_IN6(n)
+set_instance_assignment -name STRATIXII_TERMINATION "SERIES 25 OHMS WITH CALIBRATION" -to iCLK_425M_P[0](n)
+set_instance_assignment -name STRATIXII_TERMINATION "SERIES 25 OHMS WITH CALIBRATION" -to iCLK_425M_P[0]
+set_instance_assignment -name STRATIXII_TERMINATION "SERIES 25 OHMS WITH CALIBRATION" -to iFC_RD_P[19](n)
+set_instance_assignment -name STRATIXII_TERMINATION "SERIES 25 OHMS WITH CALIBRATION" -to iFC_RD_P[19]
+set_instance_assignment -name STRATIXII_TERMINATION "SERIES 25 OHMS WITH CALIBRATION" -to iHIP_SERIAL_RX_IN5
+set_instance_assignment -name STRATIXII_TERMINATION "SERIES 25 OHMS WITH CALIBRATION" -to iHIP_SERIAL_RX_IN5(n)
+set_instance_assignment -name STRATIXII_TERMINATION "SERIES 25 OHMS WITH CALIBRATION" -to MSEL3
+set_instance_assignment -name STRATIXII_TERMINATION "SERIES 25 OHMS WITH CALIBRATION" -to iFC_RD_P[20](n)
+set_instance_assignment -name STRATIXII_TERMINATION "SERIES 25 OHMS WITH CALIBRATION" -to iFC_RD_P[20]
+set_instance_assignment -name STRATIXII_TERMINATION "SERIES 25 OHMS WITH CALIBRATION" -to MSEL4
+set_instance_assignment -name STRATIXII_TERMINATION "SERIES 25 OHMS WITH CALIBRATION" -to iRXD
+set_instance_assignment -name STRATIXII_TERMINATION "SERIES 25 OHMS WITH CALIBRATION" -to iHIP_SERIAL_RX_IN4
+set_instance_assignment -name STRATIXII_TERMINATION "SERIES 25 OHMS WITH CALIBRATION" -to iHIP_SERIAL_RX_IN4(n)
+set_instance_assignment -name STRATIXII_TERMINATION "SERIES 25 OHMS WITH CALIBRATION" -to TDI
+set_instance_assignment -name STRATIXII_TERMINATION "SERIES 25 OHMS WITH CALIBRATION" -to iFC_RD_P[21](n)
+set_instance_assignment -name STRATIXII_TERMINATION "SERIES 25 OHMS WITH CALIBRATION" -to iFC_RD_P[21]
+set_instance_assignment -name STRATIXII_TERMINATION "SERIES 25 OHMS WITH CALIBRATION" -to nIO_PULLUP
+set_instance_assignment -name STRATIXII_TERMINATION "SERIES 25 OHMS WITH CALIBRATION" -to nCONFIG
+set_instance_assignment -name STRATIXII_TERMINATION "SERIES 25 OHMS WITH CALIBRATION" -to iFC_RD_P[22](n)
+set_instance_assignment -name STRATIXII_TERMINATION "SERIES 25 OHMS WITH CALIBRATION" -to iFC_RD_P[22]
+set_instance_assignment -name STRATIXII_TERMINATION "SERIES 25 OHMS WITH CALIBRATION" -to iFPGA_CLRN
+set_instance_assignment -name STRATIXII_TERMINATION "SERIES 25 OHMS WITH CALIBRATION" -to TRST
+set_instance_assignment -name STRATIXII_TERMINATION "SERIES 25 OHMS WITH CALIBRATION" -to iHIP_SERIAL_RX_IN3
+set_instance_assignment -name STRATIXII_TERMINATION "SERIES 25 OHMS WITH CALIBRATION" -to iHIP_SERIAL_RX_IN3(n)
+set_instance_assignment -name STRATIXII_TERMINATION "SERIES 25 OHMS WITH CALIBRATION" -to iFC_RD_P[23](n)
+set_instance_assignment -name STRATIXII_TERMINATION "SERIES 25 OHMS WITH CALIBRATION" -to iFC_RD_P[23]
+set_instance_assignment -name STRATIXII_TERMINATION "SERIES 25 OHMS WITH CALIBRATION" -to iFPGA_RSTN
+set_instance_assignment -name STRATIXII_TERMINATION "SERIES 25 OHMS WITH CALIBRATION" -to iHIP_SERIAL_RX_IN2
+set_instance_assignment -name STRATIXII_TERMINATION "SERIES 25 OHMS WITH CALIBRATION" -to iHIP_SERIAL_RX_IN2(n)
+set_instance_assignment -name STRATIXII_TERMINATION "SERIES 25 OHMS WITH CALIBRATION" -to iFPGA_ID_N
+set_instance_assignment -name STRATIXII_TERMINATION "SERIES 25 OHMS WITH CALIBRATION" -to iBD_NO[1]
+set_instance_assignment -name STRATIXII_TERMINATION "SERIES 25 OHMS WITH CALIBRATION" -to iFC_RD_P[24](n)
+set_instance_assignment -name STRATIXII_TERMINATION "SERIES 25 OHMS WITH CALIBRATION" -to iFC_RD_P[24]
+set_instance_assignment -name STRATIXII_TERMINATION "SERIES 25 OHMS WITH CALIBRATION" -to iBD_NO[0]
+set_instance_assignment -name STRATIXII_TERMINATION "SERIES 25 OHMS WITH CALIBRATION" -to TMS
+set_instance_assignment -name STRATIXII_TERMINATION "SERIES 25 OHMS WITH CALIBRATION" -to iHIP_SERIAL_RX_IN1
+set_instance_assignment -name STRATIXII_TERMINATION "SERIES 25 OHMS WITH CALIBRATION" -to iHIP_SERIAL_RX_IN1(n)
+set_instance_assignment -name STRATIXII_TERMINATION "SERIES 25 OHMS WITH CALIBRATION" -to iFC_RD_P[25](n)
+set_instance_assignment -name STRATIXII_TERMINATION "SERIES 25 OHMS WITH CALIBRATION" -to iFC_RD_P[25]
+set_instance_assignment -name STRATIXII_TERMINATION "SERIES 25 OHMS WITH CALIBRATION" -to iHIP_SERIAL_RX_IN0
+set_instance_assignment -name STRATIXII_TERMINATION "SERIES 25 OHMS WITH CALIBRATION" -to iHIP_SERIAL_RX_IN0(n)
+set_instance_assignment -name STRATIXII_TERMINATION "SERIES 25 OHMS WITH CALIBRATION" -to iBUS_RST
+set_instance_assignment -name STRATIXII_TERMINATION "SERIES 25 OHMS WITH CALIBRATION" -to iSFP_LOS[22]
+set_instance_assignment -name STRATIXII_TERMINATION "SERIES 25 OHMS WITH CALIBRATION" -to iSFP_LOS[18]
+set_instance_assignment -name STRATIXII_TERMINATION "SERIES 25 OHMS WITH CALIBRATION" -to iSFP_LOS[17]
+set_instance_assignment -name STRATIXII_TERMINATION "SERIES 25 OHMS WITH CALIBRATION" -to iFC_RD_P[8](n)
+set_instance_assignment -name STRATIXII_TERMINATION "SERIES 25 OHMS WITH CALIBRATION" -to iFC_RD_P[8]
+set_instance_assignment -name STRATIXII_TERMINATION "SERIES 25 OHMS WITH CALIBRATION" -to iSFP_LOS[16]
+set_instance_assignment -name STRATIXII_TERMINATION "SERIES 25 OHMS WITH CALIBRATION" -to iFC_RD_P[7]
+set_instance_assignment -name STRATIXII_TERMINATION "SERIES 25 OHMS WITH CALIBRATION" -to iFC_RD_P[7](n)
+set_instance_assignment -name STRATIXII_TERMINATION "SERIES 25 OHMS WITH CALIBRATION" -to iSFP_LOS[13]
+set_instance_assignment -name STRATIXII_TERMINATION "SERIES 25 OHMS WITH CALIBRATION" -to iFC_RD_P[9](n)
+set_instance_assignment -name STRATIXII_TERMINATION "SERIES 25 OHMS WITH CALIBRATION" -to iFC_RD_P[9]
+set_instance_assignment -name STRATIXII_TERMINATION "SERIES 25 OHMS WITH CALIBRATION" -to iSFP_LOS[12]
+set_instance_assignment -name STRATIXII_TERMINATION "SERIES 25 OHMS WITH CALIBRATION" -to iFC_RD_P[6]
+set_instance_assignment -name STRATIXII_TERMINATION "SERIES 25 OHMS WITH CALIBRATION" -to iFC_RD_P[6](n)
+set_instance_assignment -name STRATIXII_TERMINATION "SERIES 25 OHMS WITH CALIBRATION" -to iCLK_FR
+set_instance_assignment -name STRATIXII_TERMINATION "SERIES 25 OHMS WITH CALIBRATION" -to iSFP_LOS[15]
+set_instance_assignment -name STRATIXII_TERMINATION "SERIES 25 OHMS WITH CALIBRATION" -to iSFP_LOS[21]
+set_instance_assignment -name STRATIXII_TERMINATION "SERIES 25 OHMS WITH CALIBRATION" -to iFC_RD_P[10](n)
+set_instance_assignment -name STRATIXII_TERMINATION "SERIES 25 OHMS WITH CALIBRATION" -to iFC_RD_P[10]
+set_instance_assignment -name STRATIXII_TERMINATION "SERIES 25 OHMS WITH CALIBRATION" -to iSFP_LOS[14]
+set_instance_assignment -name STRATIXII_TERMINATION "SERIES 25 OHMS WITH CALIBRATION" -to iSFP_LOS[20]
+set_instance_assignment -name STRATIXII_TERMINATION "SERIES 25 OHMS WITH CALIBRATION" -to iFC_RD_P[5]
+set_instance_assignment -name STRATIXII_TERMINATION "SERIES 25 OHMS WITH CALIBRATION" -to iFC_RD_P[5](n)
+set_instance_assignment -name STRATIXII_TERMINATION "SERIES 25 OHMS WITH CALIBRATION" -to iSFP_LOS[11]
+set_instance_assignment -name STRATIXII_TERMINATION "SERIES 25 OHMS WITH CALIBRATION" -to iSFP_LOS[10]
+set_instance_assignment -name STRATIXII_TERMINATION "SERIES 25 OHMS WITH CALIBRATION" -to iFC_RD_P[11](n)
+set_instance_assignment -name STRATIXII_TERMINATION "SERIES 25 OHMS WITH CALIBRATION" -to iFC_RD_P[11]
+set_instance_assignment -name STRATIXII_TERMINATION "SERIES 25 OHMS WITH CALIBRATION" -to iBUS_CLK
+set_instance_assignment -name STRATIXII_TERMINATION "SERIES 25 OHMS WITH CALIBRATION" -to iSFP_LOS[7]
+set_instance_assignment -name STRATIXII_TERMINATION "SERIES 25 OHMS WITH CALIBRATION" -to iFC_RD_P[4]
+set_instance_assignment -name STRATIXII_TERMINATION "SERIES 25 OHMS WITH CALIBRATION" -to iFC_RD_P[4](n)
+set_instance_assignment -name STRATIXII_TERMINATION "SERIES 25 OHMS WITH CALIBRATION" -to iBUS_EN
+set_instance_assignment -name STRATIXII_TERMINATION "SERIES 25 OHMS WITH CALIBRATION" -to iSFP_LOS[6]
+set_instance_assignment -name STRATIXII_TERMINATION "SERIES 25 OHMS WITH CALIBRATION" -to iASY[0]
+set_instance_assignment -name STRATIXII_TERMINATION "SERIES 25 OHMS WITH CALIBRATION" -to iASY[1]
+set_instance_assignment -name STRATIXII_TERMINATION "SERIES 25 OHMS WITH CALIBRATION" -to iFC_RD_P[12](n)
+set_instance_assignment -name STRATIXII_TERMINATION "SERIES 25 OHMS WITH CALIBRATION" -to iFC_RD_P[12]
+set_instance_assignment -name STRATIXII_TERMINATION "SERIES 25 OHMS WITH CALIBRATION" -to iSFP_LOS[5]
+set_instance_assignment -name STRATIXII_TERMINATION "SERIES 25 OHMS WITH CALIBRATION" -to iFC_RD_P[3]
+set_instance_assignment -name STRATIXII_TERMINATION "SERIES 25 OHMS WITH CALIBRATION" -to iFC_RD_P[3](n)
+set_instance_assignment -name STRATIXII_TERMINATION "SERIES 25 OHMS WITH CALIBRATION" -to iSFP_LOS[4]
+set_instance_assignment -name STRATIXII_TERMINATION "SERIES 25 OHMS WITH CALIBRATION" -to iASY[3]
+set_instance_assignment -name STRATIXII_TERMINATION "SERIES 25 OHMS WITH CALIBRATION" -to iFC_RD_P[13](n)
+set_instance_assignment -name STRATIXII_TERMINATION "SERIES 25 OHMS WITH CALIBRATION" -to iFC_RD_P[13]
+set_instance_assignment -name STRATIXII_TERMINATION "SERIES 25 OHMS WITH CALIBRATION" -to iSFP_LOS[3]
+set_instance_assignment -name STRATIXII_TERMINATION "SERIES 25 OHMS WITH CALIBRATION" -to iASY[2]
+set_instance_assignment -name STRATIXII_TERMINATION "SERIES 25 OHMS WITH CALIBRATION" -to iFC_RD_P[2]
+set_instance_assignment -name STRATIXII_TERMINATION "SERIES 25 OHMS WITH CALIBRATION" -to iFC_RD_P[2](n)
+set_instance_assignment -name STRATIXII_TERMINATION "SERIES 25 OHMS WITH CALIBRATION" -to iSFP_LOS[2]
+set_instance_assignment -name STRATIXII_TERMINATION "SERIES 25 OHMS WITH CALIBRATION" -to iFC_RD_P[14](n)
+set_instance_assignment -name STRATIXII_TERMINATION "SERIES 25 OHMS WITH CALIBRATION" -to iFC_RD_P[14]
+set_instance_assignment -name STRATIXII_TERMINATION "SERIES 25 OHMS WITH CALIBRATION" -to iCLK_425M_P[1](n)
+set_instance_assignment -name STRATIXII_TERMINATION "SERIES 25 OHMS WITH CALIBRATION" -to iSFP_LOS[9]
+set_instance_assignment -name STRATIXII_TERMINATION "SERIES 25 OHMS WITH CALIBRATION" -to iFC_RD_P[1]
+set_instance_assignment -name STRATIXII_TERMINATION "SERIES 25 OHMS WITH CALIBRATION" -to iFC_RD_P[1](n)
+set_instance_assignment -name STRATIXII_TERMINATION "SERIES 25 OHMS WITH CALIBRATION" -to iCLK_425M_P[1]
+set_instance_assignment -name STRATIXII_TERMINATION "SERIES 25 OHMS WITH CALIBRATION" -to iSFP_LOS[1]
+set_instance_assignment -name STRATIXII_TERMINATION "SERIES 25 OHMS WITH CALIBRATION" -to iSFP_LOS[8]
+set_instance_assignment -name STRATIXII_TERMINATION "SERIES 25 OHMS WITH CALIBRATION" -to iFC_RD_P[15](n)
+set_instance_assignment -name STRATIXII_TERMINATION "SERIES 25 OHMS WITH CALIBRATION" -to iFC_RD_P[15]
+set_instance_assignment -name STRATIXII_TERMINATION "SERIES 25 OHMS WITH CALIBRATION" -to iCLK_FC_425_P[1](n)
+set_instance_assignment -name STRATIXII_TERMINATION "SERIES 25 OHMS WITH CALIBRATION" -to iCLK_FC_425_P[1]
+set_instance_assignment -name STRATIXII_TERMINATION "SERIES 25 OHMS WITH CALIBRATION" -to iSFP_LOS[0]
+set_instance_assignment -name STRATIXII_TERMINATION "SERIES 25 OHMS WITH CALIBRATION" -to iCLK_FC_425_P[0]
+set_instance_assignment -name STRATIXII_TERMINATION "SERIES 25 OHMS WITH CALIBRATION" -to iCLK_FC_425_P[0](n)
+set_instance_assignment -name STRATIXII_TERMINATION "SERIES 25 OHMS WITH CALIBRATION" -to iFC_RD_P[0]
+set_instance_assignment -name STRATIXII_TERMINATION "SERIES 25 OHMS WITH CALIBRATION" -to iFC_RD_P[0](n)
+set_instance_assignment -name STRATIXII_TERMINATION "SERIES 25 OHMS WITH CALIBRATION" -to iFC_RD_P[16](n)
+set_instance_assignment -name STRATIXII_TERMINATION "SERIES 25 OHMS WITH CALIBRATION" -to iFC_RD_P[16]
+set_instance_assignment -name STRATIXII_TERMINATION "SERIES 25 OHMS WITH CALIBRATION" -to iCLK_FC_219_P[1](n)
+set_instance_assignment -name STRATIXII_TERMINATION "SERIES 25 OHMS WITH CALIBRATION" -to iCLK_FC_219_P[1]
+set_instance_assignment -name STRATIXII_TERMINATION "SERIES 25 OHMS WITH CALIBRATION" -to iCLK_FC_219_P[0]
+set_instance_assignment -name STRATIXII_TERMINATION "SERIES 25 OHMS WITH CALIBRATION" -to iCLK_FC_219_P[0](n)
+set_location_assignment IOBANK_7A -to iBUS_MASTER
+set_location_assignment IOBANK_7B -to ioSYNC_NEIGHBOR
+set_location_assignment IOBANK_8B -to iSFP_LOS[23]
+set_location_assignment IOBANK_8B -to iSFP_LOS[19]
+set_location_assignment IOBANK_B1R -to oFC_TD_P[17](n)
+set_location_assignment IOBANK_B1R -to oFC_TD_P[17]
+set_location_assignment IOBANK_4A -to MSEL0
+set_location_assignment IOBANK_4A -to MSEL1
+set_location_assignment IOBANK_3C -to oMICTOR_A[21]
+set_location_assignment IOBANK_3B -to oLED_N[8]
+set_location_assignment IOBANK_3B -to oLED_N[9]
+set_location_assignment IOBANK_3A -to TCK
+set_location_assignment IOBANK_B1L -to oHIP_SERIAL_TX_OUT7
+set_location_assignment IOBANK_B1L -to oHIP_SERIAL_TX_OUT7(n)
+set_location_assignment IOBANK_B1R -to iFC_RD_P[17](n)
+set_location_assignment IOBANK_B1R -to iFC_RD_P[17]
+set_location_assignment IOBANK_3C -to oMICTOR_B[12]
+set_location_assignment IOBANK_3C -to oMICTOR_A[20]
+set_location_assignment IOBANK_3B -to oLED_N[10]
+set_location_assignment IOBANK_3B -to ioOPT_ROT_3
+set_location_assignment IOBANK_B1L -to iHIP_SERIAL_RX_IN7
+set_location_assignment IOBANK_B1L -to iHIP_SERIAL_RX_IN7(n)
+set_location_assignment IOBANK_B1R -to oFC_TD_P[18](n)
+set_location_assignment IOBANK_B1R -to oFC_TD_P[18]
+set_location_assignment IOBANK_3C -to oMICTOR_B[13]
+set_location_assignment IOBANK_3C -to oMICTOR_A[14]
+set_location_assignment IOBANK_3C -to oMICTOR_A[15]
+set_location_assignment IOBANK_3B -to oLED_N[11]
+set_location_assignment IOBANK_3B -to iPIN_PERST_n
+set_location_assignment IOBANK_3B -to ioOPT_ROT_4
+set_location_assignment IOBANK_3A -to DCLK
+set_location_assignment IOBANK_B1L -to oHIP_SERIAL_TX_OUT6
+set_location_assignment IOBANK_B1L -to oHIP_SERIAL_TX_OUT6(n)
+set_location_assignment IOBANK_B1R -to iFC_RD_P[18](n)
+set_location_assignment IOBANK_B1R -to iFC_RD_P[18]
+set_location_assignment IOBANK_4A -to MSEL2
+set_location_assignment IOBANK_3D -to oFC_RATE_SEL[0]
+set_location_assignment IOBANK_3D -to oFC_RATE_SEL[1]
+set_location_assignment IOBANK_3C -to oMICTOR_B[14]
+set_location_assignment IOBANK_3C -to oMICTOR_A[12]
+set_location_assignment IOBANK_3B -to ioOPT_ROT_1
+set_location_assignment IOBANK_B0L -to iPCIE_REF_CLK
+set_location_assignment IOBANK_B0L -to iPCIE_REF_CLK(n)
+set_location_assignment IOBANK_B1L -to iHIP_SERIAL_RX_IN6
+set_location_assignment IOBANK_B1L -to iHIP_SERIAL_RX_IN6(n)
+set_location_assignment IOBANK_B1R -to oFC_TD_P[19](n)
+set_location_assignment IOBANK_B1R -to oFC_TD_P[19]
+set_location_assignment IOBANK_4D -to iCLK_425M_P[0](n)
+set_location_assignment IOBANK_4D -to iCLK_425M_P[0]
+set_location_assignment IOBANK_3D -to oFC_RATE_SEL[2]
+set_location_assignment IOBANK_3D -to oFC_RATE_SEL[3]
+set_location_assignment IOBANK_3C -to oMICTOR_B[15]
+set_location_assignment IOBANK_3C -to oMICTOR_B[20]
+set_location_assignment IOBANK_3C -to oMICTOR_A[13]
+set_location_assignment IOBANK_3B -to ioOPT_ROT_2
+set_location_assignment IOBANK_B1L -to oHIP_SERIAL_TX_OUT5
+set_location_assignment IOBANK_B1L -to oHIP_SERIAL_TX_OUT5(n)
+set_location_assignment IOBANK_B1R -to iFC_RD_P[19](n)
+set_location_assignment IOBANK_B1R -to iFC_RD_P[19]
+set_location_assignment IOBANK_3C -to oMICTOR_B[21]
+set_location_assignment IOBANK_3C -to oMICTOR_A[16]
+set_location_assignment IOBANK_3B -to ioOPT_5
+set_location_assignment IOBANK_B1L -to iHIP_SERIAL_RX_IN5
+set_location_assignment IOBANK_B1L -to iHIP_SERIAL_RX_IN5(n)
+set_location_assignment IOBANK_B0R -to oFC_TD_P[20](n)
+set_location_assignment IOBANK_B0R -to oFC_TD_P[20]
+set_location_assignment IOBANK_4A -to MSEL3
+set_location_assignment IOBANK_3D -to oFC_RATE_SEL[9]
+set_location_assignment IOBANK_3C -to oMICTOR_B[23]
+set_location_assignment IOBANK_3C -to oMICTOR_A[18]
+set_location_assignment IOBANK_3C -to oMICTOR_A[17]
+set_location_assignment IOBANK_3B -to oLED_N[12]
+set_location_assignment IOBANK_3B -to ioOPT_7
+set_location_assignment IOBANK_3B -to ioOPT_6
+set_location_assignment IOBANK_B0L -to oHIP_SERIAL_TX_OUT4
+set_location_assignment IOBANK_B0L -to oHIP_SERIAL_TX_OUT4(n)
+set_location_assignment IOBANK_B0R -to iFC_RD_P[20](n)
+set_location_assignment IOBANK_B0R -to iFC_RD_P[20]
+set_location_assignment IOBANK_4A -to CONF_DONE
+set_location_assignment IOBANK_4A -to MSEL4
+set_location_assignment IOBANK_3D -to oFC_RATE_SEL[8]
+set_location_assignment IOBANK_3D -to iRXD
+set_location_assignment IOBANK_3C -to oMICTOR_B[22]
+set_location_assignment IOBANK_3C -to oMICTOR_A[19]
+set_location_assignment IOBANK_3B -to oLED_N[13]
+set_location_assignment IOBANK_3B -to ioOPT_8
+set_location_assignment IOBANK_3A -to TDO
+set_location_assignment IOBANK_B0L -to iHIP_SERIAL_RX_IN4
+set_location_assignment IOBANK_B0L -to iHIP_SERIAL_RX_IN4(n)
+set_location_assignment IOBANK_B0R -to oFC_TD_P[21](n)
+set_location_assignment IOBANK_B0R -to oFC_TD_P[21]
+set_location_assignment IOBANK_3D -to oFC_RATE_SEL[4]
+set_location_assignment IOBANK_3D -to oFC_RATE_SEL[5]
+set_location_assignment IOBANK_3D -to oTXD
+set_location_assignment IOBANK_3C -to oMICTOR_B[16]
+set_location_assignment IOBANK_3C -to oMICTOR_A[22]
+set_location_assignment IOBANK_3B -to oLED_N[14]
+set_location_assignment IOBANK_3B -to oLED_N[3]
+set_location_assignment IOBANK_3A -to TDI
+set_location_assignment IOBANK_B0R -to iFC_RD_P[21](n)
+set_location_assignment IOBANK_B0R -to iFC_RD_P[21]
+set_location_assignment IOBANK_4A -to nIO_PULLUP
+set_location_assignment IOBANK_3D -to oFC_RATE_SEL[10]
+set_location_assignment IOBANK_3C -to oMICTOR_B[17]
+set_location_assignment IOBANK_3C -to oMICTOR_A[23]
+set_location_assignment IOBANK_3B -to oLED_N[15]
+set_location_assignment IOBANK_3B -to oLED_N[2]
+set_location_assignment IOBANK_3B -to oLED_N[0]
+set_location_assignment IOBANK_3A -to nCONFIG
+set_location_assignment IOBANK_B0R -to oFC_TD_P[22](n)
+set_location_assignment IOBANK_B0R -to oFC_TD_P[22]
+set_location_assignment IOBANK_3D -to oFC_RATE_SEL[6]
+set_location_assignment IOBANK_3D -to oFC_RATE_SEL[7]
+set_location_assignment IOBANK_3D -to oFC_RATE_SEL[11]
+set_location_assignment IOBANK_3C -to oMICTOR_B[19]
+set_location_assignment IOBANK_3C -to oMICTOR_B[18]
+set_location_assignment IOBANK_3C -to oMICTOR_A[4]
+set_location_assignment IOBANK_3B -to oLED_N[4]
+set_location_assignment IOBANK_3B -to oLED_N[5]
+set_location_assignment IOBANK_3B -to oLED_N[1]
+set_location_assignment IOBANK_B0L -to oHIP_SERIAL_TX_OUT3
+set_location_assignment IOBANK_B0L -to oHIP_SERIAL_TX_OUT3(n)
+set_location_assignment IOBANK_B0R -to iFC_RD_P[22](n)
+set_location_assignment IOBANK_B0R -to iFC_RD_P[22]
+set_location_assignment IOBANK_3D -to oMICTOR_B[29]
+set_location_assignment IOBANK_3D -to oMICTOR_A[28]
+set_location_assignment IOBANK_3D -to oMICTOR_A[30]
+set_location_assignment IOBANK_3C -to oMICTOR_B[4]
+set_location_assignment IOBANK_3C -to oMICTOR_A[5]
+set_location_assignment IOBANK_3B -to oLED_N[6]
+set_location_assignment IOBANK_3A -to ioFPGA_DATA[6]
+set_location_assignment IOBANK_3A -to iFPGA_CLRN
+set_location_assignment IOBANK_3A -to TRST
+set_location_assignment IOBANK_B0L -to iHIP_SERIAL_RX_IN3
+set_location_assignment IOBANK_B0L -to iHIP_SERIAL_RX_IN3(n)
+set_location_assignment IOBANK_B0R -to oFC_TD_P[23](n)
+set_location_assignment IOBANK_B0R -to oFC_TD_P[23]
+set_location_assignment IOBANK_3D -to oMICTOR_B[28]
+set_location_assignment IOBANK_3D -to oMICTOR_B[30]
+set_location_assignment IOBANK_3D -to oMICTOR_A[29]
+set_location_assignment IOBANK_3D -to oMICTOR_A[31]
+set_location_assignment IOBANK_3C -to oMICTOR_B[6]
+set_location_assignment IOBANK_3C -to oMICTOR_B[5]
+set_location_assignment IOBANK_3C -to oMICTOR_A[6]
+set_location_assignment IOBANK_3C -to oMICTOR_A[7]
+set_location_assignment IOBANK_3B -to oLED_N[7]
+set_location_assignment IOBANK_3A -to ioFPGA_DATA[5]
+set_location_assignment IOBANK_B0L -to oHIP_SERIAL_TX_OUT2
+set_location_assignment IOBANK_B0L -to oHIP_SERIAL_TX_OUT2(n)
+set_location_assignment IOBANK_B0R -to iFC_RD_P[23](n)
+set_location_assignment IOBANK_B0R -to iFC_RD_P[23]
+set_location_assignment IOBANK_4A -to ioEXT3
+set_location_assignment IOBANK_3D -to oMICTOR_B[31]
+set_location_assignment IOBANK_3C -to oMICTOR_B[7]
+set_location_assignment IOBANK_3C -to oMICTOR_B[10]
+set_location_assignment IOBANK_3C -to oMICTOR_A[10]
+set_location_assignment IOBANK_3B -to iFPGA_RSTN
+set_location_assignment IOBANK_B0L -to iHIP_SERIAL_RX_IN2
+set_location_assignment IOBANK_B0L -to iHIP_SERIAL_RX_IN2(n)
+set_location_assignment IOBANK_B0R -to oFC_TD_P[24](n)
+set_location_assignment IOBANK_B0R -to oFC_TD_P[24]
+set_location_assignment IOBANK_4A -to ioEXT4
+set_location_assignment IOBANK_3C -to oMICTOR_B[2]
+set_location_assignment IOBANK_3C -to oMICTOR_B[11]
+set_location_assignment IOBANK_3C -to oMICTOR_A[11]
+set_location_assignment IOBANK_3B -to iFPGA_ID_N
+set_location_assignment IOBANK_3A -to iBD_NO[1]
+set_location_assignment IOBANK_3A -to ioFPGA_DATA[2]
+set_location_assignment IOBANK_B0L -to oHIP_SERIAL_TX_OUT1
+set_location_assignment IOBANK_B0L -to oHIP_SERIAL_TX_OUT1(n)
+set_location_assignment IOBANK_B0R -to iFC_RD_P[24](n)
+set_location_assignment IOBANK_B0R -to iFC_RD_P[24]
+set_location_assignment IOBANK_4A -to ioSYNC_RIBBON
+set_location_assignment IOBANK_3D -to oMICTOR_B[26]
+set_location_assignment IOBANK_3D -to oMICTOR_B[32]
+set_location_assignment IOBANK_3D -to oMICTOR_A[26]
+set_location_assignment IOBANK_3C -to oMICTOR_B[3]
+set_location_assignment IOBANK_3C -to oMICTOR_A[2]
+set_location_assignment IOBANK_3C -to oMICTOR_A[0]
+set_location_assignment IOBANK_3A -to iBD_NO[0]
+set_location_assignment IOBANK_3A -to ioFPGA_DATA[1]
+set_location_assignment IOBANK_3A -to TMS
+set_location_assignment IOBANK_B0L -to iHIP_SERIAL_RX_IN1
+set_location_assignment IOBANK_B0L -to iHIP_SERIAL_RX_IN1(n)
+set_location_assignment IOBANK_B0R -to oFC_TD_P[25](n)
+set_location_assignment IOBANK_B0R -to oFC_TD_P[25]
+set_location_assignment IOBANK_4A -to ioEXT2
+set_location_assignment IOBANK_3D -to oMICTOR_B[27]
+set_location_assignment IOBANK_3D -to oMICTOR_B[33]
+set_location_assignment IOBANK_3D -to oMICTOR_A[27]
+set_location_assignment IOBANK_3C -to oMICTOR_B[8]
+set_location_assignment IOBANK_3C -to oMICTOR_B[9]
+set_location_assignment IOBANK_3C -to oMICTOR_A[3]
+set_location_assignment IOBANK_3C -to oMICTOR_A[1]
+set_location_assignment IOBANK_3A -to ioFPGA_DATA[7]
+set_location_assignment IOBANK_3A -to ioFPGA_DATA[4]
+set_location_assignment IOBANK_3A -to ioFPGA_DATA[3]
+set_location_assignment IOBANK_B0L -to oHIP_SERIAL_TX_OUT0
+set_location_assignment IOBANK_B0L -to oHIP_SERIAL_TX_OUT0(n)
+set_location_assignment IOBANK_B0R -to iFC_RD_P[25](n)
+set_location_assignment IOBANK_B0R -to iFC_RD_P[25]
+set_location_assignment IOBANK_3D -to oMICTOR_B[24]
+set_location_assignment IOBANK_3D -to oMICTOR_A[32]
+set_location_assignment IOBANK_3D -to oMICTOR_A[24]
+set_location_assignment IOBANK_3C -to oMICTOR_B[0]
+set_location_assignment IOBANK_3C -to oMICTOR_A[8]
+set_location_assignment IOBANK_3B -to ioOPT_3
+set_location_assignment IOBANK_3B -to ioOPT_1
+set_location_assignment IOBANK_B0L -to iHIP_SERIAL_RX_IN0
+set_location_assignment IOBANK_B0L -to iHIP_SERIAL_RX_IN0(n)
+set_location_assignment IOBANK_3D -to oMICTOR_B[25]
+set_location_assignment IOBANK_3D -to oMICTOR_A[33]
+set_location_assignment IOBANK_3D -to oMICTOR_A[25]
+set_location_assignment IOBANK_3C -to oMICTOR_B[1]
+set_location_assignment IOBANK_3C -to oMICTOR_A[9]
+set_location_assignment IOBANK_3B -to ioOPT_4
+set_location_assignment IOBANK_3B -to ioOPT_2
+set_location_assignment IOBANK_7A -to iBUS_RST
+set_location_assignment IOBANK_8B -to iSFP_LOS[22]
+set_location_assignment IOBANK_8B -to iSFP_LOS[18]
+set_location_assignment IOBANK_B2R -to oFC_TD_P[8](n)
+set_location_assignment IOBANK_B2R -to oFC_TD_P[8]
+set_location_assignment IOBANK_7A -to ioBUS_SPARE
+set_location_assignment IOBANK_8B -to iSFP_LOS[17]
+set_location_assignment IOBANK_B2L -to oFC_TD_P[7]
+set_location_assignment IOBANK_B2L -to oFC_TD_P[7](n)
+set_location_assignment IOBANK_B2R -to iFC_RD_P[8](n)
+set_location_assignment IOBANK_B2R -to iFC_RD_P[8]
+set_location_assignment IOBANK_7A -to ioFPGA_DATA[0]
+set_location_assignment IOBANK_8B -to iSFP_LOS[16]
+set_location_assignment IOBANK_B2L -to iFC_RD_P[7]
+set_location_assignment IOBANK_B2L -to iFC_RD_P[7](n)
+set_location_assignment IOBANK_B2R -to oFC_TD_P[9](n)
+set_location_assignment IOBANK_B2R -to oFC_TD_P[9]
+set_location_assignment IOBANK_8B -to iSFP_LOS[13]
+set_location_assignment IOBANK_B2L -to oFC_TD_P[6]
+set_location_assignment IOBANK_B2L -to oFC_TD_P[6](n)
+set_location_assignment IOBANK_B2R -to iFC_RD_P[9](n)
+set_location_assignment IOBANK_B2R -to iFC_RD_P[9]
+set_location_assignment IOBANK_8B -to iSFP_LOS[12]
+set_location_assignment IOBANK_B2L -to iFC_RD_P[6]
+set_location_assignment IOBANK_B2L -to iFC_RD_P[6](n)
+set_location_assignment IOBANK_B2R -to oFC_TD_P[10](n)
+set_location_assignment IOBANK_B2R -to oFC_TD_P[10]
+set_location_assignment IOBANK_7A -to iCLK_FR
+set_location_assignment IOBANK_8B -to iSFP_LOS[15]
+set_location_assignment IOBANK_8B -to iSFP_LOS[21]
+set_location_assignment IOBANK_B2L -to oFC_TD_P[5]
+set_location_assignment IOBANK_B2L -to oFC_TD_P[5](n)
+set_location_assignment IOBANK_B2R -to iFC_RD_P[10](n)
+set_location_assignment IOBANK_B2R -to iFC_RD_P[10]
+set_location_assignment IOBANK_8B -to iSFP_LOS[14]
+set_location_assignment IOBANK_8B -to iSFP_LOS[20]
+set_location_assignment IOBANK_B2L -to iFC_RD_P[5]
+set_location_assignment IOBANK_B2L -to iFC_RD_P[5](n)
+set_location_assignment IOBANK_B2R -to oFC_TD_P[11](n)
+set_location_assignment IOBANK_B2R -to oFC_TD_P[11]
+set_location_assignment IOBANK_8B -to iSFP_LOS[11]
+set_location_assignment IOBANK_8B -to iSFP_LOS[10]
+set_location_assignment IOBANK_B2L -to oFC_TD_P[4]
+set_location_assignment IOBANK_B2L -to oFC_TD_P[4](n)
+set_location_assignment IOBANK_B2R -to iFC_RD_P[11](n)
+set_location_assignment IOBANK_B2R -to iFC_RD_P[11]
+set_location_assignment IOBANK_7A -to iBUS_CLK
+set_location_assignment IOBANK_8B -to iSFP_LOS[7]
+set_location_assignment IOBANK_B2L -to iFC_RD_P[4]
+set_location_assignment IOBANK_B2L -to iFC_RD_P[4](n)
+set_location_assignment IOBANK_B2R -to oFC_TD_P[12](n)
+set_location_assignment IOBANK_B2R -to oFC_TD_P[12]
+set_location_assignment IOBANK_7A -to iBUS_EN
+set_location_assignment IOBANK_8B -to iSFP_LOS[6]
+set_location_assignment IOBANK_8A -to iASY[0]
+set_location_assignment IOBANK_8A -to iASY[1]
+set_location_assignment IOBANK_B2L -to oFC_TD_P[3]
+set_location_assignment IOBANK_B2L -to oFC_TD_P[3](n)
+set_location_assignment IOBANK_B2R -to iFC_RD_P[12](n)
+set_location_assignment IOBANK_B2R -to iFC_RD_P[12]
+set_location_assignment IOBANK_8B -to iSFP_LOS[5]
+set_location_assignment IOBANK_B2L -to iFC_RD_P[3]
+set_location_assignment IOBANK_B2L -to iFC_RD_P[3](n)
+set_location_assignment IOBANK_B2R -to oFC_TD_P[13](n)
+set_location_assignment IOBANK_B2R -to oFC_TD_P[13]
+set_location_assignment IOBANK_8B -to iSFP_LOS[4]
+set_location_assignment IOBANK_8A -to iASY[3]
+set_location_assignment IOBANK_B2L -to oFC_TD_P[2]
+set_location_assignment IOBANK_B2L -to oFC_TD_P[2](n)
+set_location_assignment IOBANK_B2R -to iFC_RD_P[13](n)
+set_location_assignment IOBANK_B2R -to iFC_RD_P[13]
+set_location_assignment IOBANK_8B -to iSFP_LOS[3]
+set_location_assignment IOBANK_8A -to iASY[2]
+set_location_assignment IOBANK_B2L -to iFC_RD_P[2]
+set_location_assignment IOBANK_B2L -to iFC_RD_P[2](n)
+set_location_assignment IOBANK_B1R -to oFC_TD_P[14](n)
+set_location_assignment IOBANK_B1R -to oFC_TD_P[14]
+set_location_assignment IOBANK_8B -to iSFP_LOS[2]
+set_location_assignment IOBANK_B1L -to oFC_TD_P[1]
+set_location_assignment IOBANK_B1L -to oFC_TD_P[1](n)
+set_location_assignment IOBANK_B1R -to iFC_RD_P[14](n)
+set_location_assignment IOBANK_B1R -to iFC_RD_P[14]
+set_location_assignment IOBANK_7D -to iCLK_425M_P[1](n)
+set_location_assignment IOBANK_8B -to iSFP_LOS[9]
+set_location_assignment IOBANK_B1L -to iFC_RD_P[1]
+set_location_assignment IOBANK_B1L -to iFC_RD_P[1](n)
+set_location_assignment IOBANK_B1R -to oFC_TD_P[15](n)
+set_location_assignment IOBANK_B1R -to oFC_TD_P[15]
+set_location_assignment IOBANK_7D -to iCLK_425M_P[1]
+set_location_assignment IOBANK_8B -to iSFP_LOS[1]
+set_location_assignment IOBANK_8B -to iSFP_LOS[8]
+set_location_assignment IOBANK_B1L -to oFC_TD_P[0]
+set_location_assignment IOBANK_B1L -to oFC_TD_P[0](n)
+set_location_assignment IOBANK_B1R -to iFC_RD_P[15](n)
+set_location_assignment IOBANK_B1R -to iFC_RD_P[15]
+set_location_assignment IOBANK_B2R -to iCLK_FC_425_P[1](n)
+set_location_assignment IOBANK_B2R -to iCLK_FC_425_P[1]
+set_location_assignment IOBANK_8B -to iSFP_LOS[0]
+set_location_assignment IOBANK_B2L -to iCLK_FC_425_P[0]
+set_location_assignment IOBANK_B2L -to iCLK_FC_425_P[0](n)
+set_location_assignment IOBANK_B1L -to iFC_RD_P[0]
+set_location_assignment IOBANK_B1L -to iFC_RD_P[0](n)
+set_location_assignment IOBANK_B1R -to oFC_TD_P[16](n)
+set_location_assignment IOBANK_B1R -to oFC_TD_P[16]
+set_location_assignment IOBANK_B1R -to iFC_RD_P[16](n)
+set_location_assignment IOBANK_B1R -to iFC_RD_P[16]
+set_location_assignment IOBANK_B1R -to iCLK_FC_219_P[1](n)
+set_location_assignment IOBANK_B1R -to iCLK_FC_219_P[1]
+set_location_assignment IOBANK_B1L -to iCLK_FC_219_P[0]
+set_location_assignment IOBANK_B1L -to iCLK_FC_219_P[0](n)
+set_location_assignment EDGE_TOP -to iBUS_MASTER
+set_location_assignment EDGE_TOP -to ioSYNC_NEIGHBOR
+set_location_assignment EDGE_TOP -to iSFP_LOS[23]
+set_location_assignment EDGE_TOP -to iSFP_LOS[19]
+set_location_assignment EDGE_RIGHT -to oFC_TD_P[17](n)
+set_location_assignment EDGE_RIGHT -to oFC_TD_P[17]
+set_location_assignment EDGE_BOTTOM -to MSEL0
+set_location_assignment EDGE_BOTTOM -to MSEL1
+set_location_assignment EDGE_BOTTOM -to oMICTOR_A[21]
+set_location_assignment EDGE_BOTTOM -to oLED_N[8]
+set_location_assignment EDGE_BOTTOM -to oLED_N[9]
+set_location_assignment EDGE_BOTTOM -to TCK
+set_location_assignment EDGE_LEFT -to oHIP_SERIAL_TX_OUT7
+set_location_assignment EDGE_LEFT -to oHIP_SERIAL_TX_OUT7(n)
+set_location_assignment EDGE_RIGHT -to iFC_RD_P[17](n)
+set_location_assignment EDGE_RIGHT -to iFC_RD_P[17]
+set_location_assignment EDGE_BOTTOM -to oMICTOR_B[12]
+set_location_assignment EDGE_BOTTOM -to oMICTOR_A[20]
+set_location_assignment EDGE_BOTTOM -to oLED_N[10]
+set_location_assignment EDGE_BOTTOM -to ioOPT_ROT_3
+set_location_assignment EDGE_LEFT -to iHIP_SERIAL_RX_IN7
+set_location_assignment EDGE_LEFT -to iHIP_SERIAL_RX_IN7(n)
+set_location_assignment EDGE_RIGHT -to oFC_TD_P[18](n)
+set_location_assignment EDGE_RIGHT -to oFC_TD_P[18]
+set_location_assignment EDGE_BOTTOM -to oMICTOR_B[13]
+set_location_assignment EDGE_BOTTOM -to oMICTOR_A[14]
+set_location_assignment EDGE_BOTTOM -to oMICTOR_A[15]
+set_location_assignment EDGE_BOTTOM -to oLED_N[11]
+set_location_assignment EDGE_BOTTOM -to iPIN_PERST_n
+set_location_assignment EDGE_BOTTOM -to ioOPT_ROT_4
+set_location_assignment EDGE_BOTTOM -to DCLK
+set_location_assignment EDGE_LEFT -to oHIP_SERIAL_TX_OUT6
+set_location_assignment EDGE_LEFT -to oHIP_SERIAL_TX_OUT6(n)
+set_location_assignment EDGE_RIGHT -to iFC_RD_P[18](n)
+set_location_assignment EDGE_RIGHT -to iFC_RD_P[18]
+set_location_assignment EDGE_BOTTOM -to MSEL2
+set_location_assignment EDGE_BOTTOM -to oFC_RATE_SEL[0]
+set_location_assignment EDGE_BOTTOM -to oFC_RATE_SEL[1]
+set_location_assignment EDGE_BOTTOM -to oMICTOR_B[14]
+set_location_assignment EDGE_BOTTOM -to oMICTOR_A[12]
+set_location_assignment EDGE_BOTTOM -to ioOPT_ROT_1
+set_location_assignment EDGE_LEFT -to iPCIE_REF_CLK
+set_location_assignment EDGE_LEFT -to iPCIE_REF_CLK(n)
+set_location_assignment EDGE_LEFT -to iHIP_SERIAL_RX_IN6
+set_location_assignment EDGE_LEFT -to iHIP_SERIAL_RX_IN6(n)
+set_location_assignment EDGE_RIGHT -to oFC_TD_P[19](n)
+set_location_assignment EDGE_RIGHT -to oFC_TD_P[19]
+set_location_assignment EDGE_BOTTOM -to iCLK_425M_P[0](n)
+set_location_assignment EDGE_BOTTOM -to iCLK_425M_P[0]
+set_location_assignment EDGE_BOTTOM -to oFC_RATE_SEL[2]
+set_location_assignment EDGE_BOTTOM -to oFC_RATE_SEL[3]
+set_location_assignment EDGE_BOTTOM -to oMICTOR_B[15]
+set_location_assignment EDGE_BOTTOM -to oMICTOR_B[20]
+set_location_assignment EDGE_BOTTOM -to oMICTOR_A[13]
+set_location_assignment EDGE_BOTTOM -to ioOPT_ROT_2
+set_location_assignment EDGE_LEFT -to oHIP_SERIAL_TX_OUT5
+set_location_assignment EDGE_LEFT -to oHIP_SERIAL_TX_OUT5(n)
+set_location_assignment EDGE_RIGHT -to iFC_RD_P[19](n)
+set_location_assignment EDGE_RIGHT -to iFC_RD_P[19]
+set_location_assignment EDGE_BOTTOM -to oMICTOR_B[21]
+set_location_assignment EDGE_BOTTOM -to oMICTOR_A[16]
+set_location_assignment EDGE_BOTTOM -to ioOPT_5
+set_location_assignment EDGE_LEFT -to iHIP_SERIAL_RX_IN5
+set_location_assignment EDGE_LEFT -to iHIP_SERIAL_RX_IN5(n)
+set_location_assignment EDGE_RIGHT -to oFC_TD_P[20](n)
+set_location_assignment EDGE_RIGHT -to oFC_TD_P[20]
+set_location_assignment EDGE_BOTTOM -to MSEL3
+set_location_assignment EDGE_BOTTOM -to oFC_RATE_SEL[9]
+set_location_assignment EDGE_BOTTOM -to oMICTOR_B[23]
+set_location_assignment EDGE_BOTTOM -to oMICTOR_A[18]
+set_location_assignment EDGE_BOTTOM -to oMICTOR_A[17]
+set_location_assignment EDGE_BOTTOM -to oLED_N[12]
+set_location_assignment EDGE_BOTTOM -to ioOPT_7
+set_location_assignment EDGE_BOTTOM -to ioOPT_6
+set_location_assignment EDGE_LEFT -to oHIP_SERIAL_TX_OUT4
+set_location_assignment EDGE_LEFT -to oHIP_SERIAL_TX_OUT4(n)
+set_location_assignment EDGE_RIGHT -to iFC_RD_P[20](n)
+set_location_assignment EDGE_RIGHT -to iFC_RD_P[20]
+set_location_assignment EDGE_BOTTOM -to CONF_DONE
+set_location_assignment EDGE_BOTTOM -to MSEL4
+set_location_assignment EDGE_BOTTOM -to oFC_RATE_SEL[8]
+set_location_assignment EDGE_BOTTOM -to iRXD
+set_location_assignment EDGE_BOTTOM -to oMICTOR_B[22]
+set_location_assignment EDGE_BOTTOM -to oMICTOR_A[19]
+set_location_assignment EDGE_BOTTOM -to oLED_N[13]
+set_location_assignment EDGE_BOTTOM -to ioOPT_8
+set_location_assignment EDGE_BOTTOM -to TDO
+set_location_assignment EDGE_LEFT -to iHIP_SERIAL_RX_IN4
+set_location_assignment EDGE_LEFT -to iHIP_SERIAL_RX_IN4(n)
+set_location_assignment EDGE_RIGHT -to oFC_TD_P[21](n)
+set_location_assignment EDGE_RIGHT -to oFC_TD_P[21]
+set_location_assignment EDGE_BOTTOM -to oFC_RATE_SEL[4]
+set_location_assignment EDGE_BOTTOM -to oFC_RATE_SEL[5]
+set_location_assignment EDGE_BOTTOM -to oTXD
+set_location_assignment EDGE_BOTTOM -to oMICTOR_B[16]
+set_location_assignment EDGE_BOTTOM -to oMICTOR_A[22]
+set_location_assignment EDGE_BOTTOM -to oLED_N[14]
+set_location_assignment EDGE_BOTTOM -to oLED_N[3]
+set_location_assignment EDGE_BOTTOM -to TDI
+set_location_assignment EDGE_RIGHT -to iFC_RD_P[21](n)
+set_location_assignment EDGE_RIGHT -to iFC_RD_P[21]
+set_location_assignment EDGE_BOTTOM -to nIO_PULLUP
+set_location_assignment EDGE_BOTTOM -to oFC_RATE_SEL[10]
+set_location_assignment EDGE_BOTTOM -to oMICTOR_B[17]
+set_location_assignment EDGE_BOTTOM -to oMICTOR_A[23]
+set_location_assignment EDGE_BOTTOM -to oLED_N[15]
+set_location_assignment EDGE_BOTTOM -to oLED_N[2]
+set_location_assignment EDGE_BOTTOM -to oLED_N[0]
+set_location_assignment EDGE_BOTTOM -to nCONFIG
+set_location_assignment EDGE_RIGHT -to oFC_TD_P[22](n)
+set_location_assignment EDGE_RIGHT -to oFC_TD_P[22]
+set_location_assignment EDGE_BOTTOM -to oFC_RATE_SEL[6]
+set_location_assignment EDGE_BOTTOM -to oFC_RATE_SEL[7]
+set_location_assignment EDGE_BOTTOM -to oFC_RATE_SEL[11]
+set_location_assignment EDGE_BOTTOM -to oMICTOR_B[19]
+set_location_assignment EDGE_BOTTOM -to oMICTOR_B[18]
+set_location_assignment EDGE_BOTTOM -to oMICTOR_A[4]
+set_location_assignment EDGE_BOTTOM -to oLED_N[4]
+set_location_assignment EDGE_BOTTOM -to oLED_N[5]
+set_location_assignment EDGE_BOTTOM -to oLED_N[1]
+set_location_assignment EDGE_LEFT -to oHIP_SERIAL_TX_OUT3
+set_location_assignment EDGE_LEFT -to oHIP_SERIAL_TX_OUT3(n)
+set_location_assignment EDGE_RIGHT -to iFC_RD_P[22](n)
+set_location_assignment EDGE_RIGHT -to iFC_RD_P[22]
+set_location_assignment EDGE_BOTTOM -to oMICTOR_B[29]
+set_location_assignment EDGE_BOTTOM -to oMICTOR_A[28]
+set_location_assignment EDGE_BOTTOM -to oMICTOR_A[30]
+set_location_assignment EDGE_BOTTOM -to oMICTOR_B[4]
+set_location_assignment EDGE_BOTTOM -to oMICTOR_A[5]
+set_location_assignment EDGE_BOTTOM -to oLED_N[6]
+set_location_assignment EDGE_BOTTOM -to ioFPGA_DATA[6]
+set_location_assignment EDGE_BOTTOM -to iFPGA_CLRN
+set_location_assignment EDGE_BOTTOM -to TRST
+set_location_assignment EDGE_LEFT -to iHIP_SERIAL_RX_IN3
+set_location_assignment EDGE_LEFT -to iHIP_SERIAL_RX_IN3(n)
+set_location_assignment EDGE_RIGHT -to oFC_TD_P[23](n)
+set_location_assignment EDGE_RIGHT -to oFC_TD_P[23]
+set_location_assignment EDGE_BOTTOM -to oMICTOR_B[28]
+set_location_assignment EDGE_BOTTOM -to oMICTOR_B[30]
+set_location_assignment EDGE_BOTTOM -to oMICTOR_A[29]
+set_location_assignment EDGE_BOTTOM -to oMICTOR_A[31]
+set_location_assignment EDGE_BOTTOM -to oMICTOR_B[6]
+set_location_assignment EDGE_BOTTOM -to oMICTOR_B[5]
+set_location_assignment EDGE_BOTTOM -to oMICTOR_A[6]
+set_location_assignment EDGE_BOTTOM -to oMICTOR_A[7]
+set_location_assignment EDGE_BOTTOM -to oLED_N[7]
+set_location_assignment EDGE_BOTTOM -to ioFPGA_DATA[5]
+set_location_assignment EDGE_LEFT -to oHIP_SERIAL_TX_OUT2
+set_location_assignment EDGE_LEFT -to oHIP_SERIAL_TX_OUT2(n)
+set_location_assignment EDGE_RIGHT -to iFC_RD_P[23](n)
+set_location_assignment EDGE_RIGHT -to iFC_RD_P[23]
+set_location_assignment EDGE_BOTTOM -to ioEXT3
+set_location_assignment EDGE_BOTTOM -to oMICTOR_B[31]
+set_location_assignment EDGE_BOTTOM -to oMICTOR_B[7]
+set_location_assignment EDGE_BOTTOM -to oMICTOR_B[10]
+set_location_assignment EDGE_BOTTOM -to oMICTOR_A[10]
+set_location_assignment EDGE_BOTTOM -to iFPGA_RSTN
+set_location_assignment EDGE_LEFT -to iHIP_SERIAL_RX_IN2
+set_location_assignment EDGE_LEFT -to iHIP_SERIAL_RX_IN2(n)
+set_location_assignment EDGE_RIGHT -to oFC_TD_P[24](n)
+set_location_assignment EDGE_RIGHT -to oFC_TD_P[24]
+set_location_assignment EDGE_BOTTOM -to ioEXT4
+set_location_assignment EDGE_BOTTOM -to oMICTOR_B[2]
+set_location_assignment EDGE_BOTTOM -to oMICTOR_B[11]
+set_location_assignment EDGE_BOTTOM -to oMICTOR_A[11]
+set_location_assignment EDGE_BOTTOM -to iFPGA_ID_N
+set_location_assignment EDGE_BOTTOM -to iBD_NO[1]
+set_location_assignment EDGE_BOTTOM -to ioFPGA_DATA[2]
+set_location_assignment EDGE_LEFT -to oHIP_SERIAL_TX_OUT1
+set_location_assignment EDGE_LEFT -to oHIP_SERIAL_TX_OUT1(n)
+set_location_assignment EDGE_RIGHT -to iFC_RD_P[24](n)
+set_location_assignment EDGE_RIGHT -to iFC_RD_P[24]
+set_location_assignment EDGE_BOTTOM -to ioSYNC_RIBBON
+set_location_assignment EDGE_BOTTOM -to oMICTOR_B[26]
+set_location_assignment EDGE_BOTTOM -to oMICTOR_B[32]
+set_location_assignment EDGE_BOTTOM -to oMICTOR_A[26]
+set_location_assignment EDGE_BOTTOM -to oMICTOR_B[3]
+set_location_assignment EDGE_BOTTOM -to oMICTOR_A[2]
+set_location_assignment EDGE_BOTTOM -to oMICTOR_A[0]
+set_location_assignment EDGE_BOTTOM -to iBD_NO[0]
+set_location_assignment EDGE_BOTTOM -to ioFPGA_DATA[1]
+set_location_assignment EDGE_BOTTOM -to TMS
+set_location_assignment EDGE_LEFT -to iHIP_SERIAL_RX_IN1
+set_location_assignment EDGE_LEFT -to iHIP_SERIAL_RX_IN1(n)
+set_location_assignment EDGE_RIGHT -to oFC_TD_P[25](n)
+set_location_assignment EDGE_RIGHT -to oFC_TD_P[25]
+set_location_assignment EDGE_BOTTOM -to ioEXT2
+set_location_assignment EDGE_BOTTOM -to oMICTOR_B[27]
+set_location_assignment EDGE_BOTTOM -to oMICTOR_B[33]
+set_location_assignment EDGE_BOTTOM -to oMICTOR_A[27]
+set_location_assignment EDGE_BOTTOM -to oMICTOR_B[8]
+set_location_assignment EDGE_BOTTOM -to oMICTOR_B[9]
+set_location_assignment EDGE_BOTTOM -to oMICTOR_A[3]
+set_location_assignment EDGE_BOTTOM -to oMICTOR_A[1]
+set_location_assignment EDGE_BOTTOM -to ioFPGA_DATA[7]
+set_location_assignment EDGE_BOTTOM -to ioFPGA_DATA[4]
+set_location_assignment EDGE_BOTTOM -to ioFPGA_DATA[3]
+set_location_assignment EDGE_LEFT -to oHIP_SERIAL_TX_OUT0
+set_location_assignment EDGE_LEFT -to oHIP_SERIAL_TX_OUT0(n)
+set_location_assignment EDGE_RIGHT -to iFC_RD_P[25](n)
+set_location_assignment EDGE_RIGHT -to iFC_RD_P[25]
+set_location_assignment EDGE_BOTTOM -to oMICTOR_B[24]
+set_location_assignment EDGE_BOTTOM -to oMICTOR_A[32]
+set_location_assignment EDGE_BOTTOM -to oMICTOR_A[24]
+set_location_assignment EDGE_BOTTOM -to oMICTOR_B[0]
+set_location_assignment EDGE_BOTTOM -to oMICTOR_A[8]
+set_location_assignment EDGE_BOTTOM -to ioOPT_3
+set_location_assignment EDGE_BOTTOM -to ioOPT_1
+set_location_assignment EDGE_LEFT -to iHIP_SERIAL_RX_IN0
+set_location_assignment EDGE_LEFT -to iHIP_SERIAL_RX_IN0(n)
+set_location_assignment EDGE_BOTTOM -to oMICTOR_B[25]
+set_location_assignment EDGE_BOTTOM -to oMICTOR_A[33]
+set_location_assignment EDGE_BOTTOM -to oMICTOR_A[25]
+set_location_assignment EDGE_BOTTOM -to oMICTOR_B[1]
+set_location_assignment EDGE_BOTTOM -to oMICTOR_A[9]
+set_location_assignment EDGE_BOTTOM -to ioOPT_4
+set_location_assignment EDGE_BOTTOM -to ioOPT_2
+set_location_assignment EDGE_TOP -to iBUS_RST
+set_location_assignment EDGE_TOP -to iSFP_LOS[22]
+set_location_assignment EDGE_TOP -to iSFP_LOS[18]
+set_location_assignment EDGE_RIGHT -to oFC_TD_P[8](n)
+set_location_assignment EDGE_RIGHT -to oFC_TD_P[8]
+set_location_assignment EDGE_TOP -to ioBUS_SPARE
+set_location_assignment EDGE_TOP -to iSFP_LOS[17]
+set_location_assignment EDGE_LEFT -to oFC_TD_P[7]
+set_location_assignment EDGE_LEFT -to oFC_TD_P[7](n)
+set_location_assignment EDGE_RIGHT -to iFC_RD_P[8](n)
+set_location_assignment EDGE_RIGHT -to iFC_RD_P[8]
+set_location_assignment EDGE_TOP -to ioFPGA_DATA[0]
+set_location_assignment EDGE_TOP -to iSFP_LOS[16]
+set_location_assignment EDGE_LEFT -to iFC_RD_P[7]
+set_location_assignment EDGE_LEFT -to iFC_RD_P[7](n)
+set_location_assignment EDGE_RIGHT -to oFC_TD_P[9](n)
+set_location_assignment EDGE_RIGHT -to oFC_TD_P[9]
+set_location_assignment EDGE_TOP -to iSFP_LOS[13]
+set_location_assignment EDGE_LEFT -to oFC_TD_P[6]
+set_location_assignment EDGE_LEFT -to oFC_TD_P[6](n)
+set_location_assignment EDGE_RIGHT -to iFC_RD_P[9](n)
+set_location_assignment EDGE_RIGHT -to iFC_RD_P[9]
+set_location_assignment EDGE_TOP -to iSFP_LOS[12]
+set_location_assignment EDGE_LEFT -to iFC_RD_P[6]
+set_location_assignment EDGE_LEFT -to iFC_RD_P[6](n)
+set_location_assignment EDGE_RIGHT -to oFC_TD_P[10](n)
+set_location_assignment EDGE_RIGHT -to oFC_TD_P[10]
+set_location_assignment EDGE_TOP -to iCLK_FR
+set_location_assignment EDGE_TOP -to iSFP_LOS[15]
+set_location_assignment EDGE_TOP -to iSFP_LOS[21]
+set_location_assignment EDGE_LEFT -to oFC_TD_P[5]
+set_location_assignment EDGE_LEFT -to oFC_TD_P[5](n)
+set_location_assignment EDGE_RIGHT -to iFC_RD_P[10](n)
+set_location_assignment EDGE_RIGHT -to iFC_RD_P[10]
+set_location_assignment EDGE_TOP -to iSFP_LOS[14]
+set_location_assignment EDGE_TOP -to iSFP_LOS[20]
+set_location_assignment EDGE_LEFT -to iFC_RD_P[5]
+set_location_assignment EDGE_LEFT -to iFC_RD_P[5](n)
+set_location_assignment EDGE_RIGHT -to oFC_TD_P[11](n)
+set_location_assignment EDGE_RIGHT -to oFC_TD_P[11]
+set_location_assignment EDGE_TOP -to iSFP_LOS[11]
+set_location_assignment EDGE_TOP -to iSFP_LOS[10]
+set_location_assignment EDGE_LEFT -to oFC_TD_P[4]
+set_location_assignment EDGE_LEFT -to oFC_TD_P[4](n)
+set_location_assignment EDGE_RIGHT -to iFC_RD_P[11](n)
+set_location_assignment EDGE_RIGHT -to iFC_RD_P[11]
+set_location_assignment EDGE_TOP -to iBUS_CLK
+set_location_assignment EDGE_TOP -to iSFP_LOS[7]
+set_location_assignment EDGE_LEFT -to iFC_RD_P[4]
+set_location_assignment EDGE_LEFT -to iFC_RD_P[4](n)
+set_location_assignment EDGE_RIGHT -to oFC_TD_P[12](n)
+set_location_assignment EDGE_RIGHT -to oFC_TD_P[12]
+set_location_assignment EDGE_TOP -to iBUS_EN
+set_location_assignment EDGE_TOP -to iSFP_LOS[6]
+set_location_assignment EDGE_TOP -to iASY[0]
+set_location_assignment EDGE_TOP -to iASY[1]
+set_location_assignment EDGE_LEFT -to oFC_TD_P[3]
+set_location_assignment EDGE_LEFT -to oFC_TD_P[3](n)
+set_location_assignment EDGE_RIGHT -to iFC_RD_P[12](n)
+set_location_assignment EDGE_RIGHT -to iFC_RD_P[12]
+set_location_assignment EDGE_TOP -to iSFP_LOS[5]
+set_location_assignment EDGE_LEFT -to iFC_RD_P[3]
+set_location_assignment EDGE_LEFT -to iFC_RD_P[3](n)
+set_location_assignment EDGE_RIGHT -to oFC_TD_P[13](n)
+set_location_assignment EDGE_RIGHT -to oFC_TD_P[13]
+set_location_assignment EDGE_TOP -to iSFP_LOS[4]
+set_location_assignment EDGE_TOP -to iASY[3]
+set_location_assignment EDGE_LEFT -to oFC_TD_P[2]
+set_location_assignment EDGE_LEFT -to oFC_TD_P[2](n)
+set_location_assignment EDGE_RIGHT -to iFC_RD_P[13](n)
+set_location_assignment EDGE_RIGHT -to iFC_RD_P[13]
+set_location_assignment EDGE_TOP -to iSFP_LOS[3]
+set_location_assignment EDGE_TOP -to iASY[2]
+set_location_assignment EDGE_LEFT -to iFC_RD_P[2]
+set_location_assignment EDGE_LEFT -to iFC_RD_P[2](n)
+set_location_assignment EDGE_RIGHT -to oFC_TD_P[14](n)
+set_location_assignment EDGE_RIGHT -to oFC_TD_P[14]
+set_location_assignment EDGE_TOP -to iSFP_LOS[2]
+set_location_assignment EDGE_LEFT -to oFC_TD_P[1]
+set_location_assignment EDGE_LEFT -to oFC_TD_P[1](n)
+set_location_assignment EDGE_RIGHT -to iFC_RD_P[14](n)
+set_location_assignment EDGE_RIGHT -to iFC_RD_P[14]
+set_location_assignment EDGE_TOP -to iCLK_425M_P[1](n)
+set_location_assignment EDGE_TOP -to iSFP_LOS[9]
+set_location_assignment EDGE_LEFT -to iFC_RD_P[1]
+set_location_assignment EDGE_LEFT -to iFC_RD_P[1](n)
+set_location_assignment EDGE_RIGHT -to oFC_TD_P[15](n)
+set_location_assignment EDGE_RIGHT -to oFC_TD_P[15]
+set_location_assignment EDGE_TOP -to iCLK_425M_P[1]
+set_location_assignment EDGE_TOP -to iSFP_LOS[1]
+set_location_assignment EDGE_TOP -to iSFP_LOS[8]
+set_location_assignment EDGE_LEFT -to oFC_TD_P[0]
+set_location_assignment EDGE_LEFT -to oFC_TD_P[0](n)
+set_location_assignment EDGE_RIGHT -to iFC_RD_P[15](n)
+set_location_assignment EDGE_RIGHT -to iFC_RD_P[15]
+set_location_assignment EDGE_RIGHT -to iCLK_FC_425_P[1](n)
+set_location_assignment EDGE_RIGHT -to iCLK_FC_425_P[1]
+set_location_assignment EDGE_TOP -to iSFP_LOS[0]
+set_location_assignment EDGE_LEFT -to iCLK_FC_425_P[0]
+set_location_assignment EDGE_LEFT -to iCLK_FC_425_P[0](n)
+set_location_assignment EDGE_LEFT -to iFC_RD_P[0]
+set_location_assignment EDGE_LEFT -to iFC_RD_P[0](n)
+set_location_assignment EDGE_RIGHT -to oFC_TD_P[16](n)
+set_location_assignment EDGE_RIGHT -to oFC_TD_P[16]
+set_location_assignment EDGE_RIGHT -to iFC_RD_P[16](n)
+set_location_assignment EDGE_RIGHT -to iFC_RD_P[16]
+set_location_assignment EDGE_RIGHT -to iCLK_FC_219_P[1](n)
+set_location_assignment EDGE_RIGHT -to iCLK_FC_219_P[1]
+set_location_assignment EDGE_LEFT -to iCLK_FC_219_P[0]
+set_location_assignment EDGE_LEFT -to iCLK_FC_219_P[0](n)
+set_instance_assignment -name IO_STANDARD "2.5V" -to AS_DATA0,ASDO        # bank 3A 
+set_instance_assignment -name IO_STANDARD "2.5V" -to AS_DATA1             # bank 3A 
+set_instance_assignment -name IO_STANDARD "2.5V" -to AS_DATA2             # bank 3A 
+set_instance_assignment -name IO_STANDARD "2.5V" -to AS_DATA3             # bank 3A 
+set_instance_assignment -name IO_STANDARD "2.5V" -to CONF_DONE            # bank 4A 
+set_instance_assignment -name IO_STANDARD "2.5V" -to DCLK                 # bank 3A 
+set_instance_assignment -name IO_STANDARD "2.5V" -to MSEL0                # bank 4A 
+set_instance_assignment -name IO_STANDARD "2.5V" -to MSEL1                # bank 4A 
+set_instance_assignment -name IO_STANDARD "2.5V" -to MSEL2                # bank 4A 
+set_instance_assignment -name IO_STANDARD "2.5V" -to MSEL3                # bank 4A 
+set_instance_assignment -name IO_STANDARD "2.5V" -to MSEL4                # bank 4A 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 3A 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 3A 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 3A 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 3A 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 3A 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 3A 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 3A 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 3A 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 3A 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 3A 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 3A 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 3A 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 3A 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 3A 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 3A 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 3A 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 3A 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 3A 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 3A 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 3A 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 3A 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 3A 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 3A 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 3A 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 3A 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 3A 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 3B 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 3B 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 3B 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 3B 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 3B 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 3B 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 3B 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 3B 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 3B 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 3B 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 3B 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 3B 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 3B 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 3B 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 3B 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 3B 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 3B 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 3D 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 3D 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 3D 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 3D 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 3D 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 3D 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 3D 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 3D 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 3D 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 3D 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 3D 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 3D 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 3D 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 3D 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 4A 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 4A 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 4A 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 4A 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 4A 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 4A 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 4A 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 4A 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 4A 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 4A 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 4A 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 4A 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 4A 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 4A 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 4A 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 4A 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 4A 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 4A 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 4A 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 4A 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 4B 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 4B 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 4B 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 4B 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 4B 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 4B 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 4B 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 4B 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 4B 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 4B 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 4B 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 4B 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 4B 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 4B 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 4B 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 4B 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 4B 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 4B 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 4B 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 4B 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 4B 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 4B 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 4B 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 4B 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 4B 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 4B 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 4B 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 4B 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 4B 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 4B 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 4B 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 4B 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 4B 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 4B 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 4B 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 4B 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 4B 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 4B 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 4B 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 4B 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 4B 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 4B 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 4B 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 4B 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 4B 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 4B 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 4B 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 4B 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 4C 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 4C 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 4C 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 4C 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 4C 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 4C 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 4C 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 4C 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 4C 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 4C 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 4C 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 4C 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 4C 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 4C 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 4C 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 4C 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 4C 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 4C 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 4C 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 4C 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 4C 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 4C 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 4C 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 4C 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 4C 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 4C 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 4C 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 4C 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 4C 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 4C 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 4C 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 4C 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 4C 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 4C 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 4C 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 4C 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 4C 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 4C 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 4C 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 4C 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 4C 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 4C 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 4C 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 4C 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 4C 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 4C 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 4C 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 4C 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 4D 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 4D 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 4D 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 4D 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 4D 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 4D 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 4D 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 4D 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 4D 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 4D 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 4D 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 4D 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 4D 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 4D 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 4D 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 4D 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 4D 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 4D 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 4D 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 4D 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 4D 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 4D 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 4D 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 4D 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 4D 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 4D 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 4D 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 4D 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 4D 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 4D 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 4D 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 4D 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 4D 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 4D 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 4D 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 4D 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 4D 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 4D 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 4D 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 4D 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 4D 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 4D 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 4D 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 4D 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 4D 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 4D 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 7A 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 7A 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 7A 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 7A 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 7A 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 7A 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 7A 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 7A 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 7A 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 7A 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 7A 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 7A 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 7A 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 7A 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 7A 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 7A 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 7A 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 7B 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 7B 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 7B 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 7B 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 7B 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 7B 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 7B 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 7B 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 7B 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 7B 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 7B 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 7B 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 7B 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 7B 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 7B 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 7B 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 7B 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 7B 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 7B 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 7B 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 7B 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 7B 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 7B 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 7B 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 7B 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 7B 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 7B 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 7B 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 7B 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 7B 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 7B 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 7B 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 7B 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 7B 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 7B 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 7B 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 7B 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 7B 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 7B 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 7B 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 7B 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 7B 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 7B 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 7B 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 7B 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 7B 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 7B 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 7C 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 7C 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 7C 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 7C 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 7C 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 7C 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 7C 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 7C 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 7C 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 7C 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 7C 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 7C 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 7C 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 7C 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 7C 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 7C 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 7C 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 7C 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 7C 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 7C 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 7C 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 7C 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 7C 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 7C 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 7C 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 7C 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 7C 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 7C 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 7C 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 7C 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 7C 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 7C 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 7C 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 7C 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 7C 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 7C 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 7C 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 7C 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 7C 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 7C 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 7C 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 7C 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 7C 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 7C 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 7C 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 7C 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 7C 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 7C 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 7D 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 7D 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 7D 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 7D 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 7D 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 7D 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 7D 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 7D 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 7D 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 7D 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 7D 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 7D 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 7D 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 7D 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 7D 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 7D 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 7D 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 7D 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 7D 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 7D 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 7D 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 7D 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 7D 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 7D 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 7D 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 7D 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 7D 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 7D 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 7D 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 7D 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 7D 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 7D 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 7D 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 7D 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 7D 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 7D 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 7D 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 7D 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 7D 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 7D 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 7D 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 7D 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 7D 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 7D 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 7D 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 7D 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 8A 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 8A 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 8A 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 8A 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 8A 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 8A 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 8A 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 8A 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 8A 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 8A 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 8A 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 8A 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 8A 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 8A 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 8A 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 8A 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 8A 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 8A 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 8A 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 8A 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 8A 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 8A 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 8A 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 8A 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 8A 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 8A 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 8A 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 8A 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 8A 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 8A 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 8A 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 8A 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 8B 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 8B 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 8B 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 8B 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 8B 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 8B 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 8B 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 8B 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 8B 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 8B 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 8B 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 8B 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 8B 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 8B 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 8B 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 8B 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 8B 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 8B 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 8B 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 8B 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 8B 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 8B 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 8B 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 8B 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 8C 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 8C 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 8C 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 8C 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 8C 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 8C 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 8C 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 8C 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 8C 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 8C 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 8C 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 8C 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 8C 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 8C 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 8C 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 8C 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 8C 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 8C 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 8C 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 8C 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 8C 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 8C 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 8C 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 8C 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 8C 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 8C 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 8C 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 8C 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 8C 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 8C 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 8C 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 8C 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 8C 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 8C 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 8C 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 8C 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 8C 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 8C 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 8C 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 8C 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 8C 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 8C 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 8C 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 8C 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 8C 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 8C 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 8C 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 8C 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 8D 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 8D 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 8D 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 8D 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 8D 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 8D 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 8D 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 8D 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 8D 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 8D 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 8D 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 8D 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 8D 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 8D 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 8D 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 8D 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 8D 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 8D 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 8D 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 8D 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 8D 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 8D 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 8D 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 8D 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 8D 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 8D 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 8D 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 8D 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 8D 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 8D 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 8D 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 8D 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 8D 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 8D 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 8D 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 8D 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 8D 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 8D 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 8D 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 8D 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 8D 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 8D 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 8D 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 8D 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 8D 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 8D 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 8D 
+set_instance_assignment -name IO_STANDARD "2.5V" -to RESERVED_INPUT_WITH_WEAK_PULLUP # bank 8D 
+set_instance_assignment -name IO_STANDARD "2.5V" -to TCK                  # bank 3A 
+set_instance_assignment -name IO_STANDARD "2.5V" -to TDI                  # bank 3A 
+set_instance_assignment -name IO_STANDARD "2.5V" -to TDO                  # bank 3A 
+set_instance_assignment -name IO_STANDARD "2.5V" -to TMS                  # bank 3A 
+set_instance_assignment -name IO_STANDARD "2.5V" -to TRST                 # bank 3A 
+set_instance_assignment -name IO_STANDARD "2.5V" -to VREFB3AN0            # bank 3A 
+set_instance_assignment -name IO_STANDARD "2.5V" -to VREFB3BN0            # bank 3B 
+set_instance_assignment -name IO_STANDARD "2.5V" -to VREFB3CN0            # bank 3C 
+set_instance_assignment -name IO_STANDARD "2.5V" -to VREFB3DN0            # bank 3D 
+set_instance_assignment -name IO_STANDARD "2.5V" -to VREFB4AN0            # bank 4A 
+set_instance_assignment -name IO_STANDARD "2.5V" -to VREFB4BN0            # bank 4B 
+set_instance_assignment -name IO_STANDARD "2.5V" -to VREFB4CN0            # bank 4C 
+set_instance_assignment -name IO_STANDARD "2.5V" -to VREFB4DN0            # bank 4D 
+set_instance_assignment -name IO_STANDARD "2.5V" -to VREFB7AN0            # bank 7A 
+set_instance_assignment -name IO_STANDARD "2.5V" -to VREFB7BN0            # bank 7B 
+set_instance_assignment -name IO_STANDARD "2.5V" -to VREFB7CN0            # bank 7C 
+set_instance_assignment -name IO_STANDARD "2.5V" -to VREFB7DN0            # bank 7D 
+set_instance_assignment -name IO_STANDARD "2.5V" -to VREFB8AN0            # bank 8A 
+set_instance_assignment -name IO_STANDARD "2.5V" -to VREFB8BN0            # bank 8B 
+set_instance_assignment -name IO_STANDARD "2.5V" -to VREFB8CN0            # bank 8C 
+set_instance_assignment -name IO_STANDARD "2.5V" -to VREFB8DN0            # bank 8D 
+set_instance_assignment -name IO_STANDARD "2.5V" -to iASY[0]              # bank 8A 
+set_instance_assignment -name IO_STANDARD "2.5V" -to iASY[1]              # bank 8A 
+set_instance_assignment -name IO_STANDARD "2.5V" -to iASY[2]              # bank 8A 
+set_instance_assignment -name IO_STANDARD "2.5V" -to iASY[3]              # bank 8A 
+set_instance_assignment -name IO_STANDARD "2.5V" -to iBD_NO[0]            # bank 3A 
+set_instance_assignment -name IO_STANDARD "2.5V" -to iBD_NO[1]            # bank 3A 
+set_instance_assignment -name IO_STANDARD "2.5V" -to iBUS_CLK             # bank 7A 
+set_instance_assignment -name IO_STANDARD "2.5V" -to iBUS_EN              # bank 7A 
+set_instance_assignment -name IO_STANDARD "2.5V" -to iBUS_MASTER          # bank 7A 
+set_instance_assignment -name IO_STANDARD "2.5V" -to iBUS_RST             # bank 7A 
+set_instance_assignment -name IO_STANDARD "2.5V" -to iCLK_425M_P[0]       # bank 4D 
+set_instance_assignment -name IO_STANDARD "2.5V" -to iCLK_425M_P[0](n)    # bank 4D 
+set_instance_assignment -name IO_STANDARD "2.5V" -to iCLK_425M_P[1]       # bank 7D 
+set_instance_assignment -name IO_STANDARD "2.5V" -to iCLK_425M_P[1](n)    # bank 7D 
+set_instance_assignment -name IO_STANDARD "2.5V" -to iCLK_FR              # bank 7A 
+set_instance_assignment -name IO_STANDARD "2.5V" -to iFPGA_CLRN           # bank 3A 
+set_instance_assignment -name IO_STANDARD "2.5V" -to iFPGA_ID_N           # bank 3B 
+set_instance_assignment -name IO_STANDARD "2.5V" -to iFPGA_RSTN           # bank 3B 
+set_instance_assignment -name IO_STANDARD "2.5V" -to iPIN_PERST_n         # bank 3B 
+set_instance_assignment -name IO_STANDARD "2.5V" -to iRXD                 # bank 3D 
+set_instance_assignment -name IO_STANDARD "2.5V" -to iSFP_LOS[0]          # bank 8B 
+set_instance_assignment -name IO_STANDARD "2.5V" -to iSFP_LOS[1]          # bank 8B 
+set_instance_assignment -name IO_STANDARD "2.5V" -to iSFP_LOS[2]          # bank 8B 
+set_instance_assignment -name IO_STANDARD "2.5V" -to iSFP_LOS[3]          # bank 8B 
+set_instance_assignment -name IO_STANDARD "2.5V" -to iSFP_LOS[4]          # bank 8B 
+set_instance_assignment -name IO_STANDARD "2.5V" -to iSFP_LOS[5]          # bank 8B 
+set_instance_assignment -name IO_STANDARD "2.5V" -to iSFP_LOS[6]          # bank 8B 
+set_instance_assignment -name IO_STANDARD "2.5V" -to iSFP_LOS[7]          # bank 8B 
+set_instance_assignment -name IO_STANDARD "2.5V" -to iSFP_LOS[8]          # bank 8B 
+set_instance_assignment -name IO_STANDARD "2.5V" -to iSFP_LOS[9]          # bank 8B 
+set_instance_assignment -name IO_STANDARD "2.5V" -to iSFP_LOS[10]         # bank 8B 
+set_instance_assignment -name IO_STANDARD "2.5V" -to iSFP_LOS[11]         # bank 8B 
+set_instance_assignment -name IO_STANDARD "2.5V" -to iSFP_LOS[12]         # bank 8B 
+set_instance_assignment -name IO_STANDARD "2.5V" -to iSFP_LOS[13]         # bank 8B 
+set_instance_assignment -name IO_STANDARD "2.5V" -to iSFP_LOS[14]         # bank 8B 
+set_instance_assignment -name IO_STANDARD "2.5V" -to iSFP_LOS[15]         # bank 8B 
+set_instance_assignment -name IO_STANDARD "2.5V" -to iSFP_LOS[16]         # bank 8B 
+set_instance_assignment -name IO_STANDARD "2.5V" -to iSFP_LOS[17]         # bank 8B 
+set_instance_assignment -name IO_STANDARD "2.5V" -to iSFP_LOS[18]         # bank 8B 
+set_instance_assignment -name IO_STANDARD "2.5V" -to iSFP_LOS[19]         # bank 8B 
+set_instance_assignment -name IO_STANDARD "2.5V" -to iSFP_LOS[20]         # bank 8B 
+set_instance_assignment -name IO_STANDARD "2.5V" -to iSFP_LOS[21]         # bank 8B 
+set_instance_assignment -name IO_STANDARD "2.5V" -to iSFP_LOS[22]         # bank 8B 
+set_instance_assignment -name IO_STANDARD "2.5V" -to iSFP_LOS[23]         # bank 8B 
+set_instance_assignment -name IO_STANDARD "2.5V" -to ioBUS_SPARE          # bank 7A 
+set_instance_assignment -name IO_STANDARD "2.5V" -to ioEXT2               # bank 4A 
+set_instance_assignment -name IO_STANDARD "2.5V" -to ioEXT3               # bank 4A 
+set_instance_assignment -name IO_STANDARD "2.5V" -to ioEXT4               # bank 4A 
+set_instance_assignment -name IO_STANDARD "2.5V" -to ioFPGA_DATA[0]       # bank 7A 
+set_instance_assignment -name IO_STANDARD "2.5V" -to ioFPGA_DATA[1]       # bank 3A 
+set_instance_assignment -name IO_STANDARD "2.5V" -to ioFPGA_DATA[2]       # bank 3A 
+set_instance_assignment -name IO_STANDARD "2.5V" -to ioFPGA_DATA[3]       # bank 3A 
+set_instance_assignment -name IO_STANDARD "2.5V" -to ioFPGA_DATA[4]       # bank 3A 
+set_instance_assignment -name IO_STANDARD "2.5V" -to ioFPGA_DATA[5]       # bank 3A 
+set_instance_assignment -name IO_STANDARD "2.5V" -to ioFPGA_DATA[6]       # bank 3A 
+set_instance_assignment -name IO_STANDARD "2.5V" -to ioFPGA_DATA[7]       # bank 3A 
+set_instance_assignment -name IO_STANDARD "2.5V" -to ioOPT_1              # bank 3B 
+set_instance_assignment -name IO_STANDARD "2.5V" -to ioOPT_2              # bank 3B 
+set_instance_assignment -name IO_STANDARD "2.5V" -to ioOPT_3              # bank 3B 
+set_instance_assignment -name IO_STANDARD "2.5V" -to ioOPT_4              # bank 3B 
+set_instance_assignment -name IO_STANDARD "2.5V" -to ioOPT_5              # bank 3B 
+set_instance_assignment -name IO_STANDARD "2.5V" -to ioOPT_6              # bank 3B 
+set_instance_assignment -name IO_STANDARD "2.5V" -to ioOPT_7              # bank 3B 
+set_instance_assignment -name IO_STANDARD "2.5V" -to ioOPT_8              # bank 3B 
+set_instance_assignment -name IO_STANDARD "2.5V" -to ioOPT_ROT_1          # bank 3B 
+set_instance_assignment -name IO_STANDARD "2.5V" -to ioOPT_ROT_2          # bank 3B 
+set_instance_assignment -name IO_STANDARD "2.5V" -to ioOPT_ROT_3          # bank 3B 
+set_instance_assignment -name IO_STANDARD "2.5V" -to ioOPT_ROT_4          # bank 3B 
+set_instance_assignment -name IO_STANDARD "2.5V" -to ioSYNC_NEIGHBOR      # bank 7B 
+set_instance_assignment -name IO_STANDARD "2.5V" -to ioSYNC_RIBBON        # bank 4A 
+set_instance_assignment -name IO_STANDARD "2.5V" -to nCE                  # bank 4A 
+set_instance_assignment -name IO_STANDARD "2.5V" -to nCONFIG              # bank 3A 
+set_instance_assignment -name IO_STANDARD "2.5V" -to nCSO                 # bank 3A 
+set_instance_assignment -name IO_STANDARD "2.5V" -to nIO_PULLUP           # bank 4A 
+set_instance_assignment -name IO_STANDARD "2.5V" -to nSTATUS              # bank 4A 
+set_instance_assignment -name IO_STANDARD "2.5V" -to oFC_RATE_SEL[0]      # bank 3D 
+set_instance_assignment -name IO_STANDARD "2.5V" -to oFC_RATE_SEL[1]      # bank 3D 
+set_instance_assignment -name IO_STANDARD "2.5V" -to oFC_RATE_SEL[2]      # bank 3D 
+set_instance_assignment -name IO_STANDARD "2.5V" -to oFC_RATE_SEL[3]      # bank 3D 
+set_instance_assignment -name IO_STANDARD "2.5V" -to oFC_RATE_SEL[4]      # bank 3D 
+set_instance_assignment -name IO_STANDARD "2.5V" -to oFC_RATE_SEL[5]      # bank 3D 
+set_instance_assignment -name IO_STANDARD "2.5V" -to oFC_RATE_SEL[6]      # bank 3D 
+set_instance_assignment -name IO_STANDARD "2.5V" -to oFC_RATE_SEL[7]      # bank 3D 
+set_instance_assignment -name IO_STANDARD "2.5V" -to oFC_RATE_SEL[8]      # bank 3D 
+set_instance_assignment -name IO_STANDARD "2.5V" -to oFC_RATE_SEL[9]      # bank 3D 
+set_instance_assignment -name IO_STANDARD "2.5V" -to oFC_RATE_SEL[10]     # bank 3D 
+set_instance_assignment -name IO_STANDARD "2.5V" -to oFC_RATE_SEL[11]     # bank 3D 
+set_instance_assignment -name IO_STANDARD "2.5V" -to oLED_N[0]            # bank 3B 
+set_instance_assignment -name IO_STANDARD "2.5V" -to oLED_N[1]            # bank 3B 
+set_instance_assignment -name IO_STANDARD "2.5V" -to oLED_N[2]            # bank 3B 
+set_instance_assignment -name IO_STANDARD "2.5V" -to oLED_N[3]            # bank 3B 
+set_instance_assignment -name IO_STANDARD "2.5V" -to oLED_N[4]            # bank 3B 
+set_instance_assignment -name IO_STANDARD "2.5V" -to oLED_N[5]            # bank 3B 
+set_instance_assignment -name IO_STANDARD "2.5V" -to oLED_N[6]            # bank 3B 
+set_instance_assignment -name IO_STANDARD "2.5V" -to oLED_N[7]            # bank 3B 
+set_instance_assignment -name IO_STANDARD "2.5V" -to oLED_N[8]            # bank 3B 
+set_instance_assignment -name IO_STANDARD "2.5V" -to oLED_N[9]            # bank 3B 
+set_instance_assignment -name IO_STANDARD "2.5V" -to oLED_N[10]           # bank 3B 
+set_instance_assignment -name IO_STANDARD "2.5V" -to oLED_N[11]           # bank 3B 
+set_instance_assignment -name IO_STANDARD "2.5V" -to oLED_N[12]           # bank 3B 
+set_instance_assignment -name IO_STANDARD "2.5V" -to oLED_N[13]           # bank 3B 
+set_instance_assignment -name IO_STANDARD "2.5V" -to oLED_N[14]           # bank 3B 
+set_instance_assignment -name IO_STANDARD "2.5V" -to oLED_N[15]           # bank 3B 
+set_instance_assignment -name IO_STANDARD "2.5V" -to oMICTOR_A[0]         # bank 3C 
+set_instance_assignment -name IO_STANDARD "2.5V" -to oMICTOR_A[1]         # bank 3C 
+set_instance_assignment -name IO_STANDARD "2.5V" -to oMICTOR_A[2]         # bank 3C 
+set_instance_assignment -name IO_STANDARD "2.5V" -to oMICTOR_A[3]         # bank 3C 
+set_instance_assignment -name IO_STANDARD "2.5V" -to oMICTOR_A[4]         # bank 3C 
+set_instance_assignment -name IO_STANDARD "2.5V" -to oMICTOR_A[5]         # bank 3C 
+set_instance_assignment -name IO_STANDARD "2.5V" -to oMICTOR_A[6]         # bank 3C 
+set_instance_assignment -name IO_STANDARD "2.5V" -to oMICTOR_A[7]         # bank 3C 
+set_instance_assignment -name IO_STANDARD "2.5V" -to oMICTOR_A[8]         # bank 3C 
+set_instance_assignment -name IO_STANDARD "2.5V" -to oMICTOR_A[9]         # bank 3C 
+set_instance_assignment -name IO_STANDARD "2.5V" -to oMICTOR_A[10]        # bank 3C 
+set_instance_assignment -name IO_STANDARD "2.5V" -to oMICTOR_A[11]        # bank 3C 
+set_instance_assignment -name IO_STANDARD "2.5V" -to oMICTOR_A[12]        # bank 3C 
+set_instance_assignment -name IO_STANDARD "2.5V" -to oMICTOR_A[13]        # bank 3C 
+set_instance_assignment -name IO_STANDARD "2.5V" -to oMICTOR_A[14]        # bank 3C 
+set_instance_assignment -name IO_STANDARD "2.5V" -to oMICTOR_A[15]        # bank 3C 
+set_instance_assignment -name IO_STANDARD "2.5V" -to oMICTOR_A[16]        # bank 3C 
+set_instance_assignment -name IO_STANDARD "2.5V" -to oMICTOR_A[17]        # bank 3C 
+set_instance_assignment -name IO_STANDARD "2.5V" -to oMICTOR_A[18]        # bank 3C 
+set_instance_assignment -name IO_STANDARD "2.5V" -to oMICTOR_A[19]        # bank 3C 
+set_instance_assignment -name IO_STANDARD "2.5V" -to oMICTOR_A[20]        # bank 3C 
+set_instance_assignment -name IO_STANDARD "2.5V" -to oMICTOR_A[21]        # bank 3C 
+set_instance_assignment -name IO_STANDARD "2.5V" -to oMICTOR_A[22]        # bank 3C 
+set_instance_assignment -name IO_STANDARD "2.5V" -to oMICTOR_A[23]        # bank 3C 
+set_instance_assignment -name IO_STANDARD "2.5V" -to oMICTOR_A[24]        # bank 3D 
+set_instance_assignment -name IO_STANDARD "2.5V" -to oMICTOR_A[25]        # bank 3D 
+set_instance_assignment -name IO_STANDARD "2.5V" -to oMICTOR_A[26]        # bank 3D 
+set_instance_assignment -name IO_STANDARD "2.5V" -to oMICTOR_A[27]        # bank 3D 
+set_instance_assignment -name IO_STANDARD "2.5V" -to oMICTOR_A[28]        # bank 3D 
+set_instance_assignment -name IO_STANDARD "2.5V" -to oMICTOR_A[29]        # bank 3D 
+set_instance_assignment -name IO_STANDARD "2.5V" -to oMICTOR_A[30]        # bank 3D 
+set_instance_assignment -name IO_STANDARD "2.5V" -to oMICTOR_A[31]        # bank 3D 
+set_instance_assignment -name IO_STANDARD "2.5V" -to oMICTOR_A[32]        # bank 3D 
+set_instance_assignment -name IO_STANDARD "2.5V" -to oMICTOR_A[33]        # bank 3D 
+set_instance_assignment -name IO_STANDARD "2.5V" -to oMICTOR_B[0]         # bank 3C 
+set_instance_assignment -name IO_STANDARD "2.5V" -to oMICTOR_B[1]         # bank 3C 
+set_instance_assignment -name IO_STANDARD "2.5V" -to oMICTOR_B[2]         # bank 3C 
+set_instance_assignment -name IO_STANDARD "2.5V" -to oMICTOR_B[3]         # bank 3C 
+set_instance_assignment -name IO_STANDARD "2.5V" -to oMICTOR_B[4]         # bank 3C 
+set_instance_assignment -name IO_STANDARD "2.5V" -to oMICTOR_B[5]         # bank 3C 
+set_instance_assignment -name IO_STANDARD "2.5V" -to oMICTOR_B[6]         # bank 3C 
+set_instance_assignment -name IO_STANDARD "2.5V" -to oMICTOR_B[7]         # bank 3C 
+set_instance_assignment -name IO_STANDARD "2.5V" -to oMICTOR_B[8]         # bank 3C 
+set_instance_assignment -name IO_STANDARD "2.5V" -to oMICTOR_B[9]         # bank 3C 
+set_instance_assignment -name IO_STANDARD "2.5V" -to oMICTOR_B[10]        # bank 3C 
+set_instance_assignment -name IO_STANDARD "2.5V" -to oMICTOR_B[11]        # bank 3C 
+set_instance_assignment -name IO_STANDARD "2.5V" -to oMICTOR_B[12]        # bank 3C 
+set_instance_assignment -name IO_STANDARD "2.5V" -to oMICTOR_B[13]        # bank 3C 
+set_instance_assignment -name IO_STANDARD "2.5V" -to oMICTOR_B[14]        # bank 3C 
+set_instance_assignment -name IO_STANDARD "2.5V" -to oMICTOR_B[15]        # bank 3C 
+set_instance_assignment -name IO_STANDARD "2.5V" -to oMICTOR_B[16]        # bank 3C 
+set_instance_assignment -name IO_STANDARD "2.5V" -to oMICTOR_B[17]        # bank 3C 
+set_instance_assignment -name IO_STANDARD "2.5V" -to oMICTOR_B[18]        # bank 3C 
+set_instance_assignment -name IO_STANDARD "2.5V" -to oMICTOR_B[19]        # bank 3C 
+set_instance_assignment -name IO_STANDARD "2.5V" -to oMICTOR_B[20]        # bank 3C 
+set_instance_assignment -name IO_STANDARD "2.5V" -to oMICTOR_B[21]        # bank 3C 
+set_instance_assignment -name IO_STANDARD "2.5V" -to oMICTOR_B[22]        # bank 3C 
+set_instance_assignment -name IO_STANDARD "2.5V" -to oMICTOR_B[23]        # bank 3C 
+set_instance_assignment -name IO_STANDARD "2.5V" -to oMICTOR_B[24]        # bank 3D 
+set_instance_assignment -name IO_STANDARD "2.5V" -to oMICTOR_B[25]        # bank 3D 
+set_instance_assignment -name IO_STANDARD "2.5V" -to oMICTOR_B[26]        # bank 3D 
+set_instance_assignment -name IO_STANDARD "2.5V" -to oMICTOR_B[27]        # bank 3D 
+set_instance_assignment -name IO_STANDARD "2.5V" -to oMICTOR_B[28]        # bank 3D 
+set_instance_assignment -name IO_STANDARD "2.5V" -to oMICTOR_B[29]        # bank 3D 
+set_instance_assignment -name IO_STANDARD "2.5V" -to oMICTOR_B[30]        # bank 3D 
+set_instance_assignment -name IO_STANDARD "2.5V" -to oMICTOR_B[31]        # bank 3D 
+set_instance_assignment -name IO_STANDARD "2.5V" -to oMICTOR_B[32]        # bank 3D 
+set_instance_assignment -name IO_STANDARD "2.5V" -to oMICTOR_B[33]        # bank 3D 
+set_instance_assignment -name IO_STANDARD "2.5V" -to oTXD                 # bank 3D 
+set_instance_assignment -name IO_STANDARD "3.0V" -to DNU                  # bank  
+set_instance_assignment -name IO_STANDARD "3.0V" -to DNU                  # bank  
+set_instance_assignment -name IO_STANDARD "3.0V" -to DNU                  # bank  
+set_instance_assignment -name IO_STANDARD "3.0V" -to DNU                  # bank  
+set_instance_assignment -name IO_STANDARD "3.0V" -to DNU                  # bank  
+set_instance_assignment -name IO_STANDARD "3.0V" -to DNU                  # bank  
+set_instance_assignment -name IO_STANDARD "3.0V" -to DNU                  # bank  
+set_instance_assignment -name IO_STANDARD "3.0V" -to DNU                  # bank  
+set_instance_assignment -name IO_STANDARD "3.0V" -to DNU                  # bank  
+set_instance_assignment -name IO_STANDARD "3.0V" -to RREF                 # bank  
+set_instance_assignment -name IO_STANDARD "3.0V" -to RREF                 # bank  
+set_instance_assignment -name IO_STANDARD "3.0V" -to RREF                 # bank  
+set_instance_assignment -name IO_STANDARD "3.0V" -to RREF                 # bank  
+set_instance_assignment -name IO_STANDARD "3.0V" -to TEMPDIODEn           # bank  
+set_instance_assignment -name IO_STANDARD "3.0V" -to TEMPDIODEp           # bank  
+set_instance_assignment -name IO_STANDARD "" -to GXB_GND*             # bank B0L 
+set_instance_assignment -name IO_STANDARD "" -to GXB_GND*             # bank B0L 
+set_instance_assignment -name IO_STANDARD "" -to GXB_GND*             # bank B0R 
+set_instance_assignment -name IO_STANDARD "" -to GXB_GND*             # bank B0R 
+set_instance_assignment -name IO_STANDARD "" -to GXB_GND*             # bank B0R 
+set_instance_assignment -name IO_STANDARD "" -to GXB_GND*             # bank B0R 
+set_instance_assignment -name IO_STANDARD "" -to GXB_GND*             # bank B1L 
+set_instance_assignment -name IO_STANDARD "" -to GXB_GND*             # bank B1L 
+set_instance_assignment -name IO_STANDARD "" -to GXB_GND*             # bank B1R 
+set_instance_assignment -name IO_STANDARD "" -to GXB_GND*             # bank B1R 
+set_instance_assignment -name IO_STANDARD "" -to GXB_GND*             # bank B2L 
+set_instance_assignment -name IO_STANDARD "" -to GXB_GND*             # bank B2L 
+set_instance_assignment -name IO_STANDARD "" -to GXB_GND*             # bank B2R 
+set_instance_assignment -name IO_STANDARD "" -to GXB_GND*             # bank B2R 
+set_instance_assignment -name IO_STANDARD "" -to GXB_NC               # bank B0L 
+set_instance_assignment -name IO_STANDARD "" -to GXB_NC               # bank B0L 
+set_instance_assignment -name IO_STANDARD "" -to GXB_NC               # bank B1L 
+set_instance_assignment -name IO_STANDARD "" -to GXB_NC               # bank B1L 
+set_instance_assignment -name IO_STANDARD "" -to iCLK_FC_219_P[0]     # bank B1L 
+set_instance_assignment -name IO_STANDARD "" -to iCLK_FC_219_P[0](n)  # bank B1L 
+set_instance_assignment -name IO_STANDARD "" -to iCLK_FC_219_P[1]     # bank B1R 
+set_instance_assignment -name IO_STANDARD "" -to iCLK_FC_219_P[1](n)  # bank B1R 
+set_instance_assignment -name IO_STANDARD "" -to iCLK_FC_425_P[0]     # bank B2L 
+set_instance_assignment -name IO_STANDARD "" -to iCLK_FC_425_P[0](n)  # bank B2L 
+set_instance_assignment -name IO_STANDARD "" -to iCLK_FC_425_P[1]     # bank B2R 
+set_instance_assignment -name IO_STANDARD "" -to iCLK_FC_425_P[1](n)  # bank B2R 
+set_instance_assignment -name IO_STANDARD "" -to iFC_RD_P[0]          # bank B1L 
+set_instance_assignment -name IO_STANDARD "" -to iFC_RD_P[0](n)       # bank B1L 
+set_instance_assignment -name IO_STANDARD "" -to iFC_RD_P[1]          # bank B1L 
+set_instance_assignment -name IO_STANDARD "" -to iFC_RD_P[1](n)       # bank B1L 
+set_instance_assignment -name IO_STANDARD "" -to iFC_RD_P[2]          # bank B2L 
+set_instance_assignment -name IO_STANDARD "" -to iFC_RD_P[2](n)       # bank B2L 
+set_instance_assignment -name IO_STANDARD "" -to iFC_RD_P[3]          # bank B2L 
+set_instance_assignment -name IO_STANDARD "" -to iFC_RD_P[3](n)       # bank B2L 
+set_instance_assignment -name IO_STANDARD "" -to iFC_RD_P[4]          # bank B2L 
+set_instance_assignment -name IO_STANDARD "" -to iFC_RD_P[4](n)       # bank B2L 
+set_instance_assignment -name IO_STANDARD "" -to iFC_RD_P[5]          # bank B2L 
+set_instance_assignment -name IO_STANDARD "" -to iFC_RD_P[5](n)       # bank B2L 
+set_instance_assignment -name IO_STANDARD "" -to iFC_RD_P[6]          # bank B2L 
+set_instance_assignment -name IO_STANDARD "" -to iFC_RD_P[6](n)       # bank B2L 
+set_instance_assignment -name IO_STANDARD "" -to iFC_RD_P[7]          # bank B2L 
+set_instance_assignment -name IO_STANDARD "" -to iFC_RD_P[7](n)       # bank B2L 
+set_instance_assignment -name IO_STANDARD "" -to iFC_RD_P[8]          # bank B2R 
+set_instance_assignment -name IO_STANDARD "" -to iFC_RD_P[8](n)       # bank B2R 
+set_instance_assignment -name IO_STANDARD "" -to iFC_RD_P[9]          # bank B2R 
+set_instance_assignment -name IO_STANDARD "" -to iFC_RD_P[9](n)       # bank B2R 
+set_instance_assignment -name IO_STANDARD "" -to iFC_RD_P[10]         # bank B2R 
+set_instance_assignment -name IO_STANDARD "" -to iFC_RD_P[10](n)      # bank B2R 
+set_instance_assignment -name IO_STANDARD "" -to iFC_RD_P[11]         # bank B2R 
+set_instance_assignment -name IO_STANDARD "" -to iFC_RD_P[11](n)      # bank B2R 
+set_instance_assignment -name IO_STANDARD "" -to iFC_RD_P[12]         # bank B2R 
+set_instance_assignment -name IO_STANDARD "" -to iFC_RD_P[12](n)      # bank B2R 
+set_instance_assignment -name IO_STANDARD "" -to iFC_RD_P[13]         # bank B2R 
+set_instance_assignment -name IO_STANDARD "" -to iFC_RD_P[13](n)      # bank B2R 
+set_instance_assignment -name IO_STANDARD "" -to iFC_RD_P[14]         # bank B1R 
+set_instance_assignment -name IO_STANDARD "" -to iFC_RD_P[14](n)      # bank B1R 
+set_instance_assignment -name IO_STANDARD "" -to iFC_RD_P[15]         # bank B1R 
+set_instance_assignment -name IO_STANDARD "" -to iFC_RD_P[15](n)      # bank B1R 
+set_instance_assignment -name IO_STANDARD "" -to iFC_RD_P[16]         # bank B1R 
+set_instance_assignment -name IO_STANDARD "" -to iFC_RD_P[16](n)      # bank B1R 
+set_instance_assignment -name IO_STANDARD "" -to iFC_RD_P[17]         # bank B1R 
+set_instance_assignment -name IO_STANDARD "" -to iFC_RD_P[17](n)      # bank B1R 
+set_instance_assignment -name IO_STANDARD "" -to iFC_RD_P[18]         # bank B1R 
+set_instance_assignment -name IO_STANDARD "" -to iFC_RD_P[18](n)      # bank B1R 
+set_instance_assignment -name IO_STANDARD "" -to iFC_RD_P[19]         # bank B1R 
+set_instance_assignment -name IO_STANDARD "" -to iFC_RD_P[19](n)      # bank B1R 
+set_instance_assignment -name IO_STANDARD "" -to iFC_RD_P[20]         # bank B0R 
+set_instance_assignment -name IO_STANDARD "" -to iFC_RD_P[20](n)      # bank B0R 
+set_instance_assignment -name IO_STANDARD "" -to iFC_RD_P[21]         # bank B0R 
+set_instance_assignment -name IO_STANDARD "" -to iFC_RD_P[21](n)      # bank B0R 
+set_instance_assignment -name IO_STANDARD "" -to iFC_RD_P[22]         # bank B0R 
+set_instance_assignment -name IO_STANDARD "" -to iFC_RD_P[22](n)      # bank B0R 
+set_instance_assignment -name IO_STANDARD "" -to iFC_RD_P[23]         # bank B0R 
+set_instance_assignment -name IO_STANDARD "" -to iFC_RD_P[23](n)      # bank B0R 
+set_instance_assignment -name IO_STANDARD "" -to iFC_RD_P[24]         # bank B0R 
+set_instance_assignment -name IO_STANDARD "" -to iFC_RD_P[24](n)      # bank B0R 
+set_instance_assignment -name IO_STANDARD "" -to iFC_RD_P[25]         # bank B0R 
+set_instance_assignment -name IO_STANDARD "" -to iFC_RD_P[25](n)      # bank B0R 
+set_instance_assignment -name IO_STANDARD "" -to iHIP_SERIAL_RX_IN0   # bank B0L 
+set_instance_assignment -name IO_STANDARD "" -to iHIP_SERIAL_RX_IN0(n) # bank B0L 
+set_instance_assignment -name IO_STANDARD "" -to iHIP_SERIAL_RX_IN1   # bank B0L 
+set_instance_assignment -name IO_STANDARD "" -to iHIP_SERIAL_RX_IN1(n) # bank B0L 
+set_instance_assignment -name IO_STANDARD "" -to iHIP_SERIAL_RX_IN2   # bank B0L 
+set_instance_assignment -name IO_STANDARD "" -to iHIP_SERIAL_RX_IN2(n) # bank B0L 
+set_instance_assignment -name IO_STANDARD "" -to iHIP_SERIAL_RX_IN3   # bank B0L 
+set_instance_assignment -name IO_STANDARD "" -to iHIP_SERIAL_RX_IN3(n) # bank B0L 
+set_instance_assignment -name IO_STANDARD "" -to iHIP_SERIAL_RX_IN4   # bank B0L 
+set_instance_assignment -name IO_STANDARD "" -to iHIP_SERIAL_RX_IN4(n) # bank B0L 
+set_instance_assignment -name IO_STANDARD "" -to iHIP_SERIAL_RX_IN5   # bank B1L 
+set_instance_assignment -name IO_STANDARD "" -to iHIP_SERIAL_RX_IN5(n) # bank B1L 
+set_instance_assignment -name IO_STANDARD "" -to iHIP_SERIAL_RX_IN6   # bank B1L 
+set_instance_assignment -name IO_STANDARD "" -to iHIP_SERIAL_RX_IN6(n) # bank B1L 
+set_instance_assignment -name IO_STANDARD "" -to iHIP_SERIAL_RX_IN7   # bank B1L 
+set_instance_assignment -name IO_STANDARD "" -to iHIP_SERIAL_RX_IN7(n) # bank B1L 
+set_instance_assignment -name IO_STANDARD "" -to iPCIE_REF_CLK        # bank B0L 
+set_instance_assignment -name IO_STANDARD "" -to iPCIE_REF_CLK(n)     # bank B0L 
+set_instance_assignment -name IO_STANDARD "" -to oFC_TD_P[0]          # bank B1L 
+set_instance_assignment -name IO_STANDARD "" -to oFC_TD_P[0](n)       # bank B1L 
+set_instance_assignment -name IO_STANDARD "" -to oFC_TD_P[1]          # bank B1L 
+set_instance_assignment -name IO_STANDARD "" -to oFC_TD_P[1](n)       # bank B1L 
+set_instance_assignment -name IO_STANDARD "" -to oFC_TD_P[2]          # bank B2L 
+set_instance_assignment -name IO_STANDARD "" -to oFC_TD_P[2](n)       # bank B2L 
+set_instance_assignment -name IO_STANDARD "" -to oFC_TD_P[3]          # bank B2L 
+set_instance_assignment -name IO_STANDARD "" -to oFC_TD_P[3](n)       # bank B2L 
+set_instance_assignment -name IO_STANDARD "" -to oFC_TD_P[4]          # bank B2L 
+set_instance_assignment -name IO_STANDARD "" -to oFC_TD_P[4](n)       # bank B2L 
+set_instance_assignment -name IO_STANDARD "" -to oFC_TD_P[5]          # bank B2L 
+set_instance_assignment -name IO_STANDARD "" -to oFC_TD_P[5](n)       # bank B2L 
+set_instance_assignment -name IO_STANDARD "" -to oFC_TD_P[6]          # bank B2L 
+set_instance_assignment -name IO_STANDARD "" -to oFC_TD_P[6](n)       # bank B2L 
+set_instance_assignment -name IO_STANDARD "" -to oFC_TD_P[7]          # bank B2L 
+set_instance_assignment -name IO_STANDARD "" -to oFC_TD_P[7](n)       # bank B2L 
+set_instance_assignment -name IO_STANDARD "" -to oFC_TD_P[8]          # bank B2R 
+set_instance_assignment -name IO_STANDARD "" -to oFC_TD_P[8](n)       # bank B2R 
+set_instance_assignment -name IO_STANDARD "" -to oFC_TD_P[9]          # bank B2R 
+set_instance_assignment -name IO_STANDARD "" -to oFC_TD_P[9](n)       # bank B2R 
+set_instance_assignment -name IO_STANDARD "" -to oFC_TD_P[10]         # bank B2R 
+set_instance_assignment -name IO_STANDARD "" -to oFC_TD_P[10](n)      # bank B2R 
+set_instance_assignment -name IO_STANDARD "" -to oFC_TD_P[11]         # bank B2R 
+set_instance_assignment -name IO_STANDARD "" -to oFC_TD_P[11](n)      # bank B2R 
+set_instance_assignment -name IO_STANDARD "" -to oFC_TD_P[12]         # bank B2R 
+set_instance_assignment -name IO_STANDARD "" -to oFC_TD_P[12](n)      # bank B2R 
+set_instance_assignment -name IO_STANDARD "" -to oFC_TD_P[13]         # bank B2R 
+set_instance_assignment -name IO_STANDARD "" -to oFC_TD_P[13](n)      # bank B2R 
+set_instance_assignment -name IO_STANDARD "" -to oFC_TD_P[14]         # bank B1R 
+set_instance_assignment -name IO_STANDARD "" -to oFC_TD_P[14](n)      # bank B1R 
+set_instance_assignment -name IO_STANDARD "" -to oFC_TD_P[15]         # bank B1R 
+set_instance_assignment -name IO_STANDARD "" -to oFC_TD_P[15](n)      # bank B1R 
+set_instance_assignment -name IO_STANDARD "" -to oFC_TD_P[16]         # bank B1R 
+set_instance_assignment -name IO_STANDARD "" -to oFC_TD_P[16](n)      # bank B1R 
+set_instance_assignment -name IO_STANDARD "" -to oFC_TD_P[17]         # bank B1R 
+set_instance_assignment -name IO_STANDARD "" -to oFC_TD_P[17](n)      # bank B1R 
+set_instance_assignment -name IO_STANDARD "" -to oFC_TD_P[18]         # bank B1R 
+set_instance_assignment -name IO_STANDARD "" -to oFC_TD_P[18](n)      # bank B1R 
+set_instance_assignment -name IO_STANDARD "" -to oFC_TD_P[19]         # bank B1R 
+set_instance_assignment -name IO_STANDARD "" -to oFC_TD_P[19](n)      # bank B1R 
+set_instance_assignment -name IO_STANDARD "" -to oFC_TD_P[20]         # bank B0R 
+set_instance_assignment -name IO_STANDARD "" -to oFC_TD_P[20](n)      # bank B0R 
+set_instance_assignment -name IO_STANDARD "" -to oFC_TD_P[21]         # bank B0R 
+set_instance_assignment -name IO_STANDARD "" -to oFC_TD_P[21](n)      # bank B0R 
+set_instance_assignment -name IO_STANDARD "" -to oFC_TD_P[22]         # bank B0R 
+set_instance_assignment -name IO_STANDARD "" -to oFC_TD_P[22](n)      # bank B0R 
+set_instance_assignment -name IO_STANDARD "" -to oFC_TD_P[23]         # bank B0R 
+set_instance_assignment -name IO_STANDARD "" -to oFC_TD_P[23](n)      # bank B0R 
+set_instance_assignment -name IO_STANDARD "" -to oFC_TD_P[24]         # bank B0R 
+set_instance_assignment -name IO_STANDARD "" -to oFC_TD_P[24](n)      # bank B0R 
+set_instance_assignment -name IO_STANDARD "" -to oFC_TD_P[25]         # bank B0R 
+set_instance_assignment -name IO_STANDARD "" -to oFC_TD_P[25](n)      # bank B0R 
+set_instance_assignment -name IO_STANDARD "" -to oHIP_SERIAL_TX_OUT0  # bank B0L 
+set_instance_assignment -name IO_STANDARD "" -to oHIP_SERIAL_TX_OUT0(n) # bank B0L 
+set_instance_assignment -name IO_STANDARD "" -to oHIP_SERIAL_TX_OUT1  # bank B0L 
+set_instance_assignment -name IO_STANDARD "" -to oHIP_SERIAL_TX_OUT1(n) # bank B0L 
+set_instance_assignment -name IO_STANDARD "" -to oHIP_SERIAL_TX_OUT2  # bank B0L 
+set_instance_assignment -name IO_STANDARD "" -to oHIP_SERIAL_TX_OUT2(n) # bank B0L 
+set_instance_assignment -name IO_STANDARD "" -to oHIP_SERIAL_TX_OUT3  # bank B0L 
+set_instance_assignment -name IO_STANDARD "" -to oHIP_SERIAL_TX_OUT3(n) # bank B0L 
+set_instance_assignment -name IO_STANDARD "" -to oHIP_SERIAL_TX_OUT4  # bank B0L 
+set_instance_assignment -name IO_STANDARD "" -to oHIP_SERIAL_TX_OUT4(n) # bank B0L 
+set_instance_assignment -name IO_STANDARD "" -to oHIP_SERIAL_TX_OUT5  # bank B1L 
+set_instance_assignment -name IO_STANDARD "" -to oHIP_SERIAL_TX_OUT5(n) # bank B1L 
+set_instance_assignment -name IO_STANDARD "" -to oHIP_SERIAL_TX_OUT6  # bank B1L 
+set_instance_assignment -name IO_STANDARD "" -to oHIP_SERIAL_TX_OUT6(n) # bank B1L 
+set_instance_assignment -name IO_STANDARD "" -to oHIP_SERIAL_TX_OUT7  # bank B1L 
+set_instance_assignment -name IO_STANDARD "" -to oHIP_SERIAL_TX_OUT7(n) # bank B1L 

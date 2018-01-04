@@ -2,9 +2,9 @@
 # Run this script to create the Vivado project files in the WORKING DIRECTORY
 # If ::create_path global variable is set, the project is created under that path instead of the working dir
 if {[info exists ::create_path]} {
-	set dest_dir $::create_path
+  set dest_dir $::create_path
 } else {
-	set dest_dir [pwd]
+  set dest_dir [pwd]
 }
 puts "INFO: Creating new project in $dest_dir"
 
@@ -16,9 +16,6 @@ set origin_dir ".."
 
 # Set the directory path for the original project from where this script was exported
 set orig_proj_dir "[file normalize "$origin_dir/work"]"
-
-#set src_dir $origin_dir/src
-#set repo_dir $origin_dir/repo
 
 # Set the board part number
 set part_num xcku15p-ffve1517-3-e
@@ -110,6 +107,7 @@ set_property generic { PCIE_GEN3=0 } [current_fileset]
 set_property generic { LINKS=12 } [current_fileset]
 set_property generic { PORTS=12 } [current_fileset]
 set_property generic { SIM_ONLY=0 } [current_fileset]
+synth_design -rtl
 
 
 # Add IPs
@@ -118,6 +116,7 @@ set_property generic { SIM_ONLY=0 } [current_fileset]
 
 # Add constraints
 #add_files -fileset constrs_1 -quiet $src_dir/constraints
+add_files -fileset constrs_1 pin.xdc
 
 # Refresh IP Repositories
 #update_ip_catalog
@@ -143,16 +142,6 @@ set_property "steps.synth_design.args.shreg_min_size" "5" $obj
 # set the current synth run
 current_run -synthesis [get_runs synth_1]
 
-
-      
-reset_run synth_1
-launch_runs synth_1 -jobs 4
-wait_on_run synth_1
-open_run synth_1
-write_checkpoint -force fc16_top_synth.dcp
-
-report_power
-      
 # Create 'impl_1' run (if not found)
 if {[string equal [get_runs -quiet impl_1] ""]} {
   create_run -name impl_1 -part $part_num -flow {Vivado Implementation 2017} -strategy "Vivado Implementation Defaults" -constrset constrs_1 -parent_run synth_1
@@ -170,19 +159,43 @@ set_property "steps.phys_opt_design.args.directive" "AlternateFlowWithRetiming" 
 set_property "steps.route_design.args.directive" "HigherDelayCost" $obj
 set_property "steps.post_route_phys_opt_design.is_enabled" "1" $obj
 set_property "steps.post_route_phys_opt_design.args.directive" "AggressiveExplore" $obj
-
 set_property "part" "$part_num" $obj
 set_property "steps.write_bitstream.args.bin_file" "1" $obj
 
 # set the current impl run
 current_run -implementation [get_runs impl_1]
 
-puts "INFO: Project created:$proj_name"
+puts "INFO: Project created: $proj_name"
+#****************************#
+#*UPLOAD BITFILE TO HARDWARE*#
+#****************************#
+
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+wait_on_run synth_1
+
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+wait_on_run synth_1
+open_run synth_1
+write_checkpoint -force fc16_top_synth.dcp
+
+report_power
+
 reset_run impl_1
 launch_runs impl_1 -jobs 4
 wait_on_run impl_1
 open_run impl_1
 write_checkpoint -force fc16_top_impl.dcp
 
-reset_run impl_1 -prev_step 
-launch_runs impl_1 -to_step write_bitstream -jobs 4
+#reset_run impl_1 -prev_step 
+#launch_runs impl_1 -to_step write_bitstream -jobs 4
+#wait_on_run impl_1
+#open_run impl_1
+#write_checkpoint -force fc16_top_impl.dcp
+
+#****************************#
+#*UPLOAD BITFILE TO HARDWARE*#
+#****************************#
+#puts "INFO: Opening Hardware: $proj_name"
+#open_hw
