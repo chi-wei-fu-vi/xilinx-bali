@@ -32,7 +32,9 @@ module fc16pma_wrap #(
         output  logic [CHANNELS-1:0][63:0]           rx_parallel_data,                  //   rx parallel data from transceivers
         output  [CHANNELS-1:0]                 tx_serial_data,                          //   per transceiver serial data to IOs
         input   [CHANNELS-1:0]                 rx_serial_data,                          //   per transceiver serial data to IOs
-        input  logic [CHANNELS-1:0]                 iSFP_LOS,
+        output  [CHANNELS-1:0]                 tx_serial_data_n,                        //   per transceiver serial data to IOs
+        input   [CHANNELS-1:0]                 rx_serial_data_n,                        //   per transceiver serial data to IOs
+        input  logic [CHANNELS-1:0]                 iSFP_LOS,                           // fixme
 
         
         // --------------------------
@@ -102,8 +104,8 @@ module fc16pma_wrap #(
         input   [CHANNELS-1:0]                 oSERDES_MM_RD_EN,
         output  logic [CHANNELS-1:0][63:0]           iSERDES_MM_RD_DATA,
         output  [CHANNELS-1:0]                 iSERDES_MM_RD_DATA_V ,
-        output  [CHANNELS-1:0][63:0]           rx_parallel_data_pma,
-        input   [CHANNELS-1:0][63:0]           tx_parallel_data_pma,
+        output  [CHANNELS-1:0][63:0]           rx_parallel_data_pma,                                   // fixme 8g parallel data
+        input   [CHANNELS-1:0][63:0]           tx_parallel_data_pma,                                   // fixme 8g parallel data
 				output  [CHANNELS-1:0] rx_is_lockedtodata
         
 );
@@ -175,68 +177,262 @@ end     // block: gen_cfg_invert
 
 endgenerate
 
-pma #(
-        . SIM_ONLY (SIM_ONLY),
-        . LITE                                                 ( LITE                                               ),
-        . DEBUG                                                ( DEBUG                                              ),
-        . LOW_LATENCY_PHY                                      ( LOW_LATENCY_PHY                                    ),
-        . CHANNELS                                             ( CHANNELS                                           ),
-        . PHASE_COMP                                           ( PHASE_COMP                                         )
-) pma_inst (
-        .fc_reconfig_to_xcvr   (fc_reconfig_to_xcvr),
-        .fc_reconfig_from_xcvr (fc_reconfig_from_xcvr),
-        
-        . tx_pma_clkout			               ( tx_pma_clkout[CHANNELS-1:0]                        ),
-        . cfg_rx_slip_vec  		                       ( cfg_rx_slip_vec[CHANNELS-1:0]                      ),
-        
-        . ref_clk_425				               ( ref_clk_425[1:0]                                   ),
-        . ref_clk_219				               ( ref_clk_219[1:0]                                   ),
-        . pll_locked_425			               ( atx_pll_locked_425[CHANNELS-1:0]                   ),
-        . pll_locked_219			               ( atx_pll_locked_219[CHANNELS-1:0]                   ),
-        . iSFP_LOS                           ( iSFP_LOS[CHANNELS-1:0]                             ), // input [CHANNELS-1:0]
-				. rx_is_lockedtodata (rx_is_lockedtodata),
-        //. oLE_LINKSPEED                                      ( oLE_LINKSPEED/*[CHANNELS-1:0][3:0]*/               ), // input [CHANNELS-1:0][3:0]
-        //. fpga_ctl_force_rxdata_on_lossig_disable            ( fpga_ctl_force_rxdata_on_lossig_disable            ), // input
-        
-        . tx_parallel_data                                     ( tx_parallel_data       /*[CHANNELS-1:0][63:0]*/               ),       // input [CHANNELS-1:0][63:0]
-        . rx_parallel_data                                     ( rx_parallel_data       /*[CHANNELS-1:0][63:0]*/               ),       // output [CHANNELS-1:0][63:0]
-        . tx_serial_data                                       ( tx_serial_data[CHANNELS-1:0]                       ),  // output [CHANNELS-1:0]
-        . rx_serial_data                                       ( rx_serial_data[CHANNELS-1:0]                       ),  // input [CHANNELS-1:0]
-        . mgmt_clk_clk                                         ( mgmt_clk_clk                                       ),  // input
-        . mgmt_rst_reset                                       ( mgmt_rst_reset                                     ),  // input
-        . clk                                                  ( clk                                                ),  // input
-        . rst_n                                                ( rst_n                                              ),  // input
-        . rst                                                  ( rst                                                ),  // input
-        . tx_rst_n                                             ( tx_rst_n[CHANNELS-1:0]                             ),  // input [CHANNELS-1:0]
-        . rx_rst_n                                             ( rx_rst_n[CHANNELS-1:0]                             ),  // input [CHANNELS-1:0]
-        . rx_pma_clkout                                        ( rx_pma_clkout[CHANNELS-1:0]                        ),  // output [CHANNELS-1:0]
-        . tx_pma_clk                                           ( tx_pma_clk                                         ),  // input
-        . rx_ready                                             ( rx_ready[CHANNELS-1:0]                             ),  // output [CHANNELS-1:0]
-        . oSERDES_MM_WR_DATA                                   ( oSERDES_MM_WR_DATA             /*[CHANNELS-1:0][63:0]*/   ),   // input [CHANNELS-1:0][63:0]
-        . oSERDES_MM_ADDR                                      ( oSERDES_MM_ADDR                /*[CHANNELS-1:0][13:0]*/   ),   // input [CHANNELS-1:0][13:0]
-        . oSERDES_MM_WR_EN                                     ( oSERDES_MM_WR_EN[CHANNELS-1:0]                     ),  // input [CHANNELS-1:0]
-        . oSERDES_MM_RD_EN                                     ( oSERDES_MM_RD_EN[CHANNELS-1:0]                     ),  // input [CHANNELS-1:0]
-        . iSERDES_MM_RD_DATA                                   ( iSERDES_MM_RD_DATA             /*[CHANNELS-1:0][63:0]*/   ),   // output [CHANNELS-1:0][63:0]
-        . iSERDES_MM_RD_DATA_V                                 ( iSERDES_MM_RD_DATA_V[CHANNELS-1:0]                 ),  // output [CHANNELS-1:0]
-        . cfg_tx_invert_vec                                    ( cfg_tx_invert_vec[CHANNELS-1:0]                    ),  // input [CHANNELS-1:0]
-        . cfg_rx_invert_vec                                    ( cfg_rx_invert_vec[CHANNELS-1:0]                    ),  // input [CHANNELS-1:0]
-        . fpga_ctl_rx_serdes_disable                           ( fpga_ctl_rx_serdes_disable                         ),  // input
-        . fpga_ctl_tx_serdes_disable                           ( fpga_ctl_tx_serdes_disable                         ),  // input
-        . debug                                                ( debug          /*[25:0][15:0]*/                           ),   // output [25:0][15:0]
-        . reconfig_mgmt_address                                ( reconfig_mgmt_address[8:0]                         ),  // input [8:0]
-        . reconfig_mgmt_read                                   ( reconfig_mgmt_read[2:0]                            ),  // input [2:0]
-        . reconfig_mgmt_write                                  ( reconfig_mgmt_write[2:0]                           ),  // input [2:0]
-        . reconfig_mgmt_writedata                              ( reconfig_mgmt_writedata[31:0]                      ),  // input [31:0]
-        . reconfig_mgmt_readdata                               ( reconfig_mgmt_readdata         /*[2:0][31:0]*/            ),   // output [2:0][31:0]
-        . reconfig_mgmt_waitrequest                            ( reconfig_mgmt_waitrequest[2:0]                     ),  // output [2:0]
-        . reconfig_busy                                        ( reconfig_busy                                      ),   // output
-        . rx_parallel_data_pma(rx_parallel_data_pma),
-        . tx_parallel_data_pma(tx_parallel_data_pma),
-				. data_rate (data_rate_pma)
+//pma #(
+//        . SIM_ONLY (SIM_ONLY),
+//        . LITE                                                 ( LITE                                               ),
+//        . DEBUG                                                ( DEBUG                                              ),
+//        . LOW_LATENCY_PHY                                      ( LOW_LATENCY_PHY                                    ),
+//        . CHANNELS                                             ( CHANNELS                                           ),
+//        . PHASE_COMP                                           ( PHASE_COMP                                         )
+//) pma_inst (
+//        .fc_reconfig_to_xcvr   (fc_reconfig_to_xcvr),
+//        .fc_reconfig_from_xcvr (fc_reconfig_from_xcvr),
+//        
+//        . tx_pma_clkout			               ( tx_pma_clkout[CHANNELS-1:0]                        ),
+//        . cfg_rx_slip_vec  		                       ( cfg_rx_slip_vec[CHANNELS-1:0]                      ),
+//        
+//        . ref_clk_425				               ( ref_clk_425[1:0]                                   ),
+//        . ref_clk_219				               ( ref_clk_219[1:0]                                   ),
+//        . pll_locked_425			               ( atx_pll_locked_425[CHANNELS-1:0]                   ),
+//        . pll_locked_219			               ( atx_pll_locked_219[CHANNELS-1:0]                   ),
+//        . iSFP_LOS                           ( iSFP_LOS[CHANNELS-1:0]                             ), // input [CHANNELS-1:0]
+//				. rx_is_lockedtodata (rx_is_lockedtodata),
+//        //. oLE_LINKSPEED                                      ( oLE_LINKSPEED/*[CHANNELS-1:0][3:0]*/               ), // input [CHANNELS-1:0][3:0]
+//        //. fpga_ctl_force_rxdata_on_lossig_disable            ( fpga_ctl_force_rxdata_on_lossig_disable            ), // input
+//        
+//        . tx_parallel_data                                     ( tx_parallel_data       /*[CHANNELS-1:0][63:0]*/               ),       // input [CHANNELS-1:0][63:0]
+//        . rx_parallel_data                                     ( rx_parallel_data       /*[CHANNELS-1:0][63:0]*/               ),       // output [CHANNELS-1:0][63:0]
+//        . tx_serial_data                                       ( tx_serial_data[CHANNELS-1:0]                       ),  // output [CHANNELS-1:0]
+//        . rx_serial_data                                       ( rx_serial_data[CHANNELS-1:0]                       ),  // input [CHANNELS-1:0]
+//        . mgmt_clk_clk                                         ( mgmt_clk_clk                                       ),  // input
+//        . mgmt_rst_reset                                       ( mgmt_rst_reset                                     ),  // input
+//        . clk                                                  ( clk                                                ),  // input
+//        . rst_n                                                ( rst_n                                              ),  // input
+//        . rst                                                  ( rst                                                ),  // input
+//        . tx_rst_n                                             ( tx_rst_n[CHANNELS-1:0]                             ),  // input [CHANNELS-1:0]
+//        . rx_rst_n                                             ( rx_rst_n[CHANNELS-1:0]                             ),  // input [CHANNELS-1:0]
+//        . rx_pma_clkout                                        ( rx_pma_clkout[CHANNELS-1:0]                        ),  // output [CHANNELS-1:0]
+//        . tx_pma_clk                                           ( tx_pma_clk                                         ),  // input
+//        . rx_ready                                             ( rx_ready[CHANNELS-1:0]                             ),  // output [CHANNELS-1:0]
+//        . oSERDES_MM_WR_DATA                                   ( oSERDES_MM_WR_DATA             /*[CHANNELS-1:0][63:0]*/   ),   // input [CHANNELS-1:0][63:0]
+//        . oSERDES_MM_ADDR                                      ( oSERDES_MM_ADDR                /*[CHANNELS-1:0][13:0]*/   ),   // input [CHANNELS-1:0][13:0]
+//        . oSERDES_MM_WR_EN                                     ( oSERDES_MM_WR_EN[CHANNELS-1:0]                     ),  // input [CHANNELS-1:0]
+//        . oSERDES_MM_RD_EN                                     ( oSERDES_MM_RD_EN[CHANNELS-1:0]                     ),  // input [CHANNELS-1:0]
+//        . iSERDES_MM_RD_DATA                                   ( iSERDES_MM_RD_DATA             /*[CHANNELS-1:0][63:0]*/   ),   // output [CHANNELS-1:0][63:0]
+//        . iSERDES_MM_RD_DATA_V                                 ( iSERDES_MM_RD_DATA_V[CHANNELS-1:0]                 ),  // output [CHANNELS-1:0]
+//        . cfg_tx_invert_vec                                    ( cfg_tx_invert_vec[CHANNELS-1:0]                    ),  // input [CHANNELS-1:0]
+//        . cfg_rx_invert_vec                                    ( cfg_rx_invert_vec[CHANNELS-1:0]                    ),  // input [CHANNELS-1:0]
+//        . fpga_ctl_rx_serdes_disable                           ( fpga_ctl_rx_serdes_disable                         ),  // input
+//        . fpga_ctl_tx_serdes_disable                           ( fpga_ctl_tx_serdes_disable                         ),  // input
+//        . debug                                                ( debug          /*[25:0][15:0]*/                           ),   // output [25:0][15:0]
+//        . reconfig_mgmt_address                                ( reconfig_mgmt_address[8:0]                         ),  // input [8:0]
+//        . reconfig_mgmt_read                                   ( reconfig_mgmt_read[2:0]                            ),  // input [2:0]
+//        . reconfig_mgmt_write                                  ( reconfig_mgmt_write[2:0]                           ),  // input [2:0]
+//        . reconfig_mgmt_writedata                              ( reconfig_mgmt_writedata[31:0]                      ),  // input [31:0]
+//        . reconfig_mgmt_readdata                               ( reconfig_mgmt_readdata         /*[2:0][31:0]*/            ),   // output [2:0][31:0]
+//        . reconfig_mgmt_waitrequest                            ( reconfig_mgmt_waitrequest[2:0]                     ),  // output [2:0]
+//        . reconfig_busy                                        ( reconfig_busy                                      ),   // output
+//        . rx_parallel_data_pma(rx_parallel_data_pma),
+//        . tx_parallel_data_pma(tx_parallel_data_pma),
+//				. data_rate (data_rate_pma)
+//
+//);
+logic [1663 : 0] gtwiz_userdata_tx_in;
+logic [1663 : 0] gtwiz_userdata_rx_out;
+  wire [6 : 0] qpll0outclk_out;
+  wire [6 : 0] qpll0outrefclk_out;
+  wire [0 : 0] gtwiz_reset_rx_cdr_stable_out;
+  wire [0 : 0] gtwiz_reset_tx_done_out;
+  wire [0 : 0] gtwiz_reset_rx_done_out;
+  logic [0 : 0] gtwiz_userclk_tx_active_in = 1'b1;
+  logic [0 : 0] gtwiz_userclk_rx_active_in = 1'b1;
 
-);
+logic [CHANNELS-1:0]                pll_powerdown;
+logic [CHANNELS-1:0]                tx_digitalreset;
+logic [CHANNELS-1:0]                tx_analogreset;
+logic [CHANNELS-1:0]                rx_digitalreset;
+logic [CHANNELS-1:0]                rx_analogreset;
+logic [CHANNELS-1:0]                rx_is_lockedtoref;
+logic [CHANNELS-1:0]                rx_is_lockedtodata;
+logic [CHANNELS-1:0]                tx_cal_busy;
+logic [CHANNELS-1:0]                rx_cal_busy;
+logic [CHANNELS-1:0]                tx_ready;
+logic [CHANNELS-1:0] [2:0]          data_rate;
+logic [CHANNELS-1:0]                pll_locked_219;
+logic [CHANNELS-1:0]                pll_locked_425;
+logic [CHANNELS-1:0] [39:0]         bist_data;
+logic [CHANNELS-1:0] [39:0]         tx_pma_parallel_data_q;
+logic [CHANNELS-1:0] [15:0]         prbs_error_cnt;
+logic [CHANNELS-1:0] [47:0]         prbs_bit_cnt;
+logic [CHANNELS-1:0] [31:0]         prbs_not_locked_cnt;
+logic [CHANNELS-1:0]                prbs_lock_state;
+logic [CHANNELS-1:0] [15:0]         prbs_inj_err_cnt;
+
+wire [CHANNELS-1:0]                oREG_CTL_TXRESET;
+wire [CHANNELS-1:0]                oREG_CTL_RXRESET;
+wire [CHANNELS-1:0]                oREG_CTL_SERIALLPBKEN;
+wire [CHANNELS-1:0] [1:0]          oREG_CTL_CDRLOCKMODE;
+wire [CHANNELS-1:0]                oREG_CTL_TXMUXSEL;
+wire [CHANNELS-1:0]                oREG_CTL_EYEHCLEAR;
+wire [CHANNELS-1:0]                oREG_CTL_EYEVCLEAR;
+wire [CHANNELS-1:0]                oREG_CTL_TXINVERT;
+wire [CHANNELS-1:0]                oREG_CTL_RXINVERT;
+wire [CHANNELS-1:0]                oREG_CTL_CDRLOCKOVERRIDE                           ;
+wire [CHANNELS-1:0] [1:0]          oREG_PRBSCTL_PRBSSEL;
+wire [CHANNELS-1:0]                oREG_PRBSCTL_INJERR;
+wire [CHANNELS-1:0]                oREG_PRBSCTL_ERRCNTCLR;
+wire [CHANNELS-1:0]                oREG_PRBSCTL_RXCNTCLR;
+wire [CHANNELS-1:0]                oREG_PRBSCTL_NOTLOCKEDCNTCLR;
+wire [CHANNELS-1:0] [63:0]         oREG_SCRATCH;
+
+logic  [25 : 0] rxoutclk_out;
+logic  [25 : 0] txoutclk_out;
+logic  [25 : 0] rxusrclk2_in;
+logic  [25 : 0] txusrclk2_in;
+logic  [25 : 0] rxusrclk_in;
+logic  [25 : 0] txusrclk_in;
+logic gtwiz_reset_rx_cdr_stable_out;  // fixme
+logic gtwiz_reset_tx_done_out;  // fixme
+logic gtwiz_reset_rx_done_out;  // fixme
+logic           userclk_tx_reset_in;
+logic           userclk_rx_reset_in;
+assign userclk_tx_reset_in = !gtwiz_reset_tx_done_out;
+assign userclk_rx_reset_in = !gtwiz_reset_rx_done_out;
 
 genvar                      gi;
+generate
+  for (gi    =  0; gi < CHANNELS; gi   =  gi+1) begin : pma_gen
+    assign         pll_powerdown[gi] = 0;
+    assign         tx_digitalreset[gi] = 0;
+    assign         tx_analogreset[gi] = 0;
+    assign         rx_digitalreset[gi] = 0;
+    assign         rx_analogreset[gi] = 0;
+    assign         rx_is_lockedtoref[gi] = 0;
+    assign         rx_is_lockedtodata[gi] = 1;
+    assign         tx_cal_busy[gi] = 0;
+    assign         rx_cal_busy[gi] = 0;
+    assign         rx_ready[gi] = 1;
+    assign         tx_ready[gi] = 1;
+    assign         data_rate[gi] = 0;
+    assign         pll_locked_219[gi] = 1;
+    assign         pll_locked_425[gi] = 1;
+    assign         bist_data[gi] = 0;
+    assign         tx_pma_parallel_data_q[gi] = 0;
+    assign         prbs_error_cnt[gi] = 0;
+    assign         prbs_bit_cnt[gi] = 0;
+    assign         prbs_not_locked_cnt[gi] = 0;
+    assign         prbs_lock_state[gi] = 0;
+    assign         prbs_inj_err_cnt[gi] = 0;
+    pma_1ch_regs #(
+      . LITE                                               ( 0                                                  )
+    ) pma_1ch_regs_inst (
+      . clk                                                ( {26{iCLK_CORE_212}}                                 ), // input
+      . rst_n                                              ( {26{iRST_FC_CORE212_N}}                             ), // input
+      . wr_en                                              ( oSERDES_MM_WR_EN                             [gi]   ), // input
+      . rd_en                                              ( oSERDES_MM_RD_EN                             [gi]   ), // input
+      . addr                                               ( oSERDES_MM_ADDR[gi][9:0]                            ), // input [9:0]
+      . wr_data                                            ( oSERDES_MM_WR_DATA                           [gi]   ), // input [63:0]
+      . rd_data                                            ( iSERDES_MM_RD_DATA[gi][63:0]                        ), // output [63:0]
+      . rd_data_v                                          ( iSERDES_MM_RD_DATA_V                         [gi]   ), // output
+    
+      . oREG_CTL_TXRESET                                   ( oREG_CTL_TXRESET                             [gi]   ), // output
+      . oREG_CTL_RXRESET                                   ( oREG_CTL_RXRESET                             [gi]   ), // output
+      . oREG_CTL_SERIALLPBKEN                              ( oREG_CTL_SERIALLPBKEN                        [gi]   ), // output
+      . oREG_CTL_CDRLOCKMODE                               ( oREG_CTL_CDRLOCKMODE[gi][1:0]                       ), // output [1:0]
+      . oREG_CTL_TXMUXSEL                                  ( oREG_CTL_TXMUXSEL                            [gi]   ), // output
+      . oREG_CTL_EYEHCLEAR                                 ( oREG_CTL_EYEHCLEAR                           [gi]   ), // output
+      . oREG_CTL_EYEVCLEAR                                 ( oREG_CTL_EYEVCLEAR                           [gi]   ), // output
+      . oREG_CTL_TXINVERT                                  ( oREG_CTL_TXINVERT                            [gi]   ), // output
+      . oREG_CTL_RXINVERT                                  ( oREG_CTL_RXINVERT                            [gi]   ), // output
+      . oREG_CTL_CDRLOCKOVERRIDE                           ( oREG_CTL_CDRLOCKOVERRIDE                     [gi]   ), // output
+      . oREG_PRBSCTL_PRBSSEL                               ( oREG_PRBSCTL_PRBSSEL[gi][1:0]                       ), // output [1:0]
+      . oREG_PRBSCTL_INJERR                                ( oREG_PRBSCTL_INJERR                          [gi]   ), // output
+      . oREG_PRBSCTL_ERRCNTCLR                             ( oREG_PRBSCTL_ERRCNTCLR                       [gi]   ), // output
+      . oREG_PRBSCTL_RXCNTCLR                              ( oREG_PRBSCTL_RXCNTCLR                        [gi]   ), // output
+      . oREG_PRBSCTL_NOTLOCKEDCNTCLR                       ( oREG_PRBSCTL_NOTLOCKEDCNTCLR                 [gi]   ), // output
+      . oREG__SCRATCH                                      ( oREG_SCRATCH[gi][63:0]                              ), // output [63:0]
+    
+      . iREG_STATUS_PLLPWRDN                               ( pll_powerdown                                [gi]   ), // input
+      . iREG_STATUS_TXDIGITALRST                           ( tx_digitalreset                              [gi]   ), // input
+      . iREG_STATUS_TXANALOGRST                            ( tx_analogreset                               [gi]   ), // input
+      . iREG_STATUS_RXDIGITALRST                           ( rx_digitalreset                              [gi]   ), // input
+      . iREG_STATUS_RXANALOGRST                            ( rx_analogreset                               [gi]   ), // input
+      . iREG_STATUS_RXLOCKEDTOREF                          ( rx_is_lockedtoref                            [gi]   ), // input
+      . iREG_STATUS_RXLOCKEDTODATA                         ( rx_is_lockedtodata                           [gi]   ), // input
+      . iREG_STATUS_TXCALBUSY                              ( tx_cal_busy                                  [gi]   ), // input
+      . iREG_STATUS_RXCALBUSY                              ( rx_cal_busy                                  [gi]   ), // input
+      . iREG_STATUS_RXREADY                                ( rx_ready                                     [gi]   ), // input
+      . iREG_STATUS_TXREADY                                ( tx_ready                                     [gi]   ), // input
+      . iREG_STATUS_LINKSPEED                              ( data_rate                                    [gi]   ), // input [2:0]
+      . iREG_STATUS_PLLLOCKED_219                          ( pll_locked_219                               [gi]   ), // input
+      . iREG_STATUS_PLLLOCKED_425                          ( pll_locked_425                               [gi]   ), // input
+      . iREG_RXDATA                                        ( bist_data[gi][39:0]                                 ), // input [39:0]
+      . iREG_TXDATA                                        ( tx_pma_parallel_data_q[gi][39:0]                    ), // input [39:0]
+      . iREG_PRBSERRCNT                                    ( prbs_error_cnt[gi][15:0]                            ), // input [15:0]
+      . iREG_PRBSRXCNT                                     ( prbs_bit_cnt[gi][47:0]                              ), // input [47:0]
+      . iREG_PRBSNOTLOCKEDCNT                              ( prbs_not_locked_cnt[gi][31:0]                       ), // input [31:0]
+      . iREG_PRBSLOCK                                      ( prbs_lock_state                              [gi]   ), // input
+      . iREG_PRBSINJERRCNT                                 ( prbs_inj_err_cnt[gi][15:0]                          )  // input [15:0]
+    );
+
+        assign gtwiz_userdata_tx_in[gi*64 +: 64] = tx_parallel_data[gi];                  //   tx parallel data to transceivers
+        assign rx_parallel_data[gi]              = gtwiz_userdata_rx_out[gi*64 +: 64];    //   rx parallel data from transceivers
+
+        assign atx_pll_locked_425[gi] = 1'b1;              //   per channel PLL locked from ATX PLLs fixme
+        assign atx_pll_locked_219[gi] = 1'b1;              //   per channel PLL locked from ATX PLLs fixme
+BUFG_GT txusrclk2_bufg_inst   (.I (txoutclk_out[gi] ), .CE (1'b1     ), .O   (txusrclk2_in[gi]), .CLR(userclk_tx_reset_in));
+BUFG_GT txusrclk_bufg_inst    (.I (txoutclk_out[gi] ), .CE (1'b1     ), .DIV (3'b001  ), .O (txusrclk_in[gi]  ), .CLR(userclk_tx_reset_in));
+BUFG_GT rxusrclk2_bufg_inst   (.I (rxoutclk_out[gi] ), .CE (1'b1     ), .O   (rxusrclk2_in[gi]), .CLR(userclk_rx_reset_in));
+BUFG_GT rxusrclk_bufg_inst    (.I (rxoutclk_out[gi] ), .CE (1'b1     ), .DIV (3'b001  ), .O (rxusrclk_in[gi]  ), .CLR(userclk_rx_reset_in));
+
+  end
+endgenerate
+
+assign tx_pma_clkout = txoutclk_out;
+assign rx_pma_clkout = rxoutclk_out;
+
+s5_native_phy_16gbps s5_native_phy_16gbps (
+  .gtwiz_userdata_tx_in(gtwiz_userdata_tx_in),                              // input wire [1663 : 0] gtwiz_userdata_tx_in
+  .gtwiz_userdata_rx_out(gtwiz_userdata_rx_out),                            // output wire [1663 : 0] gtwiz_userdata_rx_out
+
+  .gthrxn_in(rx_serial_data_n),                                                    // input wire [25 : 0] gthrxn_in
+  .gthrxp_in(rx_serial_data),                                                    // input wire [25 : 0] gthrxp_in
+  .gthtxn_out(tx_serial_data_n),                                                  // output wire [25 : 0] gthtxn_out
+  .gthtxp_out(tx_serial_data),                                                  // output wire [25 : 0] gthtxp_out
+
+  //.rxoutclk_out(rx_pma_clkout),                                              // output wire [25 : 0] rxoutclk_out
+  //.txoutclk_out(tx_pma_clkout),                                              // output wire [25 : 0] txoutclk_out
+  .rxoutclk_out(rxoutclk_out),                                              // output wire [25 : 0] rxoutclk_out
+  .txoutclk_out(txoutclk_out),                                              // output wire [25 : 0] txoutclk_out
+  .rxusrclk2_in(rxusrclk2_in),                                              // input wire [25 : 0] rxusrclk2_in
+  .txusrclk2_in(txusrclk2_in),                                              // input wire [25 : 0] txusrclk2_in
+  .rxusrclk_in(rxusrclk_in),                                                // input wire [25 : 0] rxusrclk_in
+  .txusrclk_in(txusrclk_in),                                                // input wire [25 : 0] txusrclk_in
+
+  .gtwiz_reset_clk_freerun_in(mgmt_clk_clk),                  // input wire [0 : 0] gtwiz_reset_clk_freerun_in free running clock
+  .gtwiz_reset_all_in(rst),                                  // input wire [0 : 0] gtwiz_reset_all_in fixme
+  .gtwiz_reset_tx_pll_and_datapath_in(!tx_rst_n),  // input wire [0 : 0] gtwiz_reset_tx_pll_and_datapath_in fixme
+  .gtwiz_reset_tx_datapath_in(!tx_rst_n),                  // input wire [0 : 0] gtwiz_reset_tx_datapath_in fixme
+  .gtwiz_reset_rx_pll_and_datapath_in(!rx_rst_n),  // input wire [0 : 0] gtwiz_reset_rx_pll_and_datapath_in fixme
+  .gtwiz_reset_rx_datapath_in(!rx_rst_n),                  // input wire [0 : 0] gtwiz_reset_rx_datapath_in fixme
+
+  .gtwiz_reset_rx_cdr_stable_out(gtwiz_reset_rx_cdr_stable_out),            // output wire [0 : 0] gtwiz_reset_rx_cdr_stable_out
+  .gtwiz_reset_tx_done_out(gtwiz_reset_tx_done_out),                        // output wire [0 : 0] gtwiz_reset_tx_done_out
+  .gtwiz_reset_rx_done_out(gtwiz_reset_rx_done_out),                        // output wire [0 : 0] gtwiz_reset_rx_done_out
+
+  .gtpowergood_out(gtpowergood_out),                                        // output wire [25 : 0] gtpowergood_out
+  .txpmaresetdone_out(txpmaresetdone_out),                                 // output wire [25 : 0] txpmaresetdone_out
+
+  .gtwiz_userclk_tx_active_in(gtwiz_userclk_tx_active_in),                  // input wire [0 : 0] gtwiz_userclk_tx_active_in
+  .gtwiz_userclk_rx_active_in(gtwiz_userclk_rx_active_in),                  // input wire [0 : 0] gtwiz_userclk_rx_active_in
+  .gtrefclk00_in({{3{ref_clk_425[0]}},{4{ref_clk_425[1]}}}),                // input wire [6 : 0] gtrefclk00_in
+  //.gtrefclk00_in({7{ref_clk_425[0]}}),                                    // input wire [6 : 0] gtrefclk00_in
+  .qpll0outclk_out(qpll0outclk_out),                                        // output wire [6 : 0] qpll0outclk_out
+  .qpll0outrefclk_out(qpll0outrefclk_out)                                   // output wire [6 : 0] qpll0outrefclk_out
+);
+
+
+//genvar                      gi;
 generate
 for (gi    =  0; gi < CHANNELS/2; gi   =  gi+1) begin : datarate_gen
 

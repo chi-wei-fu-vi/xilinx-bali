@@ -6,7 +6,7 @@
 <Project Version="7" Minor="32" Path="/home/chiwei/work/checkout/xilinx-bali.git.new/top/syn/work0/fc16_top.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
-    <Option Name="Id" Val="f695997487984658a9c5496892e8a420"/>
+    <Option Name="Id" Val="088b13a69400432fbd3890abbfa6b1cd"/>
     <Option Name="Part" Val="xcku15p-ffve1517-3-e"/>
     <Option Name="CompiledLibDir" Val="$PCACHEDIR/compile_simlib"/>
     <Option Name="CompiledLibDirXSim" Val=""/>
@@ -215,7 +215,7 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../../../xilinx_ip/altsyncram2blk_mem/altsyncram2blk_mem.srcs/sources_1/ip/rom/rom.xci">
+      <File Path="$PPRDIR/../../../xilinx_ip/gtwizard/gtwizard.srcs/sources_1/ip/s5_native_phy_16gbps/s5_native_phy_16gbps.xci">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -252,57 +252,9 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../../../fc1_layer_kr_16_8/rtl/SERDES/ip/s5_native_phy_16gbps_intpll/s5_native_phy_16gbps_intpll/altera_xcvr_functions.sv">
-        <FileInfo>
-          <Attr Name="Library" Val="fc16pma_wrap"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/../../../fc1_layer_kr_16_8/rtl/SERDES/ip/s5_reset_26ch_13p0sp1/s5_reset_26ch/alt_xcvr_reset_counter.sv">
-        <FileInfo>
-          <Attr Name="Library" Val="fc16pma_wrap"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/../../../fc1_layer_kr_16_8/rtl/SERDES/ip/s5_reset_26ch_13p0sp1/s5_reset_26ch/alt_xcvr_resync.sv">
-        <FileInfo>
-          <Attr Name="Library" Val="fc16pma_wrap"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
       <File Path="$PPRDIR/../../../pcie_gen2x8/pcie_gen2x8_13_1/synthesis/submodules/altera_reset_controller.v">
         <FileInfo SFType="SVerilog">
           <Attr Name="Library" Val="pcie_gen2x8_13_1"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/../../../fc1_layer_kr_16_8/rtl/SERDES/ip/s5_native_phy_16gbps_intpll/s5_native_phy_16gbps_intpll/altera_xcvr_native_sv_functions_h.sv">
-        <FileInfo>
-          <Attr Name="Library" Val="fc16pma_wrap"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/../../../fc1_layer_kr_16_8/rtl/SERDES/ip/s5_native_phy_16gbps_intpll/s5_native_phy_16gbps_intpll/altera_xcvr_native_sv.sv">
-        <FileInfo>
-          <Attr Name="Library" Val="fc16pma_wrap"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/../../../fc1_layer_kr_16_8/rtl/SERDES/ip/s5_reset_26ch_13p0sp1/s5_reset_26ch/altera_xcvr_reset_control.sv">
-        <FileInfo>
-          <Attr Name="Library" Val="fc16pma_wrap"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -1436,32 +1388,8 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../../../fc1_layer_kr_16_8/rtl/SERDES/pma.sv">
-        <FileInfo>
-          <Attr Name="Library" Val="fc16pma_wrap"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/../../../fc1_layer_kr_16_8/rtl/SERDES/pma_1ch.sv">
-        <FileInfo>
-          <Attr Name="Library" Val="fc16pma_wrap"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
       <File Path="$PPRDIR/../../../fc1_layer_kr_16_8/rtl/SERDES/auto/pma_1ch_regs.v">
         <FileInfo SFType="SVerilog">
-          <Attr Name="Library" Val="fc16pma_wrap"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/../../../fc1_layer_kr_16_8/rtl/SERDES/pma_prbs.sv">
-        <FileInfo>
           <Attr Name="Library" Val="fc16pma_wrap"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -1471,14 +1399,6 @@
       <File Path="$PPRDIR/../../../fc1_layer_kr_16_8/rtl/common/pn2112/pn2112_sl.v">
         <FileInfo SFType="SVerilog">
           <Attr Name="Library" Val="fc1_kr_wrap"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/../../../fc1_layer_kr_16_8/rtl/SERDES/ip/serdes_pat_gen_chk/prbs_parm.sv">
-        <FileInfo>
-          <Attr Name="Library" Val="fc16pma_wrap"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -1524,14 +1444,6 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../../../fc16clkrst/rtl/ip/s5_altclkctrl_auto/s5_altclkctrl_auto.v">
-        <FileInfo SFType="SVerilog">
-          <Attr Name="Library" Val="fc16pma_wrap"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
       <File Path="$PPRDIR/../../../fc16clkrst/rtl/ip/s5_altpll_219in_212out.v">
         <FileInfo SFType="SVerilog">
           <Attr Name="Library" Val="fc16clkrst_wrap"/>
@@ -1556,38 +1468,6 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../../../fc1_layer_kr_16_8/rtl/SERDES/ip/s5_atxpll/s5_atxpll.v">
-        <FileInfo SFType="SVerilog">
-          <Attr Name="Library" Val="fc16pma_wrap"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/../../../fc1_layer_kr_16_8/rtl/SERDES/ip/s5_atxpll425/s5_atxpll425.v">
-        <FileInfo SFType="SVerilog">
-          <Attr Name="Library" Val="fc16pma_wrap"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/../../../fc1_layer_kr_16_8/rtl/SERDES/ip/s5_native_phy_16gbps/s5_native_phy_16gbps.v">
-        <FileInfo SFType="SVerilog">
-          <Attr Name="Library" Val="fc16pma_wrap"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/../../../fc1_layer_kr_16_8/rtl/SERDES/ip/s5_reset_26ch_13p0sp1/s5_reset_26ch.v">
-        <FileInfo SFType="SVerilog">
-          <Attr Name="Library" Val="fc16pma_wrap"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
       <File Path="$PPRDIR/../../../link_engine/rtl/se_violation.v">
         <FileInfo SFType="SVerilog">
           <Attr Name="Library" Val="link_engine"/>
@@ -1607,206 +1487,6 @@
       <File Path="$PPRDIR/../../../link_engine/rtl/stats_clr_syn.v">
         <FileInfo SFType="SVerilog">
           <Attr Name="Library" Val="link_engine"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/../../../fc1_layer_kr_16_8/rtl/SERDES/ip/s5_native_phy_16gbps_intpll/s5_native_phy_16gbps_intpll/sv_hssi_10g_rx_pcs_rbc.sv">
-        <FileInfo>
-          <Attr Name="Library" Val="fc16pma_wrap"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/../../../fc1_layer_kr_16_8/rtl/SERDES/ip/s5_native_phy_16gbps_intpll/s5_native_phy_16gbps_intpll/sv_hssi_10g_tx_pcs_rbc.sv">
-        <FileInfo>
-          <Attr Name="Library" Val="fc16pma_wrap"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/../../../fc1_layer_kr_16_8/rtl/SERDES/ip/s5_native_phy_16gbps_intpll/s5_native_phy_16gbps_intpll/sv_hssi_8g_rx_pcs_rbc.sv">
-        <FileInfo>
-          <Attr Name="Library" Val="fc16pma_wrap"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/../../../fc1_layer_kr_16_8/rtl/SERDES/ip/s5_native_phy_16gbps_intpll/s5_native_phy_16gbps_intpll/sv_hssi_8g_tx_pcs_rbc.sv">
-        <FileInfo>
-          <Attr Name="Library" Val="fc16pma_wrap"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/../../../fc1_layer_kr_16_8/rtl/SERDES/ip/s5_native_phy_16gbps_intpll/s5_native_phy_16gbps_intpll/sv_hssi_common_pcs_pma_interface_rbc.sv">
-        <FileInfo>
-          <Attr Name="Library" Val="fc16pma_wrap"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/../../../fc1_layer_kr_16_8/rtl/SERDES/ip/s5_native_phy_16gbps_intpll/s5_native_phy_16gbps_intpll/sv_hssi_common_pld_pcs_interface_rbc.sv">
-        <FileInfo>
-          <Attr Name="Library" Val="fc16pma_wrap"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/../../../fc1_layer_kr_16_8/rtl/SERDES/ip/s5_native_phy_16gbps_intpll/s5_native_phy_16gbps_intpll/sv_hssi_pipe_gen1_2_rbc.sv">
-        <FileInfo>
-          <Attr Name="Library" Val="fc16pma_wrap"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/../../../fc1_layer_kr_16_8/rtl/SERDES/ip/s5_native_phy_16gbps_intpll/s5_native_phy_16gbps_intpll/sv_hssi_pipe_gen3_rbc.sv">
-        <FileInfo>
-          <Attr Name="Library" Val="fc16pma_wrap"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/../../../fc1_layer_kr_16_8/rtl/SERDES/ip/s5_native_phy_16gbps_intpll/s5_native_phy_16gbps_intpll/sv_hssi_rx_pcs_pma_interface_rbc.sv">
-        <FileInfo>
-          <Attr Name="Library" Val="fc16pma_wrap"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/../../../fc1_layer_kr_16_8/rtl/SERDES/ip/s5_native_phy_16gbps_intpll/s5_native_phy_16gbps_intpll/sv_hssi_rx_pld_pcs_interface_rbc.sv">
-        <FileInfo>
-          <Attr Name="Library" Val="fc16pma_wrap"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/../../../fc1_layer_kr_16_8/rtl/SERDES/ip/s5_native_phy_16gbps_intpll/s5_native_phy_16gbps_intpll/sv_hssi_tx_pcs_pma_interface_rbc.sv">
-        <FileInfo>
-          <Attr Name="Library" Val="fc16pma_wrap"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/../../../fc1_layer_kr_16_8/rtl/SERDES/ip/s5_native_phy_16gbps_intpll/s5_native_phy_16gbps_intpll/sv_hssi_tx_pld_pcs_interface_rbc.sv">
-        <FileInfo>
-          <Attr Name="Library" Val="fc16pma_wrap"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/../../../fc1_layer_kr_16_8/rtl/SERDES/ip/s5_native_phy_16gbps_intpll/s5_native_phy_16gbps_intpll/sv_pcs.sv">
-        <FileInfo>
-          <Attr Name="Library" Val="fc16pma_wrap"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/../../../fc1_layer_kr_16_8/rtl/SERDES/ip/s5_native_phy_16gbps_intpll/s5_native_phy_16gbps_intpll/sv_pcs_ch.sv">
-        <FileInfo>
-          <Attr Name="Library" Val="fc16pma_wrap"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/../../../fc1_layer_kr_16_8/rtl/SERDES/ip/s5_native_phy_16gbps_intpll/s5_native_phy_16gbps_intpll/sv_pma.sv">
-        <FileInfo>
-          <Attr Name="Library" Val="fc16pma_wrap"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/../../../fc1_layer_kr_16_8/rtl/SERDES/ip/s5_native_phy_16gbps_intpll/s5_native_phy_16gbps_intpll/sv_reconfig_bundle_merger.sv">
-        <FileInfo>
-          <Attr Name="Library" Val="fc16pma_wrap"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/../../../fc1_layer_kr_16_8/rtl/SERDES/ip/s5_native_phy_16gbps_intpll/s5_native_phy_16gbps_intpll/sv_reconfig_bundle_to_xcvr.sv">
-        <FileInfo>
-          <Attr Name="Library" Val="fc16pma_wrap"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/../../../fc1_layer_kr_16_8/rtl/SERDES/ip/s5_native_phy_16gbps_intpll/s5_native_phy_16gbps_intpll/sv_rx_pma.sv">
-        <FileInfo>
-          <Attr Name="Library" Val="fc16pma_wrap"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/../../../fc1_layer_kr_16_8/rtl/SERDES/ip/s5_native_phy_16gbps_intpll/s5_native_phy_16gbps_intpll/sv_tx_pma.sv">
-        <FileInfo>
-          <Attr Name="Library" Val="fc16pma_wrap"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/../../../fc1_layer_kr_16_8/rtl/SERDES/ip/s5_native_phy_16gbps_intpll/s5_native_phy_16gbps_intpll/sv_tx_pma_ch.sv">
-        <FileInfo>
-          <Attr Name="Library" Val="fc16pma_wrap"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/../../../fc1_layer_kr_16_8/rtl/SERDES/ip/s5_native_phy_16gbps_intpll/s5_native_phy_16gbps_intpll/sv_xcvr_avmm.sv">
-        <FileInfo>
-          <Attr Name="Library" Val="fc16pma_wrap"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/../../../fc1_layer_kr_16_8/rtl/SERDES/ip/s5_native_phy_16gbps_intpll/s5_native_phy_16gbps_intpll/sv_xcvr_h.sv">
-        <FileInfo>
-          <Attr Name="Library" Val="fc16pma_wrap"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/../../../fc1_layer_kr_16_8/rtl/SERDES/ip/s5_native_phy_16gbps_intpll/s5_native_phy_16gbps_intpll/sv_xcvr_avmm_csr.sv">
-        <FileInfo>
-          <Attr Name="Library" Val="fc16pma_wrap"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/../../../fc1_layer_kr_16_8/rtl/SERDES/ip/s5_native_phy_16gbps_intpll/s5_native_phy_16gbps_intpll/sv_xcvr_native.sv">
-        <FileInfo>
-          <Attr Name="Library" Val="fc16pma_wrap"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/../../../altera_ip/altera_pll/sv_xcvr_plls.sv">
-        <FileInfo>
-          <Attr Name="Library" Val="fc16pma_wrap"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -2168,6 +1848,14 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
+      <File Path="$PPRDIR/../../../xilinx_ip/altsyncram2blk_mem/altsyncram2blk_mem.srcs/sources_1/ip/rom/rom.xci">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
       <File Path="$PPRDIR/../../../xilinx_ip/altsyncram2blk_mem/txbist72b_ram_init_ch0.coe">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -2268,7 +1956,7 @@
       <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2017">
         <ReportConfig Name="synth_1_synth_report_utilization_0" Spec="report_utilization" RunStep="synth_design" ReportFile="fc16_top_utilization_synth.rpt" Version="1" Minor="0">
           <ReportConfigOption Name="dummy_option" Type="string"/>
-          <ReportConfigOutputOption Name="pb" Type="string" Value="fc16_top_utilization_synth.pb"/>
+          <ReportConfigOutputOption Name="pb" Type="string" Value=""/>
         </ReportConfig>
         <ReportConfig Name="synth_1_synth_synthesis_report_0" Spec="" RunStep="synth_design" ReportFile="fc16_top.vds">
           <ReportConfigOption Name="dummy_option" Type="string"/>
@@ -2276,7 +1964,7 @@
       </ReportStrategy>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
-    <Run Id="impl_1" Type="Ft2:EntireDesign" Part="xcku15p-ffve1517-3-e" ConstrsSet="constrs_1" Description="Default settings for Implementation." WriteIncrSynthDcp="false" State="current" Dir="$PRUNDIR/impl_1" SynthRun="synth_1" IncludeInArchive="true">
+    <Run Id="impl_1" Type="Ft2:EntireDesign" Part="xcku15p-ffve1517-3-e" ConstrsSet="constrs_1" Description="Default settings for Implementation." WriteIncrSynthDcp="false" State="current" SynthRun="synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2017">
           <Desc>Default settings for Implementation.</Desc>
@@ -2303,16 +1991,15 @@
           <Option Id="BinFile">1</Option>
         </Step>
       </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
       <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2017">
         <ReportConfig Name="impl_1_init_report_timing_summary_0" Spec="report_timing_summary" RunStep="init_design" Version="1" Minor="0" IsDisabled="true">
           <ReportConfigOption Name="dummy_option" Type="string"/>
           <ReportConfigOutputOption Name="rpx" Type="string" Value=""/>
         </ReportConfig>
-        <ReportConfig Name="impl_1_opt_report_drc_0" Spec="report_drc" RunStep="opt_design" ReportFile="fc16_top_drc_opted.rpt" Version="1" Minor="0">
+        <ReportConfig Name="impl_1_opt_report_drc_0" Spec="report_drc" RunStep="opt_design" Version="1" Minor="0">
           <ReportConfigOption Name="dummy_option" Type="string"/>
-          <ReportConfigOutputOption Name="pb" Type="string" Value="fc16_top_drc_opted.pb"/>
-          <ReportConfigOutputOption Name="rpx" Type="string" Value="fc16_top_drc_opted.rpx"/>
+          <ReportConfigOutputOption Name="pb" Type="string" Value=""/>
+          <ReportConfigOutputOption Name="rpx" Type="string" Value=""/>
         </ReportConfig>
         <ReportConfig Name="impl_1_opt_report_timing_summary_0" Spec="report_timing_summary" RunStep="opt_design" Version="1" Minor="0" IsDisabled="true">
           <ReportConfigOption Name="dummy_option" Type="string"/>
@@ -2322,14 +2009,14 @@
           <ReportConfigOption Name="dummy_option" Type="string"/>
           <ReportConfigOutputOption Name="rpx" Type="string" Value=""/>
         </ReportConfig>
-        <ReportConfig Name="impl_1_place_report_io_0" Spec="report_io" RunStep="place_design" ReportFile="fc16_top_io_placed.rpt" Version="1" Minor="0">
+        <ReportConfig Name="impl_1_place_report_io_0" Spec="report_io" RunStep="place_design" Version="1" Minor="0">
           <ReportConfigOption Name="dummy_option" Type="string"/>
         </ReportConfig>
-        <ReportConfig Name="impl_1_place_report_utilization_0" Spec="report_utilization" RunStep="place_design" ReportFile="fc16_top_utilization_placed.rpt" Version="1" Minor="0">
+        <ReportConfig Name="impl_1_place_report_utilization_0" Spec="report_utilization" RunStep="place_design" Version="1" Minor="0">
           <ReportConfigOption Name="dummy_option" Type="string"/>
-          <ReportConfigOutputOption Name="pb" Type="string" Value="fc16_top_utilization_placed.pb"/>
+          <ReportConfigOutputOption Name="pb" Type="string" Value=""/>
         </ReportConfig>
-        <ReportConfig Name="impl_1_place_report_control_sets_0" Spec="report_control_sets" RunStep="place_design" ReportFile="fc16_top_control_sets_placed.rpt" Version="1" Minor="0">
+        <ReportConfig Name="impl_1_place_report_control_sets_0" Spec="report_control_sets" RunStep="place_design" Version="1" Minor="0">
           <ReportConfigOption Name="dummy_option" Type="string"/>
         </ReportConfig>
         <ReportConfig Name="impl_1_place_report_incremental_reuse_0" Spec="report_incremental_reuse" RunStep="place_design" Version="1" Minor="0" IsDisabled="true">
@@ -2350,41 +2037,41 @@
           <ReportConfigOption Name="dummy_option" Type="string"/>
           <ReportConfigOutputOption Name="rpx" Type="string" Value=""/>
         </ReportConfig>
-        <ReportConfig Name="impl_1_route_report_drc_0" Spec="report_drc" RunStep="route_design" ReportFile="fc16_top_drc_routed.rpt" Version="1" Minor="0">
+        <ReportConfig Name="impl_1_route_report_drc_0" Spec="report_drc" RunStep="route_design" Version="1" Minor="0">
           <ReportConfigOption Name="dummy_option" Type="string"/>
-          <ReportConfigOutputOption Name="pb" Type="string" Value="fc16_top_drc_routed.pb"/>
-          <ReportConfigOutputOption Name="rpx" Type="string" Value="fc16_top_drc_routed.rpx"/>
+          <ReportConfigOutputOption Name="pb" Type="string" Value=""/>
+          <ReportConfigOutputOption Name="rpx" Type="string" Value=""/>
         </ReportConfig>
-        <ReportConfig Name="impl_1_route_report_methodology_0" Spec="report_methodology" RunStep="route_design" ReportFile="fc16_top_methodology_drc_routed.rpt" Version="1" Minor="0">
+        <ReportConfig Name="impl_1_route_report_methodology_0" Spec="report_methodology" RunStep="route_design" Version="1" Minor="0">
           <ReportConfigOption Name="dummy_option" Type="string"/>
-          <ReportConfigOutputOption Name="pb" Type="string" Value="fc16_top_methodology_drc_routed.pb"/>
-          <ReportConfigOutputOption Name="rpx" Type="string" Value="fc16_top_methodology_drc_routed.rpx"/>
+          <ReportConfigOutputOption Name="pb" Type="string" Value=""/>
+          <ReportConfigOutputOption Name="rpx" Type="string" Value=""/>
         </ReportConfig>
-        <ReportConfig Name="impl_1_route_report_power_0" Spec="report_power" RunStep="route_design" ReportFile="fc16_top_power_routed.rpt" Version="1" Minor="0">
+        <ReportConfig Name="impl_1_route_report_power_0" Spec="report_power" RunStep="route_design" Version="1" Minor="0">
           <ReportConfigOption Name="dummy_option" Type="string"/>
-          <ReportConfigOutputOption Name="pb" Type="string" Value="fc16_top_power_summary_routed.pb"/>
-          <ReportConfigOutputOption Name="rpx" Type="string" Value="fc16_top_power_routed.rpx"/>
+          <ReportConfigOutputOption Name="pb" Type="string" Value=""/>
+          <ReportConfigOutputOption Name="rpx" Type="string" Value=""/>
         </ReportConfig>
-        <ReportConfig Name="impl_1_route_report_route_status_0" Spec="report_route_status" RunStep="route_design" ReportFile="fc16_top_route_status.rpt" Version="1" Minor="0">
+        <ReportConfig Name="impl_1_route_report_route_status_0" Spec="report_route_status" RunStep="route_design" Version="1" Minor="0">
           <ReportConfigOption Name="dummy_option" Type="string"/>
-          <ReportConfigOutputOption Name="pb" Type="string" Value="fc16_top_route_status.pb"/>
+          <ReportConfigOutputOption Name="pb" Type="string" Value=""/>
         </ReportConfig>
-        <ReportConfig Name="impl_1_route_report_timing_summary_0" Spec="report_timing_summary" RunStep="route_design" ReportFile="fc16_top_timing_summary_routed.rpt" Version="1" Minor="0">
+        <ReportConfig Name="impl_1_route_report_timing_summary_0" Spec="report_timing_summary" RunStep="route_design" Version="1" Minor="0">
           <ReportConfigOption Name="dummy_option" Type="string"/>
-          <ReportConfigOutputOption Name="rpx" Type="string" Value="fc16_top_timing_summary_routed.rpx"/>
+          <ReportConfigOutputOption Name="rpx" Type="string" Value=""/>
         </ReportConfig>
-        <ReportConfig Name="impl_1_route_report_incremental_reuse_0" Spec="report_incremental_reuse" RunStep="route_design" ReportFile="fc16_top_incremental_reuse_routed.rpt" Version="1" Minor="0">
-          <ReportConfigOption Name="dummy_option" Type="string"/>
-        </ReportConfig>
-        <ReportConfig Name="impl_1_route_report_clock_utilization_0" Spec="report_clock_utilization" RunStep="route_design" ReportFile="fc16_top_clock_utilization_routed.rpt" Version="1" Minor="0">
+        <ReportConfig Name="impl_1_route_report_incremental_reuse_0" Spec="report_incremental_reuse" RunStep="route_design" Version="1" Minor="0">
           <ReportConfigOption Name="dummy_option" Type="string"/>
         </ReportConfig>
-        <ReportConfig Name="impl_1_route_implementation_log_0" Spec="" RunStep="route_design" ReportFile="fc16_top.vdi">
+        <ReportConfig Name="impl_1_route_report_clock_utilization_0" Spec="report_clock_utilization" RunStep="route_design" Version="1" Minor="0">
           <ReportConfigOption Name="dummy_option" Type="string"/>
         </ReportConfig>
-        <ReportConfig Name="impl_1_post_route_phys_opt_report_timing_summary_0" Spec="report_timing_summary" RunStep="post_route_phys_opt_design" ReportFile="fc16_top_timing_summary_postroute_physopted.rpt" Version="1" Minor="0">
+        <ReportConfig Name="impl_1_route_implementation_log_0" Spec="" RunStep="route_design">
           <ReportConfigOption Name="dummy_option" Type="string"/>
-          <ReportConfigOutputOption Name="rpx" Type="string" Value="fc16_top_timing_summary_postroute_physopted.rpx"/>
+        </ReportConfig>
+        <ReportConfig Name="impl_1_post_route_phys_opt_report_timing_summary_0" Spec="report_timing_summary" RunStep="post_route_phys_opt_design" Version="1" Minor="0">
+          <ReportConfigOption Name="dummy_option" Type="string"/>
+          <ReportConfigOutputOption Name="rpx" Type="string" Value=""/>
         </ReportConfig>
         <ReportConfig Name="impl_1_bitstream_report_webtalk_0" Spec="" RunStep="write_bitstream">
           <ReportConfigOption Name="dummy_option" Type="string"/>

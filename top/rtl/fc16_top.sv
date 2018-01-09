@@ -61,9 +61,13 @@ module fc16_top #(
 		     // ------------
 		     input   [1:0]                          iCLK_FC_219_P,                           //  218.945313 Mhz ref clock to FC SERDES
 		     input   [1:0]                          iCLK_FC_425_P,                           //  218.945313 Mhz ref clock to FC SERDES
+		     input   [1:0]                          iCLK_FC_219_N,                           //  218.945313 Mhz ref clock to FC SERDES
+		     input   [1:0]                          iCLK_FC_425_N,                           //  218.945313 Mhz ref clock to FC SERDES
 
 		     input   [      (LINKS+CROSSLINK)*2-1:0]      iFC_RD_P,                          //  FC serial receive lines
 		     output  [      (LINKS+CROSSLINK)*2-1:0]      oFC_TD_P,                          //  FC serial transmit lines
+		     input   [      (LINKS+CROSSLINK)*2-1:0]      iFC_RD_N,                          //  FC serial receive lines
+		     output  [      (LINKS+CROSSLINK)*2-1:0]      oFC_TD_N,                          //  FC serial transmit lines
 		     output  [LINKS-1:0]                    oFC_RATE_SEL,                            //  1=high speed, 0=low speed. Affects SFP bandwidth settings
 		     input   [LINKS*2-1:0]                  iSFP_LOS,                                //  SFP loss of signal
 
@@ -203,6 +207,8 @@ module fc16_top #(
    wire [11:0] 		     LE_WR_EN;
    wire [11:0] 		     LE_RD_EN;
    wire [11:0] 		     LE_RD_DATA_V;
+   logic   [1:0]                          iCLK_FC_219;                           //  218.945313 Mhz ref clock to FC SERDES
+   logic   [1:0]                          iCLK_FC_425;                           //  218.945313 Mhz ref clock to FC SERDES
    logic [2*LINKS-1:0][63:0] iSERDES_MM_RD_DATA;
    logic [2*LINKS-1:0] 	     iSERDES_MM_RD_DATA_V;
    wire [2*LINKS-1:0][63:0]  oSERDES_MM_WR_DATA;
@@ -629,7 +635,12 @@ module fc16_top #(
 
    endgenerate
    
-   
+   generate   
+	 for(gi = 0;gi< 2;gi++) begin :clk_fc_gen
+   IBUFDS_GTE4 clkin1_buf (.I(iCLK_FC_219_P[gi]), .IB(iCLK_FC_219_N[gi]), .O(iCLK_FC_219[gi])); 
+   IBUFDS_GTE4 clkin2_buf (.I(iCLK_FC_425_P[gi]), .IB(iCLK_FC_425_N[gi]), .O(iCLK_FC_425[gi])); 
+	 end:clk_fc_gen
+   endgenerate
    fc1_kr_ser_wrap #(
 		     . SIM_ONLY                                             ( SIM_ONLY_PMA_BP                                    ),
 		     . CHANNELS                                             ( CHANNELS                                           ),
@@ -644,8 +655,10 @@ module fc16_top #(
 					     .fc_reconfig_from_xcvr (fc_reconfig_from_xcvr),
                . rx_is_lockedtodata (rx_is_lockedtodata),
 					     
-					     . iCLK_FC_219_P                                        ( iCLK_FC_219_P                                      ),          // input [1:0]
-					     . iCLK_FC_425_P                                        ( iCLK_FC_425_P                                      ),          // input [1:0]
+					     //. iCLK_FC_219_P                                        ( iCLK_FC_219_P                                      ),          // input [1:0]
+					     //. iCLK_FC_425_P                                        ( iCLK_FC_425_P                                      ),          // input [1:0]
+					     . iCLK_FC_219_P                                        ( iCLK_FC_219                                        ),          // input [1:0]
+					     . iCLK_FC_425_P                                        ( iCLK_FC_425                                        ),          // input [1:0]
 					     . iSFP_LOS                                             ( sfp_los_qual[LINKS*2-1:0]                              ),  // input [23:0]
 
 					     // .iCLK_FC_P(iCLK_FC_P),
@@ -657,6 +670,8 @@ module fc16_top #(
 					     
 					     . oFC_TD_P                                             ( oFC_TD_P[CHANNELS-1:0]                             ),  // output [CHANNELS-1:0]
 					     . iFC_RD_P                                             ( iFC_RD_P[CHANNELS-1:0]                             ),  // input [CHANNELS-1:0]
+					     . oFC_TD_N                                             ( oFC_TD_N[CHANNELS-1:0]                             ),  // output [CHANNELS-1:0]
+					     . iFC_RD_N                                             ( iFC_RD_N[CHANNELS-1:0]                             ),  // input [CHANNELS-1:0]
 					     . iCLK_CORE_212                                        ( CLK_CORE_212                                       ),  // input
 					     . iCLK_SER_212                                         ( CLK_SER_212                                        ),  // input
 					     . iCLK_SER_219                                         ( CLK_SER_PMA                                        ),  // input

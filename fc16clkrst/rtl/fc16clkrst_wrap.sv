@@ -103,6 +103,8 @@ module fc16clkrst_wrap
 );
 
 
+logic               oSYNC_RIBBON;
+logic               oSYNC_NEIGHBOR;
 logic        PllFcCoreRst, PllXbarRst;
 logic        PllFcCoreLocked, PllXbarLocked;
 logic [1:0]  TxBistLinkSpeed;
@@ -168,7 +170,6 @@ assign PllXbarLocked = PllFcCoreLocked;
   8G     : 212.50MHz 425 source (select = 2'b11)
   4G     : 106.25MHz 425 source (select = 2'b11)
 */
-
 /*
 wire clk_16g;
 
@@ -190,8 +191,8 @@ bist_clk_mux_inst
   .inclk({iCLK_SERDES_TXCLK[0], clk_16g, iCLK_425M_PAD[0], iCLK_425M_PAD[0]}),
   .outclk(oCLK_BIST)
 );
-
 */
+
 
 assign oCLK_BIST = iCLK_SERDES_TXCLK[0];
 
@@ -214,41 +215,33 @@ assign oCLK_SER_PMA = iCLK_SERDES_TXCLK[0];
 //the core 212MHz (425 sourced) domain.  These 2 domains always have ppm
 //difference.
 
-/*
-s5_altclkctrl_auto altclkctrl_ser_212_inst
+BUFG altclkctrl_ser_212_inst
 (
-	.inclk   (clk_core_212),
-	.outclk  (oCLK_CORE_212)
+	.I   (clk_core_212),
+	.O  (oCLK_CORE_212)
 );
-*/
-assign oCLK_CORE_212 = clk_core_212;
+//assign oCLK_CORE_212 = clk_core_212;
 assign oCLK_SER_212 = oCLK_CORE_212;
 
-/*
-s5_altclkctrl_auto altclkctrl_100m_inst
+BUFG altclkctrl_100m_inst
 (
-	.inclk   (iCLK_FR_100M_PAD),
-	.outclk  (oCLK_100M_GLOBAL)
+	.I   (iCLK_FR_100M_PAD),
+	.O  (oCLK_100M_GLOBAL)
 );
-*/
-assign oCLK_100M_GLOBAL = iCLK_FR_100M_PAD;
-/*
-s5_altclkctrl_auto altclkctrl_pcie_inst
+//assign oCLK_100M_GLOBAL = iCLK_FR_100M_PAD;
+BUFG altclkctrl_pcie_inst
 (
-	.inclk   (iCLK_PCIE_CORECLKOUT_HIP),
-	.outclk  (oCLK_PCIE_GLOBAL)
+	.I   (iCLK_PCIE_CORECLKOUT_HIP),
+	.O  (oCLK_PCIE_GLOBAL)
 );
-*/
-assign oCLK_PCIE_GLOBAL = iCLK_PCIE_CORECLKOUT_HIP;
+//assign oCLK_PCIE_GLOBAL = iCLK_PCIE_CORECLKOUT_HIP;
 
-/*
-s5_altclkctrl_auto altclkctrl_pcie_ref_inst
+BUFG altclkctrl_pcie_ref_inst
 (
-	.inclk   (iCLK_PCIE_REF_PAD),
-	.outclk  (oCLK_PCIE_REF_GLOBAL)
+	.I   (iCLK_PCIE_REF_PAD),
+	.O  (oCLK_PCIE_REF_GLOBAL)
 );
-*/
-assign oCLK_PCIE_REF_GLOBAL = iCLK_PCIE_REF_PAD;
+//assign oCLK_PCIE_REF_GLOBAL = iCLK_PCIE_REF_PAD;
 
 ///////////////////////////////////////////////////////////////////////////////
 //
@@ -716,14 +709,14 @@ fc16clkrst_regs fc16clkrst_regs_inst
 
 vi_rst_sync_async rst_sync_ribbon
 (
-  .iRST_ASYNC_N(ioSYNC_RIBBON),
+  .iRST_ASYNC_N(oSYNC_RIBBON),
 	.iCLK(oCLK_100M_GLOBAL),
 	.oRST_SYNC_N(ribbon_rst_n)
 );
 
 vi_rst_sync_async rst_sync_neighbor
 (
-  .iRST_ASYNC_N(ioSYNC_NEIGHBOR),
+  .iRST_ASYNC_N(oSYNC_NEIGHBOR),
 	.iCLK(oCLK_100M_GLOBAL),
 	.oRST_SYNC_N(neighbor_rst_n)
 );
@@ -761,5 +754,21 @@ assign neighbor_ena = glb_timestamp_rst_reg || !ribbon_rst_n;
 
 assign ioSYNC_RIBBON = ribbon_ena ? 1'b0 : 1'bz;
 assign ioSYNC_NEIGHBOR = neighbor_ena ? 1'b0 : 1'bz;
+assign oSYNC_RIBBON =  ioSYNC_RIBBON ;
+assign oSYNC_NEIGHBOR = ioSYNC_NEIGHBOR ;
+/*
+IOBUF ioSYNC_RIBBON_0 (
+  .I  (0),       
+  .T  (ribbon_enable),     
+  .IO (ioSYNC_RIBBON),  
+  .O  (oSYNC_RIBBON) 
+)
+IOBUF ioSYNC_NEIGHBOR_0 (
+  .I  (0),       
+  .T  (neighbor_enable),     
+  .IO (ioSYNC_NEIGHBOR),  
+  .O  (oSYNC_NEIGHBOR) 
+)
+*/
 
 endmodule

@@ -45,6 +45,8 @@ module fc1_kr_ser_wrap
         
         output  [CHANNELS-1:0]                 oFC_TD_P,                        //   per transceiver serial data to IOs
         input   [CHANNELS-1:0]                 iFC_RD_P,                        //   per transceiver serial data to IOs
+        output  [CHANNELS-1:0]                 oFC_TD_N,                        //   per transceiver serial data to IOs
+        input   [CHANNELS-1:0]                 iFC_RD_N,                        //   per transceiver serial data to IOs
         input  logic [CHANNELS-1:0]            iSFP_LOS,
 
         // --------------------------
@@ -221,6 +223,8 @@ fc16pma_wrap #(
         . rx_parallel_data                                     ( rx_parallel_data_ser                               ),  // output [CHANNELS-1:0][63:0]
         . tx_serial_data                                       ( oFC_TD_P[CHANNELS-1:0]                             ),  // output [CHANNELS-1:0]
         . rx_serial_data                                       ( iFC_RD_P[CHANNELS-1:0]                             ),  // input [CHANNELS-1:0]
+        . tx_serial_data_n                                     ( oFC_TD_N[CHANNELS-1:0]                             ),  // output [CHANNELS-1:0]
+        . rx_serial_data_n                                     ( iFC_RD_N[CHANNELS-1:0]                             ),  // input [CHANNELS-1:0]
         . ref_clk_219                                          ( iCLK_FC_219_P[1:0]                                 ),  // input [1:0]
         . ref_clk_425                                          ( iCLK_FC_425_P[1:0]                                 ),  // input [1:0]
         . clk                                                  ( iCLK_SER_219                                ),  // input
