@@ -418,6 +418,8 @@ module fc16_top #(
    wire [63:0] 				 fpga_rev;
    logic         oEND_OF_INTERVAL;
    logic end_of_interval;
+   logic PCIE_REF_CLK;
+   IBUFG pcieclk_buf (.I(iPCIE_REF_CLK), .O(PCIE_REF_CLK)); 
    
    always @(posedge CLK_SER_212 or negedge oRST_FC_SER212_N)
 	   if (!oRST_FC_SER212_N)
@@ -554,14 +556,14 @@ module fc16_top #(
 					     .ioSYNC_RIBBON                                         (ioSYNC_RIBBON),
 					     .ioSYNC_NEIGHBOR                                       (ioSYNC_NEIGHBOR),
 					     .iCLK_FR_100M_PAD                                      ( iCLK_FR                                            ),          // input
-					     .iCLK_PCIE_REF_PAD                                     ( iPCIE_REF_CLK                                      ),          // input
+					     .iCLK_PCIE_REF_PAD                                     (  PCIE_REF_CLK                                      ),          // input
 					     .iCLK_425M_PAD                                         ( iCLK_425M_P[1:0]                                   ),          // input [1:0]
 					     .iCLK_PCIE_CORECLKOUT_HIP                              ( iCLK_PCIE_CORECLKOUT_HIP                           ),          // input
 					     .iCLK_SERDES_RXREC                                     ( iCLK_RX),      // input [25:0]
 					     .iCLK_SERDES_TXCLK                                     ( oCLK_TX),      // input [25:0]
 					     .iATX_PLL_LOCKED                                       ( atx_pll_locked[CHANNELS-1:0]                       ),  // input [25:0]
 					     .iRX_READY                                             ( rx_ready[CHANNELS-1:0]                             ),  // input [25:0]
-					     .iCLK_FC_219REF                                        (iCLK_FC_219_P[0]                                    ), 
+					     .iCLK_FC_219REF                                        (iCLK_FC_219[0]                                    ), 
 					     .oCLK_100M_GLOBAL                                      ( oCLK_100M_GLOBAL                                   ),  // output
 					     .oCLK_PCIE_GLOBAL                                      ( oCLK_PCIE_GLOBAL                                   ),  // output
 					     .oCLK_PCIE_REF_GLOBAL                                  ( oCLK_PCIE_REF_GLOBAL                               ),  // output

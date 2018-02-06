@@ -17,8 +17,8 @@ module s5_altpll_219in_212out (
 s5_altpll_219in_212out_0002 s5_altpll_219in_212out_inst (
  . clk_in1              ( refclk                                             ), //  refclk.clk
  . reset                ( rst                                                ), //   reset.reset
- . clk_out2             ( outclk_0                                           ), // outclk0.clk
- . clk_out1             ( outclk_1                                           ), // outclk1.clk
+ . clk_out1             ( outclk_0                                           ), // outclk0.clk
+ . clk_out2             ( outclk_1                                           ), // outclk1.clk
  . locked               ( locked                                             )  
 );
 

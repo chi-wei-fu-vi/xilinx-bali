@@ -381,15 +381,19 @@ generate
         assign atx_pll_locked_425[gi] = 1'b1;              //   per channel PLL locked from ATX PLLs fixme
         assign atx_pll_locked_219[gi] = 1'b1;              //   per channel PLL locked from ATX PLLs fixme
 BUFG_GT txusrclk2_bufg_inst   (.I (txoutclk_out[gi] ), .CE (1'b1     ), .O   (txusrclk2_in[gi]), .CLR(userclk_tx_reset_in));
-BUFG_GT txusrclk_bufg_inst    (.I (txoutclk_out[gi] ), .CE (1'b1     ), .DIV (3'b001  ), .O (txusrclk_in[gi]  ), .CLR(userclk_tx_reset_in));
+//BUFG_GT txusrclk_bufg_inst    (.I (txoutclk_out[gi] ), .CE (1'b1     ), .DIV (3'b001  ), .O (txusrclk_in[gi]  ), .CLR(userclk_tx_reset_in));
 BUFG_GT rxusrclk2_bufg_inst   (.I (rxoutclk_out[gi] ), .CE (1'b1     ), .O   (rxusrclk2_in[gi]), .CLR(userclk_rx_reset_in));
-BUFG_GT rxusrclk_bufg_inst    (.I (rxoutclk_out[gi] ), .CE (1'b1     ), .DIV (3'b001  ), .O (rxusrclk_in[gi]  ), .CLR(userclk_rx_reset_in));
+//BUFG_GT rxusrclk_bufg_inst    (.I (rxoutclk_out[gi] ), .CE (1'b1     ), .DIV (3'b001  ), .O (rxusrclk_in[gi]  ), .CLR(userclk_rx_reset_in));
+assign txusrclk_in=txusrclk2_in;
+assign rxusrclk_in=rxusrclk2_in;
 
   end
 endgenerate
 
-assign tx_pma_clkout = txoutclk_out;
-assign rx_pma_clkout = rxoutclk_out;
+//assign tx_pma_clkout = txoutclk_out;
+//assign rx_pma_clkout = rxoutclk_out;
+assign tx_pma_clkout = txusrclk_in;
+assign rx_pma_clkout = rxusrclk_in;
 
 s5_native_phy_16gbps s5_native_phy_16gbps (
   .gtwiz_userdata_tx_in(gtwiz_userdata_tx_in),                              // input wire [1663 : 0] gtwiz_userdata_tx_in
@@ -426,6 +430,11 @@ s5_native_phy_16gbps s5_native_phy_16gbps (
   .gtwiz_userclk_tx_active_in(gtwiz_userclk_tx_active_in),                  // input wire [0 : 0] gtwiz_userclk_tx_active_in
   .gtwiz_userclk_rx_active_in(gtwiz_userclk_rx_active_in),                  // input wire [0 : 0] gtwiz_userclk_rx_active_in
   .gtrefclk00_in({{3{ref_clk_425[0]}},{4{ref_clk_425[1]}}}),                // input wire [6 : 0] gtrefclk00_in
+  //.gtrefclk00_in({{3{ref_clk_219[0]}},{4{ref_clk_219[1]}}}),                // input wire [6 : 0] gtrefclk00_in
+//  .gtrefclk00_in({
+//{2{ref_clk_219[0]}},{2{ref_clk_219[1]}},
+//{2{ref_clk_425[0]}},{1{ref_clk_425[1]}}
+//}),                // input wire [6 : 0] gtrefclk00_in
   //.gtrefclk00_in({7{ref_clk_425[0]}}),                                    // input wire [6 : 0] gtrefclk00_in
   .qpll0outclk_out(qpll0outclk_out),                                        // output wire [6 : 0] qpll0outclk_out
   .qpll0outrefclk_out(qpll0outrefclk_out)                                   // output wire [6 : 0] qpll0outrefclk_out

@@ -215,12 +215,14 @@ assign oCLK_SER_PMA = iCLK_SERDES_TXCLK[0];
 //the core 212MHz (425 sourced) domain.  These 2 domains always have ppm
 //difference.
 
+/*
 BUFG altclkctrl_ser_212_inst
 (
 	.I   (clk_core_212),
 	.O  (oCLK_CORE_212)
 );
-//assign oCLK_CORE_212 = clk_core_212;
+*/
+assign oCLK_CORE_212 = clk_core_212;
 assign oCLK_SER_212 = oCLK_CORE_212;
 
 BUFG altclkctrl_100m_inst
