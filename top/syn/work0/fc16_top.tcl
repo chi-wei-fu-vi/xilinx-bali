@@ -52,44 +52,6 @@ set obj [get_filesets sources_1]
 # Add conventional sources
 #add_files -quiet $src_dir/hdl
 source ~/bin/set_global_assignment.tcl
-set ::quartus(qip_path) [ file normalize [ file dirname /home/chiwei/work/checkout/xilinx-bali.git.new/top/doc/bist_addr_decoder.qip ] ]
-source /home/chiwei/work/checkout/xilinx-bali.git.new/top/doc/bist_addr_decoder.qip
-set ::quartus(qip_path) [ file normalize [ file dirname /home/chiwei/work/checkout/xilinx-bali.git.new/chipregs/rtl/chipregs_wrap.qip ] ]
-source /home/chiwei/work/checkout/xilinx-bali.git.new/chipregs/rtl/chipregs_wrap.qip
-set ::quartus(qip_path) [ file normalize [ file dirname /home/chiwei/work/checkout/xilinx-bali.git.new/fc16clkrst/rtl/fc16clkrst_wrap.qip ] ]
-source /home/chiwei/work/checkout/xilinx-bali.git.new/fc16clkrst/rtl/fc16clkrst_wrap.qip
-set ::quartus(qip_path) [ file normalize [ file dirname /home/chiwei/work/checkout/xilinx-bali.git.new/link_engine/rtl/dplbuf_pipe.qip ] ]
-source /home/chiwei/work/checkout/xilinx-bali.git.new/link_engine/rtl/dplbuf_pipe.qip
-set ::quartus(qip_path) [ file normalize [ file dirname /home/chiwei/work/checkout/xilinx-bali.git.new/link_engine/rtl/link_engine.qip ] ]
-source /home/chiwei/work/checkout/xilinx-bali.git.new/link_engine/rtl/link_engine.qip
-set ::quartus(qip_path) [ file normalize [ file dirname /home/chiwei/work/checkout/xilinx-bali.git.new/pcie_gen2x8/pcie_gen2x8_13_1/synthesis/pcie_gen2x8_13_1.qip ] ]
-source /home/chiwei/work/checkout/xilinx-bali.git.new/pcie_gen2x8/pcie_gen2x8_13_1/synthesis/pcie_gen2x8_13_1.qip
-set ::quartus(qip_path) [ file normalize [ file dirname /home/chiwei/work/checkout/xilinx-bali.git.new/pcie_gen2x8/pcie_mwr_bist/pcie_mwr_bist_wrap.qip ] ]
-source /home/chiwei/work/checkout/xilinx-bali.git.new/pcie_gen2x8/pcie_mwr_bist/pcie_mwr_bist_wrap.qip
-set ::quartus(qip_path) [ file normalize [ file dirname /home/chiwei/work/checkout/xilinx-bali.git.new/pcie_le/rtl/spd_change.qip ] ]
-source /home/chiwei/work/checkout/xilinx-bali.git.new/pcie_le/rtl/spd_change.qip
-set ::quartus(qip_path) [ file normalize [ file dirname /home/chiwei/work/checkout/xilinx-bali.git.new/link_engine/rtl/ucstats_pipe.qip ] ]
-source /home/chiwei/work/checkout/xilinx-bali.git.new/link_engine/rtl/ucstats_pipe.qip
-set ::quartus(qip_path) [ file normalize [ file dirname /home/chiwei/work/checkout/xilinx-bali.git.new/fc1_layer_kr_16_8/rtl/SERDES/fc16pma_wrap.qip ] ]
-source /home/chiwei/work/checkout/xilinx-bali.git.new/fc1_layer_kr_16_8/rtl/SERDES/fc16pma_wrap.qip
-set ::quartus(qip_path) [ file normalize [ file dirname /home/chiwei/work/checkout/xilinx-bali.git.new/fc1_layer_kr_16_8/rtl/fc1_kr_wrap.qip ] ]
-source /home/chiwei/work/checkout/xilinx-bali.git.new/fc1_layer_kr_16_8/rtl/fc1_kr_wrap.qip
-set ::quartus(qip_path) [ file normalize [ file dirname /home/chiwei/work/checkout/xilinx-bali.git.new/common/vi_lib/heartbeat_x4.qip ] ]
-source /home/chiwei/work/checkout/xilinx-bali.git.new/common/vi_lib/heartbeat_x4.qip
-set ::quartus(qip_path) [ file normalize [ file dirname /home/chiwei/work/checkout/xilinx-bali.git.new/top/doc/top_addr_decoder.qip ] ]
-source /home/chiwei/work/checkout/xilinx-bali.git.new/top/doc/top_addr_decoder.qip
-set ::quartus(qip_path) [ file normalize [ file dirname /home/chiwei/work/checkout/xilinx-bali.git.new/txbist72b/rtl/txbist72b_wrap.qip ] ]
-source /home/chiwei/work/checkout/xilinx-bali.git.new/txbist72b/rtl/txbist72b_wrap.qip
-set ::quartus(qip_path) [ file normalize [ file dirname /home/chiwei/work/checkout/xilinx-bali.git.new/txmux/txmux.qip ] ]
-source /home/chiwei/work/checkout/xilinx-bali.git.new/txmux/txmux.qip
-set ::quartus(qip_path) [ file normalize [ file dirname /home/chiwei/work/checkout/xilinx-bali.git.new/common/vi_design/ucstats/rtl/ucstats_wrap.qip ] ]
-source /home/chiwei/work/checkout/xilinx-bali.git.new/common/vi_design/ucstats/rtl/ucstats_wrap.qip
-set ::quartus(qip_path) [ file normalize [ file dirname /home/chiwei/work/checkout/xilinx-bali.git.new/common/vi_lib/vi_sync_pulse.qip ] ]
-source /home/chiwei/work/checkout/xilinx-bali.git.new/common/vi_lib/vi_sync_pulse.qip
-set ::quartus(qip_path) [ file normalize [ file dirname /home/chiwei/work/checkout/xilinx-bali.git.new/xbar/rtl/xbar_wrap.qip ] ]
-source /home/chiwei/work/checkout/xilinx-bali.git.new/xbar/rtl/xbar_wrap.qip
-set ::quartus(qip_path) [ file normalize [ file dirname /home/chiwei/work/checkout/xilinx-bali.git.new/top/doc/xx01_g_addr_decoder.qip ] ]
-source /home/chiwei/work/checkout/xilinx-bali.git.new/top/doc/xx01_g_addr_decoder.qip
 
 set ::quartus(qip_path) [ file normalize [ file dirname /home/chiwei/work/checkout/xilinx-bali.git.new/top/syn/work0/fc16_top.qip ] ]
 source fc16_top.qip
