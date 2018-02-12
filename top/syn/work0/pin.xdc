@@ -1,3 +1,4 @@
+source ../../../xilinx_ip/pcie4_uscale_plus_1_ex/imports/xilinx_pcie4_uscale_plus_x0y2.xdc
 #**************************************************************
 # Time Information
 #**************************************************************
@@ -103,33 +104,31 @@ set_false_path  -from  [get_clocks {iPCIE_REF_CLK}]  -to  [get_clocks {iCLK_FR}]
 
 
 set_clock_groups -asynchronous -group { clk_out1_s5_altpll_219in_212out_0002 }  -group { iBUS_CLK }
-#set_clock_groups -asynchronous -group { clk_out1_s5_altpll_219in_212out_0002 }  -group { rxoutclk_out[0]_4 }
-
-set_clock_groups -asynchronous -group { clk_out1_s5_altpll_219in_212out_0002 }  -group { rxoutclk_out[1]_4 }
-set_clock_groups -asynchronous -group { clk_out1_s5_altpll_219in_212out_0002 }  -group { rxoutclk_out[2]_4 }
-set_clock_groups -asynchronous -group { clk_out1_s5_altpll_219in_212out_0002 }  -group { rxoutclk_out[3]_4 }
-set_clock_groups -asynchronous -group { clk_out1_s5_altpll_219in_212out_0002 }  -group { rxoutclk_out[0]_5 }
-set_clock_groups -asynchronous -group { clk_out1_s5_altpll_219in_212out_0002 }  -group { rxoutclk_out[1]_5 }
-set_clock_groups -asynchronous -group { clk_out1_s5_altpll_219in_212out_0002 }  -group { rxoutclk_out[2]_5 }
-
-set_clock_groups -asynchronous -group { clk_out1_s5_altpll_219in_212out_0002 }  -group { rxoutclk_out[3]_5 }
 set_clock_groups -asynchronous -group { clk_out1_s5_altpll_219in_212out_0002 }  -group { rxoutclk_out[0] }
-set_clock_groups -asynchronous -group { clk_out1_s5_altpll_219in_212out_0002 }  -group { rxoutclk_out[1] }
-set_clock_groups -asynchronous -group { clk_out1_s5_altpll_219in_212out_0002 }  -group { rxoutclk_out[2] }
-set_clock_groups -asynchronous -group { clk_out1_s5_altpll_219in_212out_0002 }  -group { rxoutclk_out[3] }
 set_clock_groups -asynchronous -group { clk_out1_s5_altpll_219in_212out_0002 }  -group { rxoutclk_out[0]_1 }
-set_clock_groups -asynchronous -group { clk_out1_s5_altpll_219in_212out_0002 }  -group { rxoutclk_out[1]_1 }
-set_clock_groups -asynchronous -group { clk_out1_s5_altpll_219in_212out_0002 }  -group { rxoutclk_out[2]_1 }
-set_clock_groups -asynchronous -group { clk_out1_s5_altpll_219in_212out_0002 }  -group { rxoutclk_out[3]_1 }
 set_clock_groups -asynchronous -group { clk_out1_s5_altpll_219in_212out_0002 }  -group { rxoutclk_out[0]_2 }
-
-set_clock_groups -asynchronous -group { clk_out1_s5_altpll_219in_212out_0002 }  -group { rxoutclk_out[1]_2 }
-set_clock_groups -asynchronous -group { clk_out1_s5_altpll_219in_212out_0002 }  -group { rxoutclk_out[2]_2 }
-set_clock_groups -asynchronous -group { clk_out1_s5_altpll_219in_212out_0002 }  -group { rxoutclk_out[3]_2 }
 set_clock_groups -asynchronous -group { clk_out1_s5_altpll_219in_212out_0002 }  -group { rxoutclk_out[0]_3 }
+set_clock_groups -asynchronous -group { clk_out1_s5_altpll_219in_212out_0002 }  -group { rxoutclk_out[0]_4 }
+set_clock_groups -asynchronous -group { clk_out1_s5_altpll_219in_212out_0002 }  -group { rxoutclk_out[0]_5 }
+set_clock_groups -asynchronous -group { clk_out1_s5_altpll_219in_212out_0002 }  -group { rxoutclk_out[1] }
+set_clock_groups -asynchronous -group { clk_out1_s5_altpll_219in_212out_0002 }  -group { rxoutclk_out[1]_1 }
+set_clock_groups -asynchronous -group { clk_out1_s5_altpll_219in_212out_0002 }  -group { rxoutclk_out[1]_2 }
 set_clock_groups -asynchronous -group { clk_out1_s5_altpll_219in_212out_0002 }  -group { rxoutclk_out[1]_3 }
+set_clock_groups -asynchronous -group { clk_out1_s5_altpll_219in_212out_0002 }  -group { rxoutclk_out[1]_4 }
+set_clock_groups -asynchronous -group { clk_out1_s5_altpll_219in_212out_0002 }  -group { rxoutclk_out[1]_5 }
+set_clock_groups -asynchronous -group { clk_out1_s5_altpll_219in_212out_0002 }  -group { rxoutclk_out[2] }
+set_clock_groups -asynchronous -group { clk_out1_s5_altpll_219in_212out_0002 }  -group { rxoutclk_out[2]_1 }
+set_clock_groups -asynchronous -group { clk_out1_s5_altpll_219in_212out_0002 }  -group { rxoutclk_out[2]_2 }
 set_clock_groups -asynchronous -group { clk_out1_s5_altpll_219in_212out_0002 }  -group { rxoutclk_out[2]_3 }
+set_clock_groups -asynchronous -group { clk_out1_s5_altpll_219in_212out_0002 }  -group { rxoutclk_out[2]_4 }
+set_clock_groups -asynchronous -group { clk_out1_s5_altpll_219in_212out_0002 }  -group { rxoutclk_out[2]_5 }
+set_clock_groups -asynchronous -group { clk_out1_s5_altpll_219in_212out_0002 }  -group { rxoutclk_out[3] }
+set_clock_groups -asynchronous -group { clk_out1_s5_altpll_219in_212out_0002 }  -group { rxoutclk_out[3]_1 }
+set_clock_groups -asynchronous -group { clk_out1_s5_altpll_219in_212out_0002 }  -group { rxoutclk_out[3]_2 }
 set_clock_groups -asynchronous -group { clk_out1_s5_altpll_219in_212out_0002 }  -group { rxoutclk_out[3]_3 }
+set_clock_groups -asynchronous -group { clk_out1_s5_altpll_219in_212out_0002 }  -group { rxoutclk_out[3]_4 }
+#set_clock_groups -asynchronous -group { clk_out1_s5_altpll_219in_212out_0002 }  -group { rxoutclk_out[3]_5 }
+
 set_clock_groups -asynchronous -group { rxoutclk_out[0]_4 }  -group { txoutclk_out[0] }
 set_clock_groups -asynchronous -group { rxoutclk_out[1]_4 }  -group { txoutclk_out[0] }
 set_clock_groups -asynchronous -group { rxoutclk_out[2]_4 }  -group { txoutclk_out[0] }

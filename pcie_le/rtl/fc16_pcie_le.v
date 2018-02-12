@@ -791,6 +791,254 @@ else if (PCIE_GEN3) begin
     .oPCIE2MM_ADDRESS       ( pcie2mm_address[]                 ),
    );
 */
+pcie4_uscale_plus_1 your_instance_name (
+  .pci_exp_txn(pci_exp_txn),                                                                      // output wire [7 : 0] pci_exp_txn
+  .pci_exp_txp(pci_exp_txp),                                                                      // output wire [7 : 0] pci_exp_txp
+  .pci_exp_rxn(pci_exp_rxn),                                                                      // input wire [7 : 0] pci_exp_rxn
+  .pci_exp_rxp(pci_exp_rxp),                                                                      // input wire [7 : 0] pci_exp_rxp
+  .user_clk(user_clk),                                                                            // output wire user_clk
+  .user_reset(user_reset),                                                                        // output wire user_reset
+  .user_lnk_up(user_lnk_up),                                                                      // output wire user_lnk_up
+  .s_axis_rq_tdata(s_axis_rq_tdata),                                                              // input wire [255 : 0] s_axis_rq_tdata
+  .s_axis_rq_tkeep(s_axis_rq_tkeep),                                                              // input wire [7 : 0] s_axis_rq_tkeep
+  .s_axis_rq_tlast(s_axis_rq_tlast),                                                              // input wire s_axis_rq_tlast
+  .s_axis_rq_tready(s_axis_rq_tready),                                                            // output wire [3 : 0] s_axis_rq_tready
+  .s_axis_rq_tuser(s_axis_rq_tuser),                                                              // input wire [61 : 0] s_axis_rq_tuser
+  .s_axis_rq_tvalid(s_axis_rq_tvalid),                                                            // input wire s_axis_rq_tvalid
+  .m_axis_rc_tdata(m_axis_rc_tdata),                                                              // output wire [255 : 0] m_axis_rc_tdata
+  .m_axis_rc_tkeep(m_axis_rc_tkeep),                                                              // output wire [7 : 0] m_axis_rc_tkeep
+  .m_axis_rc_tlast(m_axis_rc_tlast),                                                              // output wire m_axis_rc_tlast
+  .m_axis_rc_tready(m_axis_rc_tready),                                                            // input wire m_axis_rc_tready
+  .m_axis_rc_tuser(m_axis_rc_tuser),                                                              // output wire [74 : 0] m_axis_rc_tuser
+  .m_axis_rc_tvalid(m_axis_rc_tvalid),                                                            // output wire m_axis_rc_tvalid
+  .m_axis_cq_tdata(m_axis_cq_tdata),                                                              // output wire [255 : 0] m_axis_cq_tdata
+  .m_axis_cq_tkeep(m_axis_cq_tkeep),                                                              // output wire [7 : 0] m_axis_cq_tkeep
+  .m_axis_cq_tlast(m_axis_cq_tlast),                                                              // output wire m_axis_cq_tlast
+  .m_axis_cq_tready(m_axis_cq_tready),                                                            // input wire m_axis_cq_tready
+  .m_axis_cq_tuser(m_axis_cq_tuser),                                                              // output wire [87 : 0] m_axis_cq_tuser
+  .m_axis_cq_tvalid(m_axis_cq_tvalid),                                                            // output wire m_axis_cq_tvalid
+  .s_axis_cc_tdata(s_axis_cc_tdata),                                                              // input wire [255 : 0] s_axis_cc_tdata
+  .s_axis_cc_tkeep(s_axis_cc_tkeep),                                                              // input wire [7 : 0] s_axis_cc_tkeep
+  .s_axis_cc_tlast(s_axis_cc_tlast),                                                              // input wire s_axis_cc_tlast
+  .s_axis_cc_tready(s_axis_cc_tready),                                                            // output wire [3 : 0] s_axis_cc_tready
+  .s_axis_cc_tuser(s_axis_cc_tuser),                                                              // input wire [32 : 0] s_axis_cc_tuser
+  .s_axis_cc_tvalid(s_axis_cc_tvalid),                                                            // input wire s_axis_cc_tvalid
+  .pcie_rq_seq_num0(pcie_rq_seq_num0),                                                            // output wire [5 : 0] pcie_rq_seq_num0
+  .pcie_rq_seq_num_vld0(pcie_rq_seq_num_vld0),                                                    // output wire pcie_rq_seq_num_vld0
+  .pcie_rq_seq_num1(pcie_rq_seq_num1),                                                            // output wire [5 : 0] pcie_rq_seq_num1
+  .pcie_rq_seq_num_vld1(pcie_rq_seq_num_vld1),                                                    // output wire pcie_rq_seq_num_vld1
+  .pcie_rq_tag0(pcie_rq_tag0),                                                                    // output wire [7 : 0] pcie_rq_tag0
+  .pcie_rq_tag1(pcie_rq_tag1),                                                                    // output wire [7 : 0] pcie_rq_tag1
+  .pcie_rq_tag_av(pcie_rq_tag_av),                                                                // output wire [3 : 0] pcie_rq_tag_av
+  .pcie_rq_tag_vld0(pcie_rq_tag_vld0),                                                            // output wire pcie_rq_tag_vld0
+  .pcie_rq_tag_vld1(pcie_rq_tag_vld1),                                                            // output wire pcie_rq_tag_vld1
+  .pcie_tfc_nph_av(pcie_tfc_nph_av),                                                              // output wire [3 : 0] pcie_tfc_nph_av
+  .pcie_tfc_npd_av(pcie_tfc_npd_av),                                                              // output wire [3 : 0] pcie_tfc_npd_av
+  .pcie_cq_np_req(pcie_cq_np_req),                                                                // input wire [1 : 0] pcie_cq_np_req
+  .pcie_cq_np_req_count(pcie_cq_np_req_count),                                                    // output wire [5 : 0] pcie_cq_np_req_count
+  .cfg_phy_link_down(cfg_phy_link_down),                                                          // output wire cfg_phy_link_down
+  .cfg_phy_link_status(cfg_phy_link_status),                                                      // output wire [1 : 0] cfg_phy_link_status
+  .cfg_negotiated_width(cfg_negotiated_width),                                                    // output wire [2 : 0] cfg_negotiated_width
+  .cfg_current_speed(cfg_current_speed),                                                          // output wire [1 : 0] cfg_current_speed
+  .cfg_max_payload(cfg_max_payload),                                                              // output wire [1 : 0] cfg_max_payload
+  .cfg_max_read_req(cfg_max_read_req),                                                            // output wire [2 : 0] cfg_max_read_req
+  .cfg_function_status(cfg_function_status),                                                      // output wire [15 : 0] cfg_function_status
+  .cfg_function_power_state(cfg_function_power_state),                                            // output wire [11 : 0] cfg_function_power_state
+  .cfg_vf_status(cfg_vf_status),                                                                  // output wire [503 : 0] cfg_vf_status
+  .cfg_vf_power_state(cfg_vf_power_state),                                                        // output wire [755 : 0] cfg_vf_power_state
+  .cfg_link_power_state(cfg_link_power_state),                                                    // output wire [1 : 0] cfg_link_power_state
+  .cfg_mgmt_addr(cfg_mgmt_addr),                                                                  // input wire [9 : 0] cfg_mgmt_addr
+  .cfg_mgmt_function_number(cfg_mgmt_function_number),                                            // input wire [7 : 0] cfg_mgmt_function_number
+  .cfg_mgmt_write(cfg_mgmt_write),                                                                // input wire cfg_mgmt_write
+  .cfg_mgmt_write_data(cfg_mgmt_write_data),                                                      // input wire [31 : 0] cfg_mgmt_write_data
+  .cfg_mgmt_byte_enable(cfg_mgmt_byte_enable),                                                    // input wire [3 : 0] cfg_mgmt_byte_enable
+  .cfg_mgmt_read(cfg_mgmt_read),                                                                  // input wire cfg_mgmt_read
+  .cfg_mgmt_read_data(cfg_mgmt_read_data),                                                        // output wire [31 : 0] cfg_mgmt_read_data
+  .cfg_mgmt_read_write_done(cfg_mgmt_read_write_done),                                            // output wire cfg_mgmt_read_write_done
+  .cfg_mgmt_debug_access(cfg_mgmt_debug_access),                                                  // input wire cfg_mgmt_debug_access
+  .cfg_err_cor_out(cfg_err_cor_out),                                                              // output wire cfg_err_cor_out
+  .cfg_err_nonfatal_out(cfg_err_nonfatal_out),                                                    // output wire cfg_err_nonfatal_out
+  .cfg_err_fatal_out(cfg_err_fatal_out),                                                          // output wire cfg_err_fatal_out
+  .cfg_local_error_valid(cfg_local_error_valid),                                                  // output wire cfg_local_error_valid
+  .cfg_local_error_out(cfg_local_error_out),                                                      // output wire [4 : 0] cfg_local_error_out
+  .cfg_ltssm_state(cfg_ltssm_state),                                                              // output wire [5 : 0] cfg_ltssm_state
+  .cfg_rx_pm_state(cfg_rx_pm_state),                                                              // output wire [1 : 0] cfg_rx_pm_state
+  .cfg_tx_pm_state(cfg_tx_pm_state),                                                              // output wire [1 : 0] cfg_tx_pm_state
+  .cfg_rcb_status(cfg_rcb_status),                                                                // output wire [3 : 0] cfg_rcb_status
+  .cfg_obff_enable(cfg_obff_enable),                                                              // output wire [1 : 0] cfg_obff_enable
+  .cfg_pl_status_change(cfg_pl_status_change),                                                    // output wire cfg_pl_status_change
+  .cfg_tph_requester_enable(cfg_tph_requester_enable),                                            // output wire [3 : 0] cfg_tph_requester_enable
+  .cfg_tph_st_mode(cfg_tph_st_mode),                                                              // output wire [11 : 0] cfg_tph_st_mode
+  .cfg_vf_tph_requester_enable(cfg_vf_tph_requester_enable),                                      // output wire [251 : 0] cfg_vf_tph_requester_enable
+  .cfg_vf_tph_st_mode(cfg_vf_tph_st_mode),                                                        // output wire [755 : 0] cfg_vf_tph_st_mode
+  .cfg_msg_received(cfg_msg_received),                                                            // output wire cfg_msg_received
+  .cfg_msg_received_data(cfg_msg_received_data),                                                  // output wire [7 : 0] cfg_msg_received_data
+  .cfg_msg_received_type(cfg_msg_received_type),                                                  // output wire [4 : 0] cfg_msg_received_type
+  .cfg_msg_transmit(cfg_msg_transmit),                                                            // input wire cfg_msg_transmit
+  .cfg_msg_transmit_type(cfg_msg_transmit_type),                                                  // input wire [2 : 0] cfg_msg_transmit_type
+  .cfg_msg_transmit_data(cfg_msg_transmit_data),                                                  // input wire [31 : 0] cfg_msg_transmit_data
+  .cfg_msg_transmit_done(cfg_msg_transmit_done),                                                  // output wire cfg_msg_transmit_done
+  .cfg_fc_ph(cfg_fc_ph),                                                                          // output wire [7 : 0] cfg_fc_ph
+  .cfg_fc_pd(cfg_fc_pd),                                                                          // output wire [11 : 0] cfg_fc_pd
+  .cfg_fc_nph(cfg_fc_nph),                                                                        // output wire [7 : 0] cfg_fc_nph
+  .cfg_fc_npd(cfg_fc_npd),                                                                        // output wire [11 : 0] cfg_fc_npd
+  .cfg_fc_cplh(cfg_fc_cplh),                                                                      // output wire [7 : 0] cfg_fc_cplh
+  .cfg_fc_cpld(cfg_fc_cpld),                                                                      // output wire [11 : 0] cfg_fc_cpld
+  .cfg_fc_sel(cfg_fc_sel),                                                                        // input wire [2 : 0] cfg_fc_sel
+  .cfg_dsn(cfg_dsn),                                                                              // input wire [63 : 0] cfg_dsn
+  .cfg_bus_number(cfg_bus_number),                                                                // output wire [7 : 0] cfg_bus_number
+  .cfg_power_state_change_ack(cfg_power_state_change_ack),                                        // input wire cfg_power_state_change_ack
+  .cfg_power_state_change_interrupt(cfg_power_state_change_interrupt),                            // output wire cfg_power_state_change_interrupt
+  .cfg_err_cor_in(cfg_err_cor_in),                                                                // input wire cfg_err_cor_in
+  .cfg_err_uncor_in(cfg_err_uncor_in),                                                            // input wire cfg_err_uncor_in
+  .cfg_flr_in_process(cfg_flr_in_process),                                                        // output wire [3 : 0] cfg_flr_in_process
+  .cfg_flr_done(cfg_flr_done),                                                                    // input wire [3 : 0] cfg_flr_done
+  .cfg_vf_flr_in_process(cfg_vf_flr_in_process),                                                  // output wire [251 : 0] cfg_vf_flr_in_process
+  .cfg_vf_flr_func_num(cfg_vf_flr_func_num),                                                      // input wire [7 : 0] cfg_vf_flr_func_num
+  .cfg_vf_flr_done(cfg_vf_flr_done),                                                              // input wire [0 : 0] cfg_vf_flr_done
+  .cfg_link_training_enable(cfg_link_training_enable),                                            // input wire cfg_link_training_enable
+  .cfg_interrupt_int(cfg_interrupt_int),                                                          // input wire [3 : 0] cfg_interrupt_int
+  .cfg_interrupt_pending(cfg_interrupt_pending),                                                  // input wire [3 : 0] cfg_interrupt_pending
+  .cfg_interrupt_sent(cfg_interrupt_sent),                                                        // output wire cfg_interrupt_sent
+  .cfg_interrupt_msi_enable(cfg_interrupt_msi_enable),                                            // output wire [3 : 0] cfg_interrupt_msi_enable
+  .cfg_interrupt_msi_mmenable(cfg_interrupt_msi_mmenable),                                        // output wire [11 : 0] cfg_interrupt_msi_mmenable
+  .cfg_interrupt_msi_mask_update(cfg_interrupt_msi_mask_update),                                  // output wire cfg_interrupt_msi_mask_update
+  .cfg_interrupt_msi_data(cfg_interrupt_msi_data),                                                // output wire [31 : 0] cfg_interrupt_msi_data
+  .cfg_interrupt_msi_select(cfg_interrupt_msi_select),                                            // input wire [1 : 0] cfg_interrupt_msi_select
+  .cfg_interrupt_msi_int(cfg_interrupt_msi_int),                                                  // input wire [31 : 0] cfg_interrupt_msi_int
+  .cfg_interrupt_msi_pending_status(cfg_interrupt_msi_pending_status),                            // input wire [31 : 0] cfg_interrupt_msi_pending_status
+  .cfg_interrupt_msi_pending_status_data_enable(cfg_interrupt_msi_pending_status_data_enable),    // input wire cfg_interrupt_msi_pending_status_data_enable
+  .cfg_interrupt_msi_pending_status_function_num(cfg_interrupt_msi_pending_status_function_num),  // input wire [1 : 0] cfg_interrupt_msi_pending_status_function_num
+  .cfg_interrupt_msi_sent(cfg_interrupt_msi_sent),                                                // output wire cfg_interrupt_msi_sent
+  .cfg_interrupt_msi_fail(cfg_interrupt_msi_fail),                                                // output wire cfg_interrupt_msi_fail
+  .cfg_interrupt_msi_attr(cfg_interrupt_msi_attr),                                                // input wire [2 : 0] cfg_interrupt_msi_attr
+  .cfg_interrupt_msi_tph_present(cfg_interrupt_msi_tph_present),                                  // input wire cfg_interrupt_msi_tph_present
+  .cfg_interrupt_msi_tph_type(cfg_interrupt_msi_tph_type),                                        // input wire [1 : 0] cfg_interrupt_msi_tph_type
+  .cfg_interrupt_msi_tph_st_tag(cfg_interrupt_msi_tph_st_tag),                                    // input wire [7 : 0] cfg_interrupt_msi_tph_st_tag
+  .cfg_interrupt_msi_function_number(cfg_interrupt_msi_function_number),                          // input wire [7 : 0] cfg_interrupt_msi_function_number
+  .cfg_pm_aspm_l1_entry_reject(cfg_pm_aspm_l1_entry_reject),                                      // input wire cfg_pm_aspm_l1_entry_reject
+  .cfg_pm_aspm_tx_l0s_entry_disable(cfg_pm_aspm_tx_l0s_entry_disable),                            // input wire cfg_pm_aspm_tx_l0s_entry_disable
+  .cfg_hot_reset_out(cfg_hot_reset_out),                                                          // output wire cfg_hot_reset_out
+  .cfg_config_space_enable(cfg_config_space_enable),                                              // input wire cfg_config_space_enable
+  .cfg_req_pm_transition_l23_ready(cfg_req_pm_transition_l23_ready),                              // input wire cfg_req_pm_transition_l23_ready
+  .cfg_hot_reset_in(cfg_hot_reset_in),                                                            // input wire cfg_hot_reset_in
+  .cfg_ds_port_number(cfg_ds_port_number),                                                        // input wire [7 : 0] cfg_ds_port_number
+  .cfg_ds_bus_number(cfg_ds_bus_number),                                                          // input wire [7 : 0] cfg_ds_bus_number
+  .cfg_ds_device_number(cfg_ds_device_number),                                                    // input wire [4 : 0] cfg_ds_device_number
+  .sys_clk(sys_clk),                                                                              // input wire sys_clk
+  .sys_clk_gt(sys_clk_gt),                                                                        // input wire sys_clk_gt
+  .sys_reset(sys_reset),                                                                          // input wire sys_reset
+  .common_commands_in(common_commands_in),                                                        // input wire [25 : 0] common_commands_in
+  .pipe_rx_0_sigs(pipe_rx_0_sigs),                                                                // input wire [83 : 0] pipe_rx_0_sigs
+  .pipe_rx_1_sigs(pipe_rx_1_sigs),                                                                // input wire [83 : 0] pipe_rx_1_sigs
+  .pipe_rx_2_sigs(pipe_rx_2_sigs),                                                                // input wire [83 : 0] pipe_rx_2_sigs
+  .pipe_rx_3_sigs(pipe_rx_3_sigs),                                                                // input wire [83 : 0] pipe_rx_3_sigs
+  .pipe_rx_4_sigs(pipe_rx_4_sigs),                                                                // input wire [83 : 0] pipe_rx_4_sigs
+  .pipe_rx_5_sigs(pipe_rx_5_sigs),                                                                // input wire [83 : 0] pipe_rx_5_sigs
+  .pipe_rx_6_sigs(pipe_rx_6_sigs),                                                                // input wire [83 : 0] pipe_rx_6_sigs
+  .pipe_rx_7_sigs(pipe_rx_7_sigs),                                                                // input wire [83 : 0] pipe_rx_7_sigs
+  .pipe_rx_8_sigs(pipe_rx_8_sigs),                                                                // input wire [83 : 0] pipe_rx_8_sigs
+  .pipe_rx_9_sigs(pipe_rx_9_sigs),                                                                // input wire [83 : 0] pipe_rx_9_sigs
+  .pipe_rx_10_sigs(pipe_rx_10_sigs),                                                              // input wire [83 : 0] pipe_rx_10_sigs
+  .pipe_rx_11_sigs(pipe_rx_11_sigs),                                                              // input wire [83 : 0] pipe_rx_11_sigs
+  .pipe_rx_12_sigs(pipe_rx_12_sigs),                                                              // input wire [83 : 0] pipe_rx_12_sigs
+  .pipe_rx_13_sigs(pipe_rx_13_sigs),                                                              // input wire [83 : 0] pipe_rx_13_sigs
+  .pipe_rx_14_sigs(pipe_rx_14_sigs),                                                              // input wire [83 : 0] pipe_rx_14_sigs
+  .pipe_rx_15_sigs(pipe_rx_15_sigs),                                                              // input wire [83 : 0] pipe_rx_15_sigs
+  .common_commands_out(common_commands_out),                                                      // output wire [25 : 0] common_commands_out
+  .pipe_tx_0_sigs(pipe_tx_0_sigs),                                                                // output wire [83 : 0] pipe_tx_0_sigs
+  .pipe_tx_1_sigs(pipe_tx_1_sigs),                                                                // output wire [83 : 0] pipe_tx_1_sigs
+  .pipe_tx_2_sigs(pipe_tx_2_sigs),                                                                // output wire [83 : 0] pipe_tx_2_sigs
+  .pipe_tx_3_sigs(pipe_tx_3_sigs),                                                                // output wire [83 : 0] pipe_tx_3_sigs
+  .pipe_tx_4_sigs(pipe_tx_4_sigs),                                                                // output wire [83 : 0] pipe_tx_4_sigs
+  .pipe_tx_5_sigs(pipe_tx_5_sigs),                                                                // output wire [83 : 0] pipe_tx_5_sigs
+  .pipe_tx_6_sigs(pipe_tx_6_sigs),                                                                // output wire [83 : 0] pipe_tx_6_sigs
+  .pipe_tx_7_sigs(pipe_tx_7_sigs),                                                                // output wire [83 : 0] pipe_tx_7_sigs
+  .pipe_tx_8_sigs(pipe_tx_8_sigs),                                                                // output wire [83 : 0] pipe_tx_8_sigs
+  .pipe_tx_9_sigs(pipe_tx_9_sigs),                                                                // output wire [83 : 0] pipe_tx_9_sigs
+  .pipe_tx_10_sigs(pipe_tx_10_sigs),                                                              // output wire [83 : 0] pipe_tx_10_sigs
+  .pipe_tx_11_sigs(pipe_tx_11_sigs),                                                              // output wire [83 : 0] pipe_tx_11_sigs
+  .pipe_tx_12_sigs(pipe_tx_12_sigs),                                                              // output wire [83 : 0] pipe_tx_12_sigs
+  .pipe_tx_13_sigs(pipe_tx_13_sigs),                                                              // output wire [83 : 0] pipe_tx_13_sigs
+  .pipe_tx_14_sigs(pipe_tx_14_sigs),                                                              // output wire [83 : 0] pipe_tx_14_sigs
+  .pipe_tx_15_sigs(pipe_tx_15_sigs),                                                              // output wire [83 : 0] pipe_tx_15_sigs
+  .gt_pcieuserratedone(gt_pcieuserratedone),                                                      // input wire [7 : 0] gt_pcieuserratedone
+  .gt_loopback(gt_loopback),                                                                      // input wire [23 : 0] gt_loopback
+  .gt_txprbsforceerr(gt_txprbsforceerr),                                                          // input wire [7 : 0] gt_txprbsforceerr
+  .gt_txinhibit(gt_txinhibit),                                                                    // input wire [7 : 0] gt_txinhibit
+  .gt_txprbssel(gt_txprbssel),                                                                    // input wire [31 : 0] gt_txprbssel
+  .gt_rxprbssel(gt_rxprbssel),                                                                    // input wire [31 : 0] gt_rxprbssel
+  .gt_rxprbscntreset(gt_rxprbscntreset),                                                          // input wire [7 : 0] gt_rxprbscntreset
+  .gt_txelecidle(gt_txelecidle),                                                                  // output wire [7 : 0] gt_txelecidle
+  .gt_txresetdone(gt_txresetdone),                                                                // output wire [7 : 0] gt_txresetdone
+  .gt_rxresetdone(gt_rxresetdone),                                                                // output wire [7 : 0] gt_rxresetdone
+  .gt_rxpmaresetdone(gt_rxpmaresetdone),                                                          // output wire [7 : 0] gt_rxpmaresetdone
+  .gt_txphaligndone(gt_txphaligndone),                                                            // output wire [7 : 0] gt_txphaligndone
+  .gt_txphinitdone(gt_txphinitdone),                                                              // output wire [7 : 0] gt_txphinitdone
+  .gt_txdlysresetdone(gt_txdlysresetdone),                                                        // output wire [7 : 0] gt_txdlysresetdone
+  .gt_rxphaligndone(gt_rxphaligndone),                                                            // output wire [7 : 0] gt_rxphaligndone
+  .gt_rxdlysresetdone(gt_rxdlysresetdone),                                                        // output wire [7 : 0] gt_rxdlysresetdone
+  .gt_rxsyncdone(gt_rxsyncdone),                                                                  // output wire [7 : 0] gt_rxsyncdone
+  .gt_eyescandataerror(gt_eyescandataerror),                                                      // output wire [7 : 0] gt_eyescandataerror
+  .gt_rxprbserr(gt_rxprbserr),                                                                    // output wire [7 : 0] gt_rxprbserr
+  .gt_dmonfiforeset(gt_dmonfiforeset),                                                            // input wire [7 : 0] gt_dmonfiforeset
+  .gt_dmonitorclk(gt_dmonitorclk),                                                                // input wire [7 : 0] gt_dmonitorclk
+  .gt_dmonitorout(gt_dmonitorout),                                                                // output wire [127 : 0] gt_dmonitorout
+  .gt_rxcommadet(gt_rxcommadet),                                                                  // output wire [7 : 0] gt_rxcommadet
+  .gt_phystatus(gt_phystatus),                                                                    // output wire [7 : 0] gt_phystatus
+  .gt_rxvalid(gt_rxvalid),                                                                        // output wire [7 : 0] gt_rxvalid
+  .gt_rxcdrlock(gt_rxcdrlock),                                                                    // output wire [7 : 0] gt_rxcdrlock
+  .gt_pcierateidle(gt_pcierateidle),                                                              // output wire [7 : 0] gt_pcierateidle
+  .gt_pcieuserratestart(gt_pcieuserratestart),                                                    // output wire [7 : 0] gt_pcieuserratestart
+  .gt_gtpowergood(gt_gtpowergood),                                                                // output wire [7 : 0] gt_gtpowergood
+  .gt_cplllock(gt_cplllock),                                                                      // output wire [7 : 0] gt_cplllock
+  .gt_rxoutclk(gt_rxoutclk),                                                                      // output wire [7 : 0] gt_rxoutclk
+  .gt_rxrecclkout(gt_rxrecclkout),                                                                // output wire [7 : 0] gt_rxrecclkout
+  .gt_qpll1lock(gt_qpll1lock),                                                                    // output wire [1 : 0] gt_qpll1lock
+  .gt_qpll0lock(gt_qpll0lock),                                                                    // output wire [1 : 0] gt_qpll0lock
+  .gt_rxstatus(gt_rxstatus),                                                                      // output wire [23 : 0] gt_rxstatus
+  .gt_rxbufstatus(gt_rxbufstatus),                                                                // output wire [23 : 0] gt_rxbufstatus
+  .gt_bufgtdiv(gt_bufgtdiv),                                                                      // output wire [8 : 0] gt_bufgtdiv
+  .phy_txeq_ctrl(phy_txeq_ctrl),                                                                  // output wire [15 : 0] phy_txeq_ctrl
+  .phy_txeq_preset(phy_txeq_preset),                                                              // output wire [31 : 0] phy_txeq_preset
+  .phy_rst_fsm(phy_rst_fsm),                                                                      // output wire [3 : 0] phy_rst_fsm
+  .phy_txeq_fsm(phy_txeq_fsm),                                                                    // output wire [23 : 0] phy_txeq_fsm
+  .phy_rxeq_fsm(phy_rxeq_fsm),                                                                    // output wire [23 : 0] phy_rxeq_fsm
+  .phy_rst_idle(phy_rst_idle),                                                                    // output wire phy_rst_idle
+  .phy_rrst_n(phy_rrst_n),                                                                        // output wire phy_rrst_n
+  .phy_prst_n(phy_prst_n),                                                                        // output wire phy_prst_n
+  .gt_gen34_eios_det(gt_gen34_eios_det),                                                          // output wire [7 : 0] gt_gen34_eios_det
+  .gt_txoutclk(gt_txoutclk),                                                                      // output wire [7 : 0] gt_txoutclk
+  .gt_txoutclkfabric(gt_txoutclkfabric),                                                          // output wire [7 : 0] gt_txoutclkfabric
+  .gt_rxoutclkfabric(gt_rxoutclkfabric),                                                          // output wire [7 : 0] gt_rxoutclkfabric
+  .gt_txoutclkpcs(gt_txoutclkpcs),                                                                // output wire [7 : 0] gt_txoutclkpcs
+  .gt_rxoutclkpcs(gt_rxoutclkpcs),                                                                // output wire [7 : 0] gt_rxoutclkpcs
+  .gt_txpmareset(gt_txpmareset),                                                                  // input wire [7 : 0] gt_txpmareset
+  .gt_rxpmareset(gt_rxpmareset),                                                                  // input wire [7 : 0] gt_rxpmareset
+  .gt_txpcsreset(gt_txpcsreset),                                                                  // input wire [7 : 0] gt_txpcsreset
+  .gt_rxpcsreset(gt_rxpcsreset),                                                                  // input wire [7 : 0] gt_rxpcsreset
+  .gt_rxbufreset(gt_rxbufreset),                                                                  // input wire [7 : 0] gt_rxbufreset
+  .gt_rxcdrreset(gt_rxcdrreset),                                                                  // input wire [7 : 0] gt_rxcdrreset
+  .gt_rxdfelpmreset(gt_rxdfelpmreset),                                                            // input wire [7 : 0] gt_rxdfelpmreset
+  .gt_txprogdivresetdone(gt_txprogdivresetdone),                                                  // output wire [7 : 0] gt_txprogdivresetdone
+  .gt_txpmaresetdone(gt_txpmaresetdone),                                                          // output wire [7 : 0] gt_txpmaresetdone
+  .gt_txsyncdone(gt_txsyncdone),                                                                  // output wire [7 : 0] gt_txsyncdone
+  .gt_rxprbslocked(gt_rxprbslocked),                                                              // output wire [7 : 0] gt_rxprbslocked
+  .drp_rdy(drp_rdy),                                                                              // output wire drp_rdy
+  .drp_do(drp_do),                                                                                // output wire [15 : 0] drp_do
+  .drp_clk(drp_clk),                                                                              // input wire drp_clk
+  .drp_en(drp_en),                                                                                // input wire drp_en
+  .drp_we(drp_we),                                                                                // input wire drp_we
+  .drp_addr(drp_addr),                                                                            // input wire [9 : 0] drp_addr
+  .drp_di(drp_di),                                                                                // input wire [15 : 0] drp_di
+  .phy_rdy_out(phy_rdy_out)                                                                      // output wire phy_rdy_out
+);
+// INST_TAG_END ------ End INSTANTIATION Template ---------
+
+// You must compile the wrapper file pcie4_uscale_plus_1.v when simulating
+// the core, pcie4_uscale_plus_1. When compiling the wrapper file, be sure to
+// reference the Verilog simulation library.
+
 pcie_gen3x8_13_1 #(
         .PORTS         ( PORTS             ),
         .BALI          ( 1                 )

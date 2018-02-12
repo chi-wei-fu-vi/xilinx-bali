@@ -8,7 +8,7 @@
 PROJECT = fc16_top
 SOURCE_FILES =
 SEED = 2
-ASSIGNMENT_FILES = fc16_top.qpf fc16_top.qsf 
+ASSIGNMENT_FILES = fc16_top.tcl fc16_top.qip 
 
 ###################################################################
 # Main Targets

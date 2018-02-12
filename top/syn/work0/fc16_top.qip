@@ -17,6 +17,7 @@ set_global_assignment -name QIP_FILE [file join $::quartus(qip_path) ../../../co
 set_global_assignment -name QIP_FILE [file join $::quartus(qip_path) ../../../common/vi_lib/vi_sync_pulse.qip]
 set_global_assignment -name QIP_FILE [file join $::quartus(qip_path) ../../../xbar/rtl/xbar_wrap.qip]
 set_global_assignment -name QIP_FILE [file join $::quartus(qip_path) ../../../top/doc/xx01_g_addr_decoder.qip]
+set_global_assignment -name QIP_FILE [file join $::quartus(qip_path) ../../../xilinx_ip/pcie4_uscale_plus_1_ex/imports/pcie4_uscale_plus_1_ex.qip]
 
 set_global_assignment -library fc16_pcie_le -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) ../../../pcie_le/rtl/fc16_pcie_le.v]
 set_global_assignment -library fc16_pcie_le -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) ../../../common/vi_lib/vi_sync_csr.sv]

@@ -11,6 +11,7 @@
 import fc1_pkg::*;
 
 module fc16_top #(
+      parameter PL_LINK_CAP_MAX_LINK_WIDTH=8,
       parameter PCIE_GEN3                    =  0,
 		  parameter bonded_mode                  =  "non_bonded",
 		  parameter RX_POLARITY_INV              =  "invert_disable",     //valid setting for 10gbaser:invert_disable,invert_enable
@@ -29,6 +30,13 @@ module fc16_top #(
 		  parameter SIM_ONLY_PMA_BP              =  0,
 		  parameter DEBUG                        =  0
 		  ) (
+  input logic  [(PL_LINK_CAP_MAX_LINK_WIDTH-1):0] pci_exp_rxp,
+  input logic  [(PL_LINK_CAP_MAX_LINK_WIDTH-1):0] pci_exp_rxn,
+  input logic                  sys_clk_p,
+  input logic                  sys_clk_n,
+  input logic                  sys_rst_n,
+  output logic [(PL_LINK_CAP_MAX_LINK_WIDTH-1):0] pci_exp_txp,
+  output logic [(PL_LINK_CAP_MAX_LINK_WIDTH-1):0] pci_exp_txn,
 
 		     // ------------
 		     // global clock
@@ -780,7 +788,39 @@ module fc16_top #(
 					    . txbist_data_val                                    ( txbist_data_val                                    )     // output [1:0]
 					    );
    
-
+xilinx_pcie4_uscale_ep #(
+  . AXI4_CC_TUSER_WIDTH                                ( 33                                                 ),
+  . AXI4_CQ_TUSER_WIDTH                                ( 88                                                 ),
+  . AXI4_RC_TUSER_WIDTH                                ( 75                                                 ),
+  . AXI4_RQ_TUSER_WIDTH                                ( 62                                                 ),
+  . AXISTEN_IF_CC_ALIGNMENT_MODE                       ( "FALSE"                                            ),
+  . AXISTEN_IF_CC_PARITY_CHECK                         ( 0                                                  ),
+  . AXISTEN_IF_CQ_ALIGNMENT_MODE                       ( "FALSE"                                            ),
+  . AXISTEN_IF_CQ_PARITY_CHECK                         ( 0                                                  ),
+  . AXISTEN_IF_ENABLE_CLIENT_TAG                       ( 0                                                  ),
+  . AXISTEN_IF_ENABLE_MSG_ROUTE                        ( 18'h2FFFF                                          ),
+  . AXISTEN_IF_ENABLE_RX_MSG_INTFC                     ( "FALSE"                                            ),
+  . AXISTEN_IF_MC_RX_STRADDLE                          ( 0                                                  ),
+  . AXISTEN_IF_RC_ALIGNMENT_MODE                       ( "FALSE"                                            ),
+  . AXISTEN_IF_RC_PARITY_CHECK                         ( 0                                                  ),
+  . AXISTEN_IF_RQ_ALIGNMENT_MODE                       ( "FALSE"                                            ),
+  . AXISTEN_IF_RQ_PARITY_CHECK                         ( 0                                                  ),
+  . C_DATA_WIDTH                                       ( 256                                                ),
+  . EXT_PIPE_SIM                                       ( "FALSE"                                            ),
+  //. KEEP_WIDTH                                         ( C_DATA_WIDTH / 32                                  ),
+  . PL_LINK_CAP_MAX_LINK_SPEED                         ( 4                                                  ),
+  . PL_LINK_CAP_MAX_LINK_WIDTH                         ( PL_LINK_CAP_MAX_LINK_WIDTH                         ),
+  . RQ_AVAIL_TAG                                       ( 256                                                ),
+  . RQ_AVAIL_TAG_IDX                                   ( 8                                                  )
+) xilinx_pcie4_uscale_ep_inst (
+  . pci_exp_txp                                        ( pci_exp_txp                                        ), // output [(PL_LINK_CAP_MAX_LINK_WIDTH-1):0]
+  . pci_exp_txn                                        ( pci_exp_txn                                        ), // output [(PL_LINK_CAP_MAX_LINK_WIDTH-1):0]
+  . pci_exp_rxp                                        ( pci_exp_rxp                                        ), // input [(PL_LINK_CAP_MAX_LINK_WIDTH-1):0]
+  . pci_exp_rxn                                        ( pci_exp_rxn                                        ), // input [(PL_LINK_CAP_MAX_LINK_WIDTH-1):0]
+  . sys_clk_p                                          ( sys_clk_p                                          ), // input 
+  . sys_clk_n                                          ( sys_clk_n                                          ), // input 
+  . sys_rst_n                                          ( sys_rst_n                                          )  // input 
+);
    fc16_pcie_le #(
 	    .PCIE_GEN3                                             ( PCIE_GEN3                     ),
 		  .PORTS                                                 ( LINKS                         ),

@@ -6,7 +6,7 @@
 <Project Version="7" Minor="32" Path="/home/chiwei/work/checkout/xilinx-bali.git.new/top/syn/work0/fc16_top.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
-    <Option Name="Id" Val="b5dd43a29d9a48c689f2d54410bb432f"/>
+    <Option Name="Id" Val="8267233c66194b7789d7f1f93f5953e7"/>
     <Option Name="Part" Val="xcku15p-ffve1517-3-e"/>
     <Option Name="CompiledLibDir" Val="$PCACHEDIR/compile_simlib"/>
     <Option Name="CompiledLibDirXSim" Val=""/>
@@ -174,6 +174,13 @@
         </FileInfo>
       </File>
       <File Path="$PPRDIR/../../../xilinx_ip/dcfifo/dcfifo.srcs/sources_1/ip/s5_afifo_32x128b/s5_afifo_32x128b.xci">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../../../xilinx_ip/pcie4_uscale_plus/pcie_gen3x8.srcs/sources_1/ip/pcie4_uscale_plus_1/pcie4_uscale_plus_1.xci">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -535,6 +542,14 @@
       <File Path="$PPRDIR/../../../fc1_layer_kr_16_8/rtl/encoder/encoder.v">
         <FileInfo SFType="SVerilog">
           <Attr Name="Library" Val="fc1_kr_wrap"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../../../xilinx_ip/pcie4_uscale_plus_1_ex/imports/ep_mem.v">
+        <FileInfo SFType="SVerilog">
+          <Attr Name="Library" Val="pcie4_uscale_plus_1_ex"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -1316,6 +1331,14 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
+      <File Path="$PPRDIR/../../../xilinx_ip/pcie4_uscale_plus_1_ex/imports/pcie_app_uscale.v">
+        <FileInfo SFType="SVerilog">
+          <Attr Name="Library" Val="pcie4_uscale_plus_1_ex"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
       <File Path="$PPRDIR/../../../pcie_gen2x8/pcie_gen2x8_13_1/synthesis/pcie_gen2x8_13_1.v">
         <FileInfo SFType="SVerilog">
           <Attr Name="Library" Val="pcie_gen2x8_13_1"/>
@@ -1375,6 +1398,62 @@
       <File Path="$PPRDIR/../../../fc1_layer_kr_16_8/rtl/encoder/pcs_scrambler/pcs_scrambler.v">
         <FileInfo SFType="SVerilog">
           <Attr Name="Library" Val="fc1_kr_wrap"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../../../xilinx_ip/pcie4_uscale_plus_1_ex/imports/pio.v">
+        <FileInfo SFType="SVerilog">
+          <Attr Name="Library" Val="pcie4_uscale_plus_1_ex"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../../../xilinx_ip/pcie4_uscale_plus_1_ex/imports/pio_ep.v">
+        <FileInfo SFType="SVerilog">
+          <Attr Name="Library" Val="pcie4_uscale_plus_1_ex"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../../../xilinx_ip/pcie4_uscale_plus_1_ex/imports/pio_ep_mem_access.v">
+        <FileInfo SFType="SVerilog">
+          <Attr Name="Library" Val="pcie4_uscale_plus_1_ex"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../../../xilinx_ip/pcie4_uscale_plus_1_ex/imports/pio_intr_ctrl.v">
+        <FileInfo SFType="SVerilog">
+          <Attr Name="Library" Val="pcie4_uscale_plus_1_ex"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../../../xilinx_ip/pcie4_uscale_plus_1_ex/imports/pio_rx_engine.v">
+        <FileInfo SFType="SVerilog">
+          <Attr Name="Library" Val="pcie4_uscale_plus_1_ex"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../../../xilinx_ip/pcie4_uscale_plus_1_ex/imports/pio_to_ctrl.v">
+        <FileInfo SFType="SVerilog">
+          <Attr Name="Library" Val="pcie4_uscale_plus_1_ex"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../../../xilinx_ip/pcie4_uscale_plus_1_ex/imports/pio_tx_engine.v">
+        <FileInfo SFType="SVerilog">
+          <Attr Name="Library" Val="pcie4_uscale_plus_1_ex"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -1460,7 +1539,7 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../../../xilinx_ip/clk_wiz/clk_wiz.srcs/sources_1/ip/s5_altpll_219in_212out_0002/s5_altpll_219in_212out_0002_clk_wiz.v">
+      <File Path="$PPRDIR/../../../xilinx_ip/clk_wiz_1/clk_wiz.srcs/sources_1/ip/s5_altpll_219in_212out_0002/s5_altpll_219in_212out_0002_clk_wiz.v">
         <FileInfo SFType="SVerilog">
           <Attr Name="Library" Val="fc16clkrst_wrap"/>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -1804,6 +1883,14 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
+      <File Path="$PPRDIR/../../../xilinx_ip/pcie4_uscale_plus_1_ex/imports/xilinx_pcie4_uscale_ep.v">
+        <FileInfo SFType="SVerilog">
+          <Attr Name="Library" Val="pcie4_uscale_plus_1_ex"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
       <File Path="$PPRDIR/../../doc/xx01_g_addr_decoder.v">
         <FileInfo SFType="SVerilog">
           <Attr Name="Library" Val="xx01_g_addr_decoder"/>
@@ -1839,15 +1926,6 @@
       <File Path="$PPRDIR/../../../xilinx_ip/altsyncram/fpga_rev_rom.coe">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/../../../xilinx_ip/clk_wiz/clk_wiz.srcs/sources_1/ip/s5_altpll_219in_212out_0002_1/s5_altpll_219in_212out_0002_1_clk_wiz.v">
-        <FileInfo SFType="SVerilog">
-          <Attr Name="Library" Val="fc16clkrst_wrap"/>
-          <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
@@ -1916,8 +1994,11 @@
       </Config>
     </FileSet>
     <FileSet Name="sim_1" Type="SimulationSrcs" RelSrcDir="$PSRCDIR/sim_1">
+      <Filter Type="Srcs"/>
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
+        <Option Name="TopModule" Val="fc16_top"/>
+        <Option Name="TopLib" Val="fc16_pcie_le"/>
         <Option Name="TopAutoSet" Val="TRUE"/>
         <Option Name="TransportPathDelay" Val="0"/>
         <Option Name="TransportIntDelay" Val="0"/>
@@ -1949,16 +2030,14 @@
   <Runs Version="1" Minor="10">
     <Run Id="synth_1" Type="Ft3:Synth" SrcSet="sources_1" Part="xcku15p-ffve1517-3-e" ConstrsSet="constrs_1" Description="Vivado Synthesis Defaults" WriteIncrSynthDcp="false" State="current" Dir="$PRUNDIR/synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2017">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2017"/>
         <Step Id="synth_design">
-          <Option Id="ShregMinSize">5</Option>
           <Option Id="ResourceSharing">2</Option>
+          <Option Id="ShregMinSize">5</Option>
           <Option Id="KeepEquivalentRegisters">1</Option>
+          <Option Id="FsmExtraction">1</Option>
           <Option Id="NoCombineLuts">1</Option>
           <Option Id="RepFanoutThreshold">400</Option>
-          <Option Id="FsmExtraction">1</Option>
         </Step>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -1975,9 +2054,7 @@
     </Run>
     <Run Id="impl_1" Type="Ft2:EntireDesign" Part="xcku15p-ffve1517-3-e" ConstrsSet="constrs_1" Description="Default settings for Implementation." WriteIncrSynthDcp="false" State="current" Dir="$PRUNDIR/impl_1" SynthRun="synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2017">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2017"/>
         <Step Id="init_design"/>
         <Step Id="opt_design">
           <Option Id="Directive">5</Option>
@@ -2024,7 +2101,7 @@
         </ReportConfig>
         <ReportConfig Name="impl_1_place_report_utilization_0" Spec="report_utilization" RunStep="place_design" ReportFile="fc16_top_utilization_placed.rpt" Version="1" Minor="0">
           <ReportConfigOption Name="dummy_option" Type="string"/>
-          <ReportConfigOutputOption Name="pb" Type="string" Value=""/>
+          <ReportConfigOutputOption Name="pb" Type="string" Value="fc16_top_utilization_placed.pb"/>
         </ReportConfig>
         <ReportConfig Name="impl_1_place_report_control_sets_0" Spec="report_control_sets" RunStep="place_design" ReportFile="fc16_top_control_sets_placed.rpt" Version="1" Minor="0">
           <ReportConfigOption Name="dummy_option" Type="string"/>
@@ -2049,26 +2126,26 @@
         </ReportConfig>
         <ReportConfig Name="impl_1_route_report_drc_0" Spec="report_drc" RunStep="route_design" ReportFile="fc16_top_drc_routed.rpt" Version="1" Minor="0">
           <ReportConfigOption Name="dummy_option" Type="string"/>
-          <ReportConfigOutputOption Name="pb" Type="string" Value=""/>
-          <ReportConfigOutputOption Name="rpx" Type="string" Value=""/>
+          <ReportConfigOutputOption Name="pb" Type="string" Value="fc16_top_drc_routed.pb"/>
+          <ReportConfigOutputOption Name="rpx" Type="string" Value="fc16_top_drc_routed.rpx"/>
         </ReportConfig>
         <ReportConfig Name="impl_1_route_report_methodology_0" Spec="report_methodology" RunStep="route_design" ReportFile="fc16_top_methodology_drc_routed.rpt" Version="1" Minor="0">
           <ReportConfigOption Name="dummy_option" Type="string"/>
-          <ReportConfigOutputOption Name="pb" Type="string" Value=""/>
-          <ReportConfigOutputOption Name="rpx" Type="string" Value=""/>
+          <ReportConfigOutputOption Name="pb" Type="string" Value="fc16_top_methodology_drc_routed.pb"/>
+          <ReportConfigOutputOption Name="rpx" Type="string" Value="fc16_top_methodology_drc_routed.rpx"/>
         </ReportConfig>
         <ReportConfig Name="impl_1_route_report_power_0" Spec="report_power" RunStep="route_design" ReportFile="fc16_top_power_routed.rpt" Version="1" Minor="0">
           <ReportConfigOption Name="dummy_option" Type="string"/>
-          <ReportConfigOutputOption Name="pb" Type="string" Value=""/>
-          <ReportConfigOutputOption Name="rpx" Type="string" Value=""/>
+          <ReportConfigOutputOption Name="pb" Type="string" Value="fc16_top_power_summary_routed.pb"/>
+          <ReportConfigOutputOption Name="rpx" Type="string" Value="fc16_top_power_routed.rpx"/>
         </ReportConfig>
         <ReportConfig Name="impl_1_route_report_route_status_0" Spec="report_route_status" RunStep="route_design" ReportFile="fc16_top_route_status.rpt" Version="1" Minor="0">
           <ReportConfigOption Name="dummy_option" Type="string"/>
-          <ReportConfigOutputOption Name="pb" Type="string" Value=""/>
+          <ReportConfigOutputOption Name="pb" Type="string" Value="fc16_top_route_status.pb"/>
         </ReportConfig>
         <ReportConfig Name="impl_1_route_report_timing_summary_0" Spec="report_timing_summary" RunStep="route_design" ReportFile="fc16_top_timing_summary_routed.rpt" Version="1" Minor="0">
           <ReportConfigOption Name="dummy_option" Type="string"/>
-          <ReportConfigOutputOption Name="rpx" Type="string" Value=""/>
+          <ReportConfigOutputOption Name="rpx" Type="string" Value="fc16_top_timing_summary_routed.rpx"/>
         </ReportConfig>
         <ReportConfig Name="impl_1_route_report_incremental_reuse_0" Spec="report_incremental_reuse" RunStep="route_design" ReportFile="fc16_top_incremental_reuse_routed.rpt" Version="1" Minor="0">
           <ReportConfigOption Name="dummy_option" Type="string"/>
@@ -2081,7 +2158,7 @@
         </ReportConfig>
         <ReportConfig Name="impl_1_post_route_phys_opt_report_timing_summary_0" Spec="report_timing_summary" RunStep="post_route_phys_opt_design" ReportFile="fc16_top_timing_summary_postroute_physopted.rpt" Version="1" Minor="0">
           <ReportConfigOption Name="dummy_option" Type="string"/>
-          <ReportConfigOutputOption Name="rpx" Type="string" Value=""/>
+          <ReportConfigOutputOption Name="rpx" Type="string" Value="fc16_top_timing_summary_postroute_physopted.rpx"/>
         </ReportConfig>
         <ReportConfig Name="impl_1_bitstream_report_webtalk_0" Spec="" RunStep="write_bitstream">
           <ReportConfigOption Name="dummy_option" Type="string"/>
