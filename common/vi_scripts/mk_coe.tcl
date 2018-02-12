@@ -179,7 +179,6 @@ set OUTFILE [open fpga_rev_rom.coe w]
 set lines "memory_initialization_radix = 16;
 memory_initialization_vector =
 $FPGA_VERSION,
-1510200000004308,
 0000000000000000,
 0000000000000000,
 0000000000000000,
