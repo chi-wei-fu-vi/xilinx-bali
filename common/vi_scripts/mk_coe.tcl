@@ -213,3 +213,4 @@ $FPGA_VERSION,
 "
 puts $OUTFILE [format "%s" $lines]
 close $OUTFILE
+exit
