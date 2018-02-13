@@ -153,3 +153,4 @@ write_checkpoint -force fc16_top_impl.dcp
 #****************************#
 #puts "INFO: Opening Hardware: $proj_name"
 #open_hw
+quit

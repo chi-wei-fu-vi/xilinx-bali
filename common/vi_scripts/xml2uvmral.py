@@ -52,6 +52,7 @@ reg_map.add_reg(.rg(ucstat_collision_cycle_count),.offset(10),.rights("RW"));
 "MEM" : "RW",
 "SATC" : "RW",
 "FRC" : "RW",
+"LRC" : "RW",
 }
   type2access={
 "RO"  : "RO",
@@ -59,6 +60,7 @@ reg_map.add_reg(.rg(ucstat_collision_cycle_count),.offset(10),.rights("RW"));
 "MEM" : "RW",
 "SATC" : "W1C",
 "FRC" : "W1C",
+"LRC" : "WC",
 }
   
   reg_tpl='''
@@ -140,7 +142,11 @@ endclass: {fname}'''
     """
     """
     self.top_xml=top_xml
+    self.top_xml=os.path.expanduser(self.top_xml)
     self.ral_dir=ral_dir
+    self.ral_dir=os.path.expanduser(self.ral_dir)
+    if not os.path.exists(self.ral_dir):
+      os.makedirs(self.ral_dir)
     self.xml2dict={}
     self.top_dict=self.call_xml2dict(self.top_xml)
     self.rdwr64s=[]
@@ -436,6 +442,8 @@ has_reset= 1 if x[3] else 0
                   _default=int(re.sub("\d+'h","",_default),16)
                 elif "'d" in _default:
                   _default=int(re.sub("\d+'d","",_default))
+                elif "'b" in _default:
+                  _default=int(re.sub("\d+'b","",_default),2)
                 else:
                   _default=int(_default)
               else:
@@ -450,6 +458,10 @@ has_reset= 1 if x[3] else 0
                 _offset=int(re.sub("\d+'h","",_offset),16)
               elif "'d" in _offset:
                 _offset=int(re.sub("\d+'d","",_offset))
+              elif "'b" in _offset:
+                _offset=int(re.sub("\d+'b","",_offset),2)
+              else:
+                _offset=int(_offset)
               _regmaps.append((_name,_offset,_type,_default,_text))
               if isinstance(v2['field'],dict):
                 v3=v2['field']
