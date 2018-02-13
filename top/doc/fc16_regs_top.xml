@@ -15,7 +15,7 @@
       <aaa name="perf" base="14'h400" size="14'h400" src="../../pcie_gen2x8/bali_pcie_app/doc/pcie_perf_regs.xml"/>
     </aa>
     <aa name="dplbuf" base="17'h4000" size="17'h4000">
-      <aaa name="data" base="14'h0" array="12" size="14'h400" src="../../pcie_gen2x8/bali_pcie_app/doc/bali_dplbuf_regs.xml"/>
+      <aaa name="data" base="14'h0" array="12" size="14'h400" src="../../common/vi_design/sv_pcie/pcie_app/bali_pcie_app/doc/bali_dplbuf_regs.xml"/>
     </aa>
   </a>
   <a name="bist" base="21'h60000" size="21'h20000">

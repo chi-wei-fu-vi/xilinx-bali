@@ -93,6 +93,9 @@ module ucstats_wrap
    );
 
 `include "ucstats_wrap_autoreg.vh"
+wire [31:0]                         stats_ram0_rd_data;
+wire [31:0]                         stats_ram1_rd_data;
+wire [7:0]                          tsdcalo_d;
 
    // ----------------------
    // Manual declarations

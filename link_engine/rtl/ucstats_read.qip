@@ -1,2 +1,0 @@
-set_global_assignment -library ucstats_read -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) ../lib/common_cfg.v]
-set_global_assignment -library ucstats_read -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) ucstats_read.v]

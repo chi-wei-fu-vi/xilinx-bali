@@ -886,7 +886,7 @@ if __name__ == '__main__':
   else:
     create_workarea(project)
   
-    update_qsf()
+    #update_qsf()
 
     create_makefile("work/Makefile",project)
 

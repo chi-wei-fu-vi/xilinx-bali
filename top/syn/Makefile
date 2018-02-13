@@ -20,8 +20,8 @@ make_vgen: mk_coe
 build:
 	pushd work;vivado -mode tcl -source ${PROJECT}.tcl
 auto:
-	rm -rf ../../chipregs/rtl/auto
-	mkdir ../../chipregs/rtl/auto
+#	rm -rf ../../chipregs/rtl/auto
+#	mkdir ../../chipregs/rtl/auto
 	rm -rf ../../common/vi_design/ucstats/rtl/auto
 	mkdir ../../common/vi_design/ucstats/rtl/auto
 	../../common/vi_scripts/auto_reg_wire.pl ../../common/vi_design/ucstats/rtl/ucstats_wrap.sv ../../common/vi_design/ucstats/rtl/auto/ucstats_wrap_autoreg.vh

@@ -1,5 +1,0 @@
-set_global_assignment -library link_fifo -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) link_fifo.v]
-set_global_assignment -library link_fifo -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) ../lib/ram1r1w2c.v]
-set_global_assignment -library link_fifo -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) ../../common/vi_lib/vi_sync_level.sv]
-set_global_assignment -library link_fifo -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) ../../common/vi_lib/vi_sync_lib.sv]
-set_global_assignment -library link_fifo -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) ../../common/vi_lib/vi_sync_lib.sv]

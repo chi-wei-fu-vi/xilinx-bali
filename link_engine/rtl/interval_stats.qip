@@ -1,7 +1,0 @@
-set_global_assignment -library interval_stats -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) ../lib/common_cfg.v]
-set_global_assignment -library interval_stats -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) ../../fc1_layer_kr_16_8/rtl/fc1_intstat/fc1_pkg.sv]
-set_global_assignment -library interval_stats -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) ../../fmac/rtl/fmac_pkg.sv]
-set_global_assignment -library interval_stats -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) interval_stats.v]
-set_global_assignment -library interval_stats -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) ../lib/fifo1c_ctl.v]
-set_global_assignment -library interval_stats -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) ../lib/fifo1c64x144.v]
-set_global_assignment -library interval_stats -name VHDL_FILE [file join $::quartus(qip_path) ../../xilinx_ip/altsyncram2blk_mem/altsyncram2blk_mem.srcs/sources_1/ip/ram1r1w64x144/synth/ram1r1w64x144.vhd]

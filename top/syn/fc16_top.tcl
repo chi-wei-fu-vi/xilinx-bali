@@ -50,20 +50,17 @@ set obj [get_filesets sources_1]
 #set_property "ip_repo_paths" "[file normalize $repo_dir]" $obj
 
 # Add conventional sources
-#add_files -quiet $src_dir/hdl
-source ~/bin/set_global_assignment.tcl
+source ../../../common/vi_scripts/set_global_assignment.tcl
 
 set ::quartus(qip_path) [ file normalize [ file dirname fc16_top.qip ] ]
 source fc16_top.qip
-#add_files -quiet [glob -nocomplain ../../../xilinx_ip/*/*/sources_1/ip/*/*.xci]
 set_property "top" "fc16_top" $obj
 set incdir_list [list]
-#set_property include_dirs {../../..fc1_layer_kr_16_8/rtl/SERDES/auto /home/chiwei/work/checkout/xilinx-bali.git.new/fc1_layer_kr_16_8/rtl/SERDES/includes ../../../common/vi_design/ucstats/rtl/auto /home/chiwei/work/checkout/xilinx-bali.git.new/link_engine/lib /home/chiwei/work/checkout/xilinx-bali.git.new/pcie_gen2x8/bali_pcie_app/include} $obj
-lappend incdir_list ../../..fc1_layer_kr_16_8/rtl/SERDES/auto
-lappend incdir_list ../../..fc1_layer_kr_16_8/rtl/SERDES/includes
+lappend incdir_list ../../../fc1_layer_kr_16_8/rtl/SERDES/auto
+lappend incdir_list ../../../fc1_layer_kr_16_8/rtl/SERDES/includes
 lappend incdir_list ../../../common/vi_design/ucstats/rtl/auto
-lappend incdir_list ../../..link_engine/lib
-lappend incdir_list ../../..pcie_gen2x8/bali_pcie_app/include
+lappend incdir_list ../../../link_engine/lib
+lappend incdir_list ../../../pcie_gen2x8/bali_pcie_app/include
 set_property include_dirs $incdir_list $obj
 set_property generic { PCIE_GEN3=0 } [current_fileset]
 set_property generic { LINKS=12 } [current_fileset]
@@ -73,12 +70,9 @@ synth_design -rtl
 
 
 # Add IPs
-#add_files -quiet [glob -nocomplain ../src/ip/*/*.xci]
-#add_files -quiet [glob -nocomplain ../src/ip/*/*.xco]
 
 # Add constraints
-#add_files -fileset constrs_1 -quiet $src_dir/constraints
-add_files -fileset constrs_1 pin.xdc
+add_files -fileset constrs_1 fc16_top.xdc
 
 # Refresh IP Repositories
 #update_ip_catalog
@@ -153,8 +147,6 @@ write_checkpoint -force fc16_top_impl.dcp
 #reset_run impl_1 -prev_step 
 #launch_runs impl_1 -to_step write_bitstream -jobs 4
 #wait_on_run impl_1
-#open_run impl_1
-#write_checkpoint -force fc16_top_impl.dcp
 
 #****************************#
 #*UPLOAD BITFILE TO HARDWARE*#
