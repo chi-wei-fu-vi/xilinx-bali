@@ -241,9 +241,9 @@ logic [1663 : 0] gtwiz_userdata_tx_in;
 logic [1663 : 0] gtwiz_userdata_rx_out;
   wire [6 : 0] qpll0outclk_out;
   wire [6 : 0] qpll0outrefclk_out;
-  wire [0 : 0] gtwiz_reset_rx_cdr_stable_out;
-  wire [0 : 0] gtwiz_reset_tx_done_out;
-  wire [0 : 0] gtwiz_reset_rx_done_out;
+  wire gtwiz_reset_rx_cdr_stable_out;
+  wire gtwiz_reset_tx_done_out;
+  wire gtwiz_reset_rx_done_out;
   logic [0 : 0] gtwiz_userclk_tx_active_in = 1'b1;
   logic [0 : 0] gtwiz_userclk_rx_active_in = 1'b1;
 
@@ -253,7 +253,7 @@ logic [CHANNELS-1:0]                tx_analogreset;
 logic [CHANNELS-1:0]                rx_digitalreset;
 logic [CHANNELS-1:0]                rx_analogreset;
 logic [CHANNELS-1:0]                rx_is_lockedtoref;
-logic [CHANNELS-1:0]                rx_is_lockedtodata;
+//logic [CHANNELS-1:0]                rx_is_lockedtodata;
 logic [CHANNELS-1:0]                tx_cal_busy;
 logic [CHANNELS-1:0]                rx_cal_busy;
 logic [CHANNELS-1:0]                tx_ready;
@@ -291,9 +291,9 @@ logic  [25 : 0] rxusrclk2_in;
 logic  [25 : 0] txusrclk2_in;
 logic  [25 : 0] rxusrclk_in;
 logic  [25 : 0] txusrclk_in;
-logic gtwiz_reset_rx_cdr_stable_out;  // fixme
-logic gtwiz_reset_tx_done_out;  // fixme
-logic gtwiz_reset_rx_done_out;  // fixme
+//logic gtwiz_reset_rx_cdr_stable_out;  // fixme
+//logic gtwiz_reset_tx_done_out;  // fixme
+//logic gtwiz_reset_rx_done_out;  // fixme
 logic           userclk_tx_reset_in;
 logic           userclk_rx_reset_in;
 assign userclk_tx_reset_in = !gtwiz_reset_tx_done_out;
@@ -384,14 +384,14 @@ BUFG_GT txusrclk2_bufg_inst   (.I (txoutclk_out[gi] ), .CE (1'b1     ), .O   (tx
 //BUFG_GT txusrclk_bufg_inst    (.I (txoutclk_out[gi] ), .CE (1'b1     ), .DIV (3'b001  ), .O (txusrclk_in[gi]  ), .CLR(userclk_tx_reset_in));
 BUFG_GT rxusrclk2_bufg_inst   (.I (rxoutclk_out[gi] ), .CE (1'b1     ), .O   (rxusrclk2_in[gi]), .CLR(userclk_rx_reset_in));
 //BUFG_GT rxusrclk_bufg_inst    (.I (rxoutclk_out[gi] ), .CE (1'b1     ), .DIV (3'b001  ), .O (rxusrclk_in[gi]  ), .CLR(userclk_rx_reset_in));
-assign txusrclk_in=txusrclk2_in;
-assign rxusrclk_in=rxusrclk2_in;
 
   end
 endgenerate
 
 //assign tx_pma_clkout = txoutclk_out;
 //assign rx_pma_clkout = rxoutclk_out;
+assign txusrclk_in=txusrclk2_in;
+assign rxusrclk_in=rxusrclk2_in;
 assign tx_pma_clkout = txusrclk_in;
 assign rx_pma_clkout = rxusrclk_in;
 
