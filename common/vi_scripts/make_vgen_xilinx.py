@@ -462,7 +462,7 @@ def run_vgen ():
     if proc.returncode !=0:
       print "ERROR: vgen %s %s" % (out,error)
     # move file to auto dir if auto exist
-    mv_to_auto(name,dirname)
+    #mv_to_auto(name,dirname)
 
 def mv_to_auto(name,dirname):
   """
