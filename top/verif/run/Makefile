@@ -14,7 +14,8 @@ SolveArrayResizeMax:='set SolveArrayResizeMax 0'  # default value 2000
 #TOPLEVEL := ucstats_wrap
 #TOPLEVEL := fc1_kr_wrap
 #TOPLEVEL := link_engine
-TOPLEVEL := xilinx_pcie4_uscale_ep
+#TOPLEVEL := xilinx_pcie4_uscale_ep
+TOPLEVEL := fc16_top
 TEST ?= basic_test
 VSIM_ARGS ?=
 FPGALIB=-L iplib
@@ -100,8 +101,7 @@ IPLIB_SOURCE+= xilinx/fifo_generator_v13_2/hdl/fifo_generator_v13_2_rfs.v
 IPLIB_SOURCE+= ../verilog/src/glbl.v
 IPLIB_SOURCE+= xilinx/fifo_generator_v13_2/simulation/fifo_generator_vlog_beh.v
 GTWIZLIB_SOURCE= xilinx/gtwizard_ultrascale_v1_7/hdl/*v
-UNISIMS_SOURCE= ../verilog/src/glbl.v
-UNISIMS_SOURCE+= ../verilog/src/unisims/*v
+UNISIMS_SOURCE= ../verilog/src/unisims/*v
 SIPLIB_SOURCE= ../secureip/*/*vp
 
 
@@ -224,7 +224,7 @@ $(info $(call VERILOGS_template,$(QIP_FILE)))
 endif
 ##
 QIP_FILES= ../../../top/doc/bist_addr_decoder.qip
-QIP_FILES= ../../../chipregs/rtl/chipregs_wrap.qip
+QIP_FILES+= ../../../chipregs/rtl/chipregs_wrap.qip
 QIP_FILES+= ../../../fc16clkrst/rtl/fc16clkrst_wrap.qip
 QIP_FILES+= ../../../link_engine/rtl/dplbuf_pipe.qip
 QIP_FILES+= ../../../link_engine/rtl/link_engine.qip
@@ -247,6 +247,7 @@ QIP_FILES+= ../../../common/vi_lib/vi_sync_pulse.qip
 QIP_FILES+= ../../../xbar/rtl/xbar_wrap.qip
 QIP_FILES+= ../../../top/doc/xx01_g_addr_decoder.qip
 QIP_FILES+= ../../../xilinx_ip/pcie4_uscale_plus_1_ex/imports/pcie4_uscale_plus_1_ex.qip
+#QIP_FILES+= ../../../xilinx_ip/pcie4_uscale_plus_1_ex/imports/xilinx_pcie4_uscale_ep.qip
 QIP_FILES+= ../../../top/verif/run/fc16_top.qip
 $(info $(foreach a,$(QIP_FILES),$(call QIP_FILE_template,$(a))))
 WORKLIBS=$(foreach a,$(QIP_FILES),$(subst .qip,lib,$(notdir $(a))))

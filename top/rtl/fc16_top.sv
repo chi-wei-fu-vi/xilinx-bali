@@ -427,7 +427,8 @@ module fc16_top #(
    logic         oEND_OF_INTERVAL;
    logic end_of_interval;
    logic PCIE_REF_CLK;
-   IBUFG pcieclk_buf (.I(iPCIE_REF_CLK), .O(PCIE_REF_CLK)); 
+   //IBUFG pcieclk_buf (.I(iPCIE_REF_CLK), .O(PCIE_REF_CLK)); 
+   assign PCIE_REF_CLK = iPCIE_REF_CLK;
    
    always @(posedge CLK_SER_212 or negedge oRST_FC_SER212_N)
 	   if (!oRST_FC_SER212_N)
@@ -861,7 +862,7 @@ xilinx_pcie4_uscale_ep #(
 				  .iRST_RX_N                                             ( oRST_LINK_FC_SER_N[11:0]                          ),          // input
 				  .iRST_100M_N                                           ( oRST_FR_100M_N                                     ),          // input
 				  .iRST_PCIE_N                                           ( {12{oRST_CHIP_PCIE_N}}                             ),          // input [LINKS-1:0]
-				  .iREF_CLK                                              ( iPCIE_REF_CLK                                      ),          // input
+				  .iREF_CLK                                              (  PCIE_REF_CLK                                      ),          // input
 				  .iRECONFIG_XCVR_CLK                                    ( oCLK_100M_GLOBAL                                   ),          // input
 				  .iCLK_100M                                             ( oCLK_100M_GLOBAL                                   ),          // input
 				  .iCLK_PCIE_GLOBAL                                      ( oCLK_PCIE_GLOBAL                                   ),          // input
