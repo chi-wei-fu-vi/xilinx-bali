@@ -1,2 +1,0 @@
-set_global_assignment -library fc1_kr_ser_wrap -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) ../../../fc1_layer_kr_16_8/rtl/fc1_kr_ser_wrap.sv]
-set_global_assignment -library fc1_kr_ser_wrap -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) ../../../common/vi_lib/vi_sync_pp.sv]
