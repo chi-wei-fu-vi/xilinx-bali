@@ -1,4 +1,5 @@
-
+proc set_instance_assignmenset_instance_assignment {args} {
+}
 proc set_global_assignment {args} {
   
   set kv [lrange $args 0 end-1]
@@ -32,14 +33,14 @@ proc set_global_assignment {args} {
       }
 
       "VHDL_FILE" {
-         #puts "add_files $value"
-         #add_files $value
-         #set_property file_type VHDL [get_files $value]
-         #set_property library $library [get_files $value]
-         set fbasename [file rootname [file tail $value]]
-         set fdirname [ file dir [ file dirname $value] ]
-         puts "add_files -quiet $fdirname/$fbasename.xci"
-         add_files -quiet "$fdirname/$fbasename.xci"
+         puts "add_files $value"
+         add_files $value
+         set_property file_type VHDL [get_files $value]
+         set_property library $library [get_files $value]
+         #set fbasename [file rootname [file tail $value]]
+         #set fdirname [ file dir [ file dirname $value] ]
+         #puts "add_files -quiet $fdirname/$fbasename.xci"
+         #add_files -quiet "$fdirname/$fbasename.xci"
       }
 
       "SEARCH_PATH" {
@@ -104,4 +105,3 @@ proc set_global_assignment {args} {
 
   }
 }
-#set_global_assignment -library pcie_gen2x8_13_1 -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) ../../bali_pcie_app/bali_pcie_app.sv]

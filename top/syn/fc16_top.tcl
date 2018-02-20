@@ -50,7 +50,7 @@ set obj [get_filesets sources_1]
 #set_property "ip_repo_paths" "[file normalize $repo_dir]" $obj
 
 # Add conventional sources
-source ../../../common/vi_scripts/set_global_assignment.tcl
+source ../../../common/vi_scripts/build_utils.tcl
 
 set ::quartus(qip_path) [ file normalize [ file dirname fc16_top.qip ] ]
 source fc16_top.qip

@@ -58,8 +58,10 @@ UVM_ARGS +=+UVM_VERBOSITY=UVM_FULL
 all: 
 	$(SIM_CMD) -do $(ALL_CMD) 2>&1 | tee sim.log
 compile: 
+	mv -f $(RUNSIM_DO)_old $(RUNSIM_DO)
 	$(SIM_CMD) -do $(DO_CMD) 2>&1 | tee sim.log
 run: 
+	mv -f $(RUNSIM_DO)_old $(RUNSIM_DO)
 	$(SIM_CMD) -do $(RUN_CMD) 2>&1 | tee sim.log
 $(RUNSIM_DO) : ;
 
@@ -176,7 +178,8 @@ endef
 # create questa do file
 ###############################################################################
 
-$(shell rm -f $(RUNSIM_DO))
+#$(shell rm -f $(RUNSIM_DO))
+$(shell mv -f $(RUNSIM_DO) $(RUNSIM_DO)_old)
 $(shell echo -e  'proc compile_vsim {} {' > $(RUNSIM_DO))
 ## fpgalib
 SOURCES=$(call reduce,check_uniq,$(IPLIB_SOURCE))
