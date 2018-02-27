@@ -56,51 +56,8 @@ create_clock -name {iCLK_FC_425_1} -period 2.352 -waveform { 0.000 1.176 } [get_
 # Set False Path
 #**************************************************************
 
-#set_false_path -from [get_keepers {*rdptr_g*}] -to [get_keepers {*ws_dgrp|dffpipe_re9:dffpipe16|dffe17a*}]
-#set_false_path -from [get_keepers {*delayed_wrptr_g*}] -to [get_keepers {*rs_dgwp|dffpipe_qe9:dffpipe13|dffe14a*}]
-#set_false_path -to [get_registers {*altpcie_rs_serdes|tx_cal_busy_r[0]}]
-#set_false_path -to [get_registers {*altpcie_rs_serdes|rx_cal_busy_r[0]}]
-#set_false_path -to [get_registers {*altpcie_rs_serdes|pll_locked_r[0]}]
-#set_false_path -to [get_registers {*altpcie_rs_serdes|rx_pll_locked_r[*]}]
-#set_false_path -to [get_registers {*altpcie_rs_serdes|rx_pll_freq_locked_r[0]}]
-#set_false_path -from [get_keepers {*rdptr_g*}] -to [get_keepers {*ws_dgrp|dffpipe_4v8:dffpipe9|dffe10a*}]
-#set_false_path -from [get_keepers {*delayed_wrptr_g*}] -to [get_keepers {*rs_dgwp|dffpipe_3v8:dffpipe6|dffe7a*}]
-#set_false_path -from [get_keepers {*rdptr_g*}] -to [get_keepers {*ws_dgrp|dffpipe_2v8:dffpipe9|dffe10a*}]
-#set_false_path -from [get_keepers {*delayed_wrptr_g*}] -to [get_keepers {*rs_dgwp|dffpipe_1v8:dffpipe6|dffe7a*}]
-#set_false_path -from [get_keepers {*rdptr_g*}] -to [get_keepers {*ws_dgrp|dffpipe_0v8:dffpipe14|dffe15a*}]
-#set_false_path -from [get_keepers {*delayed_wrptr_g*}] -to [get_keepers {*rs_dgwp|dffpipe_vu8:dffpipe11|dffe12a*}]
-#set_false_path -from [get_keepers {*rdptr_g*}] -to [get_keepers {*ws_dgrp|dffpipe_fd9:dffpipe16|dffe17a*}]
-#set_false_path -from [get_keepers {*delayed_wrptr_g*}] -to [get_keepers {*rs_dgwp|dffpipe_ed9:dffpipe13|dffe14a*}]
-#set_false_path -to [get_pins -nocase -compatibility_mode {*|alt_rst_sync_uq1|altera_reset_synchronizer_int_chain*|clrn}]
-#set_false_path -to [get_pins -compatibility_mode {*vi_rst_sync_async*|clrn}]
-#set_false_path -to [get_pins -compatibility_mode {*fc16clkrst*|*rst_gen*|clrn}]
-#set_false_path -to [get_pins -compatibility_mode {*fc16clkrst*|*clk_cnt_gen*|clrn}]
-#set_false_path -to [get_pins -compatibility_mode {*fc16clkrst*|*clk_cnt_sampler*|clrn}]
-#set_false_path -from [get_keepers {fc16clkrst_wrap:fc16clkrst_wrap_inst|vi_rst_sync_async*oRST_SYNC_N}] 
-#set_false_path -from [get_keepers {chipregs_wrap:chipregs_wrap_inst|chipregs:chipregs_inst|*LOOPBACKSERDESCFG*}] 
-#set_false_path -from [get_keepers {fc16_pcie_le:pcie_le_inst|link_engine:le_generate[*].u_link_engine|link_engine_regs:u_engine_regs|WREG_LINKCTRL[4]}] -to [get_keepers {chipregs_wrap:chipregs_wrap_inst|chipregs:chipregs_inst|rd_data[*]}]
-#set_false_path -from [get_keepers {fc16_pcie_le:pcie_le_inst|pcie_gen2x8_13_1:u_bali_pcie_gen2x8_wrap|bali_pcie_app:bali_pcie_app_inst|hip_rst_blk:hip_rst_blk_inst|oAPP_RST_n}] -to [get_keepers {chipregs_wrap:chipregs_wrap_inst|chipregs:chipregs_inst|rd_data[*]}]
-#set_false_path -from [get_keepers {chipregs_wrap:chipregs_wrap_inst|chipregs:chipregs_inst|WREG_FPGA_CTL[*]}] 
-#set_false_path -from [get_keepers {*fmac_efifo:fmac_efifo*}] -to [get_keepers {*fmac_regs:fmac_regs|rd_data[*]}]
-#
-#
-## False path between async clock transfers
-#
-#set_false_path  -from  [get_clocks {fc16clkrst_wrap_inst|core_clock_pll_inst|s5_altpll_219in_212out_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk}]  -to  [get_clocks {iCLK_FR}]
-#set_false_path  -from  [get_clocks {fc16clkrst_wrap_inst|core_clock_pll_inst|s5_altpll_219in_212out_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk}]  -to  [get_clocks {pcie_le_inst|u_bali_pcie_gen2x8_wrap|pcie_gen2x8_inst|altpcie_hip_256_pipen1b|stratixv_hssi_gen3_pcie_hip|coreclkout}]
-#set_false_path  -from  [get_clocks {iBUS_CLK}]  -to  [get_clocks {fc16clkrst_wrap_inst|core_clock_pll_inst|s5_altpll_219in_212out_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk}]
 set_false_path  -from  [get_clocks {iBUS_CLK}]  -to  [get_clocks {iCLK_FR}]
-#set_false_path  -from  [get_clocks {iCLK_FR}]  -to  [get_clocks {fc16clkrst_wrap_inst|core_clock_pll_inst|s5_altpll_219in_212out_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk}]
-#set_false_path  -from  [get_clocks {iCLK_FR}]  -to  [get_clocks {iPCIE_REF_CLK}]
-#set_false_path  -from  [get_clocks {iCLK_FR}]  -to  [get_clocks {pcie_le_inst|u_bali_pcie_gen2x8_wrap|pcie_gen2x8_inst|altpcie_hip_256_pipen1b|stratixv_hssi_gen3_pcie_hip|coreclkout}]
-#set_false_path  -from  [get_clocks {iCLK_FR}]  -to  [get_clocks {sv_reconfig_pma_testbus_clk_0}]
-#set_false_path  -from  [get_clocks {iCLK_FR}]  -to  [get_clocks {sv_reconfig_pma_testbus_clk_1}]
-#set_false_path  -from  [get_clocks {iPCIE_REF_CLK}]  -to  [get_clocks {fc16clkrst_wrap_inst|core_clock_pll_inst|s5_altpll_219in_212out_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk}]
 set_false_path  -from  [get_clocks {iPCIE_REF_CLK}]  -to  [get_clocks {iCLK_FR}]
-#set_false_path  -from  [get_clocks {pcie_le_inst|u_bali_pcie_gen2x8_wrap|pcie_gen2x8_inst|altpcie_hip_256_pipen1b|stratixv_hssi_gen3_pcie_hip|coreclkout}]  -to  [get_clocks {fc16clkrst_wrap_inst|core_clock_pll_inst|s5_altpll_219in_212out_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk}]
-#set_false_path  -from  [get_clocks {pcie_le_inst|u_bali_pcie_gen2x8_wrap|pcie_gen2x8_inst|altpcie_hip_256_pipen1b|stratixv_hssi_gen3_pcie_hip|coreclkout}]  -to  [get_clocks {iCLK_FR}]
-#set_false_path  -from  [get_clocks {sv_reconfig_pma_testbus_clk_0}]  -to  [get_clocks {iCLK_FR}]
-#set_false_path  -from  [get_clocks {sv_reconfig_pma_testbus_clk_1}]  -to  [get_clocks {iCLK_FR}]
 
 
 set_clock_groups -asynchronous -group { clk_out1_s5_altpll_219in_212out_0002 }  -group { iBUS_CLK }
@@ -128,6 +85,7 @@ set_clock_groups -asynchronous -group { clk_out1_s5_altpll_219in_212out_0002 }  
 set_clock_groups -asynchronous -group { clk_out1_s5_altpll_219in_212out_0002 }  -group { rxoutclk_out[3]_3 }
 set_clock_groups -asynchronous -group { clk_out1_s5_altpll_219in_212out_0002 }  -group { rxoutclk_out[3]_4 }
 #set_clock_groups -asynchronous -group { clk_out1_s5_altpll_219in_212out_0002 }  -group { rxoutclk_out[3]_5 }
+set_false_path -to [get_clocks clk_out1_s5_altpll_219in_212out_0002] -from [get_clocks rxoutclk_out[3]_5]
 
 set_clock_groups -asynchronous -group { rxoutclk_out[0]_4 }  -group { txoutclk_out[0] }
 set_clock_groups -asynchronous -group { rxoutclk_out[1]_4 }  -group { txoutclk_out[0] }
@@ -888,3 +846,31 @@ make_diff_pair_ports oFC_TD_P[20] oFC_TD_N[20];
 make_diff_pair_ports iCLK_FC_425_P[0] iCLK_FC_425_N[0];
 make_diff_pair_ports iFC_RD_P[19] iFC_RD_N[19];
 make_diff_pair_ports oFC_TD_P[19] oFC_TD_N[19];
+
+
+
+
+
+
+
+
+
+
+
+set_multicycle_path 2 -to [get_pins {fc1_kr_ser_wrap_inst/fc1_kr_wrap_inst/gen_fc1_kr[*].fc1_kr/decoder_inst/err_detect_inst/*/D}] 
+set_multicycle_path 1 -to [get_pins {fc1_kr_ser_wrap_inst/fc1_kr_wrap_inst/gen_fc1_kr[*].fc1_kr/decoder_inst/err_detect_inst/*/D}] -hold
+
+set_false_path -from [get_pins -hier -filter { NAME =~  "*fmac_efifo_inst*" && NAME =~  "*CLKARDCLK*" }] -to [get_pins -hier -filter {NAME =~ "*fmac_efifo_inst*" && NAME =~  "*ENARDEN*" }]
+
+
+set_false_path -to [get_pins {pcie_le_inst/le_generate[*].u_link_engine/channel_engine_*/fmac/fmac_efifo_inst/linkdown_level_sync/in_level_sync_r_reg[*]/CLR}]
+set_false_path -to [get_pins {pcie_le_inst/le_generate[*].u_link_engine/channel_engine_*/sfp_los_r_reg/CLR}]
+set_false_path -to [get_pins {pcie_le_inst/le_generate[*].u_link_engine/channel_engine_*/sfp_los_reg/CLR}]
+
+set_false_path -to [get_pins -of [filter [get_cells -hier] {FILE_NAME =~*vi_async_rst.v}] -filter {REF_PIN_NAME==CLR}]
+
+set_false_path -to [get_pins -of [get_cells -hier -filter name=~*rst_gen*] -filter {REF_PIN_NAME==CLR}]
+
+set_false_path -to [get_pins -of [get_cells -hier -filter name=~fc16clkrst*clk_cnt_gen*] -filter {REF_PIN_NAME==CLR}]
+
+set_false_path -to [get_pins -of [filter [get_cells -hier] {FILE_NAME=~*clk_cnt_sampler.v}] -filter {REF_PIN_NAME==CLR}]

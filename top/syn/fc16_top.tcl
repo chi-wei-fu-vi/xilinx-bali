@@ -18,7 +18,7 @@ set origin_dir ".."
 set orig_proj_dir "[file normalize "$origin_dir/work"]"
 
 # Set the board part number
-set part_num xcku15p-ffve1517-3-e
+set part_num xcku15p-ffve1517-2-e
 
 # Create project
 create_project -force $proj_name $dest_dir
